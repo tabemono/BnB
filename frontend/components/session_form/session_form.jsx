@@ -4,20 +4,22 @@ class SessionForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: "",
-            password: ""
+            email: "",
+            password: "",
+            name: ""
         };
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        // const user = Object.assign({}, this.state);
+        this.props.processForm(this.state);
     }
 
     update(field) {
-        return e => this.setState({
-            [field]: e.currentTarget.value
+       return e => this.setState({
+            [field]: e.target.value
         });
     }
 
@@ -53,6 +55,14 @@ class SessionForm extends React.Component {
                                 <input type='password'
                                     value={this.state.password}
                                     onChange={this.update('password')}
+                                    className="login-input"
+                                />
+                            </label>
+                            <br/>
+                            <label>Name:
+                                <input type='text'
+                                    value={this.state.name}
+                                    onChange={this.update('name')}
                                     className="login-input"
                                 />
                             </label>
