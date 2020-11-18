@@ -10,6 +10,7 @@ const App = () => (
     <div>
         <header>
             <h1>BnB</h1>
+            <img src={window.logo} className="logo"></img>
             <GreetingContainer />
             <Modal/>
             <Switch>

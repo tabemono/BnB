@@ -1,0 +1,66 @@
+.modal-child {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(228, 228, 219);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 5px 8px 9 rgba(0, 0, 0, 0.7), 0 7px 20px;
+}
+
+.modal-close {
+  float: left;
+  font-size: 12px;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 300;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.close-x {  
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 34x;
+  height: 15px;
+  opacity: 1;
+  background-color:white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.close-x:hover {
+ opacity: 1;
+ cursor: pointer;
+}
+
+.close-x:after {
+    display:inline-block;
+    content: "\00d7";
+    
+}
+
+.close-x:before, .close:after {
+  position: absolute;
+  left: 16px;
+  
+  height: 33px;
+  width: 12px;
+  background-color:black;
+}
+.close-x:before {
+  transform: rotate(45deg);
+}
+.close-x:after {
+  transform: rotate(-5deg);
+}
+

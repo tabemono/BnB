@@ -1,0 +1,61 @@
+.logo {
+    width: 85px;
+    position: relative;
+    margin-top: -8px;
+    margin-left: 3px;
+    outline: none;
+}
+
+.nav-signin {
+    font-size: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    padding: 12px;
+    vertical-align: middle;
+    width: 90px;
+    height: 20px;
+    font-family: 'Roboto', sans-serif
+}
+
+.nav-signin:hover {
+    background-color: rgba(82, 79, 79, 0.08);
+    transition: 0.6s;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+
+.main-nav {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+
+button {
+    color: black;
+    background-color: white;
+    border-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border:none;
+    padding: 0px 0px 3px;
+}
+
+button:hover {
+    background-color: rgb(118, 116, 116);
+}
+
+.right-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.outer-div {
+    font-family: 'Roboto', sans-serif;
+    width: 50%;
+    display: flex;
+    z-index: 1;
+    margin-top: 0px;
+}
