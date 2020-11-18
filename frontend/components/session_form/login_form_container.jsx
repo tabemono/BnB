@@ -10,7 +10,7 @@ const mSTP = ( {errors} ) => {
     return {
         
         errors: errors.session,
-        formType: 'login',
+        formType: 'Log in',
         
     }
 }
