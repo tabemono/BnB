@@ -17,7 +17,7 @@ class Greeting extends React.Component {
             </div>
        )  :( <div>
                 <li><Link to="/signup" >Create Account</Link></li>
-                <li><Link to="/login" >Log In</Link></li>
+                <li><Link to="/login" >Log In.</Link></li>
                   <div className="backgroundVid">
                     {/* <iframe frameBorder="0" height="100%" width="100%"
                       src="https://youtube.com/embed/Am7gJxRveO0?autoplay=1&controls=0&showinfo=0&autohide=1">
