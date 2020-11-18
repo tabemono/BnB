@@ -1,16 +1,18 @@
 import { connect } from 'react-redux';
 import Greeting from "./greeting";
 import { logout } from "../../actions/session_actions";
-
+import { openModal } from '../../actions/modal_actions';
 const mstp = ({ entities, session }) => {
+  
   return {
     currentUser: entities.users[session.id]
   }
 }
 
-const mdtp = dispath => {
+const mdtp = dispatch => {
   return {
-    logout: () => dispath(logout())
+    logout: () => dispatch(logout()),
+    openModal: modal => dispatch(openModal(modal))
   }
 }
 
