@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { fetchRide, createRide, updateRide } from "../../actions/ride_actions";
+import { fetchRides, createRide, updateRide } from "../../actions/ride_actions";
 import Rides from "./ride";
 
 const mSTP = (state, ownProps) => ({
@@ -7,6 +7,7 @@ const mSTP = (state, ownProps) => ({
 });
 
 const mDTP = (dispatch) => ({
+  fetchRides: () => dispatch(fetchRides()),
   fetchRide: (rideId) => dispatch(fetchRide(rideId)),
   createRide: (ride) => dispatch(createRide(ride)),
   updateRide: (ride) => dispatch(updateRide(ride)),
