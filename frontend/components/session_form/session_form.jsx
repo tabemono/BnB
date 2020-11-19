@@ -36,6 +36,7 @@ class SessionForm extends React.Component {
     }
 
     render() {
+        const header = this.props.formType === "Log In" ? "Log In" : "Sign Up";
         const isSignedUp = this.props.formType === 'Sign Up';
         const fname = () => {
             return  (
@@ -70,7 +71,17 @@ class SessionForm extends React.Component {
                                     onChange={this.update('password')}
                                     className="login-input"
                                 />
-                          
+                            
+                            <button
+                                className="session-submit"
+                                onClick={() =>
+                                    this.props
+                                        .login({ email: "demo@aa.com", password: "123456" })
+                                        .then(this.props.closeModal)
+                                }
+                            >
+                                Demo
+                                </button>
                             <br/>
                            
                             <br/>
