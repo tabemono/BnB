@@ -9,15 +9,18 @@ import Modal from "./modal/modal";
 const App = () => (
     <div>
         <header>
-            <h1>BnB</h1>
+            <h1>Bikes and Bikers</h1>
             <img src={window.logo} className="logo"></img>
+            
             <GreetingContainer />
             <Modal/>
             <Switch>
                 <AuthRoute exact path='/login' component={LoginFormContainer} />
                 <AuthRoute exact path='/signup' component={SignUpContainer} />
             </Switch>
-
+            <div width="100%" height="50%">
+                <img autoPlay muted loop className="splash-image" src={window.splashvid}></img>
+            </div>
         </header>
     </div>
 );
