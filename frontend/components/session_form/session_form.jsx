@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { BsFillXCircleFill } from 'react-icons/bs';
+
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -49,48 +51,51 @@ class SessionForm extends React.Component {
                     )  
                 }
         return (
-            <ul>
-               <div className="login-form-container">
-                    <form onSubmit={this.handleSubmit} className="login-form-box">
-                        Bikes and Bikers
-                        <br/>
-                        <div onClick={this.props.closeModal} className="close-x"></div>
-                        {this.renderErrors()}
-                        <div className = "login-form">
-                            <br/>
-                            {isSignedUp ? fname() : null}
-                            
-                                <input type='text'
-                                    value={this.state.email}
-                                    onChange={this.update('email')}
-                                    className="login-input"
-                                />
-                            
-                                <input type='password'
-                                    value={this.state.password}
-                                    onChange={this.update('password')}
-                                    className="login-input"
-                                />
-                            
-                            <button
-                                className="session-submit"
-                                onClick={() =>
-                                    this.props
-                                        .login({ email: "demo@aa.com", password: "123456" })
-                                        .then(this.props.closeModal)
-                                }
-                            >
-                                Demo
-                                </button>
-                            <br/>
-                           
-                            <br/>
-                            <input className="session-submit" type="submit" value={this.props.formType} />
-                        </div>
-                    </form>
-               </div>
-            </ul>
-        )
+          <ul>
+            <div className="login-form-container">
+              <div onClick={this.props.closeModal} className="close-x">
+                <BsFillXCircleFill />
+              </div>
+              <form onSubmit={this.handleSubmit} className="login-form-box">
+                Bikes and Bikers
+                {this.renderErrors()}
+                <div className="login-form">
+                  {isSignedUp ? fname() : null}
+
+                  <input
+                    type="text"
+                    value={this.state.email}
+                    onChange={this.update("email")}
+                    className="login-input"
+                  />
+
+                  <input
+                    type="password"
+                    value={this.state.password}
+                    onChange={this.update("password")}
+                    className="login-input"
+                  />
+
+                  <button
+                    className="session-submit"
+                    onClick={() =>
+                      this.props
+                        .login({ email: "demo@aa.com", password: "123456" })
+                        .then(this.props.closeModal)
+                    }
+                  >
+                    Demo
+                  </button>
+                  <input
+                    className="session-submit"
+                    type="submit"
+                    value={this.props.formType}
+                  />
+                </div>
+              </form>
+            </div>
+          </ul>
+        );
     }
 
 

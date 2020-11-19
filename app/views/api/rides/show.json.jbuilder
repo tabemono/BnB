@@ -1,0 +1,26 @@
+json.partial! 'ride', ride: @ride
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
