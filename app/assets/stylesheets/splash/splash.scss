@@ -26,24 +26,31 @@
   background-color: white;
 }
 
+.outside-d {
+  width: 10%;
+}
+
 .splash-exp {
   background-color: black;
-  display: flex-start;
+  //   display: flex-start;
   color: white;
   border-radius: 10px;
-  flex-basis: 33%;
+  //   flex-basis: 33%;
   max-width: 100vw;
-  text-align: center;
+}
+
+.header-text {
+  padding-left: 100px;
+  padding-top: 25px;
 }
 
 .splash-exp-area {
-  margin: 0 15px 5px;
   background-color: black;
   font-size: 20px;
-  display: block;
-  box-sizing: border-box;
-  padding: 75px;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 100px;
+  //   grid-template-columns: 50% 50%;
 }
 
 .exp-header {
@@ -69,24 +76,21 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.parent-box {
-  position: absolute;
+.parent-box1 {
   display: flex;
   background-color: #232323;
   flex-direction: column;
-  border-radius: 20px;
-  width: 40%;
+  border-radius: 16px;
+  margin-right: 20px;
   height: 40%;
 }
 
 .parent-box2 {
-  position: absolute;
-  left: 700px;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
   background-color: #232323;
-  width: 30%;
+
   height: 30%;
 }
 
@@ -94,4 +98,51 @@
   border-radius: 10px;
   width: 100%;
   height: 100%;
+}
+
+.riding-style {
+  display: grid;
+  grid-template-columns: 21% 21% 21% 21%;
+
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 100px;
+  grid-gap: 25px;
+  position: relative;
+  margin-right: 5%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.style-col {
+  margin: 0 0px 5px 100px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  //   z-index: 2;
+  //   padding-left: 100px;
+}
+
+.style-title {
+  font: 20px solid black;
+  padding: 5px;
+  font-weight: bold;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.style-link {
+  font: 15px solid black;
+  padding: 3px;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.style-img {
+  width: 100%;
+  z-index: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
