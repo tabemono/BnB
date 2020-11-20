@@ -19,6 +19,31 @@ export default function splash_page() {
           </div>
         </div>
       </div>
+      <div className="riding-style">
+        <div className="splash-col"></div>
+      </div>
+
+      <div className="splash-exp">
+        <span className="exp-header">Experience Adventures</span>
+        <p className="exp-para">
+          Meet People around the city, experiencing different sceneries together
+          or different type of riding with other riders!
+        </p>
+        <div className="splash-exp-area">
+          <div className="parent-box">
+            <img src={window.track1} className="big-pic"></img>
+            <span className="exp-desc">
+              In it for the adrenaline? Join the track experience.
+            </span>
+          </div>
+          <div className="parent-box2">
+            <img src={window.offroad} className="side-images"></img>
+            <span className="exp-desc">
+              Like the unpredictable? Try offroading with dirtbikes.
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
