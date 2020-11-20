@@ -1,9 +1,9 @@
 import { connect } from "react-redux";
 import { fetchRides, createRide, updateRide } from "../../actions/ride_actions";
-import Rides from "./ride";
+import Rides from "./rides";
 
-const mSTP = (state, ownProps) => ({
-  ride: state.entities.rides[ownProps.match.params.rideId],
+const mSTP = (state) => ({
+  rides: Object.values(state.entities.rides),
 });
 
 const mDTP = (dispatch) => ({

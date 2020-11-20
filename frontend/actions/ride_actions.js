@@ -21,8 +21,8 @@ export const receiveRide = (ride) => ({
 export const fetchRides = () => (dispatch) =>
   APIUtil.fetchRides().then((rides) => dispatch(receiveAllRides(rides)));
 
-export const fetchride = (rideId) => (dispatch) =>
-  APIUtil.fetchride(rideId).then((ride) => dispatch(receiveRide(ride)));
+export const fetchRide = (rideId) => (dispatch) =>
+  APIUtil.fetchRide(rideId).then((ride) => dispatch(receiveRide(ride)));
 
 export const createRide = (ride) => (dispatch) =>
   APIUtil.createRide(ride).then((ride) => dispatch(receiveRide(ride)));

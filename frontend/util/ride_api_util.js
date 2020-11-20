@@ -10,14 +10,14 @@ export const fetchRide = (rideId) =>
 
 export const updateRide = (ride) =>
   $.ajax({
-    method: "patch",
+    method: "PATCH",
     url: `/api/rides/${ride.id}`,
     data: { ride },
   });
 
 export const createRide = (ride) =>
   $.ajax({
-    method: "post",
+    method: "POST",
     url: "/api/rides",
     data: { ride },
   });

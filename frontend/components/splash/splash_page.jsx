@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function splash_page() {
   return (
-    <div class="splashpage">
+    <div className="splashpage">
       <h1 className="welcome">Find The Perfect Ride</h1>
       <div width="100%" height="50%">
         <img
@@ -16,7 +16,9 @@ export default function splash_page() {
       </div>
       <div className="header-content">
         <div className="look-btn">
-          <Link className='look-button' to="/rides">Look Around</Link>
+          <Link className="look-button" to="/rides">
+            Look Around
+          </Link>
         </div>
       </div>
       <div className="riding-style">
