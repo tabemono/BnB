@@ -20,6 +20,7 @@ class Rides extends React.Component {
           <li>{ride.brand}</li>
           <li>{ride.price}</li>
           <li>{ride.description}</li>
+          
         </div>
       );
     });
