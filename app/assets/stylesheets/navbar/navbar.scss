@@ -1,67 +1,105 @@
 .logo {
-    width: 85px;
-    position: relative;
-    margin-top: -8px;
-    margin-left: 3px;
-    outline: none;
+  width: 85px;
+  position: relative;
+  margin-top: -8px;
+  margin-left: 3px;
+  outline: none;
 }
 
 .nav-signin {
-    font-size: 25px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin-top: 12px;
-    padding: 12px;
-    vertical-align: middle;
-    width: 90px;
-    height: 20px;
-    font-family: 'Roboto', sans-serif
+  font-size: 25px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 12px;
+  vertical-align: middle;
+  width: 90px;
+  height: 20px;
+  font-family: "Roboto", sans-serif;
 }
 
 .nav-signin:hover {
-    background-color: rgba(82, 79, 79, 0.08);
-    transition: 0.6s;
-    cursor: pointer;
-    border-radius: 50px;
-  }
-
-.main-nav {
-    display: flex;
-    justify-content: flex-end;
+  background-color: rgba(82, 79, 79, 0.08);
+  transition: 0.6s;
+  cursor: pointer;
+  border-radius: 50px;
 }
 
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+}
 
 button {
-    color: black;
-    background-color: white;
-    border-color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    border:none;
-    padding: 0px 0px 3px;
+  color: black;
+  background-color: white;
+  border-color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  border: none;
+  padding: 0px 0px 3px;
 }
 
 button:hover {
-    background-color: rgb(118, 116, 116);
+  background-color: rgb(118, 116, 116);
 }
 
 .right-nav {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .outer-div {
-    font-family: 'Roboto', sans-serif;
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    z-index: 1;
-    margin-top: 0px;
+  font-family: "Roboto", sans-serif;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  //   flex-direction: row;
+  z-index: 1;
+  margin-top: 0px;
 }
 
-div >p {
-    font-family :'Roboto', sans-serif;
-    font-size: 16px;
+div > p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
 
+.look-btn {
+  justify-content: space-between;
+  cursor: pointer !important;
+  display: inline-block !important;
+  position: relative !important;
+  text-align: center !important;
+  font-family: "Montserrat" !important;
+  font-size: 16px !important;
+  line-height: 18px !important;
+  font-weight: 600 !important;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  color: gray(255, 255, 255) !important;
+  margin-left: 40%;
+  margin-right: 50px;
+  height: 45px;
+  width: 15%;
+  text-decoration: none;
+  border-radius: 8px;
+  border-style: solid !important;
+  outline: none !important;
+  border-color: rgb(255, 255, 255);
+  background: black;
+  opacity: 80%;
+}
+
+.look-button {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.main-nav {
+  background-color: white;
+  z-index: 1;
+}

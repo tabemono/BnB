@@ -6,17 +6,18 @@ import SignUpContainer from "./session_form/signup_form_container";
 import { AuthRoute, Protected } from "../util/route_util";
 import splash_page from "./splash/splash_page";
 import Modal from "./modal/modal";
-import RidePage from './rides/ride_container'
+import RidePage from "./rides/ride_container";
 const App = () => (
-    <>
-        <Modal />
-        <Switch>
-            <AuthRoute exact path="/login" component={LoginFormContainer} />
-            <AuthRoute exact path="/signup" component={SignUpContainer} />
-            <Route path="/" component={splash_page} />
-            <Route path='/rides' component={RidePage} />
-        </Switch>
-    </>
+  <>
+    <Modal />
+    <Route path="/" component={NavBar} />
+    <Route path="/rides" component={RidePage} />
+    <Switch>
+      <AuthRoute exact path="/login" component={LoginFormContainer} />
+      <AuthRoute exact path="/signup" component={SignUpContainer} />
+      <Route exact path="/" component={splash_page} />
+    </Switch>
+  </>
 );
 
 export default App;

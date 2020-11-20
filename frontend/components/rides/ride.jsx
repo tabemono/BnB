@@ -7,12 +7,15 @@ class Rides extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchRide(this.props.match.params.rideId);
+    this.props.fetchRides();
   }
-    
+
   render() {
-    debugger
-    return <div>hello</div>;
+    return (
+      <div>
+        <h1> THIS PAGE IS UNDER CONSTRUCTION</h1>
+      </div>
+    );
   }
 }
 

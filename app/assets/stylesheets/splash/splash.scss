@@ -1,0 +1,148 @@
+.splash-image {
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 80%;
+  z-index: -1;
+}
+
+.welcome {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  font-size: 62px;
+  padding: 200px;
+  color: white;
+}
+
+.riding-style {
+  background-color: white;
+}
+
+.outside-d {
+  width: 10%;
+}
+
+.splash-exp {
+  background-color: black;
+  //   display: flex-start;
+  color: white;
+  border-radius: 10px;
+  //   flex-basis: 33%;
+  max-width: 100vw;
+}
+
+.header-text {
+  padding-left: 100px;
+  padding-top: 25px;
+}
+
+.splash-exp-area {
+  background-color: black;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 100px;
+  //   grid-template-columns: 50% 50%;
+}
+
+.exp-header {
+  font-size: 32px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 14px;
+}
+
+.exp-para {
+  width: 50%;
+}
+
+.big-pic {
+  vertical-align: left;
+  border-radius: 15px;
+}
+
+.exp-desc {
+  width: 55%;
+  font-size: 16px;
+  line-height: 30px;
+  min-height: 80px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.parent-box1 {
+  display: flex;
+  background-color: #232323;
+  flex-direction: column;
+  border-radius: 16px;
+  margin-right: 20px;
+  height: 40%;
+}
+
+.parent-box2 {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: #232323;
+
+  height: 30%;
+}
+
+.side-images {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.riding-style {
+  display: grid;
+  grid-template-columns: 21% 21% 21% 21%;
+
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 100px;
+  grid-gap: 25px;
+  position: relative;
+  margin-right: 5%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.style-col {
+  margin: 0 0px 5px 100px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  //   z-index: 2;
+  //   padding-left: 100px;
+}
+
+.style-title {
+  font: 20px solid black;
+  padding: 5px;
+  font-weight: bold;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.style-link {
+  font: 15px solid black;
+  padding: 3px;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.style-img {
+  width: 100%;
+  z-index: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
