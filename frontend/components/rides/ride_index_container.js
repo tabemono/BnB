@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { fetchRides, createRide, updateRide } from "../../actions/ride_actions";
+import { fetchRides, createRide, updateRide, fetchRide } from "../../actions/ride_actions";
 import RideIndex from "./ride_index";
 
 const mSTP = (state) => ({
@@ -8,7 +8,7 @@ const mSTP = (state) => ({
 
 const mDTP = (dispatch) => ({
   fetchRides: () => dispatch(fetchRides()),
-  // fetchRide: (rideId) => dispatch(fetchRide(rideId)),
+  requestRide: (rideId) => dispatch(fetchRide(rideId)),
   // createRide: (ride) => dispatch(createRide(ride)),
   // updateRide: (ride) => dispatch(updateRide(ride)),
 });

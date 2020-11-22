@@ -27,6 +27,20 @@ class Ride < ApplicationRecord
 
     has_many_attached :photos
 
+
+    def self.in_bounds(bounds)
+        self.where("lat < ?", bounds[:northEast][:lat])
+        .where("lat > ?", bounds[:southWest][:lat])
+        .where("lng > ?", bounds[:southWest][:lng])
+        .where("lng < ?", bounds[:northEast][:lng])
+    end
+
+    def self.filtered_search(query) 
+        result = self.where("borough LIKE ?", "%#{query}%")
+        return result
+     end
+
+
 end
 # 298-200 W 42nd St
 # New York, NY 10036

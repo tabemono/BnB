@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "nuka-carousel";
+import { Link, withRouter } from "react-router-dom";
 
 class RideIndexItem extends React.Component {
   constructor(props) {
@@ -7,46 +8,59 @@ class RideIndexItem extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  componentDidMount() {
+    debugger;
+  }
 
- 
   handleClick() {
+    debugger;
     this.props.history.push(`/rides/${this.props.ride.id}`);
   }
 
   render() {
-      const {ride} = this.props
-      const { description, model, brand, price, style } = ride;
-     const rideCaro =
+    const { ride } = this.props;
+    const { description, model, brand, price, style } = ride;
+    const rideCaro = (
       <div className="ride-photo-container" key={ride.id}>
-            <Carousel
-              width={"15vw"}
-              wrapAround={true}
-              heightMode={"first"}
-              transitionMode={"scroll3d"}
-            >
-              {ride.photoUrls.map((photo) => {
-                return (
-                  <img className="ride-photo" src={photo} key={photo}></img>
-                );
-              })}
-            </Carousel>
-          </div>
-     
-    //   });
+        <Carousel
+          width={"15vw"}
+          wrapAround={true}
+          heightMode={"first"}
+          transitionMode={"scroll3d"}
+        >
+          {ride.photoUrls.map((photo) => {
+            return <img className="ride-photo" src={photo} key={photo}></img>;
+          })}
+        </Carousel>
+      </div>
+    );
 
     return (
       <li className="ride-index-item" onClick={this.handleClick}>
-            {rideCaro}
-        <section className="index-text-desc">
-          <p>
-            {model}-{brand}-{style}
-          </p>
-          <p>{description}</p>
-          <p>{price}</p>
-        </section>
+        {/* <Link to={`/rides/${ride.id}`}> */}
+        {rideCaro}
+        <div className="index-text-desc">
+          <section className="ride-desc">
+            <p>{description}</p>
+            <h3>{ride.model}</h3>
+          </section>
+
+          <section className="ride-desc2">
+            <p>
+              {brand}-{style}
+            </p>
+          </section>
+
+          <section className="ride-price">
+            <p>
+              <strong>${price}</strong> / night
+            </p>
+          </section>
+        </div>
+        {/* </Link> */}
       </li>
     );
   }
 }
 
-export default RideIndexItem;
+export default withRouter(RideIndexItem);

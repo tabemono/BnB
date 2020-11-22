@@ -1,5 +1,6 @@
 class Api::RidesController < ApplicationController
     def index 
+        rides = bounds ? Ride.in_bounds(bounds) : Ride.all
         @rides = Ride.all 
         render :index
     end
@@ -46,6 +47,9 @@ class Api::RidesController < ApplicationController
         )
     end
 
+    def bounds
+        params[:bounds]
+    end
 
 
 end
