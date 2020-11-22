@@ -14,7 +14,7 @@ class RideIndexItem extends React.Component {
 
   handleClick() {
     debugger;
-    this.props.history.push(`/rides/${this.props.ride.id}`);
+    this.props.requestRide(this.props.ride.id).then(this.props.history.push(`/rides/${this.props.ride.id}`));
   }
 
   render() {

@@ -14,6 +14,8 @@ class RideIndex extends React.Component {
   }
 
   render() {
+    const { requestRide } = this.props
+
     const rideIndexItems = this.props.rides.map(ride => {
       return <RideIndexItem key={ride.id} ride={ride} history={this.props.history} requestRide={requestRide}/>
     })

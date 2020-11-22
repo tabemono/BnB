@@ -8,7 +8,7 @@ export const fetchRides = () => {
 export const fetchRide = (rideId) => {
   return $.ajax({
     url: `/api/rides/${rideId}`,
-    method: "GET",
+    method: "GET"
   });
 };
 export const updateRide = (ride) => {
