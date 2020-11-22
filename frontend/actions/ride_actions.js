@@ -12,7 +12,7 @@ export const receiveAllRides = (rides) => ({
 
 
 export const receiveRide = (ride) => ({
-  type: RECEIVE_ride,
+  type: RECEIVE_RIDE,
   ride,
 });
 

@@ -14,10 +14,10 @@ const App = () => (
     <Modal />
     <Route path="/" component={NavBar} />
     <Switch>
-      <Route path="/rides" component={RideIndex} />
-      {/* <Route path="/rides" component={RideSearchContainer} /> */}
       <Route exact path="/" component={SplashPage} />
+      <Route exact path="/rides" component={RideIndex} />
       <Route exact path="/rides/:rideId" component={RideShowContainer} />
+      {/* <Route path="/rides" component={RideSearchContainer} /> */}
     </Switch>
   </>
 );
