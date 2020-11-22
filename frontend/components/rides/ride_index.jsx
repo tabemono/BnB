@@ -27,7 +27,7 @@ class RideIndex extends React.Component {
         <h1> THIS PAGE IS UNDER CONSTRUCTION</h1>
         {rideIndexItems}
         <div>
-          <BikeMap allRides={rides}/>
+          <BikeMap rides={rides}/>
         </div>
       </div>
     );

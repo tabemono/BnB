@@ -8,13 +8,10 @@ class RideIndexItem extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  componentDidMount() {
-    debugger;
-  }
-
   handleClick() {
-    debugger;
-    this.props.requestRide(this.props.ride.id).then(this.props.history.push(`/rides/${this.props.ride.id}`));
+    this.props
+      .requestRide(this.props.ride.id)
+      .then(this.props.history.push(`/rides/${this.props.ride.id}`));
   }
 
   render() {

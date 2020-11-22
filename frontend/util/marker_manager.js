@@ -5,11 +5,10 @@ class MarkerManager {
     this.markers = {};
   }
 
-  updateMarkers(rides) {
-    // rides = Object.values(rides);
+  updateMarkers(rides) { 
     const ridesObj = {};
     rides.forEach((ride) => (ridesObj[ride.id] = ride));
-
+    
     rides
       .filter((ride) => !this.markers[ride.id])
       .forEach((newRide) =>
