@@ -26,17 +26,24 @@ class RideIndexItem extends React.Component {
           transitionMode={"scroll3d"}
         >
           {ride.photoUrls.map((photo) => {
-            return <img className="ride-photo" src={photo} key={photo}></img>;
+            return (
+              <img
+                onClick={this.handleClick}
+                className="ride-photo"
+                src={photo}
+                key={photo}
+              ></img>
+            );
           })}
         </Carousel>
       </div>
     );
 
     return (
-      <li className="ride-index-item" onClick={this.handleClick}>
+      <li className="ride-index-item">
         {/* <Link to={`/rides/${ride.id}`}> */}
         {rideCaro}
-        <div className="index-text-desc">
+        <div className="index-text-desc" onClick={this.handleClick}>
           <section className="ride-desc">
             <p>{description}</p>
             <h3>{ride.model}</h3>

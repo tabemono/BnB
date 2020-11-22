@@ -18,7 +18,8 @@
 #
 class Ride < ApplicationRecord
     STYLE = ['Sport', 'Street', 'Adventure/Touring' ]
-    validates :model, :brand, :style, :description, :price, :lat, :lng, :borough, :location, presence: true
+    validates :model, 
+    :brand, :style, :description, :price, :lat, :lng, :borough, :location, presence: true
     validates :style, inclusion: {in: STYLE}
 
     belongs_to :owner,
