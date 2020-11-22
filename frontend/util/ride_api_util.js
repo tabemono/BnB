@@ -1,11 +1,13 @@
 export const fetchRides = () =>
   $.ajax({
     url: "/api/rides",
+    method: "GET",
   });
 
 export const fetchRide = (rideId) =>
   $.ajax({
     url: `/api/rides/${rideId}`,
+    method: "GET",
   });
 
 export const updateRide = (ride) =>
@@ -21,4 +23,3 @@ export const createRide = (ride) =>
     url: "/api/rides",
     data: { ride },
   });
-

@@ -1,6 +1,7 @@
 import React from "react";
+import Carousel from 'nuka-carousel';
 
-class Rides extends React.Component {
+class RideIndex extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -13,14 +14,15 @@ class Rides extends React.Component {
     const rideTags = this.props.rides.map((ride) => {
       return (
         <div className="ride-photo-container" key={ride.id}>
+          <Carousel width={"15vw"}
+          wrapAround={true}
+          heightMode={"first"}
+          transitionMode={'scroll3d'}>
+
           {ride.photoUrls.map((photo) => {
             return <img className="ride-photo" src={photo} key={photo}></img>;
           })}
-          <li>{ride.model}</li>
-          <li>{ride.brand}</li>
-          <li>{ride.price}</li>
-          <li>{ride.description}</li>
-          
+          </Carousel>
         </div>
       );
     });
@@ -33,4 +35,4 @@ class Rides extends React.Component {
   }
 }
 
-export default Rides;
+export default RideIndex;

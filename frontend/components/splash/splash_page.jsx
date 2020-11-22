@@ -40,6 +40,7 @@ export default function splash_page() {
             </span>
           </div>
         </div>
+
         <div className="style-col">
           <img src={window.touring} className="style-img"></img>
           <span className="style-title">Adventure/Touring</span>
@@ -49,6 +50,7 @@ export default function splash_page() {
             </span>
           </div>
         </div>
+
         <div className="style-col">
           <img src={window.dirt} className="style-img"></img>
           <span className="style-title">Dirt</span>
@@ -66,20 +68,48 @@ export default function splash_page() {
             together or different type of riding with other riders!
           </p>
         </div>
+
         <div className="splash-exp-area">
           <div className="parent-box1">
             <img src={window.track1} className="big-pic"></img>
-            <span className="exp-desc">
-              In it for the adrenaline? Join the track experience.
-            </span>
+            <div className="parent-desc-box">
+              <span className="exp-desc">
+                In it for the adrenaline? Join the track experience.
+              </span>
+            </div>
           </div>
 
-          <div className="parent-box2">
-            <img src={window.offroad} className="side-images"></img>
-            <span className="exp-desc">
-              Like the unpredictable? Try motorcrossing events/terrains with
-              dirtbikes.
-            </span>
+          <div className="topgrid">
+            <div className="parent-box2-container">
+              <div className="parent-box2">
+                <img src={window.group} className="side-images"></img>
+                <div className="parent-desc-box"></div>
+                <span className="exp-desc">
+                  Like group riding or meeting alot of different bikers? Join
+                  nearby group riding hosted events.
+                </span>
+              </div>
+
+              <div className="parent-box2">
+                <img src={window.learn} className="side-images"></img>
+                <div className="parent-desc-box">
+                  <span className="exp-desc">
+                    Interested in riding but never learned how to? Learn with
+                    our experienced riders that will teach you.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="parent-box3">
+              <img src={window.offroad} className="side-images"></img>
+              <div className="parent-desc-box">
+                <span className="exp-desc">
+                  Like the unpredictable? Try motorcrossing events/terrains with
+                  dirtbikes.
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
