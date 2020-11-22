@@ -7,6 +7,8 @@ import {withRouter} from "react-router";
 class RideIndex extends React.Component {
   constructor(props) {
     super(props);
+    
+
   }
 
   componentDidMount() {
@@ -14,7 +16,7 @@ class RideIndex extends React.Component {
   }
 
   render() {
-    const { requestRide } = this.props
+    const { requestRide, rides } = this.props;
 
     const rideIndexItems = this.props.rides.map(ride => {
       return <RideIndexItem key={ride.id} ride={ride} history={this.props.history} requestRide={requestRide}/>
@@ -25,7 +27,7 @@ class RideIndex extends React.Component {
         <h1> THIS PAGE IS UNDER CONSTRUCTION</h1>
         {rideIndexItems}
         <div>
-          {/* <BikeMap/> */}
+          <BikeMap allRides={rides}/>
         </div>
       </div>
     );
