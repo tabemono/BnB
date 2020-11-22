@@ -1,32 +1,52 @@
 import React from "react";
-import Carousel from "nuka/carousel";
-import { withRouter } from "react-router-dom";
-class RidesIndexItem extends React.Component {
+import Carousel from "nuka-carousel";
+
+class RideIndexItem extends React.Component {
   constructor(props) {
     super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleSubmit() {
+
+ 
+  handleClick() {
     this.props.history.push(`/rides/${this.props.ride.id}`);
   }
 
   render() {
-    const { rides } = this.props;
-    const { model, brand, price, description, photoUrls, borough } = ride;
+      const {ride} = this.props
+      const { description, model, brand, price, style } = ride;
+     const rideCaro =
+      <div className="ride-photo-container" key={ride.id}>
+            <Carousel
+              width={"15vw"}
+              wrapAround={true}
+              heightMode={"first"}
+              transitionMode={"scroll3d"}
+            >
+              {ride.photoUrls.map((photo) => {
+                return (
+                  <img className="ride-photo" src={photo} key={photo}></img>
+                );
+              })}
+            </Carousel>
+          </div>
+     
+    //   });
+
     return (
-      <li className="ride-index-item" onClick={this.handleSubmit}>
-        {/* <div className="ride-desc">
-          <div className="ride-img">{photoUrls}</div>
-          <div className="ride-model">{model}</div>
-          <div className="ride-brand">{brand}</div>
-          <div className="ride-description">{description}</div>
-          <div className="ride-borough">{borough}</div>
-          <div className="ride-price">{price}</div>
-        </div> */}
+      <li className="ride-index-item" onClick={this.handleClick}>
+            {rideCaro}
+        <section className="index-text-desc">
+          <p>
+            {model}-{brand}-{style}
+          </p>
+          <p>{description}</p>
+          <p>{price}</p>
+        </section>
       </li>
     );
   }
 }
 
-export default withRouter(RidesIndexItem);
+export default RideIndexItem;
