@@ -94,8 +94,8 @@ export default function splash_page() {
                 <img src={window.learn} className="side-images"></img>
                 <div className="parent-desc-box">
                   <span className="exp-desc">
-                    Interested in riding but never learned how to? Learn with
-                    our experienced riders that will teach you.
+                    Interested in self maintenance on your bike? Join a maintenance
+                    class!
                   </span>
                 </div>
               </div>
