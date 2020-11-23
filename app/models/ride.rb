@@ -18,8 +18,9 @@
 #
 class Ride < ApplicationRecord
     STYLE = ['Sport', 'Street', 'Adventure/Touring' ]
-    validates :model, :brand, :price, :location, :borough, :lng, :lat, :description, :style, presence: true
-    validates :style, inclusion: {in: STYLE}, default: STYLE[3];
+    validates :model, 
+    :brand, :style, :description, :price, :lat, :lng, :borough, :location, presence: true
+    validates :style, inclusion: {in: STYLE}
 
     belongs_to :owner,
         foreign_key: :owner_id,
@@ -27,4 +28,22 @@ class Ride < ApplicationRecord
 
     has_many_attached :photos
 
+
+    def self.in_bounds(bounds)
+        self.where("lat < ?", bounds[:northEast][:lat])
+        .where("lat > ?", bounds[:southWest][:lat])
+        .where("lng > ?", bounds[:southWest][:lng])
+        .where("lng < ?", bounds[:northEast][:lng])
+    end
+
+    def self.filtered_search(query) 
+        result = self.where("borough LIKE ?", "%#{query}%")
+        return result
+     end
+
+
 end
+# 298-200 W 42nd St
+# New York, NY 10036
+# 40.756492, -73.988053
+# a = Ride.create("R3", "Yamaha", "298-200 W 42nd ST", 40.756492, -73.988953, "great commute bike", "Street")

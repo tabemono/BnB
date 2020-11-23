@@ -6,6 +6,21 @@
   outline: none;
 }
 
+.navbar {
+  overflow: hidden;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+.input:focus{
+  outline:none;
+}
+.left-nav {
+  display:flex;
+  margin-left: 500px;
+}
 .nav-signin {
   font-size: 25px;
   position: relative;
@@ -20,8 +35,8 @@
 }
 
 .nav-signin:hover {
-  background-color: rgba(82, 79, 79, 0.08);
-  transition: 0.6s;
+  background-color: rgba(26, 24, 24, 0.08);
+  transition: 1s;
   cursor: pointer;
   border-radius: 50px;
 }
@@ -42,23 +57,25 @@ button {
 }
 
 button:hover {
-  background-color: rgb(118, 116, 116);
+  background-color: rgb(98, 97, 97);
+  opacity: 60%;
 }
 
 .right-nav {
   display: flex;
-  flex-direction: row;
+  justify-content: flex-end;
+  margin-left: 100px;
 }
 
-.outer-div {
-  font-family: "Roboto", sans-serif;
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-  //   flex-direction: row;
-  z-index: 1;
-  margin-top: 0px;
-}
+// .outer-div {
+//   font-family: "Roboto", sans-serif;
+//   width: 50%;
+//   display: flex;
+//   justify-content: space-between;
+//   //   flex-direction: row;
+//   z-index: 1;
+//   margin-top: 0px;
+// }
 
 div > p {
   font-family: "Roboto", sans-serif;
@@ -68,8 +85,8 @@ div > p {
 .look-btn {
   justify-content: space-between;
   cursor: pointer !important;
-  display: inline-block !important;
-  position: relative !important;
+  // display: inline-block !important;
+  // position: relative !important;
   text-align: center !important;
   font-family: "Montserrat" !important;
   font-size: 16px !important;
@@ -78,28 +95,100 @@ div > p {
   padding-top: 7px !important;
   padding-bottom: 7px !important;
   padding-left: 15px !important;
-  padding-right: 15px !important;
-  color: gray(255, 255, 255) !important;
   margin-left: 40%;
-  margin-right: 50px;
-  height: 45px;
   width: 15%;
   text-decoration: none;
   border-radius: 8px;
-  border-style: solid !important;
+  font-weight: 660px;
   outline: none !important;
-  border-color: rgb(255, 255, 255);
-  background: black;
-  opacity: 80%;
+  border: none;
+  color: white;
+  border-style: ridge;
 }
 
+.search-nav {
+  display:flex;
+  // position:fixed;
+  flex-direction: row;
+  background-color: white;
+  top: 0;
+  justify-content: space-between;
+  z-index: 100;
+
+}
+
+.right-nav {
+  width: 50%;
+  display:flex;
+  z-index: 1;
+}
+
+.nav-2 {
+  
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  margin-top: 0px;
+}
 .look-button {
   font-size: 20px;
-  color: white;
+  color:white;
   text-decoration: none;
+  font-weight: 400px;
 }
 
-.main-nav {
+.look-btn:hover {
+  background-color: gray;
+  color: black;
+  font-weight: 700px;
+  transform: scale(1.25);
+  transition: all 1s ease;
+}
+
+.search-nav {
   background-color: white;
   z-index: 1;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  width: 600px;
+  margin-top: 20px;
+  background-color: white;
+  position: relative;
+  border: 1px #EBEBEB;
+  transition: box-shadow 200ms ease-in;
+  height: 40px;
+}
+
+.search-form-input {
+  float:left;
+  border-style: none;
+}
+
+.search-icon {
+  height: 16px;
+  width: 16px;
+  display:block;
+  fill: currentColor;
+}
+
+.search-icon-box {
+  padding-top: 35px;
+  width: 30px;
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+
+}
+
+.search-button {
+  width: 100px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  letter-spacing: 0.08em;
+  color: black;
 }

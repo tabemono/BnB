@@ -1,3 +1,69 @@
 // Place all the styles related to the api::Rides controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.ride-photo-container {
+  margin: 5x;
+  font-family: "Montserrat", sans-serif;
+}
+
+// .ride-photo-container img {
+//   padding: 5px;
+//   width: 95%;
+//   height: 45%;
+//   transition: 1s;
+//   border-radius: 10px;
+// }
+
+.ride-photo-container img:hover {
+  transform: scale(1.05);
+  transition: all 1s ease;
+}
+
+.ride-header {
+  width: 1000px;
+  margin: 0 auto;
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+}
+
+.ride-minor-details {
+  span {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+}
+
+.ride-images-container {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 500px;
+  width: 100%;
+  margin: 20px auto 40px auto;
+    
+}
+
+
+.ride-thumb-img {
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+}
+
+// .thumb-img{
+//   width: 100%;
+// }
+
+.ride-side-one {
+  display: inline-block;
+  height: 100%;
+  width: 25%;
+}
+
+.ride-side-two {
+  display: inline-block;
+  height: 100%;
+  width: 25%;
+}

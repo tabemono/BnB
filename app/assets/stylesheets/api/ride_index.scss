@@ -1,0 +1,48 @@
+.index-text-desc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "Montserrat";
+}
+.ride-desc {
+  width: 300px;
+  padding-top: 20px;
+
+}
+
+.ride-index-item {
+  border-bottom: 1px #ebebeb solid;
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+  p {
+    font-weight: 200;
+
+  }
+  
+}
+
+.ride-price {
+  padding-left: 200px;
+}
+
+.ride-photo {
+  // width: 100%;
+  // height: 100%;
+  border-radius: 15px;
+  border: 1px solid #ebebeb;
+  margin: 20px 20px 20px 0;
+}
+
+.ride-index-left {
+  display: flex;
+  flex-direction: column;
+  padding-left: 70px;
+}
+
+.ride-index {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+}

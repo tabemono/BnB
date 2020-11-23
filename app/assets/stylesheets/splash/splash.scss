@@ -2,13 +2,13 @@
   border-radius: 10px;
   position: absolute;
   top: 0;
-  display: flex;
+  display: fixed;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
   width: 100%;
-  height: 80%;
+
   z-index: -1;
 }
 
@@ -31,12 +31,15 @@
 }
 
 .splash-exp {
+  display: grid;
+  justify-content: center;
   background-color: black;
-  //   display: flex-start;
   color: white;
   border-radius: 10px;
-  //   flex-basis: 33%;
+  width: 100%;
+  height: 100%;
   max-width: 100vw;
+  z-index: 0;
 }
 
 .header-text {
@@ -47,10 +50,10 @@
 .splash-exp-area {
   background-color: black;
   font-size: 20px;
-  display: flex;
+  display: grid;
   justify-content: flex-start;
   margin-left: 100px;
-  //   grid-template-columns: 50% 50%;
+  grid-template-columns: 50% 50%;
 }
 
 .exp-header {
@@ -64,8 +67,10 @@
 }
 
 .big-pic {
-  vertical-align: left;
-  border-radius: 15px;
+ 
+  border-radius: 20px;
+  height: 70%;
+  width: 100%;
 }
 
 .exp-desc {
@@ -74,6 +79,7 @@
   line-height: 30px;
   min-height: 80px;
   font-family: "Montserrat", sans-serif;
+  padding: 5px;
 }
 
 .parent-box1 {
@@ -81,17 +87,33 @@
   background-color: #232323;
   flex-direction: column;
   border-radius: 16px;
-  margin-right: 20px;
-  height: 40%;
+  margin-right: 20px;  
 }
 
 .parent-box2 {
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
   background-color: #232323;
+  width: 50%;
+  height: 40%;
+}
 
-  height: 30%;
+.parent-box2-container {
+  display: flex;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  background-color: #232323;
+}
+
+.parent-desc-box {
+  background-color: #232323;
+}
+
+.topgrid {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 
 .side-images {
@@ -99,19 +121,23 @@
   width: 100%;
   height: 100%;
 }
-
 .riding-style {
   display: grid;
   grid-template-columns: 21% 21% 21% 21%;
 
   width: 100%;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 0px;
   grid-gap: 25px;
   position: relative;
   margin-right: 5%;
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.parent-box3 {
+  width: 100%;
+  height: 100%;
 }
 
 .style-col {
@@ -121,8 +147,7 @@
   border-radius: 10px;
   width: 100%;
   text-align: center;
-  //   z-index: 2;
-  //   padding-left: 100px;
+  
 }
 
 .style-title {
@@ -142,6 +167,7 @@
 
 .style-img {
   width: 100%;
+  height: 80%;
   z-index: 1;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;

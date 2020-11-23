@@ -8,7 +8,16 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 const mSTP = ( {errors} ) => {
     
     return {
+        user: {
+            email: "",
+            password: ""
+        } ,
         
+        demoUser: {
+            email: "demo@aa.com",
+            password: "123456"
+        },
+
         errors: errors.session,
         formType: 'Log in',
         

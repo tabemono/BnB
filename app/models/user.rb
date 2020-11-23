@@ -13,7 +13,7 @@
 class User < ApplicationRecord
     validates :email, :session_token, uniqueness: true, presence: true
     validates :firstname, :password_digest, presence: true
-    validates :password, length: {minimum: 6, allow_nil: true}
+    validates :password, length: {minimum: 6 }, allow_nil: true
 
     has_many :rides,
         class_name: :Ride,
