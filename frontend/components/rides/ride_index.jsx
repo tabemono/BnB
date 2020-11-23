@@ -30,7 +30,7 @@ class RideIndex extends React.Component {
     return (
       <div>
         <div className="ride-index">
-          {rideIndexItems}
+          <div className="ride-index-left">{rideIndexItems}</div>
           <div id="map-container">
             <BikeMap rides={rides} />
           </div>

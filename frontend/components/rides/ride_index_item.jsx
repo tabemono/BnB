@@ -21,6 +21,7 @@ class RideIndexItem extends React.Component {
       <div className="ride-photo-container" key={ride.id}>
         <Carousel
           width={"15vw"}
+          height="100%"
           wrapAround={true}
           heightMode={"first"}
           transitionMode={"scroll3d"}
