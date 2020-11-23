@@ -23,10 +23,10 @@
 .ride-header {
   width: 1000px;
   margin: 0 auto;
-   h2 {
-     font-size: 40px;
-     font-weight: 600;
-   }
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+  }
 }
 
 .ride-minor-details {
@@ -36,20 +36,22 @@
   }
 }
 
-
 .ride-images-container {
   border-radius: 20px;
   overflow: hidden;
   height: 500px;
-  width:100%;
+  width: 100%;
   margin: 20px auto 40px auto;
-
 }
 .ride-thumb-img {
   width: 50%;
   height: 100%;
   display: inline-block;
 }
+
+// .thumb-img{
+//   width: 100%;
+// }
 
 .ride-side-one {
   display: inline-block;

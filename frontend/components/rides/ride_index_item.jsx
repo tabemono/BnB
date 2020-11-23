@@ -57,7 +57,7 @@ class RideIndexItem extends React.Component {
 
           <section className="ride-price">
             <p>
-              <strong>${price}</strong> / night
+              <strong>${price}</strong> / day
             </p>
           </section>
         </div>

@@ -12,7 +12,7 @@ class BikeMap extends React.Component {
         this.map = new google.maps.Map(this.mapNode, mapOptions);
         const mapOptions = {
          center: { lat: 40.775899, lng: -73.97854 },
-        zoom: 13
+        zoom: 12
     };
     this.MarketManager = new MarkerManager(
         this.map,
@@ -40,7 +40,7 @@ class BikeMap extends React.Component {
     render() {
         return (
    
-      <div ref={ map => this.mapNode = map }> 
+      <div id="map" ref={ map => this.mapNode = map }> 
      
         </div>
         )
