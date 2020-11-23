@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'open-uri'
+# require 'open-uri'
 
 ActiveRecord::Base.transaction do 
     User.destroy_all
@@ -37,7 +37,7 @@ bmw_manhattan = Ride.create!({
   price: 80.0,
   lat: 40.72768529173207,
   lng: -74.00009437067972,
-  owner_id: 1,
+  owner_id: demo.id,
   borough: "Manhattan",
   location: "Washington Square, New York 10012"
 })
@@ -50,7 +50,7 @@ r3_manhattan = Ride.create!(
   price: 50.0,
   lat: 40.756492,
   lng: -73.988953,
-  owner_id: 1,
+  owner_id: sergio.id,
   borough: "Manhattan",
   location: "298-200 W 42nd ST"
 )
@@ -62,7 +62,7 @@ r1_manhattan = Ride.create!(
   price: 120.0,
   lat: 40.7175904930345, 
   lng: -74.01279468635637,
-  owner_id: 3,
+  owner_id: ray.id,
   borough: "Manhattan",
   location: "117 West St, New York, NY 10006"
 )
