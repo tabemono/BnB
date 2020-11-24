@@ -31,8 +31,9 @@
 }
 
 .splash-exp {
-  display: grid;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: black;
   color: white;
   border-radius: 10px;
@@ -43,17 +44,17 @@
 }
 
 .header-text {
-  padding-left: 100px;
   padding-top: 25px;
 }
 
 .splash-exp-area {
   background-color: black;
   font-size: 20px;
-  display: grid;
-  justify-content: flex-start;
-  margin-left: 100px;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  margin: 0 100px;
+  // justify-content: flex-start;
+  // margin-left: 100px;
+  // grid-template-columns: 50% 50%;
 }
 
 .exp-header {
@@ -67,10 +68,10 @@
 }
 
 .big-pic {
- 
   border-radius: 20px;
   height: 70%;
-  width: 100%;
+  // width: 100%;
+  width: 600px;
 }
 
 .exp-desc {
@@ -87,13 +88,13 @@
   background-color: #232323;
   flex-direction: column;
   border-radius: 16px;
-  margin-right: 20px;  
+  margin-right: 20px;
 }
 
 .parent-box2 {
   display: flex;
   flex-direction: column;
-  background-color: #232323;
+  // background-color: #232323;
   width: 50%;
   height: 40%;
 }
@@ -101,25 +102,28 @@
 .parent-box2-container {
   display: flex;
   border-radius: 10px;
-  margin: 5px;
-  padding: 5px;
-  background-color: #232323;
+  // margin: 5px;
+  // padding: 5px;
+  width: 100%;
+  margin: 0 10px;
+  padding: 10px;
 }
 
 .parent-desc-box {
   background-color: #232323;
+  width: 200px;
+  border-radius: 10px;
 }
 
 .topgrid {
   display: flex;
   flex-direction: column;
-  padding: 10px;
 }
 
 .side-images {
   border-radius: 10px;
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: 200px;
 }
 .riding-style {
   display: grid;
@@ -138,6 +142,7 @@
 .parent-box3 {
   width: 100%;
   height: 100%;
+  margin: 0 10px;
 }
 
 .style-col {
@@ -147,7 +152,6 @@
   border-radius: 10px;
   width: 100%;
   text-align: center;
-  
 }
 
 .style-title {

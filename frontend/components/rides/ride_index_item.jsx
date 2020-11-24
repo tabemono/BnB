@@ -21,7 +21,7 @@ class RideIndexItem extends React.Component {
       <div className="ride-photo-container" key={ride.id}>
         <Carousel
           width={"15vw"}
-          height="100%"
+          height="350px"
           wrapAround={true}
           heightMode={"first"}
           transitionMode={"scroll3d"}
@@ -29,8 +29,7 @@ class RideIndexItem extends React.Component {
           {ride.photoUrls.map((photo) => {
             return (
               <img
-                onClick={this.handleClick}
-                className="ride-photo"
+                onClick={() => this.handleClick()}
                 src={photo}
                 key={photo}
               ></img>
@@ -44,7 +43,7 @@ class RideIndexItem extends React.Component {
       <li className="ride-index-item">
         {/* <Link to={`/rides/${ride.id}`}> */}
         {rideCaro}
-        <div className="index-text-desc" onClick={this.handleClick}>
+        <div className="index-text-desc" onClick={() => this.handleClick()}>
           <section className="ride-desc">
             <p>{description}</p>
             <h3>{ride.model}</h3>
