@@ -1,8 +1,9 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import { DateRangePicker } from "react-dates";
 import "react-dates/initialize";
-import "react-dates/lib/css/_datepicker.css";
+import { DateRangePicker } from "react-dates";
+
+// import "react-dates/lib/css/_datepicker.css";
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
@@ -34,17 +35,17 @@ class SearchBar extends React.Component {
     return (
       <div className="search-wrapper">
         <form className="search-form" onSubmit={this.handleSubmit}>
-          <div className="search-icon-box"></div>
-          <input
-            className="search-form-input"
-            type="text"
-            placeholder="Nearby Rides"
-            value={this.state.search}
-            onChange={this.update("search")}
-          />
+          <div className="search-form-input">
+            <input
+              type="text"
+              placeholder="Nearby Rides"
+              value={this.state.search}
+              onChange={this.update("search")}
+            />
+          </div>
           <div className="calendars">
-            <label id="checkin-label">Check in</label>
-            <label id="checkout-label">Check out</label>
+            <label id="checkin-label">Ride Out</label>
+            <label id="checkout-label">Ride Back</label>
             <DateRangePicker
               startDate={this.state.startDate} // momentPropTypes.momentObj or null,
               startDateId="search_start" // PropTypes.string.isRequired,
@@ -66,11 +67,6 @@ class SearchBar extends React.Component {
               daySize={50}
             />
           </div>
-          <button className="search-button">
-            <div id="search-badge">
-              <i className="fas fa-search"></i>
-            </div>
-          </button>
         </form>
       </div>
     );
