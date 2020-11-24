@@ -40,9 +40,11 @@ class NavBar extends React.Component {
         <div className="search-nav">
           <SearchBarContainer />
           <div id="search-badge">
-            <i className="fas fa-search">
-              <BsSearch />
-            </i>
+            <button className="search-button">
+              <i className="fas fa-search">
+                <BsSearch />
+              </i>
+            </button>
           </div>
         </div>
         <div className="right-nav">

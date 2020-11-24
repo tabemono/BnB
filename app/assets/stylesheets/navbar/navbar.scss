@@ -156,12 +156,10 @@ div > p {
 .search-form {
   display: flex;
   align-items: flex-end;
-  width: 100%;
-  // margin-top: 5px;
-  // padding-top: 10px;
+  width: 73%;
+  margin-left:200px;
   border-radius: 35px;
   background-color: white;
-  // position: relative;
   border: 1px solid #ebebeb;
   transition: box-shadow 200ms ease-in;
   height: 65px;
@@ -183,11 +181,14 @@ div > p {
 .search-form-input {
   position: relative;
   padding-top: 5px;
+  margin-bottom: 15px;
   > input {
     width: 300px;
     height: 100%;
-    padding-bottom: 7px;
+    margin-left: 22px;
     background: #fff;
+    border:0;
+    box-sizing: inherit;
     font-size: 16px;
     font-weight: 100;
   }
@@ -217,7 +218,6 @@ div > p {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: "Montserrat", sans-serif;
 
 }
 
@@ -231,4 +231,9 @@ div > p {
 #checkout-label {
   left: 168px;
   top: 0;
+}
+
+.search-button {
+  border-radius: 50%;
+  background-color: inherit;
 }

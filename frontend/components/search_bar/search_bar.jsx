@@ -3,7 +3,6 @@ import { withRouter } from "react-router-dom";
 import "react-dates/initialize";
 import { DateRangePicker } from "react-dates";
 
-// import "react-dates/lib/css/_datepicker.css";
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
