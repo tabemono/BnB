@@ -166,6 +166,17 @@ div > p {
   box-shadow: 0 5px 10px -5px grey;
 }
 
+#search-badge {
+  background: gray;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .search-form-input {
   float: left;
   border-style: none;
@@ -191,17 +202,21 @@ div > p {
 }
 
 .search-button {
-  width: 100px;
-  background-color: rgb(209, 189, 189);
-  border-radius: 10px;
-  margin-left: 180px;
-  letter-spacing: 0.45em;
-  color: black;
-  cursor: pointer;
+  border-radius: 25px;
+  border: 1px solid #ebebeb;
+  font-size: 16px;
+  font-weight: 400;
+  width: 325px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  background: #fff;
 }
 
 .date-search-button {
-  background-color:white;
+  background-color: white;
   font-weight: 900;
   text-transform: inherit;
   color: rgb(209, 189, 189);
@@ -210,4 +225,8 @@ div > p {
 .date-search {
   display: flex;
   flex-direction: column;
+}
+
+.calendars {
+  position: relative;
 }
