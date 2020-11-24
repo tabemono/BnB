@@ -26,9 +26,7 @@ export default function splash_page() {
           <img src={window.sport} className="style-img"></img>
           <span className="style-title">Sport</span>
           <div className="out-wrap">
-            <span className="style-link">
-              Like the power and speed? Go for sport.
-            </span>
+            <span className="style-link">Like the power and speed?</span>
           </div>
         </div>
         <div className="style-col">
@@ -36,7 +34,7 @@ export default function splash_page() {
           <span className="style-title">Street</span>
           <div className="out-wrap">
             <span className="style-link">
-              Like to commute or cruise the city? Try a naked or cafe racer.
+              Like to commute or cruise the city?
             </span>
           </div>
         </div>
@@ -45,9 +43,7 @@ export default function splash_page() {
           <img src={window.touring} className="style-img"></img>
           <span className="style-title">Adventure/Touring</span>
           <div className="out-wrap">
-            <span className="style-link">
-              Looking to tour the country or a long adventure ride?
-            </span>
+            <span className="style-link">Looking for a long ride?</span>
           </div>
         </div>
 
@@ -62,7 +58,7 @@ export default function splash_page() {
 
       <div className="splash-exp">
         <div className="header-text">
-          <span className="exp-header">Experience Adventures</span>
+          <span className="exp-header">Experiences</span>
           <p className="exp-para">
             Meet People around the city, experiencing different sceneries
             together or different type of riding with other riders!
@@ -72,7 +68,7 @@ export default function splash_page() {
         <div className="splash-exp-area">
           <div className="parent-box1">
             <img src={window.track1} className="big-pic"></img>
-            <div className="parent-desc-box">
+            <div className="parent-desc-box1">
               <span className="exp-desc">
                 In it for the adrenaline? Join the track experience.
               </span>
@@ -85,8 +81,7 @@ export default function splash_page() {
                 <img src={window.group} className="side-images"></img>
                 <div className="parent-desc-box">
                   <span className="exp-desc">
-                    Like group riding or meeting alot of different bikers? Join
-                    nearby group riding hosted events.
+                    Checkout nearby group meetups! Meet new riders.
                   </span>
                 </div>
               </div>
@@ -95,19 +90,25 @@ export default function splash_page() {
                 <img src={window.learn} className="side-images"></img>
                 <div className="parent-desc-box">
                   <span className="exp-desc">
-                    Interested in self maintenance on your bike? Join a maintenance
-                    class!
+                    Take care of your bike, join a maintenance class!
                   </span>
                 </div>
               </div>
             </div>
-            <div className='parent-box2-container'>
+            <div className="parent-box2-container">
               <div className="parent-box2">
                 <img src={window.offroad} className="side-images"></img>
                 <div className="parent-desc-box">
                   <span className="exp-desc">
-                    Like the unpredictable? Try motorcrossing events/terrains with
-                    dirtbikes.
+                    Like the unpredictable? Try motorcrossing events!
+                  </span>
+                </div>
+              </div>
+              <div className="parent-box2">
+                <img src={window.stunt} className="side-images"></img>
+                <div className="parent-desc-box">
+                  <span className="exp-desc">
+                    Experience stunt shows or learn it from experienced riders.
                   </span>
                 </div>
               </div>
@@ -115,6 +116,7 @@ export default function splash_page() {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }

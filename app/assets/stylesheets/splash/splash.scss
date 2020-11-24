@@ -45,6 +45,7 @@
 
 .header-text {
   padding-top: 25px;
+  margin-left: -435px;
 }
 
 .splash-exp-area {
@@ -69,9 +70,9 @@
 
 .big-pic {
   border-radius: 20px;
-  height: 70%;
-  // width: 100%;
-  width: 600px;
+  height: 90%;
+  width: 800px;
+  object-fit: cover;
 }
 
 .exp-desc {
@@ -85,7 +86,7 @@
 
 .parent-box1 {
   display: flex;
-  background-color: #232323;
+
   flex-direction: column;
   border-radius: 16px;
   margin-right: 20px;
@@ -95,8 +96,16 @@
   display: flex;
   flex-direction: column;
   // background-color: #232323;
-  width: 50%;
-  height: 40%;
+  width: 60%;
+  height: 50%;
+}
+
+.parent-desc-box1 {
+  background-color: #232323;
+  // width: 600px;
+  height: 50px;
+  padding: 16px;
+  border-radius: 0px 0px 16px 16px;
 }
 
 .parent-box2-container {
@@ -175,4 +184,9 @@
   z-index: 1;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.style-img:hover {
+  transform: scale(1.35);
+  transition: all 1s ease;
 }

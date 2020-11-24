@@ -199,3 +199,15 @@ div > p {
   color: black;
   cursor: pointer;
 }
+
+.date-search-button {
+  background-color:white;
+  font-weight: 900;
+  text-transform: inherit;
+  color: rgb(209, 189, 189);
+}
+
+.date-search {
+  display: flex;
+  flex-direction: column;
+}

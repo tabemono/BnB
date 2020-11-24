@@ -29,16 +29,26 @@ class SearchBar extends React.Component {
 
   render() {
       return (
-          <div>
-              <form className="search-form" onSubmit={this.handleSubmit}>
-              <div className="search-icon-box">
-                  <div className="search-icon"><i className="fas fa-search fa-lg"></i></div>
-                </div>  
-              <input className="search-form-input" type="text" placeholder="Anywhere in NYC" value={this.state.search} onChange={this.update('search')}/>
-              <input className="search-button" type="submit" value='Search'/>
-              </form>
-          </div>
-      )
+        <div>
+          <form className="search-form" onSubmit={this.handleSubmit}>
+            <div className="search-icon-box">
+           
+                <div className="search-icon">
+                  <i className="fas fa-search fa-lg"></i>
+                </div>
+             
+            </div>
+            <input
+              className="search-form-input"
+              type="text"
+              placeholder="Anywhere in NYC"
+              value={this.state.search}
+              onChange={this.update("search")}
+            />
+            <input className="search-button" type="submit" value="Search" />
+          </form>
+        </div>
+      );
   }
 
 }
