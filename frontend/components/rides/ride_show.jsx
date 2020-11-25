@@ -17,7 +17,7 @@ class RideShow extends React.Component {
     return (
       <section className="ride-header">
         <h2>
-          {ride.brand} : {ride.model} 
+          {ride.brand} : {ride.model}
         </h2>
         <div className="ride-minor-details">
           <span>
@@ -34,6 +34,7 @@ class RideShow extends React.Component {
               <img className="photo-top" src={ride.photoUrls[1]} />
               <img className="photo-top" src={ride.photoUrls[2]} />
             </div>
+
             <div className="ride-side-photos">
               <img className="photo-bot" src={ride.photoUrls[3]} />
               <img className="photo-bot" src={ride.photoUrls[4]} />

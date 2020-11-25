@@ -6,33 +6,39 @@
 }
 
 .ride-images-container {
-    display:flex;
+  display: flex;
 }
 
-
 .ride-thumb-img {
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: inline-block;
 }
 
 .ride-show-small {
-    display:flex;
-    
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  > img:hover {
+    padding: 5px;
+    transition: 1s;
+    border-radius: 10px;
+  }
 }
 
 .ride-side-photos {
-    display:flex;
-    flex-direction: column;
-    margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  flex-direction: column;
 }
 
 .ride-header {
   width: 1000px;
-  margin: 0 auto;
+  margin: 10%;
+
   h2 {
     font-size: 40px;
     font-weight: 600;
   }
 }
-
