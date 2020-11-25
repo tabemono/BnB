@@ -30,7 +30,7 @@ sergio = User.create!(
 )
 
 bmw_manhattan = Ride.create!({
-  model: " BMW-R 1200GS",
+  model: " R1200GS",
   brand: "BMW",
   style: "Adventure/Touring",
   description: "Great for long rides",
@@ -38,12 +38,12 @@ bmw_manhattan = Ride.create!({
   lat: 40.72768529173207,
   lng: -74.00009437067972,
   owner_id: demo.id,
-  borough: "Manhattan",
+  city: "New York City",
   location: "Washington Square, New York 10012"
 })
 
 r3_manhattan = Ride.create!(
-  model: "R3",
+  model: "YZF-R3",
   brand: "Yamaha",
   style: "Street",
   description: "Smaller bike of the YZF series great for commmute/city riding",
@@ -51,11 +51,11 @@ r3_manhattan = Ride.create!(
   lat: 40.756492,
   lng: -73.988953,
   owner_id: sergio.id,
-  borough: "Manhattan",
+  city: "New York City",
   location: "298-200 W 42nd ST"
 )
 r1_manhattan = Ride.create!(
-  model: "R1",
+  model: "YZF-R1",
   brand: "Yamaha",
   style: "Sport",
   description: "Top of the YZF series for track",
@@ -63,7 +63,7 @@ r1_manhattan = Ride.create!(
   lat: 40.7175904930345, 
   lng: -74.01279468635637,
   owner_id: ray.id,
-  borough: "Manhattan",
+  city: "New York City",
   location: "117 West St, New York, NY 10006"
 )
 

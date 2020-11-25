@@ -3,7 +3,7 @@ if ride
     :id, 
     :owner_id, 
     :price, 
-    :borough, 
+    :city, 
     :location, 
     :lng, 
     :lat, 

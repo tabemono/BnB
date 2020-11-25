@@ -1,0 +1,38 @@
+.ride-minor-details {
+  span {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+}
+
+.ride-images-container {
+    display:flex;
+}
+
+
+.ride-thumb-img {
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+}
+
+.ride-show-small {
+    display:flex;
+    
+}
+
+.ride-side-photos {
+    display:flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.ride-header {
+  width: 1000px;
+  margin: 0 auto;
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+}
+

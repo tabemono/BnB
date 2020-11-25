@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_20_060528) do
+ActiveRecord::Schema.define(version: 2020_11_25_070845) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,17 @@ ActiveRecord::Schema.define(version: 2020_11_20_060528) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "bookings", force: :cascade do |t|
+    t.integer "ride_id", null: false
+    t.integer "rider_id", null: false
+    t.datetime "check_in", null: false
+    t.datetime "check_out", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ride_id"], name: "index_bookings_on_ride_id"
+    t.index ["rider_id"], name: "index_bookings_on_rider_id"
+  end
+
   create_table "rides", force: :cascade do |t|
     t.string "model", null: false
     t.string "brand", null: false
@@ -45,7 +56,7 @@ ActiveRecord::Schema.define(version: 2020_11_20_060528) do
     t.float "lat", null: false
     t.float "lng", null: false
     t.integer "owner_id", null: false
-    t.string "borough", null: false
+    t.string "city", null: false
     t.string "location", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

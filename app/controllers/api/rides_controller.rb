@@ -41,7 +41,7 @@ class Api::RidesController < ApplicationController
             :price, 
             :lat, 
             :lng, 
-            :borough, 
+            :city, 
             :location, 
             photos: []
         )

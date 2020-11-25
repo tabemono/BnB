@@ -11,7 +11,7 @@
 #  lat         :float            not null
 #  lng         :float            not null
 #  owner_id    :integer          not null
-#  borough     :string           not null
+#  city     :string           not null
 #  location    :string           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null

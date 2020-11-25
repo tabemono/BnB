@@ -9,7 +9,7 @@ class CreateRides < ActiveRecord::Migration[5.2]
       t.float :lat, null: false
       t.float :lng, null:false
       t.integer :owner_id, null: false
-      t.string :borough, null: false
+      t.string :city, null: false
       t.string  :location, null: false
 
       t.timestamps

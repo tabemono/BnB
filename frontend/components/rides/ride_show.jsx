@@ -17,24 +17,27 @@ class RideShow extends React.Component {
     return (
       <section className="ride-header">
         <h2>
-          {ride.model} : {ride.brand}
+          {ride.brand} : {ride.model} 
         </h2>
         <div className="ride-minor-details">
           <span>
-            Style:{ride.style} Located in: {ride.borough}
+            Style:{ride.style} Located in: {ride.city}
           </span>
         </div>
         <section className="ride-images-container">
           <div className="ride-thumb-img">
             <img width="100%" className="thumb-img" src={ride.photoUrls[0]} />
           </div>
-          <div className="ride-side-one">
-            <img className="photo-top1" src={ride.photoUrls[1]} />
-            <img className="photo-top2" src={ride.photoUrls[2]} />
-          </div>
-          <div className="ride-side-two">
-            <img className="photo-bot1" src={ride.photoUrls[3]} />
-            <img className="photo-bot2" src={ride.photoUrls[4]} />
+
+          <div className="ride-show-small">
+            <div className="ride-side-photos">
+              <img className="photo-top" src={ride.photoUrls[1]} />
+              <img className="photo-top" src={ride.photoUrls[2]} />
+            </div>
+            <div className="ride-side-photos">
+              <img className="photo-bot" src={ride.photoUrls[3]} />
+              <img className="photo-bot" src={ride.photoUrls[4]} />
+            </div>
           </div>
         </section>
         <h2>Description</h2>

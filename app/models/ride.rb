@@ -11,7 +11,7 @@
 #  lat         :float            not null
 #  lng         :float            not null
 #  owner_id    :integer          not null
-#  borough     :string           not null
+#  city     :string           not null
 #  location    :string           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
@@ -19,7 +19,7 @@
 class Ride < ApplicationRecord
     STYLE = ['Sport', 'Street', 'Adventure/Touring' ]
     validates :model, 
-    :brand, :style, :description, :price, :lat, :lng, :borough, :location, presence: true
+    :brand, :style, :description, :price, :lat, :lng, :city, :location, presence: true
     validates :style, inclusion: {in: STYLE}
 
     belongs_to :owner,
@@ -37,7 +37,7 @@ class Ride < ApplicationRecord
     end
 
     def self.filtered_search(query) 
-        result = self.where("borough LIKE ?", "%#{query}%")
+        result = self.where("city LIKE ?", "%#{query}%")
         return result
      end
 
