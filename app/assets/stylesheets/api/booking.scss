@@ -41,11 +41,9 @@
 }
 
 .booking-form-container {
-  position: sticky;
-  top: 100px;
+  position: absolute;
   line-height: 18px;
   letter-spacing: normal;
-  font-family: "Roboto", sans-serif;
   color: #484848;
   font-size: 12px;
   font-weight: normal;
@@ -59,8 +57,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 2;
-  background-color: white;
+    left: 64%;
+    bottom: 45%;
 }
 
 .DateInput_input DateInput_input_1 {
@@ -70,17 +68,15 @@
 .booking-form-review {
   box-sizing: border-box;
   padding: 8px 0px;
-  width: 90%;
+//   width: 90%;
   font-weight: 600;
   overflow-wrap: break-word;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: normal;
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
-    "Helvetica Neue", sans-serif;
   color: rgb(72, 72, 72);
   display: inline;
-  margin-top: -15px;
+//   margin-top: -15px;
   text-align: left;
   border-bottom: 1px solid lightgrey;
 }

@@ -1,7 +1,7 @@
 import React from "react";
-import BookingFormContainer from '../bookings/booking_form_container';
-import BikeMap from '../map/bike_map';
-import { DayPickerRangeController } from 'react-dates';
+import BookingFormContainer from "../bookings/booking_form_container";
+import BikeMap from "../map/bike_map";
+import { DayPickerRangeController } from "react-dates";
 class RideShow extends React.Component {
   constructor(props) {
     super(props);
@@ -9,35 +9,29 @@ class RideShow extends React.Component {
       check_in: null,
       check_out: null,
     };
-    debugger
+    // debugger
   }
   componentDidMount() {
     this.props.fetchRide(this.props.match.params.rideId);
   }
-
-  // componentDidUpdate(prevProps) {
-  //   if (prevProps.match.params.rideId !== this.props.match.params.rideId) {
-  //     this.props.fetchRide(this.props.match.params.rideId);
-  //   }
+  // componentDidMount() {
+  //   this.props.fetchRides();
   // }
 
-  componentWillReceiveProps(nextProps) {
-    if (
-      this.props.ride &&
-      this.props.ride.id !== parseInt(nextProps.match.params.rideId)
-    ) {
-      this.props.fetchRide(nextProps.match.params.rideId);
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.rideId !== this.props.match.params.rideId) {
+      this.props.fetchRide(this.props.match.params.rideId);
     }
   }
 
   render() {
     const { ride } = this.props;
     const center = new google.maps.LatLng(ride.lat, ride.lng);
-    const zoom = 15;
-    debugger
+    const zoom = 14;
+    // debugger
     return (
       <div id="ride-show-page">
-        <section className="ride-header">
+        <div className="ride-header">
           <h2>
             {ride.brand} : {ride.model}
           </h2>
@@ -46,7 +40,7 @@ class RideShow extends React.Component {
               Style:{ride.style} Located in: {ride.city}
             </span>
           </div>
-          <section className="ride-images-container">
+          <div className="ride-images-container">
             <div className="ride-thumb-img">
               <img width="100%" className="thumb-img" src={ride.photoUrls[0]} />
             </div>
@@ -62,12 +56,12 @@ class RideShow extends React.Component {
                 <img className="photo-bot" src={ride.photoUrls[4]} />
               </div>
             </div>
-          </section>
+          </div>
 
           <h2>Description</h2>
           {ride.description}
-        </section>
-        <section className="avaibility-dates">
+        </div>
+        <div className="avaibility-dates">
           <DayPickerRangeController
             startDate={this.state.startDate}
             endDate={this.state.endDate}
@@ -79,13 +73,15 @@ class RideShow extends React.Component {
             hideKeyboardShortcutsPanel={true}
             numberOfMonths={1}
           />
-        </section>
-        <div className="ride-show-map">
-          {/* <BikeMap ride={[ride]} center={center} zoom={zoom} /> */}
-         
         </div>
+
         <div>
           <BookingFormContainer />
+        </div>
+        <div className="ride-show-map">
+          <div className="map-bottom">
+            <BikeMap rides={[ride]} center={center} zoom={zoom} />
+          </div>
         </div>
       </div>
     );

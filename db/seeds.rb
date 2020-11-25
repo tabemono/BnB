@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# require 'open-uri'
+require 'open-uri'
 
 ActiveRecord::Base.transaction do 
     User.destroy_all
@@ -67,18 +67,18 @@ r1_manhattan = Ride.create!(
   location: "117 West St, New York, NY 10006"
 )
 
-bmw1 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/bmw1200gs.jpg')
-bmw2 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/bnw-2.jpg')
-bmw3 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/bmw-3.jpg')
-bmw4 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/bmw-4.jpg')
-bmw5 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/bmw-5.jpg')
+bmw1 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/bmw-6.jpg')
+bmw2 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/bmw-7.jpg')
+bmw3 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/bmw-9.jpg')
+bmw4 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/bmw-8.jpg')
+bmw5 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/bmw-10.jpg')
 
 
-bmw_manhattan.photos.attach(io: bmw1,  filename:'bmw1200gs.jpg')
-bmw_manhattan.photos.attach(io: bmw2,  filename:'bnw-2.jpg')
-bmw_manhattan.photos.attach(io: bmw3,  filename:'bmw-3.jpg')
-bmw_manhattan.photos.attach(io: bmw4,  filename:'bmw-4.jpg')
-bmw_manhattan.photos.attach(io: bmw5,  filename:'bmw-5.jpg')
+bmw_manhattan.photos.attach(io: bmw1,  filename:'bmw-6.jpg')
+bmw_manhattan.photos.attach(io: bmw2,  filename:'bnw-7.jpg')
+bmw_manhattan.photos.attach(io: bmw3,  filename:'bmw-8.jpg')
+bmw_manhattan.photos.attach(io: bmw4,  filename:'bmw-9.jpg')
+bmw_manhattan.photos.attach(io: bmw5,  filename:'bmw-10.jpg')
 
 
 

@@ -70,10 +70,7 @@ class BookingForm extends React.Component {
   //   }
 
   render() {
-    // let score = 0;
-    // this.props.reviews.forEach((review) => (score += review.rating));
-    // score = score / this.props.reviews.length || 0;
-
+  
     return (
       <div className="booking-form">
         <div className="booking-form-container">
@@ -82,10 +79,6 @@ class BookingForm extends React.Component {
           <div className="price-tag">
             <strong className="booking-price"> ${this.props.ride.price}</strong>
             per day
-          </div>
-          <div className="booking-form-review">
-            {/* <Star rating={score} /> */}
-            {/* {this.props.reviews.length} */}
           </div>
           <div className="booking-date">
             <label className="label-date">Dates</label>
