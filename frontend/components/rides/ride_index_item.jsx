@@ -45,14 +45,13 @@ class RideIndexItem extends React.Component {
         {rideCaro}
         <div className="index-text-desc" onClick={() => this.handleClick()}>
           <section className="ride-desc">
-            <p>{description}</p>
+            <p>{ride.brand}</p>
             <h3>{ride.model}</h3>
           </section>
 
           <section className="ride-desc2">
-            <p>
-              {brand}-{style}
-            </p>
+            <div>{style}</div>
+            <div>{description}</div>
           </section>
 
           <section className="ride-price">

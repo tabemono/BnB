@@ -16,9 +16,9 @@
 }
 
 .ride-show-small {
-  margin: 0 auto;
+  
   display: flex;
-  flex-direction: column;
+  width: 50%;
   > img:hover {
     padding: 5px;
     transition: 1s;
@@ -34,7 +34,7 @@
 }
 
 .ride-header {
-  width: 1000px;
+  width: 100%;
   margin: 10%;
 
   h2 {

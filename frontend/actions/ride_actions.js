@@ -31,7 +31,7 @@ export const updateRide = (ride) => (dispatch) =>
   APIUtil.updateRide(ride).then((ride) => dispatch(receiveRide(ride)));
 
 
-export const fetchSearch = (query) => (dispatch) =>
-    APIUtil.fetchSearch(query).then((result) =>
-      dispatch(receiveSearch(result))
-    );
+// export const fetchSearch = (query) => (dispatch) =>
+//     APIUtil.fetchSearch(query).then((result) =>
+//       dispatch(receiveSearch(result))
+//     );
