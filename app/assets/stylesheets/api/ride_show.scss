@@ -7,11 +7,10 @@
 
 .ride-images-container {
   display: flex;
-  width:80%;
+  width: 80%;
 }
 
 .ride-thumb-img {
- 
   height: 100%;
 }
 
@@ -42,14 +41,12 @@
   }
 }
 
-
 .ride-show-map {
-    position: absolute;
-    right: 70%
-    width: 80%;
+  position: absolute;
+  width: 80%;
 }
 
 .ride-bottom {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
