@@ -7,7 +7,7 @@ const getCoordsObj = (latLng) => ({
 });
 class BikeMap extends React.Component {
   componentDidMount() {
-    debugger
+    
     const mapOptions = {
       center: { lat: 40.775899, lng: -73.97854 },
       zoom: 12,
@@ -18,9 +18,9 @@ class BikeMap extends React.Component {
       this.map,
       this.handleMarkClick.bind(this)
     );
-      debugger
+      
     this.MarketManager.updateMarkers(this.props.rides);
-    debugger
+    
   }
 
   componentDidUpdate() {

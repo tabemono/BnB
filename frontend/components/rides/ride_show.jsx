@@ -9,7 +9,6 @@ class RideShow extends React.Component {
       check_in: null,
       check_out: null,
     };
-    // debugger
   }
   componentDidMount() {
     this.props.fetchRide(this.props.match.params.rideId);
@@ -28,7 +27,6 @@ class RideShow extends React.Component {
     const { ride } = this.props;
     const center = new google.maps.LatLng(ride.lat, ride.lng);
     const zoom = 14;
-    // debugger
     return (
       <div id="ride-show-page">
         <div className="ride-header">
