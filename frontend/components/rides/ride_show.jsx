@@ -59,7 +59,7 @@ class RideShow extends React.Component {
           <h2>Description</h2>
           {ride.description}
         </div>
-        <div className="avaibility-dates">
+        <div className="availability-dates">
           <DayPickerRangeController
             startDate={this.state.startDate}
             endDate={this.state.endDate}

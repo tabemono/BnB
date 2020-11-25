@@ -57,8 +57,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-    left: 64%;
-    bottom: 45%;
+  left: 64%;
+  bottom: 15%;
 }
 
 .DateInput_input DateInput_input_1 {
@@ -68,7 +68,7 @@
 .booking-form-review {
   box-sizing: border-box;
   padding: 8px 0px;
-//   width: 90%;
+  //   width: 90%;
   font-weight: 600;
   overflow-wrap: break-word;
   font-size: 12px;
@@ -76,7 +76,7 @@
   letter-spacing: normal;
   color: rgb(72, 72, 72);
   display: inline;
-//   margin-top: -15px;
+  //   margin-top: -15px;
   text-align: left;
   border-bottom: 1px solid lightgrey;
 }
@@ -200,3 +200,8 @@ select {
   color: #349295;
   margin-top: -10px;
 }
+
+.availability-dates {
+    margin: 10%;
+}
+
