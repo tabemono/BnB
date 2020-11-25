@@ -36,7 +36,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    const header = this.props.formType === "Log In" ? "Log In" : "Sign Up";
+    const header = this.props.formType === "Log in" ? "Log In" : "Sign Up";
     const isSignedUp = this.props.formType === "Sign Up";
     const fname = () => {
       return (
@@ -49,17 +49,32 @@ class SessionForm extends React.Component {
         />
       );
     };
+    const demoLog = () => {
+      return (
+        <button
+          className="session-submit"
+          onClick={() =>
+            this.props
+              .login({ email: "demo@aa.com", password: "123456" })
+              .then(this.props.closeModal)
+          }
+        >
+          Demo
+        </button>
+      );
+    };
+
     return (
-      <ul>
-          <form onSubmit={this.handleSubmit} className="input-box">
-            <header className="modal-header">
+      <div>
+        <form onSubmit={this.handleSubmit} className="input-box">
+          <header className="modal-header">
             Bikes and Bikers
-          <div onClick={this.props.closeModal} className="close-x">
-            <BsFillXCircleFill />
-          </div>
-            </header>
-            <div className="input-container">
-            {this.renderErrors()}
+            <div onClick={this.props.closeModal} className="close-x">
+              <BsFillXCircleFill />
+            </div>
+          </header>
+          {this.renderErrors()}
+          <div className="input-container">
             <div className="login-form">
               {isSignedUp ? fname() : null}
 
@@ -78,26 +93,18 @@ class SessionForm extends React.Component {
                 onChange={this.update("password")}
                 className="login-input"
               />
-
-              <button
-                className="session-submit"
-                onClick={() =>
-                  this.props
-                    .login({ email: "demo@aa.com", password: "123456" })
-                    .then(this.props.closeModal)
-                }
-              >
-                Demo
-              </button>
+              {/* {demoLog()} */}
+              {this.props.formType === 'Log in' ? demoLog() : null}
+              {/* {console.log(this.props.formType)} */}
               <input
                 className="session-submit"
                 type="submit"
                 value={this.props.formType}
               />
             </div>
-        </div>
-          </form>
-      </ul>
+          </div>
+        </form>
+      </div>
     );
   }
 }

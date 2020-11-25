@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import "react-dates/initialize";
 import { DateRangePicker } from "react-dates";
-
+import { BsSearch } from "react-icons/bs";
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
@@ -14,6 +14,7 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
     const query = this.state;
     query["startDate"] = null;
     query["endDate"] = null;
@@ -38,13 +39,16 @@ class SearchBar extends React.Component {
             <input
               type="text"
               placeholder="Nearby Rides"
-              value={this.state.search}
+              value={this.state.query}
               onChange={this.update("search")}
             />
           </div>
+
           <div className="calendars">
-            <label id="checkin-label">Ride Out</label>
-            <label id="checkout-label">Ride Back</label>
+            <div className="date-labels">
+              <div id="checkin-label">Ride Out</div>
+              <div id="checkout-label">Ride Back</div>
+            </div>
             <DateRangePicker
               startDate={this.state.startDate} // momentPropTypes.momentObj or null,
               startDateId="search_start" // PropTypes.string.isRequired,
@@ -65,6 +69,14 @@ class SearchBar extends React.Component {
               readOnly
               daySize={50}
             />
+          </div>
+
+          <div id="search-badge">
+            <button className="search-button">
+              <i className="fas fa-search">
+                <BsSearch />
+              </i>
+            </button>
           </div>
         </form>
       </div>

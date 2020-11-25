@@ -157,7 +157,7 @@ div > p {
   display: flex;
   align-items: flex-end;
   width: 73%;
-  margin-left:200px;
+  margin-left: 200px;
   border-radius: 35px;
   background-color: white;
   border: 1px solid #ebebeb;
@@ -176,6 +176,9 @@ div > p {
   align-items: center;
   justify-content: center;
   padding-top: 3px;
+  position: relative;
+  bottom: 10px;
+  margin-left: 2px;
 }
 
 .search-form-input {
@@ -187,11 +190,21 @@ div > p {
     height: 100%;
     margin-left: 22px;
     background: #fff;
-    border:0;
+    border: 0;
     box-sizing: inherit;
     font-size: 16px;
     font-weight: 100;
   }
+}
+
+.search-form-input > input:hover {
+  background-color: lightgrey;
+  border-radius: 30px;
+}
+
+.search-form-input:hover {
+  background-color: lightgrey;
+  border-radius: 30px;
 }
 
 .search-icon {
@@ -218,7 +231,6 @@ div > p {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
-
 }
 
 #checkin-label {
@@ -228,12 +240,17 @@ div > p {
   padding-left: 10px;
 }
 
-#checkout-label {
-  left: 168px;
-  top: 0;
-}
+// #checkout-label {
+//   left: 168px;
+//   top: 0;
+// }
 
 .search-button {
   border-radius: 50%;
   background-color: inherit;
+}
+
+.date-labels {
+  display: flex;
+  flex-direction: row;
 }

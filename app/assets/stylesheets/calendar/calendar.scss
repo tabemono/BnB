@@ -680,7 +680,7 @@
   line-height: 24px;
   color: #484848;
   background-color: #fff;
-  width: 100%;
+  width: 65%;
   padding: 11px 11px 9px;
   border: 0;
   border-top: 0;
@@ -750,8 +750,19 @@
 }
 .DateRangePickerInput__withBorder {
   border-radius: 2px;
-  border: 1px solid #dbdbdb;
+  // border: 1px solid #dbdbdb;
 }
+
+.DateInput_input:hover {
+  background-color: lightgrey;
+  border-radius: 30px;
+}
+
+.DateRangePickerInput__withBorder:hover {
+  outline: none;
+  background-color: lightgrey;
+}
+
 .DateRangePickerInput__rtl {
   direction: rtl;
 }

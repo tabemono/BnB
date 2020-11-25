@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import SearchBarContainer from "../search_bar/search_bar_container";
 import { withRouter } from "react-router-dom";
 // import DateSearch from './date_search';
-import { BsSearch } from "react-icons/bs";
+
 
 class NavBar extends React.Component {
   render() {
@@ -39,13 +39,7 @@ class NavBar extends React.Component {
         </div>
         <div className="search-nav">
           <SearchBarContainer />
-          <div id="search-badge">
-            <button className="search-button">
-              <i className="fas fa-search">
-                <BsSearch />
-              </i>
-            </button>
-          </div>
+        
         </div>
         <div className="right-nav">
           <div className="nav-2">{navDisplay}</div>
