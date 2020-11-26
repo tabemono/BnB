@@ -88,8 +88,6 @@ div > p {
 .look-btn {
   justify-content: space-between;
   cursor: pointer;
-  // display: inline-block !;
-  // position: relative !;
   text-align: center;
   font-family: "Montserrat";
   font-size: 16px;
@@ -104,9 +102,9 @@ div > p {
   border-radius: 8px;
   font-weight: 660px;
   outline: none;
-  border: none;
-  color: white;
+  // border: none;
   border-style: ridge;
+  background-color: black;
 }
 
 .search-nav {

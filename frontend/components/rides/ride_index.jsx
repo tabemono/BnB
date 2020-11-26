@@ -28,7 +28,7 @@ class RideIndex extends React.Component {
     });
 
     return (
-      <div>
+      <div className='ride-index-page'>
         <div className="ride-index">
           <div className="ride-index-left">{rideIndexItems}</div>
           <div id="map-container">
