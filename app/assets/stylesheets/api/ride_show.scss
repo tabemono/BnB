@@ -7,11 +7,12 @@
 
 .ride-images-container {
   display: flex;
-  width: 80%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .ride-thumb-img {
-  height: 100%;
+  width: 40%;
 }
 
 .ride-show-small {
@@ -43,10 +44,20 @@
 
 .ride-show-map {
   position: absolute;
-  width: 80%;
+  width: 70%;
+  height:200px;
+  margin-left: 185px;
+
 }
 
 .ride-bottom {
   display: flex;
   justify-content: center;
+}
+
+.ride-body {
+    margin-top: 10px;
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+    max-width: 1200px !important;
 }

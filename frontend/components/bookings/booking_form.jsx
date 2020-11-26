@@ -85,7 +85,7 @@ class BookingForm extends React.Component {
             <div className="booking-date-calendar">
               <DateRangePicker
                 startDate={this.state.check_in}
-                startDateId="chick_in"
+                startDateId="check_in"
                 endDate={this.state.check_out}
                 endDateId="check_out"
                 onDatesChange={({ startDate, endDate }) =>

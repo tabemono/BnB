@@ -10,7 +10,7 @@ class BikeMap extends React.Component {
     
     const mapOptions = {
       center: { lat: 40.775899, lng: -73.97854 },
-      zoom: 12,
+      zoom: 14,
     };
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);

@@ -1,7 +1,8 @@
 import React from "react";
 import BookingFormContainer from "../bookings/booking_form_container";
-import BikeMap from "../map/bike_map";
+import BikeShowMap from "../map/bike_show_map";
 import { DayPickerRangeController } from "react-dates";
+
 class RideShow extends React.Component {
   constructor(props) {
     super(props);
@@ -25,8 +26,9 @@ class RideShow extends React.Component {
 
   render() {
     const { ride } = this.props;
+    if (!ride) return null;
     const center = new google.maps.LatLng(ride.lat, ride.lng);
-    const zoom = 14;
+    const zoom = 15;
     return (
       <div id="ride-show-page">
         <div className="ride-header">
@@ -34,9 +36,7 @@ class RideShow extends React.Component {
             {ride.brand} : {ride.model}
           </h2>
           <div className="ride-minor-details">
-            <span>
-              Style:{ride.style} Located in: {ride.city}
-            </span>
+            <span>Located in: {ride.city}</span>
           </div>
           <div className="ride-images-container">
             <div className="ride-thumb-img">
@@ -55,30 +55,31 @@ class RideShow extends React.Component {
               </div>
             </div>
           </div>
-
-          <h2>Description</h2>
+          <h2>Style:{ride.style}</h2>
+          <p>Description:</p>
           {ride.description}
         </div>
-        <div className="availability-dates">
-          <DayPickerRangeController
-            startDate={this.state.startDate}
-            endDate={this.state.endDate}
-            onDatesChange={({ startDate, endDate }) =>
-              this.setState({ startDate, endDate })
-            }
-            focusedInput={this.state.focusedInput}
-            onFocusChange={(focusedInput) => this.setState({ focusedInput })}
-            hideKeyboardShortcutsPanel={true}
-            numberOfMonths={1}
-          />
-        </div>
-
-        <div>
-          <BookingFormContainer />
+        <div className="ride-body">
+          <div className="availability-dates">
+            <DayPickerRangeController
+              startDate={this.state.startDate}
+              endDate={this.state.endDate}
+              onDatesChange={({ startDate, endDate }) =>
+                this.setState({ startDate, endDate })
+              }
+              focusedInput={this.state.focusedInput}
+              onFocusChange={(focusedInput) => this.setState({ focusedInput })}
+              hideKeyboardShortcutsPanel={true}
+              numberOfMonths={2}
+            />
+          </div>
+          <div className="booking-form">
+            <BookingFormContainer />
+          </div>
         </div>
         <div className="ride-show-map">
           <div className="map-bottom">
-            <BikeMap rides={[ride]} center={center} zoom={zoom} />
+            <BikeShowMap ride={ride} center={center} zoom={zoom} />
           </div>
         </div>
       </div>
