@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { withRouter } from "react-router-dom";
 
-
 class BikeShowMap extends React.Component {
   componentDidMount() {
     const mapOptions = {
@@ -16,15 +15,13 @@ class BikeShowMap extends React.Component {
 
   createMarker(ride) {
     const position = new google.maps.LatLng(ride.lat, ride.lng);
-  
+
     let marker = new google.maps.Marker({
       position,
       map: this.map,
       rideId: ride.id,
-      icon: "/&#xe860",
+      icon: "&#xe860",
     });
-
-
 
     let circle2 = new google.maps.Circle({
       map: this.map,

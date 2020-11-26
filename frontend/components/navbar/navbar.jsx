@@ -9,8 +9,11 @@ class NavBar extends React.Component {
   render() {
     const navDisplay = this.props.currentUser ? (
       <div className="outerDiv">
+        <div className='inner-div'>
+
         <p>{this.props.currentUser.firstname}</p>
         <button onClick={this.props.logout}>Log Out</button>
+        </div>
       </div>
     ) : (
       <div className="right-nav">

@@ -18,19 +18,19 @@ class BookingForm extends React.Component {
     this.props.clearBooking();
   }
 
-  //   renderErrors() {
-  //     return (
-  //       <ul>
-  //         {this.props.errors.map((error, idx) => {
-  //           return (
-  //             <li className="booking-error" key={idx}>
-  //               {error}
-  //             </li>
-  //           );
-  //         })}
-  //       </ul>
-  //     );
-  //   }
+    renderErrors() {
+      return (
+        <ul>
+          {this.props.errors.map((error, idx) => {
+            return (
+              <li className="booking-error" key={idx}>
+                {error}
+              </li>
+            );
+          })}
+        </ul>
+      );
+    }
 
   update(field) {
     return (e) => this.setState({ [field]: e.currentTarget.value });
@@ -55,27 +55,27 @@ class BookingForm extends React.Component {
     });
   }
 
-  //   renderBooking() {
-  //     const bookings = this.props.bookings;
-  //     if (!bookings.length) {
-  //       return;
-  //     } else if (bookings.length !== 0) {
-  //       return (
-  //         <ul>
-  //           <li>Congratulations, You successfully </li>
-  //           <li> booked {this.props.ride.title} </li>
-  //         </ul>
-  //       );
-  //     }
-  //   }
+    renderBooking() {
+      const bookings = this.props.bookings;
+      if (!bookings.length) {
+        return;
+      } else if (bookings.length !== 0) {
+        return (
+          <ul>
+            <li>Congratulations, You successfully </li>
+            <li> booked {this.props.ride.title} </li>
+          </ul>
+        );
+      }
+    }
 
   render() {
   
     return (
       <div className="booking-form">
         <div className="booking-form-container">
-          {/* <div className="booking-errors">{this.renderErrors()}</div> */}
-          {/* <div className="booking-success">{this.renderBooking()}</div> */}
+          <div className="booking-errors">{this.renderErrors()}</div>
+          <div className="booking-success">{this.renderBooking()}</div>
           <div className="price-tag">
             <strong className="booking-price"> ${this.props.ride.price}</strong>
             per day
