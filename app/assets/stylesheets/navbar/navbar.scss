@@ -81,25 +81,29 @@ div > p {
   font-size: 16px;
 }
 
+// .header-content {
+
+// }
+
 .look-btn {
   justify-content: space-between;
-  cursor: pointer !important;
-  // display: inline-block !important;
-  // position: relative !important;
-  text-align: center !important;
-  font-family: "Montserrat" !important;
-  font-size: 16px !important;
-  line-height: 18px !important;
-  font-weight: 600 !important;
-  padding-top: 7px !important;
-  padding-bottom: 7px !important;
-  padding-left: 15px !important;
+  cursor: pointer;
+  // display: inline-block !;
+  // position: relative !;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 600;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
   margin-left: 40%;
   width: 15%;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 660px;
-  outline: none !important;
+  outline: none;
   border: none;
   color: white;
   border-style: ridge;

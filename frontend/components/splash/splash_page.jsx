@@ -4,22 +4,24 @@ import { Link } from "react-router-dom";
 export default function splash_page() {
   return (
     <div className="splashpage">
-      <h1 className="welcome">Find The Perfect Ride</h1>
-      <div width="100%" height="50%">
-        <img
-          autoPlay
-          muted
-          loop
-          className="splash-image"
-          src={window.splashvid}
-        ></img>
-      </div>
-      <div className="header-content">
-        <div className="look-btn">
-          <Link className="look-button" to="/rides">
-            Look Around
-          </Link>
+      <div className="banner">
+        <div className="header-content">
+          <h1 className="welcome">Find The Perfect Ride</h1>
         </div>
+        <div width="100%" height="50%">
+          <img
+            autoPlay
+            muted
+            loop
+            className="splash-image"
+            src={window.splashvid}
+          ></img>
+        </div>
+      </div>
+      <div className="look-btn">
+        <Link className="look-button" to="/rides">
+          Look Around
+        </Link>
       </div>
       <div className="riding-style">
         <div className="style-col">
@@ -116,7 +118,6 @@ export default function splash_page() {
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

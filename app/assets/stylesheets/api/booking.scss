@@ -30,16 +30,6 @@
 //   width: 300px;
 // }
 
-.bulb-img {
-  height: 60px;
-  width: 60px;
-  background-image: url("https://ubisafe.org/images/orange-vector-light-bulb-3.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-  background-size: 40px 40px;
-}
-
 .booking-form-container {
   position: absolute;
   line-height: 18px;
@@ -143,7 +133,7 @@ select {
 .booking-guests-selector {
   border: 1px solid #dbdbdb;
   display: block;
-  border-radius: 2px !important;
+  border-radius: 2px;
   padding: 10px;
   margin-top: 5px;
   width: 100%;
@@ -202,6 +192,5 @@ select {
 }
 
 .availability-dates {
-    margin: 10%;
+  margin: 10%;
 }
-

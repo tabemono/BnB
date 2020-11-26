@@ -34,7 +34,7 @@ class BikeMap extends React.Component {
   }
 
   handleMarkClick(ride) {
-    this.props.history(`/rides/${ride.id}`);
+    this.props.history.push(`/rides/${ride.id}`);
   }
 
   render() {
