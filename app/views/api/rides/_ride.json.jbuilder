@@ -13,6 +13,6 @@ if ride
     :model
 end
     json.photoUrls ride.photos.map { |file| url_for(file) }
-
-
+    json.ownerId ride.owner_id
+    
     

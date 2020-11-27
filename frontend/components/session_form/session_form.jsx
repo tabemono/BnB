@@ -93,9 +93,9 @@ class SessionForm extends React.Component {
                 onChange={this.update("password")}
                 className="login-input"
               />
-              {/* {demoLog()} */}
+            
               {this.props.formType === 'Log in' ? demoLog() : null}
-              {/* {console.log(this.props.formType)} */}
+              
               <input
                 className="session-submit"
                 type="submit"

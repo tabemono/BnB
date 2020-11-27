@@ -31,7 +31,6 @@
 // }
 
 .booking-form-container {
-  position: absolute;
   line-height: 18px;
   letter-spacing: normal;
   color: #484848;
@@ -39,7 +38,6 @@
   font-weight: normal;
   margin-top: 10px;
   float: right;
-  width: 30%;
   min-width: 356px;
   border: 1.4px solid #dbdbdb;
   border-radius: 1px;
@@ -47,8 +45,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  left: 64%;
-  bottom: 15%;
 }
 
 .DateInput_input DateInput_input_1 {
