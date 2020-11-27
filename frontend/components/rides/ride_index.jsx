@@ -15,7 +15,7 @@ class RideIndex extends React.Component {
 
   render() {
     const { requestRide, rides } = this.props;
-
+    const count = this.props.rides.length;
     const rideIndexItems = this.props.rides.map((ride) => {
       return (
         <RideIndexItem
@@ -28,11 +28,16 @@ class RideIndex extends React.Component {
     });
 
     return (
-      <div className='ride-index-page'>
-        <div className="ride-index">
-          <div className="ride-index-left">{rideIndexItems}</div>
-          <div id="map-container">
-            <BikeMap rides={rides} />
+      <div>
+        <div className="ride-index-page">
+          <div className="ride-index">
+            <ul className="ride-index-left">
+              <span className='index-count'>{count} bikes to ride.</span>
+              {rideIndexItems}
+            </ul>
+            <div id="map-container">
+              <BikeMap rides={rides} />
+            </div>
           </div>
         </div>
       </div>

@@ -35,7 +35,7 @@ class BikeShowMap extends React.Component {
 
   render() {
     return (
-      <div id="map" ref={(map) => (this.mapNode = map)}>
+      <div id="map-show" ref={(map) => (this.mapNode = map)}>
         Map
       </div>
     );

@@ -38,7 +38,7 @@ class BikeMap extends React.Component {
   }
 
   render() {
-    return <div id="map" ref={(map) => (this.mapNode = map)}></div>;
+    return <div id="map-index" ref={(map) => (this.mapNode = map)}></div>;
   }
 }
 

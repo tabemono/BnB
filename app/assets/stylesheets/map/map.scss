@@ -1,9 +1,24 @@
-#map {
+#map-index {
   width: 100%;
   height: 100%;
 }
 
 #map-container {
-  width: 45vw;
-  height: 60vh;
+  // width: 45vw;
+  // height: 60vh;
+
+  position: fixed;
+  height: 100%;
+  width: -webkit-calc(100% - 800px);
+  width: -moz-calc(100% - 800px);
+  width: calc(100% - 800px);
+  margin-top: 50px;
+  margin-left: 860px;
+}
+
+
+#map-show {
+  overflow: none;
+  width: 800px;
+  height: 50%;
 }

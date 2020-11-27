@@ -29,6 +29,19 @@ sergio = User.create!(
   password: 'sergioaa123'
 )
 
+jasmine = User.create!(
+  firstname: 'Jasmine',
+  email: 'jasmine@gmail.com',
+  password: 'jasmineaa123'
+)
+
+maggie = User.create!(
+  firstname: 'Maggie',
+  email: 'maggie@gmail.com',
+  password: 'maggieaa123'
+)
+
+
 bmw_manhattan = Ride.create!({
   model: " R1200GS",
   brand: "BMW",
@@ -67,6 +80,31 @@ r1_manhattan = Ride.create!(
   location: "117 West St, New York, NY 10006"
 )
 
+ktm_ny = Ride.create!(
+  model: "KTM SX-E 5",
+  brand: "KTM",
+  style: "Dirt",
+  description: "Great for rough terrains, gets me going everywhere. No obstacle is a challenge.",
+  price: 100.0,
+  lat: 40.689197,
+  lng:  -74.001632,
+  owner_id: jasmine.id,
+  city: "New York City",
+  location: "100 Columbia St, Brooklyn, NY 11201"
+)
+
+ktmsx1 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-1.jpg')
+ktmsx2 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-2.jpg')
+ktmsx3 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-3.jpg')
+ktmsx4 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-4.jpg')
+ktmsx5 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-5.jpg')
+
+ktm_ny.photos.attach(io: ktmsx1, filename:'KTMSXE5-1.jpg')
+ktm_ny.photos.attach(io: ktmsx2, filename:'KTMSXE5-2.jpg')
+ktm_ny.photos.attach(io: ktmsx3, filename:'KTMSXE5-3.jpg')
+ktm_ny.photos.attach(io: ktmsx4, filename:'KTMSXE5-4.jpg')
+ktm_ny.photos.attach(io: ktmsx5, filename:'KTMSXE5-5.jpg')
+
 bmw1 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/bmw-6.jpg')
 bmw2 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/bmw-7.jpg')
 bmw3 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/bmw-9.jpg')
@@ -75,7 +113,7 @@ bmw5 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/bmw-10.jpg')
 
 
 bmw_manhattan.photos.attach(io: bmw1,  filename:'bmw-6.jpg')
-bmw_manhattan.photos.attach(io: bmw2,  filename:'bnw-7.jpg')
+bmw_manhattan.photos.attach(io: bmw2,  filename:'bmw-7.jpg')
 bmw_manhattan.photos.attach(io: bmw3,  filename:'bmw-8.jpg')
 bmw_manhattan.photos.attach(io: bmw4,  filename:'bmw-9.jpg')
 bmw_manhattan.photos.attach(io: bmw5,  filename:'bmw-10.jpg')

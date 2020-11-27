@@ -9,11 +9,16 @@
   padding-top: 20px;
 }
 
+
+
+
 .ride-index-item {
-  border-bottom: 1px #ebebeb solid;
+  border-bottom: 1px grey solid;
   display: flex;
   justify-content: flex-start;
   cursor: pointer;
+  border-top: 1px grey solid;
+  padding-top: 30px;
 
   p {
     font-weight: 200;
@@ -32,25 +37,39 @@
   margin: 20px 20px 20px 0;
 }
 
+
+
 .ride-index-left {
   display: flex;
   flex-direction: column;
   height: 60vh;
-  width: 30vw;
-  margin-right: 15px;
+  // width: 30vw;
+  // margin-right: 15px;
+  border-top: 2px solid rosybrown;
   padding: 50px;
-  overflow: scroll;
+  
+ 
 }
+
+.ride-index-left > span {
+  
+    font-size: 25px;
+    color: #282828;
+    font-weight: 500;
+    margin-left: 20px;
+  
+}
+
 
 .ride-index {
   display: flex;
   width: 100vw;
   padding-top: 80px;
   height: 100vh;
-  justify-content: center;
-  
+ 
+  overflow: scroll;
 }
 .ride-index-page {
   display: flex;
-  justify-content: center;
+ 
 }

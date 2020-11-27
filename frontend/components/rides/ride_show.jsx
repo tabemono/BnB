@@ -31,55 +31,55 @@ class RideShow extends React.Component {
     const zoom = 15;
     return (
       <div id="ride-show-page">
-        <div className="ride-header">
-          <h2>
-            {ride.brand} : {ride.model}
-          </h2>
-          <div className="ride-minor-details">
-            <span>Located in: {ride.city}</span>
+        <div className="ride-images-container">
+          <div className="ride-thumb-img">
+            <img className="thumb-img" src={ride.photoUrls[1]} />
           </div>
-          <div className="ride-images-container">
-            <div className="ride-thumb-img">
-              <img width="100%" className="thumb-img" src={ride.photoUrls[0]} />
-            </div>
-
-            <div className="ride-show-small">
-              <div className="ride-side-photos">
-                <img className="photo-top" src={ride.photoUrls[1]} />
-                <img className="photo-top" src={ride.photoUrls[2]} />
-              </div>
-
-              <div className="ride-side-photos">
-                <img className="photo-bot" src={ride.photoUrls[3]} />
-                <img className="photo-bot" src={ride.photoUrls[4]} />
-              </div>
-            </div>
-          </div>
-          <h2>Style:{ride.style}</h2>
-          <p>Description:</p>
-          {ride.description}
-        </div>
-        <div className="ride-body">
-          <div className="availability-dates">
-            <DayPickerRangeController
-              startDate={this.state.startDate}
-              endDate={this.state.endDate}
-              onDatesChange={({ startDate, endDate }) =>
-                this.setState({ startDate, endDate })
-              }
-              focusedInput={this.state.focusedInput}
-              onFocusChange={(focusedInput) => this.setState({ focusedInput })}
-              hideKeyboardShortcutsPanel={true}
-              numberOfMonths={2}
-            />
-          </div>
-          <div className="booking-form">
-            <BookingFormContainer />
+          <div className="ride-side-photos">
+            <img src={ride.photoUrls[0]} />
+            <img src={ride.photoUrls[2]} />
+            <img src={ride.photoUrls[3]} />
+            <img src={ride.photoUrls[4]} />
           </div>
         </div>
-        <div className="ride-show-map">
-          <div className="map-bottom">
-            <BikeShowMap ride={ride} center={center} zoom={zoom} />
+        <div className='ride-body-div'>
+          <div className="ride-body">
+            <div className="ride-details">
+              <div className="ride-header">
+                {ride.brand} : {ride.model}
+              </div>
+              <div className="ride-minor-details">
+                <span>Located in: {ride.city}</span>
+              </div>
+              <h2>Style:{ride.style}</h2>
+              <p>Description:</p>
+              {ride.description}
+
+              <div className="availability-dates">
+                <DayPickerRangeController
+                  startDate={this.state.startDate}
+                  endDate={this.state.endDate}
+                  onDatesChange={({ startDate, endDate }) =>
+                    this.setState({ startDate, endDate })
+                  }
+                  focusedInput={this.state.focusedInput}
+                  onFocusChange={(focusedInput) =>
+                    this.setState({ focusedInput })
+                  }
+                  hideKeyboardShortcutsPanel={true}
+                  numberOfMonths={2}
+                />
+              </div>
+              <div className="booking-form">
+                <BookingFormContainer />
+              </div>
+
+              <div className="ride-show-map">
+                <div className="map-bottom">
+                  <BikeShowMap ride={ride} center={center} zoom={zoom} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

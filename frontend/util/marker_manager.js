@@ -30,11 +30,12 @@ class MarkerManager {
       icon,
     });
     const icon = {
+      path: google.maps.SymbolPath.CIRCLE,
       fillColor: "white",
-      fillOpacity: 6,
-      scale: 1,
+      fillOpacity: .8,
+      scale: 18,
       strokeColor: "darkgrey",
-      labelOrigin: new google.maps.Point(0, -18),
+      // labelOrigin: new google.maps.Point(0, -18),
       strokeWeight: 1.6,
     };
 

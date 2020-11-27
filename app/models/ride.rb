@@ -17,7 +17,7 @@
 #  updated_at  :datetime         not null
 #
 class Ride < ApplicationRecord
-    STYLE = ['Sport', 'Street', 'Adventure/Touring' ]
+    STYLE = ['Sport', 'Street', 'Adventure/Touring', 'Dirt' ]
     validates :model, 
     :brand, :style, :description, :price, :lat, :lng, :city, :location, presence: true
     validates :style, inclusion: {in: STYLE}
