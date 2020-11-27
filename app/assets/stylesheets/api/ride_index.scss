@@ -7,10 +7,24 @@
 .ride-desc {
   width: 300px;
   padding-top: 20px;
+  >h3{
+    font-size: 20px;
+    font-weight: bold;
+  }
 }
 
+// .ride-index-icons {
+//   display: flex;
+// }
 
+.ride-icons {
+  display: flex;
+}
 
+.ride-index-icons {
+  display:flex;
+  flex-direction: row;
+}
 
 .ride-index-item {
   border-bottom: 1px grey solid;

@@ -23,6 +23,10 @@
   // border-radius: 15px 0px 0px 15px;
   box-sizing: border-box;
   margin-right: 1%;
+  > img:hover {
+    filter: brightness(70%);
+    transition: filter 0.5s ease;
+  }
 }
 
 .ride-side-photos {
@@ -37,7 +41,6 @@
 
   > img {
     width: 49%;
-
     &:nth-child(1) {
       margin-bottom: 2%;
       margin-right: 1%;
@@ -58,8 +61,10 @@
   }
 }
 
-
-
+.ride-side-photos > img:hover {
+  filter: brightness(70%);
+  transition: filter 0.5s ease;
+}
 
 .ride-details {
   display: flex;
@@ -79,9 +84,8 @@
   position: sticky;
   top: 80px;
   bottom: 80px;
-  
-   
-    // padding-left: 50%;
+
+  // padding-left: 50%;
 }
 
 .booking-div-div {
@@ -89,11 +93,9 @@
   height: 700px;
 }
 
-
 .availability-dates {
   margin-top: 10px;
 }
-
 
 .ride-show-map {
   width: 100%;
@@ -106,7 +108,6 @@
   flex-direction: row;
   justify-content: space-between;
 }
-
 
 .map-bottom {
   width: 100%;
@@ -125,7 +126,6 @@
 .ride-body-div {
   max-width: 600px;
   padding-left: 15%;
-
 }
 
 .ride-body {

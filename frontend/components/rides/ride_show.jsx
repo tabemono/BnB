@@ -2,7 +2,7 @@ import React from "react";
 import BookingFormContainer from "../bookings/booking_form_container";
 import BikeShowMap from "../map/bike_show_map";
 import { DayPickerRangeController } from "react-dates";
-
+import RideIcon from "./ride_icons";
 class RideShow extends React.Component {
   constructor(props) {
     super(props);
@@ -29,17 +29,6 @@ class RideShow extends React.Component {
     if (!ride) return null;
     const center = new google.maps.LatLng(ride.lat, ride.lng);
     const zoom = 15;
-    const styleIcon = () => {
-      if (ride.style === "Adventure/Touring") {
-        return <img id="s-icon" src={window.adv} alt="style-icon"></img>;
-      } else if (ride.style === "Dirt") {
-        return <img id="s-icon" src={window.dirtb} alt="style-icon"></img>;
-      } else if (ride.style === "Street") {
-        return <img id="s-icon" src={window.streetb} alt="style-icon"></img>;
-      } else {
-        return <img id="s-icon" src={window.sportb} alt="style-icon"></img>;
-      }
-    };
     return (
       <div id="ride-show-page">
         <div className="ride-images-container">
@@ -66,7 +55,9 @@ class RideShow extends React.Component {
                 </div>
                 <span>
                   Style:{ride.style}
-                  {styleIcon()}
+                  <ul>
+                    <RideIcon ride={ride} />
+                  </ul>
                 </span>
               </div>
               <div className="ride-show-desc">
@@ -91,7 +82,7 @@ class RideShow extends React.Component {
                 />
               </div>
             </div>
-            <div className='booking-div-div'>
+            <div className="booking-div-div">
               <div className="booking-div">
                 <BookingFormContainer />
               </div>
