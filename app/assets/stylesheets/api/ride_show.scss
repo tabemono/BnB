@@ -63,7 +63,8 @@
 
 .ride-details {
   display: flex;
-  margin-left: auto;
+  // margin-left: auto;
+  align-items: left;
   flex-direction: column;
   box-sizing: border-box;
   border-bottom: 1px solid darkgray;
@@ -75,15 +76,37 @@
 }
 
 .booking-div {
-  display: flex;
-  justify-content: flex-end;
+  position: sticky;
+  top: 80px;
+  bottom: 80px;
+  
+   
+    // padding-left: 50%;
 }
+
+.booking-div-div {
+  position: relative;
+  height: 700px;
+}
+
+
+.availability-dates {
+  margin-top: 10px;
+}
+
 
 .ride-show-map {
   width: 100%;
   height: 400px;
   display: flex;
 }
+
+.body-test {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 
 .map-bottom {
   width: 100%;
@@ -102,8 +125,12 @@
 .ride-body-div {
   max-width: 600px;
   padding-left: 15%;
+
 }
 
 .ride-body {
-  align-items: center;
+  // align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-right: 50%;
 }

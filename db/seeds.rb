@@ -68,11 +68,11 @@ r3_manhattan = Ride.create!(
   location: "298-200 W 42nd ST"
 )
 r1_manhattan = Ride.create!(
-  model: "YZF-R1",
+  model: "YZF-R1M",
   brand: "Yamaha",
   style: "Sport",
   description: "Top of the YZF series for track",
-  price: 120.0,
+  price: 150.0,
   lat: 40.7175904930345, 
   lng: -74.01279468635637,
   owner_id: ray.id,
@@ -120,29 +120,29 @@ bmw_manhattan.photos.attach(io: bmw5,  filename:'bmw-10.jpg')
 
 
 
-r3_1 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r3.jpeg')
-r3_2 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r3-1.jpeg')
-r3_3 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r3-2.jpeg')
-r3_4 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r3-3.jpeg')
-r3_5 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r3-4.jpeg')
+r3_1 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r3-1.jpg')
+r3_2 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r3-2.jpg')
+r3_3 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r3-3.jpg')
+r3_4 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r3-4.jpg')
+r3_5 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r3-5.jpg')
 
-r3_manhattan.photos.attach(io: r3_1, filename: 'r3.jpeg')
-r3_manhattan.photos.attach(io: r3_2, filename: 'r3-1.jpeg')
-r3_manhattan.photos.attach(io: r3_3, filename: 'r3-2.jpeg')
-r3_manhattan.photos.attach(io: r3_4, filename: 'r3-3.jpeg')
-r3_manhattan.photos.attach(io: r3_5, filename: 'r3-4.jpeg')
+r3_manhattan.photos.attach(io: r3_1, filename: 'r3-1.jpg')
+r3_manhattan.photos.attach(io: r3_2, filename: 'r3-2.jpg')
+r3_manhattan.photos.attach(io: r3_3, filename: 'r3-3.jpg')
+r3_manhattan.photos.attach(io: r3_4, filename: 'r3-4.jpg')
+r3_manhattan.photos.attach(io: r3_5, filename: 'r3-5.jpg')
 
 
-r1_1 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r1-1.jpg')
-r1_2 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r1-2.jpg')
-r1_3 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r1-3.jpg')
-r1_4 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r1-4.jpg')
-r1_5 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r1-5.jpg')
+r1m_1 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r1m-1.jpg')
+r1m_2 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r1m-2.jpg')
+r1m_3 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r1m-3.jpg')
+r1m_4 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r1m-4.jpg')
+r1m_5 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/r1m-5.jpg')
 
-r1_manhattan.photos.attach(io: r1_1, filename: 'r1-1.jpg')
-r1_manhattan.photos.attach(io: r1_2, filename: 'r1-2.jpg')
-r1_manhattan.photos.attach(io: r1_3, filename: 'r1-3.jpg')
-r1_manhattan.photos.attach(io: r1_4, filename: 'r1-4.jpg')
-r1_manhattan.photos.attach(io: r1_5, filename: 'r1-5.jpg')
+r1_manhattan.photos.attach(io: r1m_1, filename: 'r1m-1.jpg')
+r1_manhattan.photos.attach(io: r1m_2, filename: 'r1m-2.jpg')
+r1_manhattan.photos.attach(io: r1m_3, filename: 'r1m-3.jpg')
+r1_manhattan.photos.attach(io: r1m_4, filename: 'r1m-4.jpg')
+r1_manhattan.photos.attach(io: r1m_5, filename: 'r1m-5.jpg')
 
 end
