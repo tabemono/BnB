@@ -7,23 +7,24 @@
 .ride-desc {
   width: 300px;
   padding-top: 20px;
-  >h3{
+  > h3 {
     font-size: 20px;
     font-weight: bold;
   }
 }
 
-// .ride-index-icons {
-//   display: flex;
-// }
-
-.ride-icons {
+.ride-show-details {
   display: flex;
+  flex-direction: column;
 }
 
 .ride-index-icons {
-  display:flex;
+  display: flex;
   flex-direction: row;
+}
+
+.ride-icon-div {
+  display: flex;
 }
 
 .ride-index-item {
@@ -51,8 +52,6 @@
   margin: 20px 20px 20px 0;
 }
 
-
-
 .ride-index-left {
   display: flex;
   flex-direction: column;
@@ -61,29 +60,23 @@
   // margin-right: 15px;
   border-top: 2px solid rosybrown;
   padding: 50px;
-  
- 
 }
 
 .ride-index-left > span {
-  
-    font-size: 25px;
-    color: #282828;
-    font-weight: 500;
-    margin-left: 20px;
-  
+  font-size: 25px;
+  color: #282828;
+  font-weight: 500;
+  margin-left: 20px;
 }
-
 
 .ride-index {
   display: flex;
   width: 100vw;
   padding-top: 80px;
   height: 100vh;
- 
+
   overflow: scroll;
 }
 .ride-index-page {
   display: flex;
- 
 }

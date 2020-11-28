@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "nuka-carousel";
 import { Link, withRouter } from "react-router-dom";
-import RideIcon from "./ride_icons";
+import RideIndexIcon from "./ride_index_icons";
 class RideIndexItem extends React.Component {
   constructor(props) {
     super(props);
@@ -51,11 +51,13 @@ class RideIndexItem extends React.Component {
           </section>
 
           <section className="ride-desc2">
+            {style}
             <div>
-              {style}
-              <ol className="ride-index-icons">
-                <RideIcon ride={ride} />
-              </ol>
+              <ul className="ride-index-icons">
+                <div className="ride-icon-div">
+                  <RideIndexIcon ride={ride} />
+                </div>
+              </ul>
             </div>
           </section>
 

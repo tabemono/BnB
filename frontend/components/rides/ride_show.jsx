@@ -2,7 +2,7 @@ import React from "react";
 import BookingFormContainer from "../bookings/booking_form_container";
 import BikeShowMap from "../map/bike_show_map";
 import { DayPickerRangeController } from "react-dates";
-import RideIcon from "./ride_icons";
+import RideShowDetail from "./ride_show_detail";
 class RideShow extends React.Component {
   constructor(props) {
     super(props);
@@ -28,7 +28,7 @@ class RideShow extends React.Component {
     const { ride } = this.props;
     if (!ride) return null;
     const center = new google.maps.LatLng(ride.lat, ride.lng);
-    const zoom = 15;
+    const zoom = 2;
     return (
       <div id="ride-show-page">
         <div className="ride-images-container">
@@ -53,10 +53,10 @@ class RideShow extends React.Component {
                 <div className="ride-minor-details">
                   {ride.brand} : {ride.model}
                 </div>
+                <br />
                 <span>
-                  Style:{ride.style}
-                  <ul>
-                    <RideIcon ride={ride} />
+                  <ul className="ride-show-icons">
+                    <RideShowDetail ride={ride} />
                   </ul>
                 </span>
               </div>
@@ -88,11 +88,11 @@ class RideShow extends React.Component {
               </div>
             </div>
           </div>
-          <div className="ride-show-map">
-            <div className="map-bottom">
-              <BikeShowMap ride={ride} center={center} zoom={zoom} />
-            </div>
-          </div>
+        </div>
+
+        <div className="ride-show-map">
+          <h2>Pick Up Location</h2>
+          <BikeShowMap ride={ride} center={center} zoom={zoom} />
         </div>
       </div>
     );
