@@ -4,14 +4,14 @@ export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
-export const RECEIVE_USERS = "RECEIVE_USERS";
+// export const RECEIVE_USERS = "RECEIVE_USERS";
 
-export const receiveUsers = (users) => {
-  return {
-    type: RECEIVE_USERS,
-    users,
-  };
-};
+// export const receiveUsers = (users) => {
+//   return {
+//     type: RECEIVE_USERS,
+//     users,
+//   };
+// };
 
 export const login = (user) => {
   return (dispatch) => {
@@ -67,10 +67,10 @@ export const clearErrors = () => {
   };
 };
 
-export const fetchUsers = (data) => {
-  return (dispatch) => {
-    return SessionApiUtil.fetchUsers(data).then((users) => {
-      return dispatch(receiveUsers(users));
-    });
-  };
-};
+// export const fetchUsers = (data) => {
+//   return (dispatch) => {
+//     return SessionApiUtil.fetchUsers(data).then((users) => {
+//       return dispatch(receiveUsers(users));
+//     });
+//   };
+// };

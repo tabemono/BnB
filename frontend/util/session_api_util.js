@@ -1,9 +1,10 @@
-export const login = (user) =>
-  $.ajax({
+export const login = (user) => {
+  return $.ajax({
     method: "POST",
-    url: "/api/session",
+    url: "api/session",
     data: { user },
   });
+};
 
 export const signup = (user) =>
   $.ajax({
@@ -18,9 +19,9 @@ export const logout = () =>
     url: "/api/session",
   });
 
-export const fetchUsers = () => {
-  return $.ajax({
-    method: "GET",
-    url: "api/users",
-  });
-};
+// export const fetchUsers = () => {
+//   return $.ajax({
+//     method: "GET",
+//     url: "api/users",
+//   });
+// };

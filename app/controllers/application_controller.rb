@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
     end
 
     def current_user 
+        return nil unless session[:session_token]
         @current_user ||= User.find_by(session_token: session[:session_token])
     end
 
@@ -20,6 +21,6 @@ class ApplicationController < ActionController::Base
     end
 
     def ensure_logged_in
-        render json: ['You are not logged in '], status: 401 unless logged_in?
+        redirect_to api_users_url unless logged_in?
     end    
 end

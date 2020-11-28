@@ -34,10 +34,10 @@ const mDTP = dispatch => {
             </button>
         ),
         closeModal: () => dispatch(closeModal()),
-        login: user => dispatch(login(user)),
+        // login: user => dispatch(login(user)),
         clearErrors: () => dispatch(clearErrors()),
     };
 };
 
 
-export default withRouter(connect(mSTP, mDTP)(SessionForm));
+export default connect(mSTP, mDTP)(SessionForm);

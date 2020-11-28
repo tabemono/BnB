@@ -13,11 +13,13 @@ class SessionForm extends React.Component {
       error: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.props.clearErrors();
+    this.update = this.update.bind(this);
+    // this.props.clearErrors();
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    // const user = Object.assign({}, this.state);
     this.props.processForm(this.state).then(this.props.closeModal);
   }
 
@@ -64,8 +66,8 @@ class SessionForm extends React.Component {
         <button
           className="session-submit"
           onClick={() =>
-            this.props
-              .login({ email: "demo@aa.com", password: "123456" })
+            this.props 
+              .processForm({ email: "demo@aa.com", password: "123456" })
               .then(this.props.closeModal)
           }
         >
@@ -127,4 +129,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default withRouter(SessionForm);
+export default SessionForm;

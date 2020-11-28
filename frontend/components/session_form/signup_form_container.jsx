@@ -21,8 +21,8 @@ const mdtp = (dispatch) => {
       <button className= 'other-form-btn'onClick={() => dispatch(openModal("login"))}>Login</button>
     ),
     closeModal: () => dispatch(closeModal()),
-    clearErrors: () => dispatch(clearErrors())
+    // clearErrors: () => dispatch(clearErrors())
   };
 };
 
-export default withRouter(connect(mstp, mdtp)(SessionForm));
+export default connect(mstp, mdtp)(SessionForm);
