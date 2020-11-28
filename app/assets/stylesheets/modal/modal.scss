@@ -55,20 +55,20 @@
 
 .modal-header {
   padding: 15px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 800;
   font-family: "Montserrat";
   margin: 0;
 }
 
 .close-x:hover {
-  opacity: 1;
+  // opacity: 1;
   cursor: pointer;
 }
 
-.close-x:after {
-  display: inline-block;
-}
+// .close-x:after {
+//   display: inline-block;
+// }
 
 .close-x:before,
 .close:after {
@@ -88,7 +88,6 @@
   flex-flow: column-reverse;
   margin-bottom: 1em;
   background-color: white;
-  width: 550px;
 }
 
 .input-container input:focus {
@@ -96,7 +95,7 @@
   outline: none;
 }
 .session-submit {
-  background-color: rgb(209, 189, 189);
+  background-color: rgb(146, 47, 47);
   border: 0;
   padding: 0 0 3px 0;
   outline: none;
@@ -105,11 +104,15 @@
   color: white;
   margin: 16px 0;
   font-size: 24px;
-  width: 100%;
   height: 40px;
 }
 
-.login-form {
+// .login-form {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+.input-container {
   display: flex;
   flex-direction: column;
 }
@@ -120,10 +123,45 @@
 }
 
 .login-input {
-  border: 1px solid #dddddd;
+  border: 1px solid #888;
   position: relative;
   color: #383838;
+  letter-spacing: normal;
   width: 525px;
   height: 30px;
-  background-color: transparent;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background-color: #fefefe;
+}
+
+.session-errors {
+  color: red;
+}
+
+.error-list {
+  color: red;
+  font-size: 16px;
+}
+
+.other-form-btn {
+  cursor: pointer;
+  color: darkblue;
+  font-size: 16px;
+}
+
+.signup-input >i{
+  font-size: 20px;
+  z-index: 2;
+  right: 25px;
+  position: absolute;
+  margin-top: 27px;
+}
+
+// .signup-input {
+//   position: relative;
+// }
+
+i {
+  width: 50px;
+  height: 50px;
 }

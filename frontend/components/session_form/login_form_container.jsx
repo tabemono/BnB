@@ -1,41 +1,43 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { login } from '../../actions/session_actions';
+import { Link, withRouter } from 'react-router-dom';
+import { login, clearErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
-const mSTP = ( {errors} ) => {
-    
-    return {
-        user: {
-            email: "",
-            password: ""
-        } ,
-        
-        demoUser: {
-            email: "demo@aa.com",
-            password: "123456"
-        },
+const mSTP = ({ session, errors, entities: { users } }) => {
+  return {
+    // user: {
+    //   email: "",
+    //   password: "",
+    // },
 
-        errors: errors.session,
-        formType: 'Log in',
-        
-    }
-}
+    // demoUser: {
+    //   email: "demo@aa.com",
+    //   password: "123456",
+    // },
+
+    errors: errors.session,
+    currentUser: users[session.currentUserId],
+    formType: "Log in",
+    status_text: "Don't have an account?",
+    navLink: <Link to="/signup">Sign Up</Link>,
+  };
+};
 
 const mDTP = dispatch => {
     return {
         processForm: user => dispatch(login(user)),
         otherForm: (
-            <button onClick={() => dispatch(openModal('signup'))}>
+            <button className='other-form-btn' onClick={() => dispatch(openModal('signup'))}>
                 Signup
             </button>
         ),
         closeModal: () => dispatch(closeModal()),
-        login: user => dispatch(login(user))
+        login: user => dispatch(login(user)),
+        clearErrors: () => dispatch(clearErrors()),
     };
 };
 
 
-export default connect(mSTP, mDTP)(SessionForm);
+export default withRouter(connect(mSTP, mDTP)(SessionForm));

@@ -20,6 +20,6 @@ class ApplicationController < ActionController::Base
     end
 
     def ensure_logged_in
-        redirect_to api_users_url unless logged_in?
+        render json: ['You are not logged in '], status: 401 unless logged_in?
     end    
 end

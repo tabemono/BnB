@@ -1,7 +1,8 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { BsFillXCircleFill } from "react-icons/bs";
-
+import { IoMdPerson, IoIosMail } from "react-icons/io";
+import { FiLock } from "react-icons/fi";
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -9,8 +10,10 @@ class SessionForm extends React.Component {
       email: "",
       password: "",
       firstname: "",
+      error: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.props.clearErrors();
   }
 
   handleSubmit(e) {
@@ -27,9 +30,11 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="error-list">
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>{error}</li>
+          <li className="session-errors" key={`error-${i}`}>
+            {error}
+          </li>
         ))}
       </ul>
     );
@@ -40,13 +45,18 @@ class SessionForm extends React.Component {
     const isSignedUp = this.props.formType === "Sign Up";
     const fname = () => {
       return (
-        <input
-          type="text"
-          placeholder="First Name"
-          value={this.state.firstname}
-          onChange={this.update("firstname")}
-          className="login-input"
-        />
+        <div className="signup-input">
+          <input
+            type="text"
+            placeholder="First Name"
+            value={this.state.firstname}
+            onChange={this.update("firstname")}
+            className="login-input"
+          />
+          <i>
+            <IoMdPerson />
+          </i>
+        </div>
       );
     };
     const demoLog = () => {
@@ -66,18 +76,15 @@ class SessionForm extends React.Component {
 
     return (
       <div>
+        <header className="modal-header">Bikes and Bikers</header>
+        <div className="signup-errors">{this.renderErrors()}</div>
+        <button onClick={this.props.closeModal} className="close-x">
+          <BsFillXCircleFill />
+        </button>
         <form onSubmit={this.handleSubmit} className="input-box">
-          <header className="modal-header">
-            Bikes and Bikers
-            <div onClick={this.props.closeModal} className="close-x">
-              <BsFillXCircleFill />
-            </div>
-          </header>
-          {this.renderErrors()}
           <div className="input-container">
-            <div className="login-form">
-              {isSignedUp ? fname() : null}
-
+            {isSignedUp ? fname() : null}
+            <div className="signup-input">
               <input
                 type="text"
                 placeholder="Email"
@@ -85,7 +92,11 @@ class SessionForm extends React.Component {
                 onChange={this.update("email")}
                 className="login-input"
               />
-
+              <i>
+                <IoIosMail />
+              </i>
+            </div>
+            <div className="signup-input">
               <input
                 type="password"
                 placeholder="Password"
@@ -93,15 +104,22 @@ class SessionForm extends React.Component {
                 onChange={this.update("password")}
                 className="login-input"
               />
-            
-              {this.props.formType === 'Log in' ? demoLog() : null}
-              
-              <input
-                className="session-submit"
-                type="submit"
-                value={this.props.formType}
-              />
+              <i>
+                <FiLock />
+              </i>
             </div>
+            {this.props.formType === "Log in" ? demoLog() : null}
+
+            <input
+              className="session-submit"
+              type="submit"
+              value={this.props.formType}
+            />
+          </div>
+          <div className="other-form">
+            {this.props.status_text}
+            <br />
+            {this.props.otherForm}
           </div>
         </form>
       </div>
