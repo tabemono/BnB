@@ -8,7 +8,6 @@ class BookingForm extends React.Component {
     this.state = {
       check_in: null,
       check_out: null,
-      rider: 1,
       focusedInput: null,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,19 +17,19 @@ class BookingForm extends React.Component {
     this.props.clearBooking();
   }
 
-    renderErrors() {
-      return (
-        <ul>
-          {this.props.errors.map((error, idx) => {
-            return (
-              <li className="booking-error" key={idx}>
-                {error}
-              </li>
-            );
-          })}
-        </ul>
-      );
-    }
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, idx) => {
+          return (
+            <li className="booking-error" key={idx}>
+              {error}
+            </li>
+          );
+        })}
+      </ul>
+    );
+  }
 
   update(field) {
     return (e) => this.setState({ [field]: e.currentTarget.value });
@@ -40,9 +39,8 @@ class BookingForm extends React.Component {
     e.preventDefault();
 
     const booking = {
-      check_in: this.state.check_in,
-      check_out: this.state.check_out,
-      rider: this.state.rider,
+      check_in: this.state.check_in._d,
+      check_out: this.state.check_out._d,
       ride_id: parseInt(this.props.match.params.rideId),
     };
     this.props.createBooking(booking).then(() => {
@@ -55,22 +53,21 @@ class BookingForm extends React.Component {
     });
   }
 
-    renderBooking() {
-      const bookings = this.props.bookings;
-      if (!bookings.length) {
-        return;
-      } else if (bookings.length !== 0) {
-        return (
-          <ul>
-            <li>Congratulations, You successfully </li>
-            <li> booked {this.props.ride.title} </li>
-          </ul>
-        );
-      }
+  renderBooking() {
+    const bookings = this.props.bookings;
+    if (!bookings.length) {
+      return;
+    } else if (bookings.length !== 0) {
+      return (
+        <ul>
+          <li>Congratulations, You successfully </li>
+          <li> booked {this.props.ride.model} </li>
+        </ul>
+      );
     }
+  }
 
   render() {
-  
     return (
       <div className="booking-form">
         <div className="booking-form-container">
@@ -78,7 +75,7 @@ class BookingForm extends React.Component {
           <div className="booking-success">{this.renderBooking()}</div>
           <div className="price-tag">
             <strong className="booking-price"> ${this.props.ride.price}</strong>
-            per day
+            per night
           </div>
           <div className="booking-date">
             <label className="label-date">Dates</label>
@@ -103,12 +100,6 @@ class BookingForm extends React.Component {
               <br></br>
             </div>
           </div>
-          <div className="booking-riders">
-            <select
-              className="booking-riders-selector"
-              onChange={this.update("riders")}
-            ></select>
-          </div>
           <button
             className="booking-button-box"
             onClick={this.handleSubmit}
@@ -116,19 +107,18 @@ class BookingForm extends React.Component {
           >
             Book
           </button>
-          <div className="booking-text"></div>
+
           <div className="booking-footer">
             <div className="booking-footer-text">
               <span className="booking-footer-text-header">
                 {" "}
-                This bike is popular!
+                This bike is popular.
               </span>
               <br></br>
               <span className="booking-footer-text-content">
                 It’s been viewed 100+ times in the past week
               </span>
             </div>
-            
           </div>
         </div>
       </div>

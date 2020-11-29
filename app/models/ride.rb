@@ -26,6 +26,14 @@ class Ride < ApplicationRecord
         foreign_key: :owner_id,
         class_name: :User
 
+    has_many :bookings,
+        foreign_key: :ride_id,
+        class_name: :Booking
+
+    has_many :bookers,
+        through: :bookings,
+        source: :rider
+
     has_many_attached :photos
 
 

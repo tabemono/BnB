@@ -19,9 +19,9 @@ export const logout = () =>
     url: "/api/session",
   });
 
-// export const fetchUsers = () => {
-//   return $.ajax({
-//     method: "GET",
-//     url: "api/users",
-//   });
-// };
+export const fetchUsers = () => {
+  return $.ajax({
+    method: "GET",
+    url: "api/users",
+  });
+};

@@ -5,10 +5,9 @@ class Api::BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.rider_id = current_user.id
     if @booking.save
-      @bookings = Booking.where(rider_id: current_user.id)
       render :show
     else
-      render json: @booking.errors.full_messages, status: 422
+      render json: @booking.errors.full_messages, status: 401
     end
   end
 
@@ -21,13 +20,24 @@ class Api::BookingsController < ApplicationController
     end
   end
 
+  def show
+      @booking = Booking.find(params[:id])
+      render :show
+  end
+  
   def index
-    @bookings = Booking.where(rider_id: current_user.id)
+    if params[:riderId]
+      @bookings = User.find(params[:userId]).bookings
+    else
+      @bookings = Booking.all
+    end
+    render :index
   end
 
   def destroy
     @booking = Booking.find(params[:id])
-    @booking.destroy
+    @booking.delete
+    render :show
   end
 
 

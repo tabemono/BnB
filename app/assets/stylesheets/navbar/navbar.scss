@@ -21,6 +21,18 @@
   outline: none;
 }
 
+.logout-btn {
+  // border-bottom: 1px solid gray;
+  color: black;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: rgb(219, 213, 213);
+  opacity: .8;
+  border-radius: 15px;
+}
+
 .inner-div {
   margin-top: 30px;
   margin-right: 40px;

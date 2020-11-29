@@ -19,6 +19,11 @@ class User < ApplicationRecord
         class_name: :Ride,
         foreign_key: :owner_id
 
+    has_many :bookings,
+        class_name: :Booking,
+        foreign_key: :rider_id
+
+
     after_initialize :ensure_session_token
 
     attr_reader :password
