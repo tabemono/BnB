@@ -8,7 +8,7 @@ const getCoordsObj = (latLng) => ({
 class BikeMap extends React.Component {
   componentDidMount() {
     const mapOptions = {
-      center: { lat: 40.775899, lng: -73.97854 },
+      center: { lat: 40.720233, lng: -73.976081 },
       zoom: 12,
     };
 

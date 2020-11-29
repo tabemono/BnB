@@ -41,6 +41,17 @@ maggie = User.create!(
   password: 'maggieaa123'
 )
 
+andy = User.create!(
+  firstname: 'Andy',
+  email: 'andy@aa.com',
+  password: 'andyaa123'
+)
+
+tony = User.create!(
+  firstname: 'Tony',
+  email: 'tony@aa.com',
+  password: 'tonyasdf123'
+)
 
 bmw_manhattan = Ride.create!({
   model: " R1200GS",
@@ -54,6 +65,33 @@ bmw_manhattan = Ride.create!({
   city: "New York City",
   location: "Washington Square, New York 10012"
 })
+
+harley_manhattan = Ride.create!({
+  model: "Sportster Iron 883",
+  brand: "Harley-Davidson",
+  style: "Street",
+  description: "Comfortable and fast. Have gone through alot with this bike and would love to share with other rides. Runs really nice.",
+  price: 80.0,
+  lat: 40.774045,
+  lng: -73.978682,
+  owner_id: andy.id,
+  city: "New York City",
+  location: "98-2 W 68th St, New York, NY 10023"
+})
+
+z9_manhattan = Ride.create!({
+  model: " Z900",
+  brand: "Kawasaki",
+  style: "Street",
+  description: "Overall use for everything. Fast and comfortable, have done long rides on this without a problem. 900CC Engine",
+  price: 120.0,
+  lat: 40.767781,
+  lng: -73.969761,
+  owner_id: tony.id,
+  city: "New York City",
+  location: "25-1 E 65th St, New York, NY 10065"
+})
+
 
 r3_manhattan = Ride.create!(
   model: "YZF-R3",
@@ -92,6 +130,9 @@ ktm_ny = Ride.create!(
   city: "New York City",
   location: "100 Columbia St, Brooklyn, NY 11201"
 )
+
+
+
 
 ktmsx1 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-1.jpg')
 ktmsx2 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-2.jpg')
@@ -145,4 +186,27 @@ r1_manhattan.photos.attach(io: r1m_3, filename: 'r1m-3.jpg')
 r1_manhattan.photos.attach(io: r1m_4, filename: 'r1m-4.jpg')
 r1_manhattan.photos.attach(io: r1m_5, filename: 'r1m-5.jpg')
 
+z9_1 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/z9-1.jpg')
+z9_2 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/z9-2.jpg')
+z9_3 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/z9-3.jpg')
+z9_4 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/z9-4.jpg')
+z9_5 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/z9-5.jpg')
+
+z9_manhattan.photos.attach(io: z9_1, filename: 'z9-1.jpg')
+z9_manhattan.photos.attach(io: z9_2, filename: 'z9-2.jpg')
+z9_manhattan.photos.attach(io: z9_3, filename: 'z9-3.jpg')
+z9_manhattan.photos.attach(io: z9_4, filename: 'z9-4.jpg')
+z9_manhattan.photos.attach(io: z9_5, filename: 'z9-5.jpg')
+
+ha_1 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/harley-s1.jpg')
+ha_2 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/harley-s2.jpg')
+ha_3 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/harley-s3.jpg')
+ha_4 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/harley-s4.jpg')
+ha_5 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/harley-s5.jpg')
+
+harley_manhattan.photos.attach(io: ha_1, filename: 'harley-s1.jpg')
+harley_manhattan.photos.attach(io: ha_2, filename: 'harley-s2.jpg')
+harley_manhattan.photos.attach(io: ha_3, filename: 'harley-s3.jpg')
+harley_manhattan.photos.attach(io: ha_4, filename: 'harley-s4.jpg')
+harley_manhattan.photos.attach(io: ha_5, filename: 'harley-s5.jpg')
 end
