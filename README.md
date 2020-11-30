@@ -1,7 +1,7 @@
 # Bikes and Bikers
 
 * Is a AirBnB clone with the theme of motorcycles instead of homes.
-<iframe src='https://gfycat.com/ifr/AptScratchyBoubou' frameborder='0' scrolling='no' allowfullscreen width='640' height='412'></iframe><p><a href="https://gfycat.com/discover/green-screen-gifs">from Green Screen GIFs</a> <a href="https://gfycat.com/aptscratchyboubou-green-screen">via Gfycat</a></p>
+![giftext](https://gfycat.com/ifr/UnpleasantWindingIndianringneckparakeet.gif)
 
 # Technologies
 Ruby on Rails
