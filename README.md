@@ -1,24 +1,26 @@
-# README
+# Bikes and Bikers
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Is a AirBnB clone with the theme of motorcycles instead of homes.
+![<iframe src='https://gfycat.com/ifr/AptScratchyBoubou' frameborder='0' scrolling='no' allowfullscreen width='640' height='412'></iframe><p><a href="https://gfycat.com/discover/green-screen-gifs">from Green Screen GIFs</a> <a href="https://gfycat.com/aptscratchyboubou-green-screen">via Gfycat</a></p>]
 
-Things you may want to cover:
+# Technologies
+Ruby on Rails
+React
+Redux
+Node JS
+PostgreSQL
+Google Maps API
+CSS
+AWS S3
 
-* Ruby version
 
-* System dependencies
+# Features
 
-* Configuration
+* User authentication with demo log in
+* Listings are marked on the map when searched.
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# In the works
+* Polishing bookings and having a booking page for user
+* Filtering out search
+* Leaving Reviews
