@@ -1,7 +1,7 @@
 # Bikes and Bikers
 
 * Is a AirBnB clone with the theme of motorcycles instead of homes.
-![](https://gfycat.com/brokentintedamericansaddlebred.gif)
+![gif](https://gfycat.com/brokentintedamericansaddlebred.gif)
 
 # Technologies
 Ruby on Rails
