@@ -78,7 +78,7 @@ class SessionForm extends React.Component {
 
     return (
       <div>
-        <header className="modal-header">Bikes and Bikers</header>
+        <header className="modal-header">{header}</header>
         <div className="signup-errors">{this.renderErrors()}</div>
         <button onClick={this.props.closeModal} className="close-x">
           <BsFillXCircleFill />
