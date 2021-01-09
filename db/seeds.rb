@@ -62,7 +62,7 @@ bmw_manhattan = Ride.create!({
   lat: 40.72768529173207,
   lng: -74.00009437067972,
   owner_id: demo.id,
-  city: "New York City",
+  city: "New York",
   location: "Washington Square, New York 10012"
 })
 
@@ -75,7 +75,7 @@ harley_manhattan = Ride.create!({
   lat: 40.774045,
   lng: -73.978682,
   owner_id: andy.id,
-  city: "New York City",
+  city: "New York",
   location: "98-2 W 68th St, New York, NY 10023"
 })
 
@@ -88,7 +88,7 @@ z9_manhattan = Ride.create!({
   lat: 40.767781,
   lng: -73.969761,
   owner_id: tony.id,
-  city: "New York City",
+  city: "New York",
   location: "25-1 E 65th St, New York, NY 10065"
 })
 
@@ -102,7 +102,7 @@ r3_manhattan = Ride.create!(
   lat: 40.756492,
   lng: -73.988953,
   owner_id: sergio.id,
-  city: "New York City",
+  city: "New York",
   location: "298-200 W 42nd ST"
 )
 r1_manhattan = Ride.create!(
@@ -114,7 +114,7 @@ r1_manhattan = Ride.create!(
   lat: 40.7175904930345, 
   lng: -74.01279468635637,
   owner_id: ray.id,
-  city: "New York City",
+  city: "New York",
   location: "117 West St, New York, NY 10006"
 )
 
@@ -127,7 +127,7 @@ ktm_ny = Ride.create!(
   lat: 40.689197,
   lng:  -74.001632,
   owner_id: jasmine.id,
-  city: "New York City",
+  city: "New York",
   location: "100 Columbia St, Brooklyn, NY 11201"
 )
 

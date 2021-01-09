@@ -1,8 +1,8 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import { BsFillXCircleFill } from "react-icons/bs";
+
 import { IoMdPerson, IoIosMail } from "react-icons/io";
-import { FiLock } from "react-icons/fi";
+
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -55,9 +55,6 @@ class SessionForm extends React.Component {
             onChange={this.update("firstname")}
             className="login-input"
           />
-          <i>
-            <IoMdPerson />
-          </i>
         </div>
       );
     };
@@ -66,7 +63,7 @@ class SessionForm extends React.Component {
         <button
           className="session-submit"
           onClick={() =>
-            this.props 
+            this.props
               .processForm({ email: "demo@aa.com", password: "123456" })
               .then(this.props.closeModal)
           }
@@ -81,7 +78,7 @@ class SessionForm extends React.Component {
         <header className="modal-header">{header}</header>
         <div className="signup-errors">{this.renderErrors()}</div>
         <button onClick={this.props.closeModal} className="close-x">
-          <BsFillXCircleFill />
+          x
         </button>
         <form onSubmit={this.handleSubmit} className="input-box">
           <div className="input-container">
@@ -94,9 +91,6 @@ class SessionForm extends React.Component {
                 onChange={this.update("email")}
                 className="login-input"
               />
-              <i>
-                <IoIosMail />
-              </i>
             </div>
             <div className="signup-input">
               <input
@@ -106,9 +100,6 @@ class SessionForm extends React.Component {
                 onChange={this.update("password")}
                 className="login-input"
               />
-              <i>
-                <FiLock />
-              </i>
             </div>
             {this.props.formType === "Log in" ? demoLog() : null}
 
