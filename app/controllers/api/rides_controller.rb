@@ -1,7 +1,7 @@
 class Api::RidesController < ApplicationController
     def index 
         rides = bounds ? Ride.in_bounds(bounds) : Ride.all
-        @rides = Ride.all 
+        @rides = Ride.with_attached_photos.all 
         render :index
     end
 
