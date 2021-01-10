@@ -1,7 +1,8 @@
-export const fetchRides = () => {
+export const fetchRides = (bounds) => {
   return $.ajax({
     url: "/api/rides",
     method: "GET",
+    data: { bounds },
   });
 };
 
