@@ -21,12 +21,23 @@ class Api::RidesController < ApplicationController
     end
 
 
+
     def update 
         @ride = Ride.find(params[:id])
         if @ride && @ride.update(ride_params)
             render :show
         else
             render json: @ride.errors.full_messages, status: 422
+        end
+    end
+
+    def search
+        search_rides = Ride.filtered_search(params[:query])
+        if search_rides 
+            @rides = search_rides
+            render :index
+        else
+            render json: ["No Results Found"], status: 404
         end
     end
 
@@ -45,6 +56,10 @@ class Api::RidesController < ApplicationController
             :location, 
             photos: []
         )
+    end
+
+    def location
+        params[:location]
     end
 
     def bounds
