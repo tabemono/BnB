@@ -9,16 +9,12 @@ export const receiveAllRides = (rides) => ({
   rides,
 });
 
-
-
 export const receiveRide = (ride) => ({
   type: RECEIVE_RIDE,
   ride,
 });
 
-
-
-export const fetchRides = filters => (dispatch) =>
+export const fetchRides = (filters) => (dispatch) =>
   APIUtil.fetchRides(filters).then((rides) => dispatch(receiveAllRides(rides)));
 
 export const fetchRide = (rideId) => (dispatch) =>
@@ -30,8 +26,5 @@ export const createRide = (ride) => (dispatch) =>
 export const updateRide = (ride) => (dispatch) =>
   APIUtil.updateRide(ride).then((ride) => dispatch(receiveRide(ride)));
 
-
-// export const fetchSearch = (query) => (dispatch) =>
-//     APIUtil.fetchSearch(query).then((result) =>
-//       dispatch(receiveSearch(result))
-//     );
+export const fetchSearch = (query) => (dispatch) =>
+  APIUtil.fetchSearch(query).then((result) => dispatch(receiveSearch(result)));
