@@ -8,7 +8,7 @@ export const fetchRides = () => {
 export const fetchRide = (rideId) => {
   return $.ajax({
     url: `/api/rides/${rideId}`,
-    method: "GET"
+    method: "GET",
   });
 };
 export const updateRide = (ride) => {
@@ -26,3 +26,9 @@ export const createRide = (ride) => {
     data: { ride },
   });
 };
+
+export const fetchSearch = (query) =>
+  $.ajax({
+    url: "api/search",
+    data: { query },
+  });

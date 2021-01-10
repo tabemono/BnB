@@ -18,10 +18,10 @@ class SearchBar extends React.Component {
     const query = this.state;
     query["startDate"] = null;
     query["endDate"] = null;
-    this.props.runSearch(query);
+    // this.props.runSearch(query);
     this.props.fetchRides(query);
     if (this.props.location.pathname !== "/rides") {
-      this.props.history.push(`/rides/?search=${this.state.search}`);
+      this.props.history.push(`/search`);
     }
   }
 
@@ -40,7 +40,7 @@ class SearchBar extends React.Component {
               type="text"
               placeholder="Nearby Rides"
               value={this.state.query}
-              onChange={this.update("search")}
+              onChange={(e) => this.update(e)}
             />
           </div>
 
@@ -72,7 +72,10 @@ class SearchBar extends React.Component {
           </div>
 
           <div id="search-badge">
-            <button className="search-button">
+            <button
+              className="search-button"
+              onClick={(e) => this.handleSubmit(e)}
+            >
               <i className="fas fa-search">
                 <BsSearch />
               </i>

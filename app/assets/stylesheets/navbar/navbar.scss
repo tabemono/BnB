@@ -29,7 +29,7 @@
 
 .logout-btn:hover {
   background-color: rgb(219, 213, 213);
-  opacity: .8;
+  opacity: 0.8;
   border-radius: 15px;
 }
 
@@ -37,7 +37,6 @@
   margin-top: 30px;
   margin-right: 40px;
 }
-
 
 .nav-signin {
   font-size: 25px;
@@ -263,6 +262,7 @@ div > p {
 .search-button {
   border-radius: 50%;
   background-color: inherit;
+  cursor: pointer;
 }
 
 .date-labels {

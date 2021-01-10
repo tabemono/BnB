@@ -7,7 +7,8 @@ import { AuthRoute, Protected } from "../util/route_util";
 import SplashPage from "./splash/splash_page";
 import Modal from "./modal/modal";
 import RideIndex from "./rides/ride_index_container";
-import RideShowContainer from './rides/ride_show_container';
+import RideShowContainer from "./rides/ride_show_container";
+
 // import RideSearchContainer from './rides/ride_search_container';
 const App = () => (
   <>
@@ -18,7 +19,7 @@ const App = () => (
       <Route exact path="/rides" component={RideIndex} />
       <Route exact path="/rides/:rideId" component={RideShowContainer} />
       <Route exact path="/rides/:rideId" component={Modal} />
-      
+
       {/* <Route path="/rides" component={RideSearchContainer} /> */}
     </Switch>
   </>

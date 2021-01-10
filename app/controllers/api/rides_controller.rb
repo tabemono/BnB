@@ -1,7 +1,6 @@
 class Api::RidesController < ApplicationController
     def index 
-        rides = bounds ? Ride.in_bounds(bounds) : Ride.all
-        @rides = Ride.with_attached_photos.all 
+        @rides = bounds ? Ride.in_bounds(bounds) : Ride.with_attached_photos.all
         render :index
     end
 
@@ -56,10 +55,6 @@ class Api::RidesController < ApplicationController
             :location, 
             photos: []
         )
-    end
-
-    def location
-        params[:location]
     end
 
     def bounds

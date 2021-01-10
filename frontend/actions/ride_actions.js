@@ -14,6 +14,11 @@ export const receiveRide = (ride) => ({
   ride,
 });
 
+export const receiveSearch = (result) => ({
+  type: RECEIVE_SEARCH,
+  result,
+});
+
 export const fetchRides = (filters) => (dispatch) =>
   APIUtil.fetchRides(filters).then((rides) => dispatch(receiveAllRides(rides)));
 

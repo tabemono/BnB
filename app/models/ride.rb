@@ -39,20 +39,16 @@ class Ride < ApplicationRecord
   
 
     def self.in_bounds(bounds)
-        self.where("lat < ?", bounds[:northEast][:lat])
-        .where("lat > ?", bounds[:southWest][:lat])
-        .where("lng > ?", bounds[:southWest][:lng])
-        .where("lng < ?", bounds[:northEast][:lng])
+       self.where("lat < ?", bounds[:northEast][:lat])
+      .where("lat > ?", bounds[:southWest][:lat])
+      .where("lng > ?", bounds[:southWest][:lng])
+      .where("lng < ?", bounds[:northEast][:lng])
     end
 
-    def self.filtered_search(query) 
-        result = self.where("city LIKE ?", "%#{query}%")
-        return result
-     end
+    # def self.filtered_search(query) 
+    #     result = self.where("city LIKE ?", "%#{query}%")
+    #     return result
+    #  end
 
 
 end
-# 298-200 W 42nd St
-# New York, NY 10036
-# 40.756492, -73.988053
-# a = Ride.create("R3", "Yamaha", "298-200 W 42nd ST", 40.756492, -73.988953, "great commute bike", "Street")
