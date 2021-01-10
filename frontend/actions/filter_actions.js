@@ -2,13 +2,14 @@ import { fetchRides } from "./ride_actions";
 
 export const UPDATE_FILTER = "UPDATE_FILTER";
 
-export const changeFilter = (filter, value) => ({
+export const changeFilter = (bounds) => ({
   type: UPDATE_FILTER,
-  filter,
-  value,
+  bounds
 });
 
-export const updateFilter = (filter, value) => (dispatch, getState) => {
-  dispatch(changeFilter(filter, value));
-  return fetchRides(getState().ui.filters)(dispatch);
-};
+export const updateBounds = (bounds) => {
+  return (dispatch, getState) => {
+    dispatch(changeBounds(bounds));
+    return dispatch(fetchRides(getState().ui.filterReducer.bound));
+  }
+}
