@@ -5,11 +5,26 @@ const getCoordsObj = (latLng) => ({
   lat: latLng.lat(),
   lng: latLng.lng(),
 });
+
 class BikeMap extends React.Component {
+  constructor(props) {
+    super(props);
+    this.searchParams = new URLSearchParams(
+      `${this.props.history.location.hash}`
+    );
+    let lat = parseFloat(this.searchParams.get("lat")) || 40.753647;
+    let lng = parseFloat(this.searchParams.get("lng")) || -73.980707;
+    this.center = { lat: lat, lng: lng };
+    this.state = {
+      lat: lat,
+      lng: lng,
+    };
+  }
+
   componentDidMount() {
     const mapOptions = {
-      center: { lat: 40.720233, lng: -73.976081 },
-      zoom: 12,
+      center: this.center,
+      zoom: 13,
     };
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
@@ -21,10 +36,18 @@ class BikeMap extends React.Component {
     this.MarketManager.updateMarkers(this.props.rides);
   }
 
-  componentDidUpdate() {
-    // if (prevProps !== this.props) {
+  componentDidUpdate(prevProps) {
+    if (this.props.history.location.hash !== prevProps.location.hash) {
+      const newLocation = new URLSearchParams(
+        `${this.props.history.location.hash}`
+      );
+      const lat = parseFloat(newLocation.get("lat")) || 40.753647;
+      const lng = parseFloat(newLocation.get("lng")) || -73.980707;
+      this.setState({ lat: lat, lng: lng });
+      this.center = { lat: lat, lng: lng };
+      this.map.setCenter(this.center);
+    }
     this.MarketManager.updateMarkers(this.props.rides);
-    // }
   }
 
   registerListeners() {
