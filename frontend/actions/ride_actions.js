@@ -1,4 +1,4 @@
-import * as APIUtil from "../util/ride_api_util";
+import * as RideApiUtil from "../util/ride_api_util";
 
 export const RECEIVE_ALL_RIDES = "RECEIVE_ALL_RIDES";
 export const RECEIVE_RIDE = "RECEIVE_RIDE";
@@ -14,13 +14,15 @@ export const receiveRide = (ride) => ({
 });
 
 export const fetchRides = (filters) => (dispatch) =>
-  APIUtil.fetchRides(filters).then((rides) => dispatch(receiveAllRides(rides)));
+  RideApiUtil.fetchRides(filters).then((rides) =>
+    dispatch(receiveAllRides(rides))
+  );
 
 export const fetchRide = (rideId) => (dispatch) =>
-  APIUtil.fetchRide(rideId).then((ride) => dispatch(receiveRide(ride)));
+  RideApiUtil.fetchRide(rideId).then((ride) => dispatch(receiveRide(ride)));
 
-export const createRide = (ride) => (dispatch) =>
-  APIUtil.createRide(ride).then((ride) => dispatch(receiveRide(ride)));
+// export const createRide = (ride) => (dispatch) =>
+//   APIUtil.createRide(ride).then((ride) => dispatch(receiveRide(ride)));
 
-export const updateRide = (ride) => (dispatch) =>
-  APIUtil.updateRide(ride).then((ride) => dispatch(receiveRide(ride)));
+// export const updateRide = (ride) => (dispatch) =>
+//   APIUtil.updateRide(ride).then((ride) => dispatch(receiveRide(ride)));
