@@ -32,7 +32,7 @@ class RideIndex extends React.Component {
         <div className="ride-index-page">
           <div className="ride-index">
             <ul className="ride-index-left">
-              <span className='index-count'>{count} bikes to ride.</span>
+              <span className="index-count">{count} bikes to ride.</span>
               {rideIndexItems}
             </ul>
             <div id="map-container">

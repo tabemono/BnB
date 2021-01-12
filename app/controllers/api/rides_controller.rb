@@ -1,7 +1,12 @@
 class Api::RidesController < ApplicationController
     def index 
-        @rides = bounds ? Ride.in_bounds(bounds) : Ride.with_attached_photos.all
-        render :index
+        rides = params[:bounds] ? Ride.with_attached_photos.in_bounds(params:bounds) : Ride.with_attached_photos.all
+        
+        if params[:query]
+            rides = rides.where("city ILIKE ?", "%#{params[:query]}%")
+        end
+        @rides = rides
+        render: index
     end
 
     def show
@@ -21,25 +26,7 @@ class Api::RidesController < ApplicationController
 
 
 
-    def update 
-        @ride = Ride.find(params[:id])
-        if @ride && @ride.update(ride_params)
-            render :show
-        else
-            render json: @ride.errors.full_messages, status: 422
-        end
-    end
-
-    def search
-        search_rides = Ride.filtered_search(params[:query])
-        if search_rides 
-            @rides = search_rides
-            render :index
-        else
-            render json: ["No Results Found"], status: 404
-        end
-    end
-
+  
     private
 
     def ride_params    
