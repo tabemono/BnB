@@ -12,24 +12,18 @@ export const fetchRide = (rideId) => {
     method: "GET",
   });
 };
-export const updateRide = (ride) => {
-  return $.ajax({
-    method: "PATCH",
-    url: `/api/rides/${ride.id}`,
-    data: { ride },
-  });
-};
+// export const updateRide = (ride) => {
+//   return $.ajax({
+//     method: "PATCH",
+//     url: `/api/rides/${ride.id}`,
+//     data: { ride },
+//   });
+// };
 
-export const createRide = (ride) => {
-  return $.ajax({
-    method: "POST",
-    url: "/api/rides",
-    data: { ride },
-  });
-};
-
-export const fetchSearch = (query) =>
-  $.ajax({
-    url: "api/search",
-    data: { query },
-  });
+// export const createRide = (ride) => {
+//   return $.ajax({
+//     method: "POST",
+//     url: "/api/rides",
+//     data: { ride },
+//   });
+// };
