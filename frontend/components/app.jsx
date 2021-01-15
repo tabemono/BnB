@@ -16,8 +16,8 @@ const App = () => (
     <Route path="/" component={NavBar} />
     <Switch>
       <Route exact path="/" component={SplashPage} />
-      {/* <Route exact path="/rides" component={RideIndex} /> */}
-      <Route exact path="/rides" component={Ride} />
+      <Route exact path="/rides" component={RideIndex} />
+      {/* <Route exact path="/rides" component={Ride} /> */}
       <Route exact path="/rides/:rideId" component={RideShowContainer} />
       <Route exact path="/rides/:rideId" component={Modal} />
 

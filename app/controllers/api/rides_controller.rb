@@ -6,7 +6,7 @@ class Api::RidesController < ApplicationController
             rides = rides.where("city ILIKE ?", "%#{params[:query]}%")
         end
         @rides = rides
-        render: index
+        render :index
     end
 
     def show
