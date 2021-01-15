@@ -5,10 +5,10 @@ class MarkerManager {
     this.markers = {};
   }
 
-  updateMarkers(rides) { 
+  updateMarkers(rides) {
     const ridesObj = {};
     rides.forEach((ride) => (ridesObj[ride.id] = ride));
-    
+
     rides
       .filter((ride) => !this.markers[ride.id])
       .forEach((newRide) =>
@@ -26,18 +26,21 @@ class MarkerManager {
       position,
       map: this.map,
       rideId: ride.id,
-      label: "$" + String(ride.price),
-      icon,
+      label: {
+        fontFamily: "Helvetica Neue",
+        fontSize: "14px",
+        color: "#484848",
+        fontWeight: "700",
+        text: "$" + ride.price.toString(),
+      },
+      icon: {
+        url: `${window.marker}`,
+        scaledSize: new google.maps.Size(60, 40),
+        origin: new google.maps.Point(0, 0),
+        labelOrigin: new google.maps.Point(27, 19),
+        backgroundColor: "white",
+      },
     });
-    const icon = {
-      path: google.maps.SymbolPath.CIRCLE,
-      fillColor: "white",
-      fillOpacity: .8,
-      scale: 18,
-      strokeColor: "darkgrey",
-      // labelOrigin: new google.maps.Point(0, -18),
-      strokeWeight: 1.6,
-    };
 
     marker.addListener("click", () => this.handleClick(ride));
     this.markers[marker.rideId] = marker;
