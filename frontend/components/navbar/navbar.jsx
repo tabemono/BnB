@@ -5,7 +5,14 @@ import { withRouter } from "react-router-dom";
 // import DateSearch from './date_search';
 
 class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {searching: false}
+
+  }
+
   render() {
+    
     const navDisplay = this.props.currentUser ? (
       <div className="outerDiv">
         <div className="inner-div">

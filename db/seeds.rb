@@ -53,6 +53,20 @@ tony = User.create!(
   password: 'tonyasdf123'
 )
 
+suzuki_sf = Ride.create!({
+  model: "GSX-600",
+  brand: "Suzuki",
+  style: "Sport",
+  description: "test",
+  price: 100,
+  lat: 37.7749,
+  lng: -122.4194,
+  owner_id: demo.id,
+  city: "San Francisco",
+  location: "San Francisco"
+})
+
+
 bmw_manhattan = Ride.create!({
   model: " R1200GS",
   brand: "BMW",

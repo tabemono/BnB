@@ -1,9 +1,15 @@
 import { connect } from "react-redux";
-import { fetchRides, createRide, updateRide, fetchRide } from "../../actions/ride_actions";
+import {
+  fetchRides,
+  createRide,
+  updateRide,
+  fetchRide,
+} from "../../actions/ride_actions";
 import RideIndex from "./ride_index";
 
 const mSTP = (state) => ({
   rides: Object.values(state.entities.rides),
+  type: "index",
 });
 
 const mDTP = (dispatch) => ({

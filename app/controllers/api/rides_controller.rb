@@ -2,6 +2,10 @@ class Api::RidesController < ApplicationController
     def index 
         rides = params[:bounds] ? Ride.with_attached_photos.in_bounds(params:bounds) : Ride.with_attached_photos.all
         
+        if bounds != nil 
+            rides = rides.in_bounds(params[:bounds])
+        end
+
         if params[:query]
             rides = rides.where("city ILIKE ?", "%#{params[:query]}%")
         end
@@ -42,6 +46,10 @@ class Api::RidesController < ApplicationController
             :location, 
             photos: []
         )
+    end
+
+    def location
+        params[:location]
     end
 
     def bounds

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../navbar/navbar_container';
 import SearchMapContainer from '../map/search_map_container';
-import Search from '../search_bar/search';
+import Search from '../search_bar/search_index';
 
 class Ride extends React.Component {
     constructor(props) {

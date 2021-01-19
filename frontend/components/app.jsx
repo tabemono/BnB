@@ -10,6 +10,7 @@ import RideIndex from "./rides/ride_index_container";
 import RideShowContainer from "./rides/ride_show_container";
 import Ride from "../components/rides/ride";
 // import RideSearchContainer from './rides/ride_search_container';
+import Search from '../components/search_bar/search_index';
 const App = () => (
   <>
     <Modal />
@@ -17,9 +18,9 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={Splash} />
       <Route exact path="/rides" component={RideIndex} />
-      {/* <Route exact path="/rides" component={Ride} /> */}
+      <Route exact path="/search/:input" component={Search} />
       <Route exact path="/rides/:rideId" component={RideShowContainer} />
-      <Route exact path="/rides/:rideId" component={Modal} />
+      {/* <Route exact path="/rides/:rideId" component={Modal} /> */}
 
       {/* <Route path="/rides" component={RideSearchContainer} /> */}
     </Switch>

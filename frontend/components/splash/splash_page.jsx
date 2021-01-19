@@ -1,12 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import { Link, withRouter } from "react-router-dom";
+import { connect } from "react-redux";
 class Splash extends React.Component {
-  constructor(props) {{
-    super(props);
-  }}
-  
-  
+  constructor(props) {
+    {
+      super(props);
+    }
+  }
+
   render() {
     return (
       <div className="splashpage">
@@ -130,4 +131,8 @@ class Splash extends React.Component {
   }
 }
 
-export default Splash;
+const mapStateToProps = (state) => ({
+  type: "splash",
+});
+
+export default withRouter(connect(mapStateToProps, null)(Splash));
