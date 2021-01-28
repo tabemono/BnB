@@ -1,7 +1,9 @@
 import { connect } from "react-redux";
 import SearchBar from "./search_bar";
-import { fetchRides } from "../../actions/ride_actions";
+import { fetchRides, rideSearch } from "../../actions/ride_actions";
 import { withRouter } from "react-router-dom";
+// import { updateFilter } from "../../actions/filter_actions";
+
 // import Search from "./search";
 const mstp = (state, ownProps) => {
   const allRides = Object.values(state.entities.rides);
@@ -20,7 +22,9 @@ const mstp = (state, ownProps) => {
 const mdp = (dispatch) => {
   return {
     fetchRides: (query) => dispatch(fetchRides(query)),
+    rideSearch: (keyword) => dispatch(rideSearch(keyword))
+    // updateFilter: (bounds) => dispatch(updateBounds(bounds)),
   };
 };
 
-export default withRouter(connect(mstp, mdp)(SearchBar));
+export default withRouter(connect(null, mdp)(SearchBar));

@@ -148,17 +148,17 @@ ktm_ny = Ride.create!(
 
 
 
-ktmsx1 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-1.jpg')
-ktmsx2 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-2.jpg')
-ktmsx3 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-3.jpg')
-ktmsx4 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-4.jpg')
-ktmsx5 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-5.jpg')
+# ktmsx1 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-1.jpg')
+# ktmsx2 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-2.jpg')
+# ktmsx3 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-3.jpg')
+# ktmsx4 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-4.jpg')
+# ktmsx5 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-5.jpg')
 
-ktm_ny.photos.attach(io: ktmsx1, filename:'KTMSXE5-1.jpg')
-ktm_ny.photos.attach(io: ktmsx2, filename:'KTMSXE5-2.jpg')
-ktm_ny.photos.attach(io: ktmsx3, filename:'KTMSXE5-3.jpg')
-ktm_ny.photos.attach(io: ktmsx4, filename:'KTMSXE5-4.jpg')
-ktm_ny.photos.attach(io: ktmsx5, filename:'KTMSXE5-5.jpg')
+# ktm_ny.photos.attach(io: ktmsx1, filename:'KTMSXE5-1.jpg')
+# ktm_ny.photos.attach(io: ktmsx2, filename:'KTMSXE5-2.jpg')
+# ktm_ny.photos.attach(io: ktmsx3, filename:'KTMSXE5-3.jpg')
+# ktm_ny.photos.attach(io: ktmsx4, filename:'KTMSXE5-4.jpg')
+# ktm_ny.photos.attach(io: ktmsx5, filename:'KTMSXE5-5.jpg')
 
 # bmw1 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/bmw-6.jpg')
 # bmw2 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/bmw-7.jpg')

@@ -63,7 +63,7 @@ class BikeMap extends React.Component {
         northEast: { lat: north, lng: east },
         southWest: { lat: south, lng: west },
       };
-      this.props.updateBounds(bounds);
+      this.state.updateFilter(bounds);
     });
   }
 

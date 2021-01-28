@@ -12,6 +12,16 @@ export const fetchRide = (rideId) => {
     method: "GET",
   });
 };
+
+export const rideSearch = (keyword) => {
+  return $.ajax({
+    method: "GET",
+    url: "/api/rides",
+    data: {
+      keyword,
+    },
+  });
+};
 // export const updateRide = (ride) => {
 //   return $.ajax({
 //     method: "PATCH",

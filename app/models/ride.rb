@@ -39,16 +39,18 @@ class Ride < ApplicationRecord
   
 
     def self.in_bounds(bounds)
-       self.where("lat < ?", bounds[:northEast][:lat])
+       Ride.where("lat < ?", bounds[:northEast][:lat])
       .where("lat > ?", bounds[:southWest][:lat])
       .where("lng > ?", bounds[:southWest][:lng])
       .where("lng < ?", bounds[:northEast][:lng])
     end
 
-    # def self.filtered_search(query) 
-    #     result = self.where("city LIKE ?", "%#{query}%")
-    #     return result
-    #  end
+    def self.filtered_search(query) 
+        match = "%#{query}%"
+        result = Ride.where("city ILIKE ?", match)
+            .or(Ride.where("location ILIKE ?", match))
+            .or(Ride.where("model ILIKE ?", match))
+     end
 
 
 end
