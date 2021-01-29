@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import MarkerManager from "./marker_manager";
+import { isEqual } from "lodash";
 const getCoordsObj = (latLng) => ({
   lat: latLng.lat(),
   lng: latLng.lng(),
@@ -10,7 +11,7 @@ class BikeMap extends React.Component {
   constructor(props) {
     super(props);
     this.searchParams = new URLSearchParams(`${this.props.keyword}`);
-    let lat = parseFloat(this.searchParams.get("lat")) || 40.753647;
+    let lat = parseFloat(this.searchParams.get("lat")) || 40.753647;;
     let lng = parseFloat(this.searchParams.get("lng")) || -73.980707;
     this.center = { lat: lat, lng: lng };
     this.state = {
@@ -41,17 +42,20 @@ class BikeMap extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.history.location.hash !== prevProps.location.hash) {
-      const newLocation = new URLSearchParams(
-        `${this.props.history.location.hash}`
-      );
-      const lat = parseFloat(newLocation.get("lat")) || 40.753647;
-      const lng = parseFloat(newLocation.get("lng")) || -73.980707;
-      this.setState({ lat: lat, lng: lng });
-      this.center = { lat: lat, lng: lng };
-      this.map.setCenter(this.center);
-    }
+    // if (this.props.history.location.hash !== prevProps.location.hash) {
+    //   const newLocation = new URLSearchParams(
+    //     `${this.props.history.location.hash}`
+    //   );
+    //   const lat = parseFloat(newLocation.get("lat")) || 40.753647;
+    //   const lng = parseFloat(newLocation.get("lng")) || -73.980707;
+    //   this.setState({ lat: lat, lng: lng });
+    //   this.center = { lat: lat, lng: lng };
+    //   this.map.setCenter(this.center);
+    // }
+    if (isEqual(prevProps.keyword, this.props.keyword)  && isEqual(prevProps.rides, this.props.rides)) return;
     this.MarketManager.updateMarkers(this.props.rides);
+
+    if(this.props.keyword) {}
   }
 
   // registerListeners() {

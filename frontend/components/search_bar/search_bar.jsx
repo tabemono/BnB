@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import "react-dates/initialize";
 import { DateRangePicker } from "react-dates";
 import { BsSearch } from "react-icons/bs";
-import RideIndexItem from "../rides/ride_index_item";
+
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -11,11 +11,19 @@ class SearchBar extends React.Component {
     // this.state = { ...this.props.query };
     this.state = {
       keyword: "",
+      lat: null,
+      lng: null,
     };
+    // this.newLocation = this.newLocation.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
 
+  // componentDidMount() {
+    // const input = document.getElementById("search-input");
+    // this.autocomplete = new google.maps.places.Autocomplete(input);
+    // this.autocomplete.addListener("place_changed", this.newLocation);
+  // }
   // componentDidMount() {
   //   this.props.fetchRides();
   // }
@@ -26,12 +34,23 @@ class SearchBar extends React.Component {
   //   }
   // }
 
+  // newLocation() {
+  //   const loc = this.autocomplete.getPlace();
+  //   this.setState({
+  //     address: loc.formatted_address,
+  //     lat: loc.geometry.location.lat(),
+  //     lng: loc.geometry.location.lng(),
+  //   });
+
+  //   this.handleSubmit();
+  // }
+
   handleSubmit(e) {
     e.preventDefault();
 
     const lat = this.state.lat || 40.753647;
     const lng = this.state.lng || -73.980707;
-    const hash = `&lat=${lat}&lng=${lng}`;
+    // const hash = `&lat=${lat}&lng=${lng}`;
     // const query = this.state;
     // query["startDate"] = null;
     // query["endDate"] = null;
@@ -98,6 +117,7 @@ class SearchBar extends React.Component {
               placeholder="Nearby Rides"
               value={this.state.keyword}
               onChange={(e) => this.update(e)}
+              id="search-input"
             />
           </div>
 

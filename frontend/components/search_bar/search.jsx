@@ -6,6 +6,7 @@ const Search = ({
   rides,
   fetchRides,
   //   updateBounds,
+  requestRide,
   updateFilter,
   keyword,
   deleteKeyword,
@@ -20,6 +21,7 @@ const Search = ({
               rides={rides}
               fetchRides={fetchRides}
               keyword={keyword}
+              requestRide={requestRide}
             />
           </ul>
           <div id="map-container">
