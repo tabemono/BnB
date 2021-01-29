@@ -47,7 +47,7 @@ class SearchBar extends React.Component {
     // debugger;
     this.props
       .rideSearch(this.state.keyword)
-      .then(() => this.props.history.push("/search/"));
+      .then(() => this.props.history.push(`/search/${this.state.keyword}`));
   }
 
   update(e) {

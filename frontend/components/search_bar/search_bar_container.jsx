@@ -16,14 +16,15 @@ const mstp = (state, ownProps) => {
     rides: Object.values(state.entities.rides),
     // search: state.entities.search,
     // searchedCity: searchedCity,
+    type: "search",
   };
 };
 
 const mdp = (dispatch) => {
   return {
     fetchRides: (query) => dispatch(fetchRides(query)),
-    rideSearch: (keyword) => dispatch(rideSearch(keyword))
-    // updateFilter: (bounds) => dispatch(updateBounds(bounds)),
+    rideSearch: (keyword) => dispatch(rideSearch(keyword)),
+    updateBounds: (bounds) => dispatch(updateBounds(bounds)),
   };
 };
 

@@ -12,7 +12,7 @@ const msp = (state) => {
 };
 
 const mdp = (dispatch) => ({
-  fetchRides: () => dispatch(fetchRides()),
+  fetchRides: (keyword) => dispatch(fetchRides(keyword)),
   updateBounds: (bounds) => dispatch(updateBounds(bounds)),
 });
 

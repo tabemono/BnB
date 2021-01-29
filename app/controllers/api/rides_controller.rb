@@ -1,12 +1,15 @@
 class Api::RidesController < ApplicationController
     def index 
-        
+       
+        @rides = bounds ? Ride.in_bounds(bounds) : Ride.all
        
         if params[:keyword]
             
             @rides = Ride.with_attached_photos.filtered_search(params[:keyword])
         else
-            @rides = Rides.with_attached_photos.in_bounds(params[:filters])
+            # @rides = Rides.with_attached_photos.in_bounds(params[:filters])
+            render {}
+            return
         end
         # @rides = Ride.all
         render :index

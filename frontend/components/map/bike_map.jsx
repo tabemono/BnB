@@ -6,12 +6,12 @@ import MarkerManager from "./marker_manager";
 //   lng: latLng.lng(),
 // });
 
+
+
 class BikeMap extends React.Component {
   constructor(props) {
     super(props);
-    this.searchParams = new URLSearchParams(
-      `${this.props.history.location.hash}`
-    );
+    this.searchParams = new URLSearchParams(`${this.props.keyword}`);
     let lat = parseFloat(this.searchParams.get("lat")) || 40.753647;
     let lng = parseFloat(this.searchParams.get("lng")) || -73.980707;
     this.center = { lat: lat, lng: lng };
@@ -30,7 +30,9 @@ class BikeMap extends React.Component {
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarketManager = new MarkerManager(
       this.map,
-      this.handleMarkClick.bind(this)
+      // this.handleMarkClick.bind(this)
+      // position: { lat: ride.lat, lng: ride.lng },
+      // animation: google.maps.Animation.DROP
     );
     this.boundListener();
     this.MarketManager.updateMarkers(this.props.rides);
@@ -63,7 +65,7 @@ class BikeMap extends React.Component {
         northEast: { lat: north, lng: east },
         southWest: { lat: south, lng: west },
       };
-      this.state.updateFilter(bounds);
+      this.props.updateBounds(bounds);
     });
   }
 

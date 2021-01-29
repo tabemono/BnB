@@ -5,7 +5,7 @@ import BikeMap from "../map/bike_map";
 const Search = ({
   rides,
   fetchRides,
-  updateFilter,
+  updateBounds,
   keyword,
   deleteKeyword,
 }) => {
@@ -20,10 +20,11 @@ const Search = ({
           <div id="map-container">
             <BikeMap
               rides={rides}
-              updateFilter={updateFilter}
+              updateBounds={updateBounds}
               keyword={keyword}
               deleteKeyword={deleteKeyword}
             />
+
           </div>
         </div>
       </div>

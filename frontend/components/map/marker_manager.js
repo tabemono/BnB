@@ -25,6 +25,7 @@ class MarkerManager {
     const marker = new google.maps.Marker({
       position,
       map: this.map,
+      animation: google.maps.Animation.DROP,
       rideId: ride.id,
       label: {
         fontFamily: "Helvetica Neue",
