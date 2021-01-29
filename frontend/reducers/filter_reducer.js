@@ -1,18 +1,19 @@
 import { UPDATE_FILTER } from "../actions/filter_actions";
 
-const filterReducer = (oldState = {}, action) => {
-  Object.freeze(oldState);
+const defaultFilters = Object.freeze({
+  bounds: {},
+});
 
-  switch (action.type) {
-    case UPDATE_FILTER:
-      const newFilter = {
-        [action.filter]: action.value,
-      };
-
-      return Object.assign({}, oldState, newFilter);
-    default:
-      return oldState;
+const filtersReducer = (state = defaultFilters, action) => {
+  Object.freeze(state);
+  if (action.type === UPDATE_FILTER) {
+    const newFilter = {
+      [action.filter]: action.value,
+    };
+    return Object.assign({}, state, newFilter);
+  } else {
+    return state;
   }
 };
 
-export default filterReducer;
+export default filtersReducer;

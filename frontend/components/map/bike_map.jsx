@@ -1,12 +1,10 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import MarkerManager from "./marker_manager";
-// const getCoordsObj = (latLng) => ({
-//   lat: latLng.lat(),
-//   lng: latLng.lng(),
-// });
-
-
+const getCoordsObj = (latLng) => ({
+  lat: latLng.lat(),
+  lng: latLng.lng(),
+});
 
 class BikeMap extends React.Component {
   constructor(props) {
@@ -30,12 +28,16 @@ class BikeMap extends React.Component {
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarketManager = new MarkerManager(
       this.map,
-      // this.handleMarkClick.bind(this)
+      this.handleMarkClick.bind(this)
       // position: { lat: ride.lat, lng: ride.lng },
       // animation: google.maps.Animation.DROP
     );
-    this.boundListener();
-    this.MarketManager.updateMarkers(this.props.rides);
+    if (this.props.ride) {
+      this.props.fetchRide(this.props.rideId);
+    } else {
+      this.boundListener();
+      this.MarketManager.updateMarkers(this.props.rides);
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -65,7 +67,8 @@ class BikeMap extends React.Component {
         northEast: { lat: north, lng: east },
         southWest: { lat: south, lng: west },
       };
-      this.props.updateBounds(bounds);
+      // this.props.updateBounds(bounds);
+      this.props.updateFilter("bounds", bounds);
     });
   }
 
