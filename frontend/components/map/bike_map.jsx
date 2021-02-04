@@ -2,6 +2,8 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import MarkerManager from "./marker_manager";
 import { isEqual } from "lodash";
+import getLocation from "../../util/map_util";
+
 const getCoordsObj = (latLng) => ({
   lat: latLng.lat(),
   lng: latLng.lng(),
@@ -11,22 +13,31 @@ class BikeMap extends React.Component {
   constructor(props) {
     super(props);
     this.searchParams = new URLSearchParams(`${this.props.keyword}`);
-    let lat = parseFloat(this.searchParams.get("lat")) || 40.753647;;
-    let lng = parseFloat(this.searchParams.get("lng")) || -73.980707;
-    this.center = { lat: lat, lng: lng };
+    let latitude = parseFloat(this.searchParams.get("lat")) || 40.753647;
+    let longtitude = parseFloat(this.searchParams.get("lng")) || -73.980707;
+    this.center = { lat: latitude, lng: longtitude };
     this.state = {
-      lat: lat,
-      lng: lng,
+      lat: latitude,
+      lng: longtitude,
     };
   }
 
-  componentDidMount() {
-    const mapOptions = {
-      center: this.center,
-      zoom: 13,
-    };
+  mapOptions() {
+    const options = {};
+    if (this.props.rides.length) {
+      options.center = { lat: this.props.rides[0].lat, lng: this.props.rides[0].lng };
+      options.zoom = 15;
+    } else {
+      options.center = { lat: 40.227745, lng: -97.2509 };
+      options.zoom = 3.9;
+    }
+    return options;
+  }
 
-    this.map = new google.maps.Map(this.mapNode, mapOptions);
+  componentDidMount() {
+    // const mapOpts = getLocation(this.props.keyword);
+    this.map = new google.maps.Map(this.mapNode, this.mapOptions());
+    // this.map = new google.maps.Map(this.mapNode, mapOpts);
     this.MarketManager = new MarkerManager(
       this.map,
       this.handleMarkClick.bind(this)
@@ -42,20 +53,18 @@ class BikeMap extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    // if (this.props.history.location.hash !== prevProps.location.hash) {
-    //   const newLocation = new URLSearchParams(
-    //     `${this.props.history.location.hash}`
-    //   );
-    //   const lat = parseFloat(newLocation.get("lat")) || 40.753647;
-    //   const lng = parseFloat(newLocation.get("lng")) || -73.980707;
-    //   this.setState({ lat: lat, lng: lng });
-    //   this.center = { lat: lat, lng: lng };
-    //   this.map.setCenter(this.center);
-    // }
-    if (isEqual(prevProps.keyword, this.props.keyword)  && isEqual(prevProps.rides, this.props.rides)) return;
-    this.MarketManager.updateMarkers(this.props.rides);
+    if (this.props.history.location.hash !== prevProps.location.hash) {
+      const newLocation = new URLSearchParams(
+        `${this.props.history.location.hash}`
+      );
+      const lat = parseFloat(newLocation.get("lat")) || 40.753647;
+      const lng = parseFloat(newLocation.get("lng")) || -73.980707;
+      this.setState({ lat: lat, lng: lng });
+      this.center = { lat: lat, lng: lng };
+      this.map.setCenter(this.center);
+    }
 
-    if(this.props.keyword) {}
+    this.MarketManager.updateMarkers(this.props.rides);
   }
 
   // registerListeners() {

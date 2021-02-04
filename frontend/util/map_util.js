@@ -13,8 +13,8 @@ const defaultOptions = () => ({
   zoom: 3,
 });
 
-const getLocation = (query) => {
-  switch (query.toLowerCase()) {
+const getLocation = (keyword) => {
+  switch (keyword.toLowerCase()) {
     case "san francisco":
       return sfLocation();
     case "new york":
