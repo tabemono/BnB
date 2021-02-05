@@ -18,8 +18,7 @@ const mdp = (dispatch) => {
     fetchRides: () => dispatch(fetchRides()),
     requestRide: (rideId) => dispatch(fetchRide(rideId)),
     deleteKeyword: () => dispatch(deleteKeyword()),
-    // updateBounds: (bounds) => dispatch(updateBounds(bounds)),
-    updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
+    updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),,
   };
 };
 

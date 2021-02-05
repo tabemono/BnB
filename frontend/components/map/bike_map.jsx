@@ -12,21 +12,24 @@ const getCoordsObj = (latLng) => ({
 class BikeMap extends React.Component {
   constructor(props) {
     super(props);
-    this.searchParams = new URLSearchParams(`${this.props.keyword}`);
-    let latitude = parseFloat(this.searchParams.get("lat")) || 40.753647;
-    let longtitude = parseFloat(this.searchParams.get("lng")) || -73.980707;
-    this.center = { lat: latitude, lng: longtitude };
-    this.state = {
-      lat: latitude,
-      lng: longtitude,
-    };
+    // this.searchParams = new URLSearchParams(`${this.props.keyword}`);
+    // let latitude = parseFloat(this.searchParams.get("lat")) || 40.753647;
+    // let longtitude = parseFloat(this.searchParams.get("lng")) || -73.980707;
+    // this.center = { lat: latitude, lng: longtitude };
+    // this.state = {
+    //   lat: latitude,
+    //   lng: longtitude,
+    // };
   }
 
   mapOptions() {
     const options = {};
     if (this.props.rides.length) {
-      options.center = { lat: this.props.rides[0].lat, lng: this.props.rides[0].lng };
-      options.zoom = 15;
+      options.center = {
+        lat: this.props.rides[0].lat,
+        lng: this.props.rides[0].lng,
+      };
+      options.zoom = 13;
     } else {
       options.center = { lat: 40.227745, lng: -97.2509 };
       options.zoom = 3.9;
@@ -52,27 +55,6 @@ class BikeMap extends React.Component {
     }
   }
 
-  componentDidUpdate(prevProps) {
-    if (this.props.history.location.hash !== prevProps.location.hash) {
-      const newLocation = new URLSearchParams(
-        `${this.props.history.location.hash}`
-      );
-      const lat = parseFloat(newLocation.get("lat")) || 40.753647;
-      const lng = parseFloat(newLocation.get("lng")) || -73.980707;
-      this.setState({ lat: lat, lng: lng });
-      this.center = { lat: lat, lng: lng };
-      this.map.setCenter(this.center);
-    }
-
-    this.MarketManager.updateMarkers(this.props.rides);
-  }
-
-  // registerListeners() {
-  //   google.maps.event.addListener(this.map, "click", (e) => {
-  //     const coords = getCoordsObj(e.latLng);
-  //   });
-  // }
-
   boundListener() {
     google.maps.event.addListener(this.map, "idle", () => {
       const { north, south, east, west } = this.map.getBounds().toJSON();
@@ -84,6 +66,32 @@ class BikeMap extends React.Component {
       this.props.updateFilter("bounds", bounds);
     });
   }
+
+  componentDidUpdate(prevProps) {
+    // if (this.props.history.location.hash !== prevProps.location.hash) {
+    //   const newLocation = new URLSearchParams(
+    //     `${this.props.history.location.hash}`
+    //   );
+    //   const lat = parseFloat(newLocation.get("lat")) || 40.753647;
+    //   const lng = parseFloat(newLocation.get("lng")) || -73.980707;
+    //   this.setState({ lat: lat, lng: lng });
+    //   this.center = { lat: lat, lng: lng };
+    //   this.map.setCenter(this.center);
+    // }
+    if (prevProps.keyword !== this.props.keyword) {
+      this.map = new google.maps.Map(this.mapNode, this.mapOptions());
+      this.MarketManager = new MarkerManager(this.map);
+      this.boundListener();
+    }
+
+    this.MarketManager.updateMarkers(this.props.rides);
+  }
+
+  // registerListeners() {
+  //   google.maps.event.addListener(this.map, "click", (e) => {
+  //     const coords = getCoordsObj(e.latLng);
+  //   });
+  // }
 
   handleMarkClick(ride) {
     this.props.history.push(`/rides/${ride.id}`);

@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import "react-dates/initialize";
 import { DateRangePicker } from "react-dates";
 import { BsSearch } from "react-icons/bs";
-
+import RideIndexItem from "../rides/ride_index_item";
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -20,9 +20,9 @@ class SearchBar extends React.Component {
   }
 
   // componentDidMount() {
-    // const input = document.getElementById("search-input");
-    // this.autocomplete = new google.maps.places.Autocomplete(input);
-    // this.autocomplete.addListener("place_changed", this.newLocation);
+  // const input = document.getElementById("search-input");
+  // this.autocomplete = new google.maps.places.Autocomplete(input);
+  // this.autocomplete.addListener("place_changed", this.newLocation);
   // }
   // componentDidMount() {
   //   this.props.fetchRides();
@@ -163,77 +163,5 @@ class SearchBar extends React.Component {
     );
   }
 }
-
-//   const { rides, searchedCity, requestRide } = this.props;
-
-//   const count = this.props.rides.length;
-//   const filteredRides = rides.filter((ride) => {
-//     return ride.city.toLowerCase().includes(this.state.input.toLowerCase());
-//   });
-//   console.log(filteredRides);
-//   console.log(this.props.rides)
-//   // const SearchedLength = searchedCity.length;
-//   const SearchedItems = filteredRides.map((ride) => (
-//     <RideIndexitem
-//       key={ride.id}
-//       history={this.props.history}
-//       requestRide={requestRide}
-//       ride={ride}
-//     />
-//   ));
-//   return (
-//     <div className="search-wrapper">
-//       <form className="search-form" onSubmit={this.handleSubmit}>
-//         <div className="search-form-input">
-//           <input
-//             type="text"
-//             placeholder="Nearby Rides"
-//             value={this.state.input}
-//             onChange={(e) => this.update(e)}
-//           />
-//         </div>
-
-//         <div className="calendars">
-//           <div className="date-labels">
-//             <div id="checkin-label">Ride Out</div>
-//             <div id="checkout-label">Ride Back</div>
-//           </div>
-//           <DateRangePicker
-//             startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-//             startDateId="search_start" // PropTypes.string.isRequired,
-//             endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-//             endDateId="search_end" // PropTypes.string.isRequired,
-//             onDatesChange={({ startDate, endDate }) =>
-//               this.setState({ startDate, endDate })
-//             } // PropTypes.func.isRequired,
-//             focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-//             onFocusChange={(focusedInput) => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-//             startDatePlaceholderText="Add dates"
-//             endDatePlaceholderText="Add dates"
-//             displayFormat="MMM D"
-//             noBorder={false}
-//             hideKeyboardShortcutsPanel={true}
-//             withPortal
-//             block
-//             readOnly
-//             daySize={50}
-//           />
-//         </div>
-
-//         <div id="search-badge">
-//           <button
-//             className="search-button"
-//             onClick={(e) => this.handleSubmit(e)}
-//           >
-//             <i className="fas fa-search">
-//               <BsSearch />
-//             </i>
-//           </button>
-//         </div>
-//       </form>
-//     </div>
-//   );
-// }
-// }
 
 export default withRouter(SearchBar);

@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import SearchBar from "./search_bar";
 import { fetchRides, rideSearch } from "../../actions/ride_actions";
 import { withRouter } from "react-router-dom";
-// import { updateFilter } from "../../actions/filter_actions";
+import { updateFilter } from "../../actions/filter_actions";
 
 // import Search from "./search";
 const mstp = (state, ownProps) => {
@@ -24,7 +24,7 @@ const mdp = (dispatch) => {
   return {
     fetchRides: (query) => dispatch(fetchRides(query)),
     rideSearch: (keyword) => dispatch(rideSearch(keyword)),
-    updateBounds: (bounds) => dispatch(updateBounds(bounds)),
+    updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
   };
 };
 
