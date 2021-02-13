@@ -14,7 +14,7 @@ class RideIndex extends React.Component {
   }
 
   render() {
-    const { requestRide, rides } = this.props;
+    const { requestRide, rides, updateFilter } = this.props;
     const count = this.props.rides.length;
     const rideIndexItems = this.props.rides.map((ride) => {
       return (
@@ -36,7 +36,7 @@ class RideIndex extends React.Component {
               {rideIndexItems}
             </ul>
             <div id="map-container">
-              <BikeMap rides={rides} />
+              <BikeMap rides={rides} updateFilter={updateFilter} />
             </div>
           </div>
         </div>

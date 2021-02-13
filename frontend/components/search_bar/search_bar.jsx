@@ -52,8 +52,8 @@ class SearchBar extends React.Component {
     const lng = this.state.lng || -73.980707;
     // const hash = `&lat=${lat}&lng=${lng}`;
     // const query = this.state;
-    // query["startDate"] = null;
-    // query["endDate"] = null;
+    // query["checkIn"] = null;
+    // query["checkOut"] = null;
     // // this.props.runSearch(query);
     // this.props.fetchRides(query);
     // if (this.props.location.pathname !== "/rides") {
@@ -120,24 +120,24 @@ class SearchBar extends React.Component {
               id="search-input"
             />
           </div>
-
+{/* 
           <div className="calendars">
             <div className="date-labels">
               <div id="checkin-label">Ride Out</div>
               <div id="checkout-label">Ride Back</div>
             </div>
             <DateRangePicker
-              startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-              startDateId="search_start" // PropTypes.string.isRequired,
-              endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-              endDateId="search_end" // PropTypes.string.isRequired,
-              onDatesChange={({ startDate, endDate }) =>
-                this.setState({ startDate, endDate })
+              checkIn={this.state.checkIn} // momentPropTypes.momentObj or null,
+              checkInId="search_start" // PropTypes.string.isRequired,
+              checkOut={this.state.checkOut} // momentPropTypes.momentObj or null,
+              checkOutId="search_end" // PropTypes.string.isRequired,
+              onDatesChange={({ checkIn, checkOut }) =>
+                this.setState({ checkIn, checkOut })
               } // PropTypes.func.isRequired,
-              focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+              focusedInput={this.state.focusedInput} // PropTypes.oneOf([check_in, check_out]) or null,
               onFocusChange={(focusedInput) => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-              startDatePlaceholderText="Add dates"
-              endDatePlaceholderText="Add dates"
+              checkInPlaceholderText="Add dates"
+              checkOutPlaceholderText="Add dates"
               displayFormat="MMM D"
               noBorder={false}
               hideKeyboardShortcutsPanel={true}
@@ -146,7 +146,7 @@ class SearchBar extends React.Component {
               readOnly
               daySize={50}
             />
-          </div>
+          </div> */}
 
           <div id="search-badge">
             <button

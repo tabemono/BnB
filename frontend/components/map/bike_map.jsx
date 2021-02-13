@@ -62,22 +62,12 @@ class BikeMap extends React.Component {
         northEast: { lat: north, lng: east },
         southWest: { lat: south, lng: west },
       };
-      // this.props.updateBounds(bounds);
+
       this.props.updateFilter("bounds", bounds);
     });
   }
 
   componentDidUpdate(prevProps) {
-    // if (this.props.history.location.hash !== prevProps.location.hash) {
-    //   const newLocation = new URLSearchParams(
-    //     `${this.props.history.location.hash}`
-    //   );
-    //   const lat = parseFloat(newLocation.get("lat")) || 40.753647;
-    //   const lng = parseFloat(newLocation.get("lng")) || -73.980707;
-    //   this.setState({ lat: lat, lng: lng });
-    //   this.center = { lat: lat, lng: lng };
-    //   this.map.setCenter(this.center);
-    // }
     if (prevProps.keyword !== this.props.keyword) {
       this.map = new google.maps.Map(this.mapNode, this.mapOptions());
       this.MarketManager = new MarkerManager(this.map);
@@ -86,12 +76,6 @@ class BikeMap extends React.Component {
 
     this.MarketManager.updateMarkers(this.props.rides);
   }
-
-  // registerListeners() {
-  //   google.maps.event.addListener(this.map, "click", (e) => {
-  //     const coords = getCoordsObj(e.latLng);
-  //   });
-  // }
 
   handleMarkClick(ride) {
     this.props.history.push(`/rides/${ride.id}`);

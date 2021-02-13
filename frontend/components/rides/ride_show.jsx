@@ -7,15 +7,33 @@ class RideShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      check_in: null,
-      check_out: null,
+      scrollFixedUp: true,
+      scrollFixedB: false,
     };
   }
   componentDidMount() {
     this.props.fetchRide(this.props.match.params.rideId);
+    document.addEventListener("scroll", () => {
+      const belowPictures = window.scrollY < 550;
+      if (belowPictures !== this.state.scrollFixedUp)
+        this.setState({ scrollFixedUp: belowPictures });
+    });
+    document.addEventListener("scroll", () => {
+      const topPictures =
+        window.scrollY > document.body.scrollHeight - window.innerHeight - 345;
+      if (topPictures !== this.state.scrollFixedB)
+        this.setState({ scrollFixedB: topPictures });
+    });
   }
   // componentDidMount() {
   //   this.props.fetchRides();
+  // }
+
+  // onFocusChange() {
+  //   this.setState({
+  //     focusedInputLeftCol:
+  //       this.state.focusedInputLeftCol === START_DATE ? END_DATE : START_DATE,
+  //   });
   // }
 
   componentDidUpdate(prevProps) {
@@ -26,6 +44,12 @@ class RideShow extends React.Component {
 
   render() {
     const { ride } = this.props;
+    // const { photoUrls } = ride;
+    const scrollClass = this.state.scrollFixedUp
+      ? "booking-container"
+      : this.state.scrollFixedB
+      ? "booking-container-absolute"
+      : "booking-container-fixed";
     if (!ride) return null;
     const center = new google.maps.LatLng(ride.lat, ride.lng);
     const zoom = 2;
@@ -64,8 +88,8 @@ class RideShow extends React.Component {
                 <p>Description:</p>
                 {ride.description}
               </div>
-
-              <div className="availability-dates">
+              {/* add reviews here */}
+              {/* <div className="availability-dates">
                 <h4>Select check-in date</h4>
                 <DayPickerRangeController
                   startDate={this.state.startDate}
@@ -74,17 +98,19 @@ class RideShow extends React.Component {
                     this.setState({ startDate, endDate })
                   }
                   focusedInput={this.state.focusedInput}
-                  onFocusChange={(focusedInput) =>
-                    this.setState({ focusedInput })
-                  }
+                  onFocusChange={this.onFocusChange}
                   hideKeyboardShortcutsPanel={true}
                   numberOfMonths={2}
                 />
-              </div>
+              </div> */}
             </div>
             <div className="booking-div-div">
               <div className="booking-div">
-                <BookingFormContainer />
+                <BookingFormContainer
+                  ride={ride}
+                  photos={ride.photoUrls}
+                  scroll={scrollClass}
+                />
               </div>
             </div>
           </div>

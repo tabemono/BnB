@@ -1,28 +1,29 @@
-export const fetchBookings = () => {
-  return $.ajax({
-    method: "GET",
-    url: "/api/bookings",
+export const fetchBookings = (userId) =>
+  $.ajax({
+    url: `api/users/${userId}/bookings`,
   });
-};
 
-export const fetchBooking = (id) => {
-  return $.ajax({
-    method: "GET",
-    url: `/api/bookings/${id}`,
+export const fetchBooking = (bookingId) =>
+  $.ajax({
+    url: `api/bookings/${bookingId}`,
   });
-};
 
-export const createBooking = (booking) => {
-  return $.ajax({
+export const createBooking = (booking) =>
+  $.ajax({
     method: "POST",
-    url: `/api/bookings/`,
+    url: `api/bookings`,
     data: { booking },
   });
-};
 
-export const deleteBooking = (id) => {
-  return $.ajax({
-    method: "DELETE",
-    url: `/api/bookings/${id}`,
+export const updateBooking = (booking) =>
+  $.ajax({
+    method: "PATCH",
+    url: `api/bookings/${booking.id}`,
+    data: { booking },
   });
-};
+
+export const destroyBooking = (bookingId) =>
+  $.ajax({
+    method: "DELETE",
+    url: `api/bookings/${bookingId}`,
+  });

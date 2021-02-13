@@ -39,12 +39,13 @@ ActiveRecord::Schema.define(version: 2020_11_25_070845) do
   create_table "bookings", force: :cascade do |t|
     t.integer "ride_id", null: false
     t.integer "rider_id", null: false
-    t.datetime "check_in", null: false
-    t.datetime "check_out", null: false
+    t.integer "num_riders", null: false
+    t.datetime "start_date", null: false
+    t.datetime "end_date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["ride_id"], name: "index_bookings_on_ride_id"
-    t.index ["rider_id"], name: "index_bookings_on_rider_id"
+    t.index ["ride_id"], name: "index_bookings_on_ride_id", unique: true
+    t.index ["rider_id"], name: "index_bookings_on_rider_id", unique: true
   end
 
   create_table "rides", force: :cascade do |t|

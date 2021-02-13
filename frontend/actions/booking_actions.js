@@ -1,58 +1,46 @@
-import * as BookingApiUtil from "../util/booking_api_util";
+import * as BookingAPI from "../util/booking_api_util";
 
-export const RECEIVE_BOOKINGS = "RECEIVE_BOOKINGS";
+export const RECEIVE_ALL_BOOKINGS = "RECEIVE_ALL_BOOKINGS";
 export const RECEIVE_BOOKING = "RECEIVE_BOOKING";
-export const RECEIVE_BOOKING_ERRORS = "RECEIVE_BOOKING_ERRORS";
-export const CLEAR_BOOKING_ERRORS = "CLEAR_BOOKING_ERRORS";
+export const REMOVE_BOOKING = "REMOVE_BOOKING";
 
-export const receiveBookings = (bookings) => {
-  return {
-    type: RECEIVE_BOOKINGS,
-    bookings,
-  };
-};
+const receiveAllBookings = (bookings) => ({
+  type: RECEIVE_ALL_BOOKINGS,
+  bookings: bookings.bookings,
+  spots: bookings.spots,
+});
 
-export const receiveBooking = (booking) => {
-  return {
-    type: RECEIVE_BOOKING,
-    booking,
-  };
-};
+const receiveBooking = (booking) => ({
+  type: RECEIVE_BOOKING,
+  booking,
+});
 
-export const receiveBookingErrors = (errors) => {
-  return {
-    type: RECEIVE_BOOKING_ERRORS,
-    errors,
-  };
-};
+const removeBooking = (bookingId) => ({
+  type: REMOVE_BOOKING,
+  bookingId,
+});
 
-export const clearBookingErrors = () => {
-  return {
-    type: CLEAR_BOOKING_ERRORS,
-  };
-};
+export const fetchBookings = (userId) => (dispatch) =>
+  BookingAPI.fetchBookings(userId).then((bookings) =>
+    dispatch(receiveAllBookings(bookings))
+  );
 
-export const clearBooking = () => (dispatch) => {
-  return dispatch(receiveBookings({}));
-};
+export const fetchBooking = (bookingId) => (dispatch) =>
+  BookingAPI.fetchBooking(bookingId).then((booking) =>
+    dispatch(receiveBooking(booking))
+  );
 
-export const fetchBookings = () => {
-  return (dispatch) => {
-    return BookingApiUtil.fetchBookings().then((bookings) => {
-      return dispatch(receiveBookings(bookings));
-    });
-  };
-};
+export const createBooking = (booking) => (dispatch) =>
+  BookingAPI.createBooking(booking).then((booking) =>
+    dispatch(receiveBooking(booking))
+  );
 
-export const createBooking = (booking) => {
-  return (dispatch) => {
-    return BookingApiUtil.createBooking(booking).then(
-      (booking) => {
-        return dispatch(receiveBooking(booking));
-      },
-      (errors) => {
-        return dispatch(receiveBookingErrors(errors.responseJSON));
-      }
-    );
-  };
-};
+export const updateBooking = (booking) => (dispatch) =>
+  BookingAPI.updateBooking(booking).then((booking) =>
+    dispatch(receiveBooking(booking))
+  );
+
+export const destroyBooking = (bookingId) => (dispatch) =>
+  BookingAPI.destroyBooking(bookingId).then(() =>
+    dispatch(removeBooking(bookingId))
+  );

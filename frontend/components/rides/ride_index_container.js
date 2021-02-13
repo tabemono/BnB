@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import { updateFilter } from "../../actions/filter_actions";
 import {
   fetchRides,
   createRide,
@@ -17,6 +18,7 @@ const mDTP = (dispatch) => ({
   requestRide: (rideId) => dispatch(fetchRide(rideId)),
   // createRide: (ride) => dispatch(createRide(ride)),
   // updateRide: (ride) => dispatch(updateRide(ride)),
+  updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
 });
 
 export default connect(mSTP, mDTP)(RideIndex);

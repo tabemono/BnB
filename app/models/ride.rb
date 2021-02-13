@@ -30,9 +30,7 @@ class Ride < ApplicationRecord
         foreign_key: :ride_id,
         class_name: :Booking
 
-    has_many :bookers,
-        through: :bookings,
-        source: :rider
+   
 
     has_many_attached :photos
 
