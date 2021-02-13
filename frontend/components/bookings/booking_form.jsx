@@ -39,11 +39,11 @@ class BookingForm extends React.Component {
           end_date: endDate._d,
         })
         .then(() =>
-          this.props.history.push(`/${this.state.rider_id}/bookings`)
+          this.props.history.push(`/${this.state.session.id}/bookings`)
         );
-    } else {
-      this.props.openModal("login");
-    }
+    } //else {
+    //   this.props.openModal("login");
+    // }
   }
 
   addrider(e) {
@@ -63,8 +63,8 @@ class BookingForm extends React.Component {
       <div className="booking-daypicker">
         <DayPickerRangeController
           startDate={this.state.startDate}
-          startDateId="start"
-          endDateId="end"
+          // startDateId="start"
+          // endDateId="end"
           endDate={this.state.endDate}
           onDatesChange={({ startDate, endDate }) =>
             this.setState({ startDate, endDate })

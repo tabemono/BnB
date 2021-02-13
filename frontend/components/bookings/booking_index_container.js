@@ -1,21 +1,21 @@
-import bookingIndex from "./booking_index";
 import { connect } from "react-redux";
 import { fetchBookings, destroyBooking } from "../../actions/booking_actions";
-import { withRouter } from "react-router-dom";
+import { fetchRides } from "../../actions/ride_actions";
+import BookingIndex from "./booking_index";
+import { openModal, closeModal } from "../../actions/modal_actions";
 
-const msp = (state) => {
-  return {
-    bookings: Object.values(state.entities.bookings),
-    rides: state.entities.rides,
-    currentUser: state.entities.users[state.session.id],
-  };
-};
+const mSTP = (state) => ({
+  user: state.entities.users[state.session.id],
+  rides: state.entities.rides,
+  bookings: Object.values(state.entities.bookings),
+});
 
-const mdp = (dispatch) => {
-  return {
-    fetchBookings: (userId) => dispatch(fetchBookings(userId)),
-    destroyBooking: (bookingId) => dispatch(destroyBooking(bookingId)),
-  };
-};
+const mDTP = (dispatch) => ({
+  fetchBookings: (userId) => dispatch(fetchBookings(userId)),
+  destroyBooking: (bookingId) => dispatch(destroyBooking(bookingId)),
+  closeModal: () => dispatch(closeModal()),
+  openModal: () => dispatch(openModal("review")),
+  fetchrides: () => dispatch(fetchRides()),
+});
 
-export default connect(msp, mdp)(bookingIndex);
+export default connect(mSTP, mDTP)(BookingIndex);
