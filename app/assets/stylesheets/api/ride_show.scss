@@ -93,6 +93,10 @@
 .booking-div-div {
   position: relative;
   height: 700px;
+  right: 0;
+  border-radius: 10px;
+  width: 40%;
+  // margin-bottom: 30px;
 }
 
 .availability-dates {
@@ -106,7 +110,7 @@
   margin-bottom: 20px;
   border-top: 1px solid darkgray;
   padding-left: 20%;
-  >h2 {
+  > h2 {
     font-size: 25px;
     padding-left: 30%;
   }

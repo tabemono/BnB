@@ -99,7 +99,7 @@ class BookingForm extends React.Component {
       <div className={scroll} id="shadow">
         <div className="booking-header">
           <div className="ride-price-booking">
-            <span>{this.props.ride.price}</span>/day
+            <span>{this.props.ride.price}</span>$/day
           </div>
           <div className="rating-container-booking">
             <div className="star">
