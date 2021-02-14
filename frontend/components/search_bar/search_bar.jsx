@@ -114,13 +114,13 @@ class SearchBar extends React.Component {
           <div className="search-form-input">
             <input
               type="text"
-              placeholder="Nearby Rides"
+              placeholder="Rides near you"
               value={this.state.keyword}
               onChange={(e) => this.update(e)}
               id="search-input"
             />
           </div>
-{/* 
+          {/* 
           <div className="calendars">
             <div className="date-labels">
               <div id="checkin-label">Ride Out</div>

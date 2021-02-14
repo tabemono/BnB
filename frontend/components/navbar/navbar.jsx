@@ -16,14 +16,36 @@ class NavBar extends React.Component {
 
     const navDisplay = this.props.currentUser ? (
       <div className="outerDiv">
+        {/* <div className="social-media">
+          <a className="git" href="https://github.com/tabemono">
+            <i className="fab fa-github"></i>
+          </a>
+          <a
+            className="personal-social"
+            href="https://www.linkedin.com/in/tony-chen-830850201/"
+          >
+            <i className="fab fa-linkedin"></i>
+          </a>
+        </div> */}
         <div className="inner-div">
           {/* {this.props.currentUser.firstname} */}
-          <button className="logout-btn" onClick={this.props.logout}>
-            Log Out
-          </button>
-          <button className="logout-btn" onClick={handleRidesClick}>
-            Rides
-          </button>
+          <div className="social-media">
+            <a className="git" href="https://github.com/tabemono">
+              <img src={window.github}></img>
+            </a>
+            <a
+              className="personal-social"
+              href="https://www.linkedin.com/in/tony-chen-830850201/"
+            >
+              <img src={window.linkedIn}></img>
+            </a>
+            <button className="logout-btn" onClick={this.props.logout}>
+              Log Out
+            </button>
+            <button className="logout-btn" onClick={handleRidesClick}>
+              Rides
+            </button>
+          </div>
         </div>
       </div>
     ) : (
