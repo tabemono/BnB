@@ -39,7 +39,7 @@ class BookingForm extends React.Component {
           end_date: endDate._d,
         })
         .then(() =>
-          this.props.history.push(`/${this.state.session.id}/bookings`)
+          this.props.history.push(`/${this.state.rider_id}/bookings`)
         );
     } else {
       this.props.openModal("login");

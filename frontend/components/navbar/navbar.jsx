@@ -7,18 +7,22 @@ import { withRouter } from "react-router-dom";
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {searching: false}
-
+    this.state = { searching: false };
   }
 
   render() {
-    
+    const handleRidesClick = () =>
+      this.props.history.push(`/${this.props.currentUser.id}/bookings`);
+
     const navDisplay = this.props.currentUser ? (
       <div className="outerDiv">
         <div className="inner-div">
-          {this.props.currentUser.firstname}
+          {/* {this.props.currentUser.firstname} */}
           <button className="logout-btn" onClick={this.props.logout}>
             Log Out
+          </button>
+          <button className="logout-btn" onClick={handleRidesClick}>
+            Rides
           </button>
         </div>
       </div>
