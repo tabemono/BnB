@@ -30,6 +30,9 @@ class Ride < ApplicationRecord
         foreign_key: :ride_id,
         class_name: :Booking
 
+    has_many :reviews,
+    class_name: :Review,
+    foreign_key: :ride_id
    
 
     has_many_attached :photos

@@ -107,7 +107,7 @@ class BookingForm extends React.Component {
             <div className="star">
               <i className="fas fa-star"></i>
             </div>
-            {/* {this.props.rating} */}
+            {this.props.rating}
           </div>
         </div>
         <div className="booking-calendar">{this.renderDayPicker()}</div>

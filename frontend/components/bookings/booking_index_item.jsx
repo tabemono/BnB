@@ -57,7 +57,9 @@ const BookingIndexItem = ({ booking, destroyBooking }) => {
             <div className="booking-middle-photo">
               <img src={photoUrls[1]} />
             </div>
-            <div className="booking-title">{ride.model}</div>
+            <div className="booking-title">
+              {ride.brand}{""} {ride.model}
+            </div>
           </div>
           <div className="booking-footer">
             <button className="destroy-booking" onClick={handleDelete}>

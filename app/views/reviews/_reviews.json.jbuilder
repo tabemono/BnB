@@ -1,0 +1,1 @@
+json.extract! review, :id, :body, :rating, :ride_id, :rider_id

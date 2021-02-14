@@ -165,7 +165,7 @@
   padding-right: 15px;
   height: 55px;
   width: 166px;
-  --accent-color: #ff3300;
+  --accent-color: #d13b16;
   margin-left: 72px;
 }
 
@@ -185,7 +185,7 @@
   right: 0;
   bottom: 0;
   z-index: -1;
-  background-color: #ff0066;
+  background-color: #e9490a;
   transform: scaleX(0);
   transition: transform 300ms ease-in-out;
   border-radius: 10px;

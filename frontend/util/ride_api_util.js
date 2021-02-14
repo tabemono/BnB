@@ -22,6 +22,8 @@ export const rideSearch = (keyword) => {
     },
   });
 };
+
+
 // export const updateRide = (ride) => {
 //   return $.ajax({
 //     method: "PATCH",

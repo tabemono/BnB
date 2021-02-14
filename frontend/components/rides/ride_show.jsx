@@ -54,6 +54,12 @@ class RideShow extends React.Component {
     if (this.props.ride) {
       const { ride } = this.props;
       // const { photoUrls } = ride;
+      const reviews = ride.reviews ? Object.values(ride.reviews) : [];
+      let totalRate = 0;
+      reviews
+        .map((review) => review.rating)
+        .forEach((ele) => (totalRate += ele));
+      const rating = Math.round((totalRate / reviews.length) * 100) / 100;
       const scrollClass = this.state.scrollFixedUp
         ? "booking-container"
         : this.state.scrollFixedB
@@ -81,7 +87,13 @@ class RideShow extends React.Component {
                 <div className="ride-details">
                   <div className="ride-header">
                     {/* <h3>Bike is owned by {ride.owner.firstname}</h3> */}
-                    <span>Located in: {ride.city}</span>
+                    <span className="ride-rating">
+                      <div className='rating-container'>
+                          <div className='star'><i className="fas fa-star"></i>{rating}</div>
+                      </div>
+                        <br/>
+                      <div>Located in: {ride.city}</div>
+                    </span>
                   </div>
                   <div className="ride-minor-details">
                     {ride.brand} : {ride.model}
@@ -119,6 +131,7 @@ class RideShow extends React.Component {
                     ride={ride}
                     photos={ride.photoUrls}
                     scroll={scrollClass}
+                    rating={rating}
                   />
                 </div>
               </div>

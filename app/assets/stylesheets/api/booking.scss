@@ -1,172 +1,180 @@
-
 .booking-container {
-    width: 325px;
-    height: 400px;
-    box-shadow: 0 5px 15px -5px #00000070;
-    margin-left: 2.5vw;
-    border-radius: 20px;
-    position: absolute;
-    padding-left: 3px;
-    padding-right: 3px;
-} 
+  width: 325px;
+  height: 400px;
+  box-shadow: 0 5px 15px -5px #00000070;
+  margin-left: 2.5vw;
+  border-radius: 20px;
+  position: absolute;
+  padding-left: 3px;
+  padding-right: 3px;
+}
 
 .booking-container-fixed {
-    width: 325px;
-    height: 400px;
-    box-shadow: 0 5px 15px -5px #00000070;
-    border-radius: 20px;
-    margin-top: -580px;
-    transform: 300ms ease-in-out ;
-    position: fixed;
-    margin-left: 2.5vw;
-    padding-left: 3px;
-    padding-right: 3px;
+  width: 325px;
+  height: 400px;
+  box-shadow: 0 5px 15px -5px #00000070;
+  border-radius: 20px;
+  margin-top: -580px;
+  transform: 300ms ease-in-out;
+  position: fixed;
+  margin-left: 2.5vw;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .booking-container-absolute {
-    width: 325px;
-    height: 400px;
-    box-shadow: 0 5px 15px -5px #00000070;
-    border-radius: 20px;
-    margin-left: 2.5vw;
-    position: absolute;
-    padding-left: 3px;
-    padding-right: 3px;
-    bottom: 165px;
+  width: 325px;
+  height: 400px;
+  box-shadow: 0 5px 15px -5px #00000070;
+  border-radius: 20px;
+  margin-left: 2.5vw;
+  position: absolute;
+  padding-left: 3px;
+  padding-right: 3px;
+  bottom: 165px;
 }
 
-
 .booking-header {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important; 
-    margin: 5px;
-    position: left;
-    padding: 4px;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  margin: 5px;
+  position: left;
+  padding: 4px;
 }
 
 .booking-form-container {
-    height: 45vh;
-    width: 23vw;
-    float: right;
-    display: flex;
-    right: 0;
+  height: 45vh;
+  width: 23vw;
+  float: right;
+  display: flex;
+  right: 0;
 }
 
-.spot-price-booking{
-    font-size: 20px;
+.spot-price-booking {
+  font-size: 20px;
 }
 
 .rating-container-booking {
-    font-weight: 700;
-    display: flex;
-    flex-direction: row;
-    margin-top: 4px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  margin-top: 4px;
 }
 
-.spot-price-booking span{
-    font-weight: 700;
+.rating-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+
+.spot-price-booking span {
+  font-weight: 700;
 }
 
 .spot-right-side {
-    width: 40%;
-    right: 0;
-    border-radius: 10px;
-    margin-top: 30px;
-    position: relative;
+  width: 40%;
+  right: 0;
+  border-radius: 10px;
+  margin-top: 30px;
+  position: relative;
 }
 
-#shadow { 
-    margin-left: 7vw;
+#shadow {
+  margin-left: 7vw;
 }
 
 .container-booking-checkout {
-    display: block;
-    border-top: 1px solid rgb(73, 72, 72);
+  display: block;
+  border-top: 1px solid rgb(73, 72, 72);
 }
 
 .booking-extra-container {
-    width: 100%;
-    height: 23%;
-    display: flex;
-    margin-top: 10px;
-    flex-direction: row;
-    justify-content: space-between;
-    border-radius: 10px;
+  width: 100%;
+  height: 23%;
+  display: flex;
+  margin-top: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 10px;
 }
 
 .booking-extra-container p {
-    font-size: 17px;
-    padding-left: 10px;
-    text-align: left;
+  font-size: 17px;
+  padding-left: 10px;
+  text-align: left;
 }
 
-.des span{
-    font-weight: 600;
+.des span {
+  font-weight: 600;
 }
 
 .gem {
-    margin-top: 10px;
-    margin-right: 10px;
-    font-size: 30px;
-    color:#20B2AA;
-    padding-left: 7px;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 30px;
+  color: #20b2aa;
+  padding-left: 7px;
 }
 
 .booking-add {
-    text-align: center;
-    font-size: 14px;
-    margin-top: -5px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: -5px;
 }
 
 .checkin-checkout {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
 }
 .riders-booking {
-   width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-.booking-spot-start, .booking-spot-end {
-    padding-left: 4px;
-    width: 48.5%;
-    height: 99.5%;
-    text-align: left;
-    height: 6vh;    
+.booking-spot-start,
+.booking-spot-end {
+  padding-left: 4px;
+  width: 48.5%;
+  height: 99.5%;
+  text-align: left;
+  height: 6vh;
 }
 
 .booking-spot-start {
-    border-right: 1px solid rgb(73, 72, 72);
+  border-right: 1px solid rgb(73, 72, 72);
 }
 
 .check-rider-out {
-    border: 1px solid rgb(73, 72, 72); 
-    border-radius: 10px;
+  border: 1px solid rgb(73, 72, 72);
+  border-radius: 10px;
 }
 
 .date-label {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .booking-calendar {
-    position: relative;
+  position: relative;
 }
 
-.booking-spot-start input, .booking-spot-end input {
-    border: none;
-    outline: none;
+.booking-spot-start input,
+.booking-spot-end input {
+  border: none;
+  outline: none;
 }
 
-.booking-spot-checkin label, .booking-spot-checkout label {
-    font-size: 11px;
-    margin-bottom: 4px;
+.booking-spot-checkin label,
+.booking-spot-checkout label {
+  font-size: 11px;
+  margin-bottom: 4px;
 }
 
-.substract-riders-booking, .add-riders-booking {
+.substract-riders-booking,
+.add-riders-booking {
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -179,60 +187,60 @@
   cursor: pointer;
 }
 
-.substract-riders-booking:hover, .add-riders-booking:hover {
-    font-weight: 600;
-    border: 2px solid rgb(31, 31, 31);
+.substract-riders-booking:hover,
+.add-riders-booking:hover {
+  font-weight: 600;
+  border: 2px solid rgb(31, 31, 31);
 }
 
-
 .booking-num-riders {
-    padding: 5px;
-    margin-bottom: 2px;
-    padding-bottom: 10px;
-    font-size: 17px;
+  padding: 5px;
+  margin-bottom: 2px;
+  padding-bottom: 10px;
+  font-size: 17px;
 }
 
 .num-riders-123 {
-    padding-bottom: 20px !important;
+  padding-bottom: 20px !important;
 }
 
 .rider-container label {
-    font-size: 14px;
-    text-align: left !important;
-    margin-left: 25px;
+  font-size: 14px;
+  text-align: left !important;
+  margin-left: 25px;
 }
 
 .rider-container {
-    display: flex;
-    margin-left: -20px;
-    height: 6vh;
+  display: flex;
+  margin-left: -20px;
+  height: 6vh;
 }
 
 .adding-riders-booking {
-    font-size: 18px;
-    font-weight: 500;
-    display: flex;
-    flex-direction: row;
-    margin-top: 9px;
-    padding-left: 4px;
-    margin-left: 125px;
-    text-align: center;
-    position: absolute;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  margin-top: 9px;
+  padding-left: 4px;
+  margin-left: 125px;
+  text-align: center;
+  position: absolute;
 }
 
 .total-price-booking {
-    margin-top: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 12px;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px;
 }
 
-.total-price-booking span, .booking-total {
-    font-size: 20px;
-    font-weight: 600;
+.total-price-booking span,
+.booking-total {
+  font-size: 20px;
+  font-weight: 600;
 }
-
 
 .reserve-booking {
   margin-top: 15px;
@@ -250,11 +258,8 @@
 }
 
 .booking-footer {
-    margin-top: -30px;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
+  margin-top: -30px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
 }
-
-
-
