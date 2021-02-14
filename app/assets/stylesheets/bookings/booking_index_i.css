@@ -1,0 +1,207 @@
+.booking-item-container {
+  margin: 0 15px 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background: #fff;
+  border-radius: 10px;
+  flex-basis: 33%;
+  max-width: 360px;
+  cursor: pointer;
+  height: 430px;
+  z-index: 4;
+}
+
+.photo-booking {
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+}
+
+.photo-booking img {
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+}
+
+.bookings-item-columns {
+  display: grid;
+  grid-template-columns: 360px 360px 360px;
+  padding-top: 10px;
+  grid-gap: 20px;
+  margin-left: 70px;
+}
+
+.bottom-booking-item {
+  text-align: left;
+  padding: 10px;
+}
+
+.date-booking-header {
+  font-size: 13px;
+  color: rgb(97, 96, 96);
+}
+
+.booking-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.booking-total-header {
+  font-size: 15px;
+}
+
+.booking-total-header span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.booking-middle {
+  display: flex;
+  flex-direction: row;
+}
+
+.booking-middle-photo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  margin-right: 10px;
+}
+
+.booking-location {
+  margin-bottom: 5px;
+}
+
+.booking-title {
+  margin-top: 8px;
+}
+
+.booking-par {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.edit-booking {
+  border: transparent;
+  background: transparent;
+  justify-content: space-between;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 150px;
+  height: 55px;
+  width: 166px;
+  --accent-color: #0af;
+}
+
+.edit-booking:hover {
+  color: #fff;
+}
+
+.edit-booking:focus {
+  outline: 0;
+}
+
+.edit-booking::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #0af;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  border-radius: 10px;
+}
+
+.edit-booking:hover::before,
+.edit-booking:focus::before {
+  transform: scaleX(1);
+}
+
+.edit-booking {
+  transition: transform 300ms ease-in-out;
+  z-index: 1;
+}
+
+.edit-booking:hover::before,
+.edit-booking:focus::before {
+  color: white;
+}
+
+.destroy-booking {
+  border: transparent;
+  background: transparent;
+  justify-content: space-between;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 55px;
+  width: 166px;
+  --accent-color: #ff0066;
+  margin-left: 72px;
+}
+
+.destroy-booking:hover {
+  color: #fff;
+}
+
+.destroy-booking:focus {
+  outline: 0;
+}
+
+.destroy-booking::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #ff0066;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  border-radius: 10px;
+}
+
+.destroy-booking:hover::before,
+.destroy-booking:focus::before {
+  transform: scaleX(1);
+}
+
+.destroy-booking {
+  transition: transform 300ms ease-in-out;
+  z-index: 1;
+}
+
+.destroy-booking:hover::before,
+.destroy-booking:focus::before {
+  color: white;
+}

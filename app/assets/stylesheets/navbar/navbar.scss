@@ -182,23 +182,23 @@ div > p {
 
 #search-badge {
   background: rgb(163, 155, 155);
-  width: 30px;
+  // width: 30px;
   height: 30px;
   border-radius: 50%;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 3px;
+  // padding-top: 3px;
   position: relative;
-  bottom: 10px;
-  margin-left: 2px;
+  bottom: 5px;
+  // margin-left: 2px;
 }
 
 .search-form-input {
   position: relative;
-  padding-top: 5px;
-  margin-bottom: 15px;
+  padding-top: 10px;
+  margin-bottom: 10px;
   > input {
     width: 300px;
     height: 100%;

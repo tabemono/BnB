@@ -9,7 +9,5 @@ class CreateBookings < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
-    add_index :bookings, :rider_id, unique: true
-    add_index :bookings, :ride_id, unique: true
   end
 end

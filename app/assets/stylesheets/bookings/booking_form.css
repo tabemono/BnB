@@ -35,9 +35,9 @@
 }
 
 .booking-header {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: space-between !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 5px;
   position: left;
   padding: 4px;
@@ -194,13 +194,13 @@
   font-size: 17px;
 }
 
-.num-riders-123 {
-  padding-bottom: 20px !important;
+.num-riders- {
+  padding-bottom: 20px;
 }
 
 .rider-container label {
   font-size: 14px;
-  text-align: left !important;
+  text-align: left;
   margin-left: 25px;
 }
 

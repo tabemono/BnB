@@ -44,8 +44,6 @@ ActiveRecord::Schema.define(version: 2020_11_25_070845) do
     t.datetime "end_date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["ride_id"], name: "index_bookings_on_ride_id", unique: true
-    t.index ["rider_id"], name: "index_bookings_on_rider_id", unique: true
   end
 
   create_table "rides", force: :cascade do |t|

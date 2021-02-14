@@ -1,8 +1,8 @@
 class Api::BookingsController < ApplicationController
-    before_action :ensure_logged_in!
+    before_action :ensure_logged_in
     def index
         @bookings = if params[:user_id]
-        Booking.includes(:ride).where(guest_id: params[:user_id])
+        Booking.includes(:ride).where(rider_id: params[:user_id])
         else
             Booking.includes(:ride).all
         end
@@ -20,7 +20,7 @@ class Api::BookingsController < ApplicationController
 
     def create
         @booking = Booking.new(booking_params)
-        @booking.guest_id = current_user.id
+        @booking.rider_id = current_user.id
         if @booking.save
             render :show
         else
@@ -41,7 +41,7 @@ class Api::BookingsController < ApplicationController
         @booking = Booking.find(params[:id])
         if @booking.destroy 
              @bookings = if params[:user_id]
-                Booking.includes(:ride).where(guest_id: params[:user_id])
+                Booking.includes(:ride).where(rider_id: params[:user_id])
               else
                Booking.includes(:ride).all
               end

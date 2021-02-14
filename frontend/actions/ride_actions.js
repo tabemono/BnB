@@ -9,9 +9,9 @@ export const receiveAllRides = (rides) => ({
   rides,
 });
 
-export const receiveRide = payload => ({
+export const receiveRide = ride => ({
   type: RECEIVE_RIDE,
-  payload
+  ride
 });
 
 export const fetchRides = (bounds) => (dispatch) =>

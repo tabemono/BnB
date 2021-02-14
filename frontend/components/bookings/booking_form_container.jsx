@@ -10,8 +10,8 @@ const mSTP = (state, ownProps) => ({
     startDate: null,
     endDate: null,
     num_riders: 1,
-    guest_id: state.session.id,
-    spot_id: ownProps.spotId,
+    rider_id: state.session.id,
+    ride_id: ownProps.rideId,
     focusedInput: START_DATE,
     open: false,
     error: "",
@@ -19,7 +19,7 @@ const mSTP = (state, ownProps) => ({
 });
 
 const mDTP = (dispatch) => ({
-  action: (booking) => dispatch(createBooking(booking)),
+  createBooking: (booking) => dispatch(createBooking(booking)),
   fetchRide: (rideId) => dispatch(fetchRide(rideId)),
   openModal: () => dispatch(openModal("login")),
 });

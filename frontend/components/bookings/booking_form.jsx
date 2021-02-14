@@ -11,8 +11,8 @@ class BookingForm extends React.Component {
     super(props);
     this.state = this.props.booking;
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.addrider = this.addrider.bind(this);
-    this.substractrider = this.substractrider.bind(this);
+    this.addRider = this.addRider.bind(this);
+    this.substractRider = this.substractRider.bind(this);
     this.state.condition = false;
   }
 
@@ -31,7 +31,7 @@ class BookingForm extends React.Component {
     if (this.props.booking.rider_id) {
       const { startDate, endDate, num_riders, rider_id } = this.state;
       this.props
-        .action({
+        .createBooking({
           ride_id: this.props.ride.id,
           rider_id: rider_id,
           num_riders: num_riders,
@@ -41,18 +41,18 @@ class BookingForm extends React.Component {
         .then(() =>
           this.props.history.push(`/${this.state.session.id}/bookings`)
         );
-    } //else {
-    //   this.props.openModal("login");
-    // }
+    } else {
+      this.props.openModal("login");
+    }
   }
 
-  addrider(e) {
+  addRider(e) {
     e.preventDefault();
     if (this.state.num_riders < 2)
       this.setState({ num_riders: this.state.num_riders + 1 });
   }
 
-  substractrider(e) {
+  substractRider(e) {
     e.preventDefault();
     if (this.state.num_riders > 1)
       this.setState({ num_riders: this.state.num_riders - 1 });
@@ -72,13 +72,15 @@ class BookingForm extends React.Component {
           focusedInput={this.state.focusedInput}
           onFocusChange={(focusedInput) => this.setState({ focusedInput })}
           numberOfMonths={1}
+          noBorder={false}
           hideKeyboardShortcutsPanel={true}
+          daySize={50}
         />
       </div>
     ) : null;
   }
 
-  renderTotalrider() {
+  renderTotalRiders() {
     const riderCount =
       this.state.num_riders > 1
         ? ((this.state.num_riders - 1) / 2.0) * this.props.ride.price
@@ -123,6 +125,7 @@ class BookingForm extends React.Component {
                   bookingShadow.setAttribute("style", "height: 685px");
                   this.setState({ condition: true });
                 }}
+                onChange={(e) => {}}
               />
             </div>
             <div className="booking-ride-end">
@@ -137,6 +140,7 @@ class BookingForm extends React.Component {
                   bookingShadow.removeAttribute("style", "height: 685px");
                   this.setState({ condition: false });
                 }}
+                onChange={(e) => {}}
               />
             </div>
           </div>
@@ -146,16 +150,16 @@ class BookingForm extends React.Component {
               <div className="adding-riders-booking">
                 <span
                   className="substract-riders-booking"
-                  onClick={this.substractrider}
+                  onClick={this.substractRider}
                 >
                   -
                 </span>
-                <div className="num-riders-123">
+                <div className="num-riders-">
                   <div className="booking-num-riders">
                     {this.state.num_riders} {riders}{" "}
                   </div>
                 </div>
-                <span className="add-riders-booking" onClick={this.addrider}>
+                <span className="add-riders-booking" onClick={this.addRider}>
                   +
                 </span>
               </div>
@@ -175,7 +179,7 @@ class BookingForm extends React.Component {
         <div className="total-price-booking">
           <span>Total</span>
           <div className="booking-total">
-            ${this.renderTotalrider() ? this.renderTotalrider() : 0}
+            ${this.renderTotalRiders() ? this.renderTotalRiders() : 0}
           </div>
         </div>
         <button className="reserve-booking" onClick={this.handleSubmit}>
