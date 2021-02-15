@@ -35,7 +35,7 @@ class RideShowDetail extends Component {
           <>
             <li className="show-details">
               <span className="show-head">{ride.style}</span>
-              <img id="s-icon" src={window.dirtb} alt="style-icon"></img>;
+              <img id="s-icon" src={window.dirtb} alt="style-icon"></img>
               <span className="show-desc">Meant for the dirt</span>
             </li>
             <br />
