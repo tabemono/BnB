@@ -1,12 +1,9 @@
-import {
-  createReview,
-  fetchRide,
-  fetchReviews,
-} from "../../actions/review_actions";
+import { createReview, fetchReviews } from "../../actions/review_actions";
+import { fetchRide } from "../../actions/ride_actions";
 import ReviewForm from "./review_form";
 import { connect } from "react-redux";
 import { openModal } from "../../actions/modal_actions";
-import { clearErrors } from "../../actions/ride_actions";
+import { clearErrors } from "../../actions/review_actions";
 
 const mSTP = (state, ownProps) => ({
   errors: state.errors.review,

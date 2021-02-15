@@ -16,6 +16,17 @@ class RideIndex extends React.Component {
   render() {
     const { requestRide, rides, updateFilter } = this.props;
     const count = this.props.rides.length;
+    const ifZero = () => {
+      if (count === 0) {
+        return (
+          <div>
+            <p>No results found, Try New york or San Francisco.</p>
+          </div>
+        );
+      } else {
+        return <span className="index-count">{count} bikes to ride.</span>;
+      }
+    };
     const rideIndexItems = this.props.rides.map((ride) => {
       return (
         <RideIndexItem
@@ -32,7 +43,8 @@ class RideIndex extends React.Component {
         <div className="ride-index-page">
           <div className="ride-index">
             <ul className="ride-index-left">
-              <span className="index-count">{count} bikes to ride.</span>
+              {/* <span className="index-count">{count} bikes to ride.</span> */}
+              <div>{ifZero()}</div>
               {rideIndexItems}
             </ul>
             <div id="map-container">

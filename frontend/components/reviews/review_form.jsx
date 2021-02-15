@@ -12,14 +12,14 @@ class ReviewForm extends React.Component {
     const start = Array.from(document.getElementsByClassName("start-reviews"));
     start.forEach((star) => (star.checked = false));
     const textArea = document.getElementById("review-text");
-    textArea.className = "review-body-no-error";
+    textArea.className = "review-body-null-error";
     this.setState(this.props.review);
   }
 
   renderErrors() {
     if (!this.props.errors.length) return null;
     const textArea = document.getElementById("review-text");
-    textArea.className = "review-body-yes-error";
+    textArea.className = "review-body-error";
     return (
       <div className="review-errors">
         {this.props.errors.map((error, idx) => (
@@ -60,17 +60,42 @@ class ReviewForm extends React.Component {
     return this.setState({ rating });
   }
 
+  setRating(num) {
+    this.setState({ rating: num });
+  }
+
+  radioStars() {
+    const { rating } = this.state;
+    return [5, 4, 3, 2, 1].map((i) => (
+      <>
+        <input
+          type="radio"
+          key={`radio-${i}`}
+          id={`radio-${i}`}
+          value={i}
+          onChange={() => this.setRating(i)}
+          checked={i === rating}
+          onClick={() => this.setRating(i)}
+        />
+        <label htmlFor={`radio-${i}`} key={`label-${i}`}>
+          <i className="fas fa-star fa-2x"></i>
+        </label>
+      </>
+    ));
+  }
+
   render() {
     const errors = this.renderErrors();
     return (
-      <div className="review-form-containter">
+      <div className="review-form-container">
         <div className="review-header">
           <h3>Leave a review</h3>
         </div>
-        <div className="review-middle">
+        <div className="mid-review">
           <div className="reviews-ratings">
             <div className="rating">
-              <input
+              {this.radioStars()}
+              {/* <input
                 className="start-reviews"
                 type="radio"
                 id="star5"
@@ -114,12 +139,12 @@ class ReviewForm extends React.Component {
                 value={this.state.rating}
                 onClick={() => this.handleRating(1.0)}
               />
-              <label htmlFor="star1"></label>
+              <label htmlFor="star1"></label> */}
             </div>
           </div>
           <textarea
             id="review-text"
-            className="review-body-no-error"
+            className="review-body-null-error"
             onChange={this.update("body")}
             placeholder="Tell us about the ride"
             value={this.state.body}
@@ -128,7 +153,7 @@ class ReviewForm extends React.Component {
         {errors}
         <div className="review-footer">
           <button
-            className="add-review-btn"
+            className="review-btn"
             type="submit"
             onClick={this.handleSubmit}
           >

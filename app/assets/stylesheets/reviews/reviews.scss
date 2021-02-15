@@ -1,0 +1,173 @@
+// Place all the styles related to the Reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.reviews-container {
+  width: 50%;
+  height: 40%;
+  margin-bottom: 100px;
+}
+
+.ride-reviews {
+  margin-top: -40px;
+  height: 100%;
+  margin-bottom: 100px;
+}
+
+.review-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 200px;
+}
+
+.ride-rating-review {
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.review-heading {
+  margin-top: 19px;
+  margin-left: 5px;
+}
+
+.star {
+  margin-top: -2px;
+  padding-right: 2px;
+  color: rgb(242, 88, 88);
+}
+
+.review-form {
+  width: 100%;
+  height: 500px;
+}
+
+.review-body-null-error {
+  margin-top: 0px;
+  font-size: 18px;
+  resize: none;
+  border-radius: 5px;
+  width: 98%;
+  height: 50%;
+  outline: none;
+}
+
+.review-body-error {
+  margin-top: 0px;
+  font-size: 18px;
+  resize: none;
+  border-radius: 5px;
+  width: 98%;
+  height: 50%;
+  outline: none;
+  border: 1px solid rgb(243, 98, 98);
+  background-color: rgb(248, 231, 231);
+}
+
+.reviews-stars-create {
+  position: absolute;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  display: flex;
+}
+
+.reviews-stars-create input {
+  display: none;
+}
+
+.reviews-stars-create label {
+  display: block;
+  cursor: pointer;
+  width: 60%;
+  padding-left: 10px;
+}
+
+.reviews-stars-create label::before {
+  content: "\f005";
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+  position: relative;
+  display: block;
+  font-size: 20px;
+  color: #ccc;
+}
+
+.reviews-stars-create label::after {
+  content: "\f005";
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  display: block;
+  color: #ff0066;
+  transition: 0.4s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.rating {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.rating > label {
+  color: #ebebeb;
+}
+
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:checked ~ label,
+input[type="radio"]:hover ~ label {
+  color: rgb(236, 79, 17);
+}
+
+.reviews-stars-create label:hover::after,
+.reviews-stars-create label:hover ~ label::after,
+.reviews-stars-create input:checked ~ label::after {
+  opacity: 1;
+}
+
+.review-btn {
+  margin-top: 15px;
+  margin-left: 18px;
+  cursor: pointer;
+  border: 0;
+  padding: 0 0 3px 0;
+  background: #c83d14;
+  color: white;
+  width: 90%;
+  height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  outline: none;
+}
+
+.review-form-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2vh;
+  width: 420px;
+  height: 400px;
+  box-shadow: 0 7px 17px -7px #00000070;
+  border-radius: 20px;
+}
+
+.mid-review {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  float: left;
+  margin-top: 2vh;
+}
+
+.review-errors {
+  font-size: 15px;
+  color: red;
+}

@@ -1,8 +1,6 @@
-import {
-  RECEIVE_RIDE,
-  RECEIVE_REVIEW,
-  RECEIVE_ALL_REVIEWS,
-} from "../actions/ride_actions";
+import { RECEIVE_RIDE } from "../actions/ride_actions";
+
+import { RECEIVE_REVIEW, RECEIVE_ALL_REVIEWS } from "../actions/review_actions";
 import { merge } from "lodash";
 
 const reviewsReducer = (state = {}, action) => {

@@ -1,8 +1,8 @@
 .booking-index-container {
   margin-top: 25px;
   font-family: "Montserrat";
-  padding-left: 65px !important;
-  padding-right: 40px !important;
+  padding-left: 65px;
+  padding-right: 40px;
 }
 
 .booking-picture {
@@ -48,28 +48,28 @@
 
 .booking-index-button {
   justify-content: space-between;
-  cursor: pointer !important;
-  display: inline-block !important;
-  position: relative !important;
-  text-align: center !important;
-  font-family: "Montserrat" !important;
-  font-size: 16px !important;
-  line-height: 18px !important;
-  font-weight: 500 !important;
-  padding-top: 7px !important;
-  padding-bottom: 7px !important;
-  padding-left: 15px !important;
-  padding-right: 15px !important;
-  color: rgb(255, 255, 255) !important;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: rgb(255, 255, 255);
   height: 55px;
   width: 166px;
-  text-decoration: none !important;
-  border-radius: 8px !important;
-  border-width: 1px !important;
-  border-style: solid !important;
-  outline: none !important;
+  text-decoration: none;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
   transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
-    -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s !important;
+    -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
   border-color: rgb(255, 255, 255);
   background: black;
   z-index: 3;

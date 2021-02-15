@@ -6,10 +6,11 @@
     <%= csp_meta_tag %>
   <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyB0cgyzG8DjgEGQcjWk1pwQw2Wjj8XcwYI"></script>
   <%# <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyDpMnFahZxeKYBPRRnU2Wspgz7_7RD2GxElibraries=places"></script> %>
-
+  <script src="https://kit.fontawesome.com/a2bdb82061.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all' %> <%= csrf_meta_tags %>
     <%= javascript_include_tag 'application' %>
   </head>
+   <%= favicon_link_tag asset_path('helmet.png') %>
     <script type="text/javascript">
     
       window.linkedIn ="<%= image_url("linkedin.png")%>";

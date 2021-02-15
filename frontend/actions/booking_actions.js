@@ -7,7 +7,7 @@ export const REMOVE_BOOKING = "REMOVE_BOOKING";
 const receiveAllBookings = (bookings) => ({
   type: RECEIVE_ALL_BOOKINGS,
   bookings: bookings.bookings,
-  spots: bookings.spots,
+  rides: bookings.rides,
 });
 
 const receiveBooking = (booking) => ({

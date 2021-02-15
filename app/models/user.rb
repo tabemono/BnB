@@ -23,6 +23,10 @@ class User < ApplicationRecord
         class_name: :Booking,
         foreign_key: :rider_id
 
+    has_many :reviews,
+        foreign_key: :rider_id,
+        class_name: :Review
+
 
     after_initialize :ensure_session_token
 

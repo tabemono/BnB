@@ -1,5 +1,5 @@
 .booking-container {
-  width: 325px;
+  width: 400px;
   height: 400px;
   box-shadow: 0 5px 15px -5px #00000070;
   margin-left: 2.5vw;
@@ -9,8 +9,8 @@
   padding-right: 3px;
 }
 
-.booking-container-fixed {
-  width: 325px;
+.fixed-booking-container {
+  width: 400px;
   height: 400px;
   box-shadow: 0 5px 15px -5px #00000070;
   border-radius: 20px;
@@ -23,7 +23,7 @@
 }
 
 .booking-container-absolute {
-  width: 325px;
+  width: 400px;
   height: 400px;
   box-shadow: 0 5px 15px -5px #00000070;
   border-radius: 20px;
@@ -35,9 +35,9 @@
 }
 
 .booking-header {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: space-between !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 5px;
   position: left;
   padding: 4px;
@@ -51,7 +51,7 @@
   right: 0;
 }
 
-.spot-price-booking {
+.ride-price-booking {
   font-size: 20px;
 }
 
@@ -68,11 +68,11 @@
   margin-top: 5px;
 }
 
-.spot-price-booking span {
+.ride-price-booking span {
   font-weight: 700;
 }
 
-.spot-right-side {
+.ride-right-side {
   width: 40%;
   right: 0;
   border-radius: 10px;
@@ -135,8 +135,8 @@
   height: 100%;
 }
 
-.booking-spot-start,
-.booking-spot-end {
+.booking-ride-start,
+.booking-ride-end {
   padding-left: 4px;
   width: 48.5%;
   height: 99.5%;
@@ -144,7 +144,7 @@
   height: 6vh;
 }
 
-.booking-spot-start {
+.booking-ride-start {
   border-right: 1px solid rgb(73, 72, 72);
 }
 
@@ -161,14 +161,14 @@
   position: relative;
 }
 
-.booking-spot-start input,
-.booking-spot-end input {
+.booking-ride-start input,
+.booking-ride-end input {
   border: none;
   outline: none;
 }
 
-.booking-spot-checkin label,
-.booking-spot-checkout label {
+.booking-ride-checkin label,
+.booking-ride-checkout label {
   font-size: 11px;
   margin-bottom: 4px;
 }
@@ -201,12 +201,12 @@
 }
 
 .num-riders-123 {
-  padding-bottom: 20px !important;
+  padding-bottom: 20px;
 }
 
 .rider-container label {
   font-size: 14px;
-  text-align: left !important;
+  text-align: left;
   margin-left: 25px;
 }
 

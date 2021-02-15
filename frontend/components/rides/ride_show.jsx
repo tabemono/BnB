@@ -3,6 +3,8 @@ import BookingFormContainer from "../bookings/booking_form_container";
 import BikeShowMap from "../map/bike_show_map";
 import { DayPickerRangeController } from "react-dates";
 import RideShowDetail from "./ride_show_detail";
+import RideReview from "../reviews/ride_review";
+import ReviewContainer from "../reviews/review_container";
 class RideShow extends React.Component {
   constructor(props) {
     super(props);
@@ -55,6 +57,7 @@ class RideShow extends React.Component {
       const { ride } = this.props;
       // const { photoUrls } = ride;
       const reviews = ride.reviews ? Object.values(ride.reviews) : [];
+      const { riders } = ride;
       let totalRate = 0;
       reviews
         .map((review) => review.rating)
@@ -64,7 +67,7 @@ class RideShow extends React.Component {
         ? "booking-container"
         : this.state.scrollFixedB
         ? "booking-container-absolute"
-        : "booking-container-fixed";
+        : "fixed-booking-container";
 
       const center = new google.maps.LatLng(ride.lat, ride.lng);
       const zoom = 2;
@@ -88,10 +91,13 @@ class RideShow extends React.Component {
                   <div className="ride-header">
                     {/* <h3>Bike is owned by {ride.owner.firstname}</h3> */}
                     <span className="ride-rating">
-                      <div className='rating-container'>
-                          <div className='star'><i className="fas fa-star"></i>{rating}</div>
+                      <div className="rating-container">
+                        <div className="star">
+                          <i className="fas fa-star"></i>
+                          {rating}
+                        </div>
                       </div>
-                        <br/>
+                      <br />
                       <div>Located in: {ride.city}</div>
                     </span>
                   </div>
@@ -109,21 +115,31 @@ class RideShow extends React.Component {
                   <p>Description:</p>
                   {ride.description}
                 </div>
-                {/* add reviews here */}
-                {/* <div className="availability-dates">
-                <h4>Select check-in date</h4>
-                <DayPickerRangeController
-                  startDate={this.state.startDate}
-                  endDate={this.state.endDate}
-                  onDatesChange={({ startDate, endDate }) =>
-                    this.setState({ startDate, endDate })
-                  }
-                  focusedInput={this.state.focusedInput}
-                  onFocusChange={this.onFocusChange}
-                  hideKeyboardShortcutsPanel={true}
-                  numberOfMonths={2}
-                />
-              </div> */}
+                <div className="ride-reviews">
+                  <div className="review-header">
+                    <div className="ride-rating-review">
+                      <div className="star">
+                        <i className="fas fa-star"></i>
+                      </div>
+                      {rating}
+                    </div>
+                    <h3 className="review-heading">
+                      ({reviews.length} Reviews)
+                    </h3>
+                  </div>
+                  <div className="reviews-container">
+                    {reviews.map((review) => (
+                      <RideReview
+                        review={review}
+                        key={review.id}
+                        riders={riders}
+                      />
+                    ))}
+                    <div className="review-form">
+                      <ReviewContainer ride={ride} />
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="booking-div-div">
                 <div className="booking-div">

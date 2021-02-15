@@ -50,20 +50,7 @@ class SearchBar extends React.Component {
 
     const lat = this.state.lat || 40.753647;
     const lng = this.state.lng || -73.980707;
-    // const hash = `&lat=${lat}&lng=${lng}`;
-    // const query = this.state;
-    // query["checkIn"] = null;
-    // query["checkOut"] = null;
-    // // this.props.runSearch(query);
-    // this.props.fetchRides(query);
-    // if (this.props.location.pathname !== "/rides") {
-    //   this.props.history.push(`/search`);
-    // }
-    // let change = this.state.input;
-    // this.setState({ input: "" });
-    // console.log(this.state.input);
-    // this.props.history.push(`/search/${change}`);
-    // debugger;
+ 
     this.props
       .rideSearch(this.state.keyword)
       .then(() => this.props.history.push(`/search/${this.state.keyword}`));
@@ -153,14 +140,13 @@ class SearchBar extends React.Component {
               className="search-button"
               onClick={(e) => this.handleSubmit(e)}
             >
-              <i className="fas fa-search">
-                <BsSearch />
-              </i>
+              <i className="fas fa-search"></i>
             </button>
           </div>
         </form>
       </div>
     );
+    
   }
 }
 
