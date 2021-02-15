@@ -145,8 +145,17 @@ ktm_ny = Ride.create!(
   location: "100 Columbia St, Brooklyn, NY 11201"
 )
 
+suzuki1 = open('https://bnb-seeds.s3.amazonaws.com/suzuki_1.jpg')
+suzuki2 = open('https://bnb-seeds.s3.amazonaws.com/suzuki_2.jpg')
+suzuki3 = open('https://bnb-seeds.s3.amazonaws.com/suzuki_3.jpg')
+suzuki4 = open('https://bnb-seeds.s3.amazonaws.com/suzuki_4.jpg')
+suzuki5 = open('https://bnb-seeds.s3.amazonaws.com/suzuki_5.jpg')
 
-
+suzuki_sf.photos.attach(io: suzuki1, filename:'suzuki_1.jpg')
+suzuki_sf.photos.attach(io: suzuki2, filename:'suzuki_2.jpg')
+suzuki_sf.photos.attach(io: suzuki3, filename:'suzuki_3.jpg')
+suzuki_sf.photos.attach(io: suzuki4, filename:'suzuki_4.jpg')
+suzuki_sf.photos.attach(io: suzuki5, filename:'suzuki_5.jpg')
 
 ktmsx1 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-1.jpg')
 ktmsx2 = open('https://bnb-seeds.s3.us-east-1.amazonaws.com/KTMSXE5-2.jpg')
