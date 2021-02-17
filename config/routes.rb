@@ -1,7 +1,7 @@
 # == Route Map
 #
 #                    Prefix Verb   URI Pattern                                                                              Controller#Action
-#                      root GET    /                                                                                        static_pages#root
+#                     root  GET    /                                                                                        static_pages#root
 #               api_session DELETE /api/session(.:format)                                                                   api/sessions#destroy {:default=>{:format=>:json}}
 #                           POST   /api/session(.:format)                                                                   api/sessions#create {:default=>{:format=>:json}}
 #                 api_users POST   /api/users(.:format)                                                                     api/users#create {:default=>{:format=>:json}}

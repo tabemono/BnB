@@ -8,7 +8,7 @@ import RideIndexItem from "../rides/ride_index_item";
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = { ...this.props.query };
+
     this.state = {
       keyword: "",
       lat: null,
@@ -19,32 +19,7 @@ class SearchBar extends React.Component {
     this.update = this.update.bind(this);
   }
 
-  // componentDidMount() {
-  // const input = document.getElementById("search-input");
-  // this.autocomplete = new google.maps.places.Autocomplete(input);
-  // this.autocomplete.addListener("place_changed", this.newLocation);
-  // }
-  // componentDidMount() {
-  //   this.props.fetchRides();
-  // }
-
-  // componentDidUpdate(prevProps) {
-  //   if (prevProps.searchTermn !== this.props.keyword) {
-  //     this.setState(this.props.keyword);
-  //   }
-  // }
-
-  // newLocation() {
-  //   const loc = this.autocomplete.getPlace();
-  //   this.setState({
-  //     address: loc.formatted_address,
-  //     lat: loc.geometry.location.lat(),
-  //     lng: loc.geometry.location.lng(),
-  //   });
-
-  //   this.handleSubmit();
-  // }
-
+ 
   handleSubmit(e) {
     e.preventDefault();
 

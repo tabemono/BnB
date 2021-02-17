@@ -16,13 +16,10 @@ const App = () => (
     <Route path="/" component={NavBar} />
     <Switch>
       <Route exact path="/" component={Splash} />
-      <Route exact path="/rides" component={RideIndex} />
-      {/* <Route exact path="/search/:input" component={Search} /> */}
-      <Route exact path="/search/:keyword" component={Search} />
-      <Route exact path="/rides/:rideId" component={RideShowContainer} />
-      {/* <Route exact path="/rides/:rideId" component={Modal} /> */}
+      <Route path="/rides" component={RideIndex} />
+      <Route path="/search/:keyword" component={Search} />
+      <Route path="/rides/:rideId" component={RideShowContainer} />
       <Route path={`/:userId/bookings`} component={BookingIndexContainer} />
-      {/* <Route path="/rides" component={RideSearchContainer} /> */}
     </Switch>
   </>
 );

@@ -119,7 +119,7 @@ class RideShow extends React.Component {
                   <div className="review-header">
                     <div className="ride-rating-review">
                       <div className="star">
-                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star fa-lg"></i>
                       </div>
                       {rating}
                     </div>

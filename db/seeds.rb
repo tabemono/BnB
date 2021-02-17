@@ -10,6 +10,7 @@ require 'open-uri'
 ActiveRecord::Base.transaction do 
     User.destroy_all
     Ride.destroy_all
+    Review.destroy_all
 
 demo = User.create!(
     firstname: "Demo",
@@ -144,6 +145,84 @@ ktm_ny = Ride.create!(
   city: "New York",
   location: "100 Columbia St, Brooklyn, NY 11201"
 )
+
+suzuki_sf_review = Review.create(
+  body: "Great Bike a bit sporty for the city but great for the track!",
+  rating: 4.5,
+  ride_id: suzuki_sf.id,
+  rider_id: jasmine.id
+)
+
+suzuki_sf_review2 = Review.create(
+  body: "Had a blast with the bike!",
+  rating: 5.0,
+  ride_id: suzuki_sf.id,
+  rider_id: ray.id
+)
+
+bmw_manhattan_review = Review.create(
+  body: "Great adventure bike always wanted to try one out, Now I just want to buy one after renting this one!",
+  rating: 5.0,
+  ride_id: bmw_manhattan.id,
+  rider_id: sergio.id
+)
+
+bmw_manhattan_review2 = Review.create(
+  body: "Big bike for big me!",
+  rating: 4.5,
+  ride_id: bmw_manhattan.id,
+  rider_id: andy.id
+)
+
+harley_manhattan_review = Review.create(
+  body: "Love cruisers, this one is one of my favorites.",
+  rating: 5.0,
+  ride_id: harley_manhattan.id,
+  rider_id: andy.id
+)
+
+harley_manhattan_review2 = Review.create(
+  body: "Low seating height! which is great for me and also super comfortable for cruising!",
+  rating: 4.0, 
+  ride_id: harley_manhattan.id,
+  rider_id: maggie.id
+)
+
+z9_manhattan_review = Review.create(
+  body: "Best bike I've ever rode! Has alot of power but not enough to get you in trouble :) and very easy to control and comfortable",
+  rating: 5.0,
+  ride_id: z9_manhattan.id,
+  rider_id: tony.id,
+)
+
+z9_manhattan_review2 = Review.create(
+  body: "Gorgeous bike, owner let me ride it before renting it. It's in great shape.",
+  rating: 5.0,
+  ride_id: z9_manhattan.id,
+  rider_id: ray.id
+)
+
+r1_manhattan_review = Review.create(
+  body: "A track monster is all i can say.",
+  rating: 5.0,
+  ride_id: r1_manhattan.id,
+  rider_id: ray.id
+)
+
+r3_manhattan_review = Review.create(
+  body: 'Great commuter bike for the city, had to rent a bike due to my car being flatted over the weekend and being a person who took a break from riding this was a great beginner bike to restart!',
+  rating: 5.0,
+  ride_id: r3_manhattan.id,
+  rider_id: maggie.id
+)
+
+ktm_ny_review = Review.create(
+  body: 'Great dirt bike, Had alot of fun with it in the mountains. 10/10 will rent again.',
+  rating: 5.0,
+  ride_id: ktm_ny.id,
+  rider_id: tony.id
+)
+
 
 suzuki1 = open('https://bnb-seeds.s3.amazonaws.com/suzuki_1.jpg')
 suzuki2 = open('https://bnb-seeds.s3.amazonaws.com/suzuki_2.jpg')

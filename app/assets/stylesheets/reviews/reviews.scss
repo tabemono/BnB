@@ -171,3 +171,16 @@ input[type="radio"]:hover ~ label {
   font-size: 15px;
   color: red;
 }
+
+.review-rider {
+  margin-top: 21px;
+  font-weight: bolder;
+}
+
+.review-rating {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}

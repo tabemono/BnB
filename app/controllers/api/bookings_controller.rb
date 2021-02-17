@@ -39,16 +39,14 @@ class Api::BookingsController < ApplicationController
 
     def destroy 
         @booking = Booking.find(params[:id])
-        if @booking.destroy 
-             @bookings = if params[:user_id]
-                Booking.includes(:ride).where(rider_id: params[:user_id])
-              else
-               Booking.includes(:ride).all
-              end
-            render :index
-        else 
-            render json: ["Booking doesn't exist"], status: 401
+       
+        if @booking
+            @booking.delete
+            render :show
+        else
+            render json: ["Booking could not be deleted at this moment"], status: 422
         end
+       
     end
 
     private
