@@ -27,9 +27,8 @@ class RideIndexIcon extends Component {
       } else if (ride.style === "Dirt") {
         return (
           <>
-            
             <li>
-              <img id="s-icon" src={window.dirtb} alt="style-icon"></img>;
+              <img id="s-icon" src={window.dirtb} alt="style-icon"></img>
             </li>
             <li>
               <img
@@ -73,7 +72,7 @@ class RideIndexIcon extends Component {
       }
     };
 
-    return <div className='ride-index-icons'>{styleIcon()}</div>;
+    return <div className="ride-index-icons">{styleIcon()}</div>;
   }
 }
 

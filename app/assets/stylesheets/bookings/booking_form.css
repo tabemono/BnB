@@ -1,5 +1,5 @@
 .booking-container {
-  width: 325px;
+  width: 400px;
   height: 400px;
   box-shadow: 0 5px 15px -5px #00000070;
   margin-left: 2.5vw;
@@ -10,7 +10,7 @@
 }
 
 .fixed-booking-container {
-  width: 325px;
+  width: 400px;
   height: 400px;
   box-shadow: 0 5px 15px -5px #00000070;
   border-radius: 20px;
@@ -23,7 +23,7 @@
 }
 
 .booking-container-absolute {
-  width: 325px;
+  width: 400px;
   height: 400px;
   box-shadow: 0 5px 15px -5px #00000070;
   border-radius: 20px;
@@ -115,7 +115,6 @@
   text-align: center;
   font-size: 14px;
   margin-top: -5px;
-
 }
 
 .checkin-checkout {
@@ -257,4 +256,8 @@
   display: flex;
   flex-direction: row;
   text-align: center;
+}
+
+#charge-text {
+  padding-top: 3%;
 }
