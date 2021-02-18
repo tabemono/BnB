@@ -17,7 +17,7 @@ const mdp = (dispatch) => {
   return {
     fetchRides: () => dispatch(fetchRides()),
     requestRide: (rideId) => dispatch(fetchRide(rideId)),
-    // deleteKeyword: () => dispatch(deleteKeyword()),
+    deleteKeyword: () => dispatch(deleteKeyword()),
     updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
   };
 };

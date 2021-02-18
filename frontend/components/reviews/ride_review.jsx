@@ -11,7 +11,7 @@ const RideReview = ({ riders, review }) => {
           </div>
           {review.rating}
         </div>
-        <div className="review-rider">{rider.firstname}</div>
+        <div className="review-rider">by {rider.firstname}</div>
       </div>
       <div className="review-body">{review.body}</div>
     </div>

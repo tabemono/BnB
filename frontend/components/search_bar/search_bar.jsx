@@ -19,6 +19,13 @@ class SearchBar extends React.Component {
     this.update = this.update.bind(this);
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.keyword !== this.props.keyword) {
+      debugger;
+      this.setState(this.props.keyword);
+    }
+  }
+
   handleSubmit(e) {
     e.preventDefault();
 

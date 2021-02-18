@@ -136,7 +136,7 @@ class RideShow extends React.Component {
                       />
                     ))}
                     <div className="review-form">
-                      <ReviewContainer ride={ride} />
+                      <ReviewContainer ride={ride} key={ride.id}/>
                     </div>
                   </div>
                 </div>

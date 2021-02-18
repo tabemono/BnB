@@ -20,7 +20,7 @@ class BikeMap extends React.Component {
     //   lat: latitude,
     //   lng: longtitude,
     // };
-    this.placeMarker = false;
+    // this.placeMarker = false;
     this.cities = {
       "new york": { bounds: { lat: 40.7493039, lng: -74.0070414 }, zoom: 13 },
       "san francisco": { bounds: { lat: 37.7749, lng: -122.4194 }, zoom: 13 },
@@ -59,7 +59,7 @@ class BikeMap extends React.Component {
       this.boundListener();
       this.MarketManager.updateMarkers(this.props.rides);
     }
-    this.placeMarker = false;
+    // this.placeMarker = false;
   }
 
   boundListener() {
