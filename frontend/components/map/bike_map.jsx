@@ -48,8 +48,8 @@ class BikeMap extends React.Component {
     this.map = new google.maps.Map(this.mapNode, this.mapOptions());
     // this.map = new google.maps.Map(this.mapNode, mapOpts);
     this.MarketManager = new MarkerManager(
-      this.map
-      // this.handleMarkClick.bind(this)
+      this.map,
+      this.handleMarkClick.bind(this)
       // position: { lat: ride.lat, lng: ride.lng },
       // animation: google.maps.Animation.DROP
     );

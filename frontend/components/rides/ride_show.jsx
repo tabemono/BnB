@@ -112,7 +112,7 @@ class RideShow extends React.Component {
                   </span>
                 </div>
                 <div className="ride-show-desc">
-                  <p>Description:</p>
+                  <p id="about-head">About:</p>
                   {ride.description}
                 </div>
                 <div className="ride-reviews">
@@ -136,7 +136,7 @@ class RideShow extends React.Component {
                       />
                     ))}
                     <div className="review-form">
-                      <ReviewContainer ride={ride} key={ride.id}/>
+                      <ReviewContainer ride={ride} />
                     </div>
                   </div>
                 </div>

@@ -58,7 +58,7 @@ class BookingForm extends React.Component {
       this.setState({ num_riders: this.state.num_riders - 1 });
   }
 
-  renderDayPicker() {
+  renderDayPickerCal() {
     return this.state.condition ? (
       <div className="booking-daypicker">
         <DayPickerRangeController
@@ -110,7 +110,7 @@ class BookingForm extends React.Component {
             {this.props.rating}
           </div>
         </div>
-        <div className="booking-calendar">{this.renderDayPicker()}</div>
+        <div className="booking-calendar">{this.renderDayPickerCal()}</div>
         <div className="check-rider-out">
           <div className="checkin-checkout">
             <div className="booking-ride-start">
@@ -122,7 +122,11 @@ class BookingForm extends React.Component {
                 placeholder="MM/DD/YYYY"
                 required
                 onClick={() => {
-                  bookingShadow.setAttribute("style", "height: 685px");
+                  bookingShadow.setAttribute(
+                    "style",
+                    "height: 770px",
+                    "width: 400px"
+                  );
                   this.setState({ condition: true });
                 }}
                 onChange={(e) => {}}
@@ -137,7 +141,7 @@ class BookingForm extends React.Component {
                 placeholder="MM/DD/YYYY"
                 required
                 onClick={() => {
-                  bookingShadow.removeAttribute("style", "height: 685px");
+                  bookingShadow.removeAttribute("style", "height: 770px", "width: 400px");
                   this.setState({ condition: false });
                 }}
                 onChange={(e) => {}}
@@ -186,7 +190,7 @@ class BookingForm extends React.Component {
           Reserve
         </button>
         <div className="booking-add">
-          <p>You won't be charged</p>
+          <p id="charge-text">You won't be charged</p>
         </div>
       </div>
     );
