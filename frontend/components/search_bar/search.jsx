@@ -34,10 +34,10 @@ class Search extends React.Component {
             {/* <div id="map-container"> */}
               {/* <BikeMap
                 rides={rides}
-                //   updateBounds={updateBounds}
+                  // updateBounds={updateBounds}
                 updateFilter={updateFilter}
                 keyword={keyword}
-                //   deleteKeyword={deleteKeyword}
+                  deleteKeyword={deleteKeyword}
               /> */}
             {/* </div> */}
           </div>

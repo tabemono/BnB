@@ -19,16 +19,15 @@ class SearchBar extends React.Component {
     this.update = this.update.bind(this);
   }
 
- 
   handleSubmit(e) {
     e.preventDefault();
 
     const lat = this.state.lat || 40.753647;
     const lng = this.state.lng || -73.980707;
- 
+
     this.props
       .rideSearch(this.state.keyword)
-      .then(() => this.props.history.push(`/search/${this.state.keyword}`));
+      .then(() => this.props.history.push(`/search=${this.state.keyword}`));
   }
 
   update(e) {
@@ -121,7 +120,6 @@ class SearchBar extends React.Component {
         </form>
       </div>
     );
-    
   }
 }
 
