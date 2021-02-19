@@ -37,7 +37,7 @@ class BikeMap extends React.Component {
       };
       options.zoom = 13;
     } else {
-      options.center = { lat: 40.227745, lng: -97.2509 };
+      options.center = { lat: 40.228245, lng: -96.2309 };
       options.zoom = 3.9;
     }
     return options;
@@ -47,7 +47,7 @@ class BikeMap extends React.Component {
     // const mapOpts = getLocation(this.props.keyword);
     this.map = new google.maps.Map(this.mapNode, this.mapOptions());
     // this.map = new google.maps.Map(this.mapNode, mapOpts);
-    this.MarketManager = new MarkerManager(
+    this.markerManager = new MarkerManager(
       this.map,
       this.handleMarkClick.bind(this)
       // position: { lat: ride.lat, lng: ride.lng },
@@ -57,7 +57,7 @@ class BikeMap extends React.Component {
       this.props.fetchRide(this.props.rideId);
     } else {
       this.boundListener();
-      this.MarketManager.updateMarkers(this.props.rides);
+      this.markerManager.updateMarkers(this.props.rides);
     }
     // this.placeMarker = false;
   }
@@ -75,14 +75,16 @@ class BikeMap extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
+    // debugger;
     if (prevProps.keyword !== this.props.keyword) {
       this.map = new google.maps.Map(this.mapNode, this.mapOptions());
-      this.MarketManager = new MarkerManager(this.map);
+      this.markerManager = new MarkerManager(this.map);
       // this.map.setCenter(this.mapOptions.center);
       this.boundListener();
     }
     // this.MarkerManager.removeAllMarkers();
-    this.MarketManager.updateMarkers(this.props.rides);
+    this.markerManager.updateMarkers(this.props.rides);
+    //////////////////
   }
 
   // componentDidUpdate() {

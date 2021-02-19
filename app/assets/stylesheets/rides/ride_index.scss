@@ -58,8 +58,8 @@
   height: 60vh;
   // width: 30vw;
   // margin-right: 15px;
-  border-top: 2px solid rosybrown;
-  padding: 50px;
+  // border-top: 2px solid rosybrown;
+  padding: 2%;
 }
 
 .ride-index-left > span {
@@ -77,4 +77,9 @@
 }
 .ride-index-page {
   display: flex;
+}
+
+
+.index-count {
+  font-size: 20px;
 }

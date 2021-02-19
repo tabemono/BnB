@@ -21,7 +21,6 @@ class SearchBar extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.keyword !== this.props.keyword) {
-      debugger;
       this.setState(this.props.keyword);
     }
   }
@@ -29,8 +28,8 @@ class SearchBar extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    const lat = this.state.lat || 40.753647;
-    const lng = this.state.lng || -73.980707;
+    // const lat = this.state.lat || 40.753647;
+    // const lng = this.state.lng || -73.980707;
 
     this.props
       .rideSearch(this.state.keyword)

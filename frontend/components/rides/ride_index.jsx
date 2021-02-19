@@ -11,10 +11,17 @@ class RideIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchRides();
+    // this.props.rideSearch(keyword);
   }
 
   render() {
-    const { requestRide, rides, updateFilter, keyword } = this.props;
+    const {
+      requestRide,
+      rides,
+      updateFilter,
+      keyword,
+      // rideSearch,
+    } = this.props;
     const count = this.props.rides.length;
     const ifZero = () => {
       if (count === 0) {
