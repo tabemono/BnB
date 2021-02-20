@@ -28,16 +28,7 @@ class RideShow extends React.Component {
         this.setState({ scrollFixedB: topPictures });
     });
   }
-  // componentDidMount() {
-  //   this.props.fetchRides();
-  // }
 
-  // onFocusChange() {
-  //   this.setState({
-  //     focusedInputLeftCol:
-  //       this.state.focusedInputLeftCol === START_DATE ? END_DATE : START_DATE,
-  //   });
-  // }
 
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.rideId !== this.props.match.params.rideId) {
@@ -45,12 +36,6 @@ class RideShow extends React.Component {
     }
   }
 
-  // componentWillUnmount() {
-  //   // fix Warning: Can't perform a React state update on an unmounted component
-  //   this.setState = (state, callback) => {
-  //     return;
-  //   };
-  // }
 
   render() {
     if (this.props.ride) {

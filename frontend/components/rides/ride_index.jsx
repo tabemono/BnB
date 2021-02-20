@@ -11,7 +11,7 @@ class RideIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchRides();
-    // this.props.rideSearch(keyword);
+    
   }
 
   render() {

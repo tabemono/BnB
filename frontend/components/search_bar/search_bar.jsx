@@ -28,14 +28,21 @@ class SearchBar extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
+    const { keyword } = this.state;
+
     // const lat = this.state.lat || 40.753647;
     // const lng = this.state.lng || -73.980707;
 
     this.props
-      .rideSearch(this.state.keyword)
-      .then(() => this.props.history.push(`/search=${this.state.keyword}`));
+      .rideSearch(keyword)
+      .then(() => this.props.history.push(`/search=${keyword}`));
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.keyword !== this.props.keyword) {
+      this.setState(this.props.keyword);
+    }
+  }
   update(e) {
     e.preventDefault();
     this.setState({ keyword: e.target.value });

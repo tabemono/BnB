@@ -5,28 +5,28 @@ import BikeMap from "../map/bike_map";
 class Search extends React.Component {
   constructor(props) {
     super(props);
-    this.mapRerender = this.mapRerender.bind(this);
+    // this.mapRerender = this.mapRerender.bind(this);
   }
 
-  mapRerender() {
-    // const { rides } = this.props;
-    // const { ride } = rides;
-    this.map = new google.maps.Map(this.mapNode, this.mapOptions());
-    // this.map = new google.maps.Map(this.mapNode, mapOpts);
-    this.MarketManager = new MarkerManager(
-      this.map,
-      this.handleMarkClick.bind(this)
-      // position: { lat: ride.lat, lng: ride.lng },
-      // animation: google.maps.Animation.DROP
-    );
-    if (this.props.ride) {
-      this.props.fetchRide(this.props.rideId);
-    } else {
-      this.boundListener();
-      this.MarketManager.updateMarkers(this.props.rides);
-    }
-    // this.placeMarker = false;
-  }
+  // mapRerender() {
+  //   // const { rides } = this.props;
+  //   // const { ride } = rides;
+  //   this.map = new google.maps.Map(this.mapNode, this.mapOptions());
+  //   // this.map = new google.maps.Map(this.mapNode, mapOpts);
+  //   this.MarketManager = new MarkerManager(
+  //     this.map,
+  //     this.handleMarkClick.bind(this)
+  //     // position: { lat: ride.lat, lng: ride.lng },
+  //     // animation: google.maps.Animation.DROP
+  //   );
+  //   if (this.props.ride) {
+  //     this.props.fetchRide(this.props.rideId);
+  //   } else {
+  //     this.boundListener();
+  //     this.MarketManager.updateMarkers(this.props.rides);
+  //   }
+  //   // this.placeMarker = false;
+  // }
 
   render() {
     const {
@@ -56,13 +56,13 @@ class Search extends React.Component {
               />
             </ul>
             {/* <div id="map-container"> */}
-            <BikeMap
+            {/* <BikeMap
               rides={rides}
               // updateBounds={updateBounds}
               updateFilter={updateFilter}
               keyword={keyword}
               deleteKeyword={deleteKeyword}
-            />
+            /> */}
             {/* </div> */}
           </div>
         </div>
