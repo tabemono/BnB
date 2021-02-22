@@ -3,6 +3,7 @@ import React from "react";
 import RideIndexItem from "./ride_index_item";
 import BikeMap from "../map/bike_map";
 import { withRouter } from "react-router";
+import { deleteKeyword } from "../../actions/keyword_actions";
 
 class RideIndex extends React.Component {
   constructor(props) {
@@ -11,7 +12,6 @@ class RideIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchRides();
-    
   }
 
   render() {
@@ -20,11 +20,12 @@ class RideIndex extends React.Component {
       rides,
       updateFilter,
       keyword,
-      // rideSearch,
+      rideSearch,
+      deleteKeyword,
     } = this.props;
     const count = this.props.rides.length;
     const ifZero = () => {
-      if (count === 0) {
+      if (count === 0 || keyword === "") {
         return (
           <div>
             <p>No results found, Try New york or San Francisco.</p>
@@ -56,9 +57,12 @@ class RideIndex extends React.Component {
             </ul>
             <div id="map-container">
               <BikeMap
+                type={this.props.type}
+                rideSearch={rideSearch}
                 keyword={keyword}
                 rides={rides}
                 updateFilter={updateFilter}
+                deleteKeyword={deleteKeyword}
               />
             </div>
           </div>

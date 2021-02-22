@@ -51,6 +51,13 @@ class MarkerManager {
     this.markers[marker.rideId].setMap(null);
     delete this.markers[marker.rideId];
   }
+
+  removeAllMarkers() {
+    Object.values(this.markers).forEach((marker) => {
+      marker.setMap(null);
+    });
+    this.markers = {};
+  }
 }
 
 export default MarkerManager;

@@ -28,14 +28,14 @@ class SearchBar extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    const { keyword } = this.state;
+    // const { keyword } = this.state;
 
     // const lat = this.state.lat || 40.753647;
     // const lng = this.state.lng || -73.980707;
 
     this.props
-      .rideSearch(keyword)
-      .then(() => this.props.history.push(`/search=${keyword}`));
+      .rideSearch(this.state.keyword)
+      .then(() => this.props.history.push(`/search=${this.state.keyword}`));
   }
 
   componentDidUpdate(prevProps) {
@@ -45,43 +45,10 @@ class SearchBar extends React.Component {
   }
   update(e) {
     e.preventDefault();
-    this.setState({ keyword: e.target.value });
+    this.setState({ keyword: e.currentTarget.value });
   }
 
   render() {
-    // if (this.props.rides.length < 1) {
-    //   return (
-    //     <div>
-    //       <p> Sorry no results available. Try New York or San Francisco</p>
-    //     </div>
-    //   );
-    // }
-    // } else {
-    //   const { rides, searchedCity, requestRide } = this.props;
-
-    //   const count = this.props.rides.length;
-    //   const filteredRides = rides.filter((ride) => {
-    // console.log(this.state.input);
-    // console.log(
-    //   ride.city.toLowerCase().match(this.state.input.toLowerCase())
-    // );
-    // return ride.city.toLowerCase().includes(this.state.input.toLowerCase());
-    //   return ride.city
-    //     .toLowerCase()
-    //     .match(this.state.searchTerm.toLowerCase());
-    // });
-    // console.log(filteredRides);
-
-    // console.log(this.props.rides);
-    // const SearchedLength = searchedCity.length;
-    // const SearchedItems = filteredRides.map((ride) => (
-    //   <RideIndexItem
-    //     key={ride.id}
-    //     history={this.props.history}
-    //     requestRide={requestRide}
-    //     ride={ride}
-    //   />
-    // ));
     return (
       <div className="search-wrapper">
         <form className="search-form" onSubmit={this.handleSubmit}>

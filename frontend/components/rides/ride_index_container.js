@@ -10,7 +10,7 @@ const mSTP = (state) => ({
 
 const mDTP = (dispatch) => ({
   fetchRides: () => dispatch(fetchRides()),
-  // rideSearch: (keyword) => dispatch(rideSearch(keyword)),
+  rideSearch: (keyword) => dispatch(rideSearch(keyword)),
   requestRide: (rideId) => dispatch(fetchRide(rideId)),
   updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
 });
