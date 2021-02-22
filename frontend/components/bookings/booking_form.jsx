@@ -63,18 +63,19 @@ class BookingForm extends React.Component {
       <div className="booking-daypicker">
         <DayPickerRangeController
           startDate={this.state.startDate}
-          // startDateId="start"
-          // endDateId="end"
+          startDateId="mm/dd/yyyy"
+          endDateId="mm/dd/yyyy"
           endDate={this.state.endDate}
           onDatesChange={({ startDate, endDate }) =>
             this.setState({ startDate, endDate })
           }
           focusedInput={this.state.focusedInput}
           onFocusChange={(focusedInput) => this.setState({ focusedInput })}
-          numberOfMonths={1}
+          numberOfMonths={2}
           noBorder={false}
           hideKeyboardShortcutsPanel={true}
-          daySize={50}
+          block={true}
+          // daySize={50}
         />
       </div>
     ) : null;
@@ -141,7 +142,11 @@ class BookingForm extends React.Component {
                 placeholder="MM/DD/YYYY"
                 required
                 onClick={() => {
-                  bookingShadow.removeAttribute("style", "height: 770px", "width: 400px");
+                  bookingShadow.removeAttribute(
+                    "style",
+                    "height: 770px",
+                    "width: 400px"
+                  );
                   this.setState({ condition: false });
                 }}
                 onChange={(e) => {}}

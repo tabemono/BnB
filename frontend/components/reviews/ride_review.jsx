@@ -7,7 +7,7 @@ const RideReview = ({ riders, review }) => {
       <div className="review-rating">
         <div className="ride-rating-review">
           <div className="star">
-            <i className="fas fa-star"></i>
+            <i className="fas fa-star fa-lg"></i>
           </div>
           {review.rating}
         </div>

@@ -29,13 +29,11 @@ class RideShow extends React.Component {
     });
   }
 
-
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.rideId !== this.props.match.params.rideId) {
       this.props.fetchRide(this.props.match.params.rideId);
     }
   }
-
 
   render() {
     if (this.props.ride) {
@@ -47,13 +45,19 @@ class RideShow extends React.Component {
       reviews
         .map((review) => review.rating)
         .forEach((ele) => (totalRate += ele));
-      const rating = Math.round((totalRate / reviews.length) * 100) / 100;
+      const rating = Math.round((totalRate / reviews.length) * 100.0) / 100.0;
       const scrollClass = this.state.scrollFixedUp
         ? "booking-container"
         : this.state.scrollFixedB
         ? "booking-container-absolute"
         : "fixed-booking-container";
-
+      let pluralRev = () => {
+        if (reviews.length > 1) {
+          return "reviews";
+        } else {
+          return "review";
+        }
+      };
       const center = new google.maps.LatLng(ride.lat, ride.lng);
       const zoom = 2;
       return (
@@ -102,15 +106,20 @@ class RideShow extends React.Component {
                 </div>
                 <div className="ride-reviews">
                   <div className="review-header">
-                    <div className="ride-rating-review">
+                    {/* <div className="ride-rating-review">
                       <div className="star">
                         <i className="fas fa-star fa-lg"></i>
                       </div>
                       {rating}
-                    </div>
-                    <h3 className="review-heading">
-                      ({reviews.length} Reviews)
-                    </h3>
+                    </div> */}
+                    {reviews.length > 0 ? (
+                      <h2 className="review-heading">
+                        <i className="fas fa-star fa-lg"></i>
+                        {`${rating} (${reviews.length} ${pluralRev()})`}
+                      </h2>
+                    ) : (
+                      <h3>There are no reviews yet for this ride.</h3>
+                    )}
                   </div>
                   <div className="reviews-container">
                     {reviews.map((review) => (
