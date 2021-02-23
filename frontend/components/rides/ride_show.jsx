@@ -33,7 +33,7 @@ class RideShow extends React.Component {
   //   if (prevProps.match.params.rideId !== this.props.match.params.rideId) {
   //     this.props.fetchRide(this.props.match.params.rideId);
   //   }
-  }
+  // }
 
   render() {
     if (this.props.ride) {
