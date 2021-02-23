@@ -29,8 +29,6 @@ class RideShow extends React.Component {
     });
   }
 
-  
-
   render() {
     if (this.props.ride) {
       const { ride, currentUser } = this.props;
@@ -70,7 +68,7 @@ class RideShow extends React.Component {
             </div>
           </div>
           <div className="ride-body-div">
-            <div className="body-test">
+            <div className="left-ride-body">
               <div className="ride-body">
                 <div className="ride-details">
                   <div className="ride-header">
@@ -97,7 +95,7 @@ class RideShow extends React.Component {
                   </span>
                 </div>
                 <div className="ride-show-desc">
-                  <p id="about-head">About:</p>
+                  <p id="about-head">About This Ride:</p>
                   {ride.description}
                 </div>
                 <div className="ride-reviews">
@@ -131,16 +129,16 @@ class RideShow extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className="booking-div-div">
-                <div className="booking-div">
-                  <BookingFormContainer
-                    ride={ride}
-                    photos={ride.photoUrls}
-                    scroll={scrollClass}
-                    rating={rating}
-                  />
-                </div>
-              </div>
+              {/* <div className="booking-div-div"> */}
+              {/* </div> */}
+            </div>
+            <div className="booking-div">
+              <BookingFormContainer
+                ride={ride}
+                photos={ride.photoUrls}
+                scroll={scrollClass}
+                rating={rating}
+              />
             </div>
           </div>
 

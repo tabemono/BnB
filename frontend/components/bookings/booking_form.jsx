@@ -422,7 +422,7 @@ class BookingForm extends React.Component {
         <div className="booking-gem">
           <div className="booking-extra-container">
             <p className="des">
-              <span>This is a rare find. </span> Usually this place is booked
+              <span>This is a rare find. </span> Usually this ride is booked
             </p>
             <div className="gem">
               <i className="far fa-gem"></i>
