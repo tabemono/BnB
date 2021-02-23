@@ -15,6 +15,7 @@
 }
 
 .review-header {
+  font-size: 20px;
   display: flex;
   // flex-direction: row;
   justify-content: left;
@@ -45,6 +46,7 @@
 .review-form {
   width: 100%;
   height: 500px;
+  padding-top: 100px;
 }
 
 .review-body-null-error {
@@ -151,6 +153,7 @@ input[type="radio"]:hover ~ label {
 }
 
 .review-form-container {
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   margin-bottom: 2vh;

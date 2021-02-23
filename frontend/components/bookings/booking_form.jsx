@@ -3,6 +3,8 @@ import "react-dates/initialize";
 import { withRouter } from "react-router";
 import "react-dates/initialize";
 import { DayPickerRangeController } from "react-dates";
+import { DateRangePicker } from "react-dates";
+// import { DatePicker} from "react-datepicker";
 import "react-dates/lib/css/_datepicker.css";
 import "./react_dates_overrides.css";
 
@@ -13,7 +15,7 @@ class BookingForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.addRider = this.addRider.bind(this);
     this.substractRider = this.substractRider.bind(this);
-    this.state.condition = false;
+    // this.state.condition = false;
   }
 
   handleDate(date) {
@@ -63,8 +65,8 @@ class BookingForm extends React.Component {
       <div className="booking-daypicker">
         <DayPickerRangeController
           startDate={this.state.startDate}
-          startDateId="mm/dd/yyyy"
-          endDateId="mm/dd/yyyy"
+          // startDateId="mm/dd/yyyy"
+          // endDateId="mm/dd/yyyy"
           endDate={this.state.endDate}
           onDatesChange={({ startDate, endDate }) =>
             this.setState({ startDate, endDate })
@@ -74,8 +76,8 @@ class BookingForm extends React.Component {
           numberOfMonths={2}
           noBorder={false}
           hideKeyboardShortcutsPanel={true}
-          block={true}
-          // daySize={50}
+          // block={true}
+          daySize={50}
         />
       </div>
     ) : null;
@@ -111,47 +113,97 @@ class BookingForm extends React.Component {
             {this.props.rating}
           </div>
         </div>
-        <div className="booking-calendar">{this.renderDayPickerCal()}</div>
+        {/* <div className="booking-calendar"> */}
+        {/* <div className="booking-daypicker"> */}
+        {/* <DateRangePicker
+              startDate={this.state.startDate}
+              startDateId="mm/dd/yyyy"
+              endDateId="mm/dd/yyyy"
+              endDate={this.state.endDate}
+              onDatesChange={({ startDate, endDate }) =>
+                this.setState({ startDate, endDate })
+              }
+              startDatePlaceholderText="MM/DD/YY"
+              endDatePlaceholderText="MM/DD/YY"
+              focusedInput={this.state.focusedInput}
+              onFocusChange={(focusedInput) => this.setState({ focusedInput })}
+              numberOfMonths={2}
+              noBorder={false}
+              hideKeyboardShortcutsPanel={true}
+              block={true}
+              readOnly
+              daySize={50}
+            /> */}
+        {/* </div> */}
+        {/* </div> */}
         <div className="check-rider-out">
           <div className="checkin-checkout">
-            <div className="booking-ride-start">
-              <label className="date-label">Start Date</label>
-              <input
+            {/* <div className="booking-ride-start"> */}
+            <label className="date-label">Start Date</label>
+            {/* <input
                 className="date-input"
                 type="text"
                 value={this.handleDate(this.state.startDate)}
                 placeholder="MM/DD/YYYY"
                 required
-                onClick={() => {
-                  bookingShadow.setAttribute(
-                    "style",
-                    "height: 770px",
-                    "width: 400px"
-                  );
-                  this.setState({ condition: true });
-                }}
+                // onClick={() => {
+                //   bookingShadow.setAttribute(
+                //     "style",
+                //     "height: 770px",
+                //     "width: 400px"
+                //   );
+                //   this.setState({ condition: true });
+                // }}
                 onChange={(e) => {}}
-              />
-            </div>
-            <div className="booking-ride-end">
-              <label className="date-label">End Date</label>
-              <input
+              /> */}
+            {/* </div> */}
+            {/* <div className="booking-ride-end"> */}
+            <label className="date-label">
+              End Date
+              {/* <input
                 className="date-input"
                 type="text"
                 value={this.handleDate(this.state.endDate)}
                 placeholder="MM/DD/YYYY"
                 required
-                onClick={() => {
-                  bookingShadow.removeAttribute(
-                    "style",
-                    "height: 770px",
-                    "width: 400px"
-                  );
-                  this.setState({ condition: false });
-                }}
+                // onClick={() => {
+                //   bookingShadow.removeAttribute(
+                //     "style",
+                //     "height: 770px",
+                //     "width: 400px"
+                //   );
+                //   this.setState({ condition: false });
+                // }}
                 onChange={(e) => {}}
+              /> */}
+              <DateRangePicker
+                startDate={this.state.startDate}
+                startDateId="MM/DD/YYYY"
+                endDateId="MM/DD/YYYY"
+                endDate={this.state.endDate}
+                onDatesChange={({ startDate, endDate }) =>
+                  this.setState({ startDate, endDate })
+                }
+                startDatePlaceholderText="MM/DD/YY"
+                endDatePlaceholderText="MM/DD/YY"
+                focusedInput={this.state.focusedInput}
+                onFocusChange={(focusedInput) =>
+                  this.setState({ focusedInput })
+                }
+                numberOfMonths={1}
+                noBorder={false}
+                hideKeyboardShortcutsPanel={true}
+                block={true}
+                // openDirection="up"
+                keepOpenOnDateSelect={false}
+                reopenPickerOnClearDates={false}
+                anchorDirection="right"
+                orientation="vertical"
+                readOnly
+                daySize={50}
               />
-            </div>
+            </label>
+            {/* </div> */}
           </div>
           <div className="container-booking-checkout">
             <div className="rider-container">
@@ -203,3 +255,5 @@ class BookingForm extends React.Component {
 }
 
 export default withRouter(BookingForm);
+
+////

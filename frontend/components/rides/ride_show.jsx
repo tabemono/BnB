@@ -37,7 +37,7 @@ class RideShow extends React.Component {
 
   render() {
     if (this.props.ride) {
-      const { ride } = this.props;
+      const { ride, currentUser } = this.props;
       // const { photoUrls } = ride;
       const reviews = ride.reviews ? Object.values(ride.reviews) : [];
       const { riders } = ride;
@@ -124,8 +124,8 @@ class RideShow extends React.Component {
                   <div className="reviews-container">
                     {reviews.map((review) => (
                       <RideReview
-                        review={review}
                         key={review.id}
+                        review={review}
                         riders={riders}
                       />
                     ))}

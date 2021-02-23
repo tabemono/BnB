@@ -64,7 +64,7 @@ class ReviewForm extends React.Component {
     this.setState({ rating: num });
   }
 
-  radioStars() {
+  ratingStars() {
     const { rating } = this.state;
     return [5, 4, 3, 2, 1].map((i) => (
       <>
@@ -86,6 +86,7 @@ class ReviewForm extends React.Component {
 
   render() {
     const errors = this.renderErrors();
+    const {rider_id} = this.state;
     return (
       <div className="review-form-container">
         <div className="review-header">
@@ -93,57 +94,11 @@ class ReviewForm extends React.Component {
         </div>
         <div className="mid-review">
           <div className="reviews-ratings">
-            <div className="rating">
-              {this.radioStars()}
-              {/* <input
-                className="start-reviews"
-                type="radio"
-                id="star5"
-                name="rating"
-                value={this.state.rating}
-                onClick={() => this.handleRating(5.0)}
-              />
-              <label htmlFor="star5"></label>
-              <input
-                className="start-reviews"
-                type="radio"
-                id="star4"
-                name="rating"
-                value={this.state.rating}
-                onClick={() => this.handleRating(4.0)}
-              />
-              <label htmlFor="star4"></label>
-              <input
-                className="start-reviews"
-                type="radio"
-                id="star3"
-                name="rating"
-                value={this.state.rating}
-                onClick={() => this.handleRating(3.0)}
-              />
-              <label htmlFor="star3"></label>
-              <input
-                className="start-reviews"
-                type="radio"
-                id="star2"
-                name="rating"
-                value={this.state.rating}
-                onClick={() => this.handleRating(2.0)}
-              />
-              <label htmlFor="star2"></label>
-              <input
-                className="start-reviews"
-                type="radio"
-                id="star1"
-                name="rating"
-                value={this.state.rating}
-                onClick={() => this.handleRating(1.0)}
-              />
-              <label htmlFor="star1"></label> */}
-            </div>
+            <div className="rating">{this.ratingStars()}</div>
           </div>
           <textarea
             id="review-text"
+            // key={rider_id}
             className="review-body-null-error"
             onChange={this.update("body")}
             placeholder="Tell us about the ride"

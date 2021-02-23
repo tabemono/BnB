@@ -25,3 +25,5 @@ const mDTP = (dispatch) => ({
 });
 
 export default connect(mSTP, mDTP)(BookingForm);
+
+

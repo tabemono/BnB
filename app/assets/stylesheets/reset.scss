@@ -50,3 +50,7 @@ button:focus {
 input {
   outline: none;
 }
+
+input :hover {
+  background-color: none;
+}

@@ -28,7 +28,7 @@
 }
 
 .logout-btn:hover {
-  background-color: rgb(219, 213, 213);
+  // background-color: rgb(219, 213, 213);
   opacity: 0.8;
   border-radius: 15px;
 }
@@ -39,7 +39,7 @@
 }
 
 .nav-signin {
-  font-size: 25px;
+  font-size: 20px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -48,14 +48,15 @@
   vertical-align: middle;
   width: 90px;
   height: 20px;
-  font-family: "Roboto", sans-serif;
+  // font-family: "Roboto", sans-serif;
 }
 
 .nav-signin:hover {
-  background-color: rgba(26, 24, 24, 0.08);
+  // background-color: rgba(26, 24, 24, 0.08);
   transition: 1s;
   cursor: pointer;
   border-radius: 50px;
+  border-bottom: 1px solid burlywood;
 }
 
 .main-nav {
@@ -150,7 +151,7 @@ div > p {
 }
 
 .look-btn:hover {
-  background-color: gray;
+  // background-color: gray;
   color: black;
   font-weight: 700px;
   transform: scale(1.25);
@@ -263,11 +264,6 @@ div > p {
   border-radius: 50%;
   background-color: inherit;
   cursor: pointer;
-}
-
-.date-labels {
-  display: flex;
-  flex-direction: row;
 }
 
 .social-media {
