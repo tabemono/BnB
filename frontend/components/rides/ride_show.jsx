@@ -29,10 +29,10 @@ class RideShow extends React.Component {
     });
   }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.match.params.rideId !== this.props.match.params.rideId) {
-      this.props.fetchRide(this.props.match.params.rideId);
-    }
+  // componentDidUpdate(prevProps) {
+  //   if (prevProps.match.params.rideId !== this.props.match.params.rideId) {
+  //     this.props.fetchRide(this.props.match.params.rideId);
+  //   }
   }
 
   render() {
