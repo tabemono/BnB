@@ -198,7 +198,7 @@ class BookingForm extends React.Component {
                 keepOpenOnDateSelect={false}
                 reopenPickerOnClearDates={false}
                 anchorDirection="right"
-                orientation="vertical"
+                
                 readOnly
                 daySize={50}
               />
