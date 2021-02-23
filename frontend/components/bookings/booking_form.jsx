@@ -257,7 +257,6 @@
 
 ////
 
-
 import React from "react";
 import "react-dates/initialize";
 import { withRouter } from "react-router";
@@ -266,7 +265,7 @@ import { DayPickerRangeController } from "react-dates";
 import "react-dates/lib/css/_datepicker.css";
 import "./react_dates_overrides.css";
 
-class NewBookingForm extends React.Component {
+class BookingForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.booking;
@@ -318,7 +317,7 @@ class NewBookingForm extends React.Component {
       this.setState({ num_riders: this.state.num_riders - 1 });
   }
 
-  renderDayPicker() {
+  renderDayPickerCal() {
     return this.state.condition ? (
       <div className="booking-daypicker">
         <DayPickerRangeController
@@ -351,13 +350,13 @@ class NewBookingForm extends React.Component {
   render() {
     const riders = this.state.num_riders > 1 ? "riders" : "rider";
     const { scroll } = this.props;
-    const bookingShadow = document.getElementById("shadow");
+    const bookingBox = document.getElementById("box");
     if (!this.props.ride) return null;
     return (
-      <div className={scroll} id="shadow">
+      <div className={scroll} id="box">
         <div className="booking-header">
           <div className="ride-price-booking">
-            <span>{this.props.ride.price}</span>/night
+            <span>${this.props.ride.price}</span>/ day
           </div>
           <div className="rating-container-booking">
             <div className="star">
@@ -366,7 +365,7 @@ class NewBookingForm extends React.Component {
             {this.props.rating}
           </div>
         </div>
-        <div className="booking-calendar">{this.renderDayPicker()}</div>
+        <div className="booking-calendar">{this.renderDayPickerCal()}</div>
         <div className="check-rider-out">
           <div className="checkin-checkout">
             <div className="booking-ride-start">
@@ -378,7 +377,7 @@ class NewBookingForm extends React.Component {
                 placeholder="MM/DD/YYYY"
                 required
                 onClick={() => {
-                  bookingShadow.setAttribute("style", "height: 685px");
+                  bookingBox.setAttribute("style", "height: 685px");
                   this.setState({ condition: true });
                 }}
               />
@@ -392,7 +391,7 @@ class NewBookingForm extends React.Component {
                 placeholder="MM/DD/YYYY"
                 required
                 onClick={() => {
-                  bookingShadow.removeAttribute("style", "height: 685px");
+                  bookingBox.removeAttribute("style", "height: 685px");
                   this.setState({ condition: false });
                 }}
               />
@@ -440,11 +439,11 @@ class NewBookingForm extends React.Component {
           Reserve
         </button>
         <div className="booking-add">
-          <p>You won't be charged</p>
+          <p id="charge-text">You won't be charged</p>
         </div>
       </div>
     );
   }
 }
 
-export default withRouter(NewBookingForm); 
+export default withRouter(BookingForm);
