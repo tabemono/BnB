@@ -37,8 +37,8 @@ class BookingForm extends React.Component {
           ride_id: this.props.ride.id,
           rider_id: rider_id,
           num_riders: num_riders,
-          start_date: startDate._d,
-          end_date: endDate._d,
+          start_date: startDate.format("YYYY-MM-DD"),
+          end_date: endDate.format("YYYY-MM-DD"),
         })
         .then(() =>
           this.props.history.push(`/${this.state.rider_id}/bookings`)
@@ -198,7 +198,6 @@ class BookingForm extends React.Component {
                 keepOpenOnDateSelect={false}
                 reopenPickerOnClearDates={false}
                 anchorDirection="right"
-                
                 readOnly
                 daySize={50}
               />
