@@ -16,12 +16,14 @@ AWS S3
 # Features
 
 * User authentication with demo log in
-![login](https://github.com/tabemono/blob/media/media/login-gif.gif)
+![login](https://github.com/tabemono/BnB/blob/media/media/login-gif.gif)
 
-* Listings are marked on the map when searched.
+* Listings are placed on the map when searched and filtered by city
+* Listings are not shown when out of bounds on map.
+![search](https://github.com/tabemono/BnB/blob/media/media/search-gif.gif)
 
+* Users can add reviews to posted rides
+* ![review](https://github.com/tabemono/BnB/blob/media/media/review-gif.gif)
 
-# In the works
-* Polishing bookings and having a booking page for user
-* Filtering out search
-* Leaving Reviews
+* Users can reserve rides based off on dates
+![booking](https://github.com/tabemono/BnB/blob/media/media/booking-gif.gif)
