@@ -1,7 +1,6 @@
 # Bikes and Bikers
 
 * Is a AirBnB clone with the theme of motorcycles instead of homes.
-![.gif](https://gfycat.com/brokentintedamericansaddlebred.gif)
 
 # Technologies
 Ruby on Rails
@@ -17,6 +16,8 @@ AWS S3
 # Features
 
 * User authentication with demo log in
+![login](https://github.com/tabemono/blob/media/media/login-gif.gif)
+
 * Listings are marked on the map when searched.
 
 
