@@ -23,7 +23,8 @@ AWS S3
 ![search](https://github.com/tabemono/BnB/blob/media/media/search-gif.gif)
 
 * Users can add reviews to posted rides
-* ![review](https://github.com/tabemono/BnB/blob/media/media/review-gif.gif)
+![review](https://github.com/tabemono/BnB/blob/media/media/review-gif.gif)
 
 * Users can reserve rides based off on dates
 ![booking](https://github.com/tabemono/BnB/blob/media/media/booking-gif.gif)
+
