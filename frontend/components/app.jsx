@@ -11,9 +11,11 @@ import RideShowContainer from "./rides/ride_show_container";
 import Search from "./search_bar/search_container";
 import BookingIndexContainer from "./bookings/booking_index_container";
 import EmptySearch from "./search_bar/empty_search";
+
 const App = () => (
   <>
     <Modal />
+
     <Route path="/" component={NavBar} />
     <Switch>
       <Route exact path="/" component={Splash} />
@@ -21,8 +23,12 @@ const App = () => (
       {/* <Route exact path="/search/:input" component={Search} /> */}
       <Route exact path="/search=:keyword" component={Search} />
       <Route exact path="/rides/:rideId" component={RideShowContainer} />
-      <Route path="/search=" component={EmptySearch} />
-      <Route path={`/:userId/bookings`} component={BookingIndexContainer} />
+      <Route exact path="/search=" component={EmptySearch} />
+      <Route
+        exact
+        path={`/:userId/bookings`}
+        component={BookingIndexContainer}
+      />
     </Switch>
   </>
 );

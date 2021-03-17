@@ -7,11 +7,20 @@ import { openModal, closeModal } from "../../actions/modal_actions";
 
 const mSTP = ({ session, errors, entities: { users } }) => {
   return {
+    user: {
+      email: "",
+      password: "",
+      error: "",
+    },
     errors: errors.session,
     currentUser: users[session.currentUserId],
     formType: "Log in",
     status_text: "Don't have an account?",
     navLink: <Link to="/signup">Sign Up</Link>,
+    demoUser: {
+      email: "demo@aa.com",
+      password: "123456",
+    },
   };
 };
 
@@ -27,7 +36,6 @@ const mDTP = (dispatch) => {
       </button>
     ),
     closeModal: () => dispatch(closeModal()),
-    // login: user => dispatch(login(user)),
     clearErrors: () => dispatch(clearErrors()),
   };
 };
