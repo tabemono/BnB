@@ -77,7 +77,11 @@
   box-sizing: border-box;
   border-bottom: 1px solid #ebebeb;
   padding-bottom: 30px;
+  // width: 55%;
+  // padding-left: 1vw;
 }
+
+
 .ride-show-desc {
   font-size: 20px;
   padding-top: 32px;
@@ -86,11 +90,16 @@
 }
 
 .booking-div {
-  position: sticky;
-  top: 80px;
-  bottom: 80px;
-  width: 50%;
+  // position: sticky;
+  // top: 80px;
+  // bottom: 80px;
+  // width: 50%;
   // padding-left: 50%;
+  width: 40%;
+  right: 0;
+  border-radius: 10px;
+  margin-top: 30px;
+  position: relative;
 }
 
 .booking-div-div {
@@ -119,10 +128,9 @@
   }
 }
 
-.body-test {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.left-ride-body {
+  width: 60%;
+  height: 100%;
 }
 
 // .map-bottom {
@@ -140,16 +148,20 @@
 }
 
 .ride-body-div {
-  max-width: 600px;
+  // max-width: 600px;
   padding-left: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 80%;
 }
 
-.ride-body {
-  // align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin-right: 50%;
-}
+// .ride-body {
+//   // align-items: center;
+//   display: flex;
+//   flex-direction: column;
+//   margin-right: 50%;
+// }
 
 .show-head {
   font-size: 25px;

@@ -6,21 +6,26 @@ import { IoMdPerson, IoIosMail } from "react-icons/io";
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      email: "",
-      password: "",
-      firstname: "",
-      error: "",
-    };
+    // this.state = {
+    //   email: "",
+    //   password: "",
+    //   firstname: "",
+    //   error: "",
+    // };
+    this.state = { ...props.user };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
-    // this.props.clearErrors();
+    this.renderErrors.bind(this);
+    this.props.clearErrors();
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    // const user = Object.assign({}, this.state);
-    this.props.processForm(this.state).then(this.props.closeModal);
+    const user =
+      e.currentTarget.id === "demo-button"
+        ? this.props.demoUser
+        : { ...this.state };
+    this.props.processForm(user).then(this.props.closeModal);
   }
 
   update(field) {
@@ -62,13 +67,20 @@ class SessionForm extends React.Component {
       return (
         <button
           className="session-submit"
-          onClick={() =>
-            this.props
-              .processForm({ email: "demo@aa.com", password: "123456" })
-              .then(this.props.closeModal)
+          id="demo-button"
+          onClick={
+            () =>
+              this.props
+
+                .processForm({ email: "demo@aa.com", password: "123456" })
+                .then(this.props.clearErrors())
+                .then(this.props.closeModal)
+            // {
+            //   this.handleSubmit;
+            // }
           }
         >
-          Demo
+          Demo Login
         </button>
       );
     };
@@ -120,4 +132,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);

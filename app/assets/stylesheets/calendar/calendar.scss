@@ -23,15 +23,15 @@
 }
 .PresetDateRangePicker_button__selected {
   color: #fff;
-  background: #a63d00;
+  background: #00a699;
 }
 .SingleDatePickerInput {
   display: inline-block;
-  // background-color: #fff;
+  background-color: #fff;
 }
 .SingleDatePickerInput__withBorder {
   border-radius: 2px;
-  // border: 1px solid #dbdbdb;
+  border: 1px solid #dbdbdb;
 }
 .SingleDatePickerInput__rtl {
   direction: rtl;
@@ -64,7 +64,7 @@
 }
 .SingleDatePickerInput_clearDate__default:focus,
 .SingleDatePickerInput_clearDate__default:hover {
-  // background: #dbdbdb;
+  background: #dbdbdb;
   border-radius: 50%;
 }
 .SingleDatePickerInput_clearDate__small {
@@ -149,7 +149,7 @@
 }
 .SingleDatePicker_closeButton:focus,
 .SingleDatePicker_closeButton:hover {
-  // color: darken(#cacccd, 10%);
+  color: darken(#cacccd, 10%);
   text-decoration: none;
 }
 .SingleDatePicker_closeButton_svg {
@@ -368,7 +368,7 @@
 .CalendarDay__blocked_calendar,
 .CalendarDay__blocked_calendar:active,
 .CalendarDay__blocked_calendar:hover {
-  // background: #cacccd;
+  background: #cacccd;
   border: 1px solid #cacccd;
   color: #82888a;
 }
@@ -656,13 +656,13 @@
   overflow-y: scroll;
 }
 .DateInput {
-  margin: 0;
-  padding: 0;
-  background: #fff;
-  position: relative;
-  display: inline-block;
-  width: 140px;
-  vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    vertical-align: middle;
 }
 .DateInput__small {
   width: 97px;
@@ -676,10 +676,10 @@
 }
 .DateInput_input {
   font-weight: 200;
-  // font-size: 19px;
+  font-size: 19px;
   line-height: 24px;
   color: #484848;
-  // background-color: #fff;
+  background-color: #fff;
   width: 65%;
   padding: 11px 11px 9px;
   border: 0;
@@ -688,11 +688,6 @@
   border-bottom: 2px solid transparent;
   border-left: 0;
   border-radius: 0;
-  margin-left: 25px;
-}
-
-.DateInput_input :hover {
-  background-color: white;
 }
 .DateInput_input__small {
   font-size: 15px;
@@ -715,7 +710,7 @@
   border: 0;
   border-top: 0;
   border-right: 0;
-  border-bottom: 2px solid #aa4a12;
+  border-bottom: 2px solid #008489;
   border-left: 0;
 }
 .DateInput_input__disabled {
@@ -758,14 +753,14 @@
   // border: 1px solid #dbdbdb;
 }
 
-// .DateInput_input:hover {
-// background-color: lightgrey;
-//   border-radius: 30px;
-// }
+.DateInput_input:hover {
+  background-color: lightgrey;
+  border-radius: 30px;
+}
 
 .DateRangePickerInput__withBorder:hover {
   outline: none;
-  // background-color: lightgrey;
+  background-color: lightgrey;
 }
 
 .DateRangePickerInput__rtl {
