@@ -10,7 +10,7 @@ import RideIndex from "./rides/ride_index_container";
 import RideShowContainer from "./rides/ride_show_container";
 import Search from "./search_bar/search_container";
 import BookingIndexContainer from "./bookings/booking_index_container";
-import EmptySearch from "./search_bar/empty_search";
+// import EmptySearch from "./search_bar/empty_search";
 
 const App = () => (
   <>
@@ -20,7 +20,6 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={Splash} />
       <Route exact path="/rides" component={RideIndex} />
-      {/* <Route exact path="/search/:input" component={Search} /> */}
       <Route exact path="/search=:keyword" component={Search} />
       <Route exact path="/rides/:rideId" component={RideShowContainer} />
       <Route exact path="/search=" component={EmptySearch} />
