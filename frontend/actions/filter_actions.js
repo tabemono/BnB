@@ -16,14 +16,3 @@ export const updateFilter = (filter, value) => {
   };
 };
 
-// const changeBounds = (bounds) => ({
-//   type: UPDATE_BOUNDS,
-//   bounds,
-// });
-
-// export const updateBounds = (bounds) => {
-//   return (dispatch, getState) => {
-//     dispatch(changeBounds(bounds));
-//     return dispatch(fetchRides(getState().ui.filterReducer.bound));
-//   };
-// };

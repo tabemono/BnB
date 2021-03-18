@@ -102,7 +102,7 @@ class ReviewForm extends React.Component {
             className="review-body-null-error"
             onChange={this.update("body")}
             placeholder="Tell us about the ride"
-            value={this.state.body}
+            // value={this.state.body}
           />
         </div>
         {errors}
