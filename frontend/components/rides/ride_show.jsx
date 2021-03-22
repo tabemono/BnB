@@ -1,6 +1,7 @@
 import React from "react";
 import BookingFormContainer from "../bookings/booking_form_container";
 import BikeShowMap from "../map/bike_show_map";
+import { withRouter } from "react-router-dom";
 import { DayPickerRangeController } from "react-dates";
 import RideShowDetail from "./ride_show_detail";
 import RideReview from "../reviews/ride_review";
@@ -15,7 +16,7 @@ class RideShow extends React.Component {
   }
   componentDidMount() {
     this.props.fetchRide(this.props.match.params.rideId);
-
+    this.props.fetchReviews(this.props.match.params.rideId);
     document.addEventListener("scroll", () => {
       const belowPictures = window.scrollY < 550;
       if (belowPictures !== this.state.scrollFixedUp)
@@ -27,11 +28,12 @@ class RideShow extends React.Component {
       if (topPictures !== this.state.scrollFixedB)
         this.setState({ scrollFixedB: topPictures });
     });
+    
   }
 
   render() {
     if (this.props.ride) {
-      const { ride, currentUser, deleteReview } = this.props;
+      const { ride, currentUser, deleteReview, fetchReview } = this.props;
 
       // const { photoUrls } = ride;
       const reviews = ride.reviews ? Object.values(ride.reviews) : [];
@@ -124,6 +126,7 @@ class RideShow extends React.Component {
                         riders={riders}
                         currentUser={currentUser}
                         deleteReview={deleteReview}
+                        // fetchReview={fetchReview}
                       />
                     ))}
                     <div className="review-form">
@@ -157,4 +160,4 @@ class RideShow extends React.Component {
   }
 }
 
-export default RideShow;
+export default withRouter(RideShow);

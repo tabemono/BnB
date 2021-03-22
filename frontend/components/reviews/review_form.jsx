@@ -54,6 +54,7 @@ class ReviewForm extends React.Component {
 
   componentWillUnmount() {
     this.props.clearErrors();
+    // delete window["reviewId"];
   }
 
   handleRating(rating) {
@@ -86,7 +87,7 @@ class ReviewForm extends React.Component {
 
   render() {
     const errors = this.renderErrors();
-    const {rider_id} = this.state;
+    const { rider_id } = this.state;
     return (
       <div className="review-form-container">
         <div className="review-header">

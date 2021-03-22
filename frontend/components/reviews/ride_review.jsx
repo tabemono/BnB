@@ -3,6 +3,7 @@ import React from "react";
 class RideReview extends React.Component {
   constructor(props) {
     super(props);
+    this.state = this.props.review;
   }
 
   // componentDidMount() {
@@ -21,11 +22,14 @@ class RideReview extends React.Component {
   //     });
   //   });
   // }
+  componentDidMount() {
+    this.props.review;
+  }
 
   render() {
     const { riders, review, currentUser } = this.props;
     const rider = riders[review.rider_id];
-    debugger;
+    // debugger;
     const deleteButton = () => {
       if (review.rider_id === currentUser)
         return (
