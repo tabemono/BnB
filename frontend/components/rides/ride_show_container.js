@@ -1,6 +1,7 @@
 import { fetchRide } from "../../actions/ride_actions";
 import { connect } from "react-redux";
 import { createBooking } from "../../actions/booking_actions";
+import { deleteReview } from '../../actions/review_actions';
 import RideShow from "./ride_show";
 
 const mstp = (state, ownProps) => {
@@ -17,6 +18,7 @@ const mstp = (state, ownProps) => {
 };
 const mdtp = (dispatch) => ({
   openModal: (modal) => dispatch(openModal(modal)),
+  deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
   createBooking: (booking) => dispatch(createBooking(booking)),
   fetchRide: (rideId) => dispatch(fetchRide(rideId)),
 });

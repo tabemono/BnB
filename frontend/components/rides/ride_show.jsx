@@ -31,7 +31,8 @@ class RideShow extends React.Component {
 
   render() {
     if (this.props.ride) {
-      const { ride, currentUser } = this.props;
+      const { ride, currentUser, deleteReview } = this.props;
+
       // const { photoUrls } = ride;
       const reviews = ride.reviews ? Object.values(ride.reviews) : [];
       const { riders } = ride;
@@ -121,6 +122,8 @@ class RideShow extends React.Component {
                         key={review.id}
                         review={review}
                         riders={riders}
+                        currentUser={currentUser}
+                        deleteReview={deleteReview}
                       />
                     ))}
                     <div className="review-form">

@@ -195,3 +195,19 @@ input[type="radio"]:hover ~ label {
 .review-footer {
   padding-bottom: 5%;
 }
+
+
+.review-delete {
+  color: #c83d14;
+
+}
+
+.review-delete:hover {
+   transition: 1s;
+  cursor: pointer;
+  border-radius: 50px;
+  border-bottom: 1px solid burlywood;
+}
+.review-del-btn {
+  margin-left: 30%;
+}
