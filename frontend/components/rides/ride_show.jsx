@@ -4,7 +4,7 @@ import BikeShowMap from "../map/bike_show_map";
 import { withRouter } from "react-router-dom";
 import { DayPickerRangeController } from "react-dates";
 import RideShowDetail from "./ride_show_detail";
-import RideReview from "../reviews/ride_review";
+import ReviewIndex from "../reviews/review_index";
 import ReviewContainer from "../reviews/review_container";
 class RideShow extends React.Component {
   constructor(props) {
@@ -12,6 +12,7 @@ class RideShow extends React.Component {
     this.state = {
       scrollFixedUp: true,
       scrollFixedB: false,
+      // reviews: this.props.ride.reviews,
     };
   }
   componentDidMount() {
@@ -28,12 +29,11 @@ class RideShow extends React.Component {
       if (topPictures !== this.state.scrollFixedB)
         this.setState({ scrollFixedB: topPictures });
     });
-    
   }
 
   render() {
     if (this.props.ride) {
-      const { ride, currentUser, deleteReview, fetchReview } = this.props;
+      const { ride, currentUser, deleteReview, fetchReview, fetchReviews } = this.props;
 
       // const { photoUrls } = ride;
       const reviews = ride.reviews ? Object.values(ride.reviews) : [];
@@ -119,18 +119,29 @@ class RideShow extends React.Component {
                     )}
                   </div>
                   <div className="reviews-container">
-                    {reviews.map((review) => (
-                      <RideReview
-                        key={review.id}
-                        review={review}
-                        riders={riders}
-                        currentUser={currentUser}
-                        deleteReview={deleteReview}
-                        // fetchReview={fetchReview}
-                      />
-                    ))}
+                    {/* {reviews
+                      .map((review) => (
+                        <RideReview
+                          key={review.id}
+                          review={review}
+                          riders={riders}
+                          currentUser={currentUser}
+                          deleteReview={deleteReview}
+                          // fetchReview={fetchReview}
+                        />
+                      ))
+                      } */}
+                    <ReviewIndex
+                      // key={reviews.id}
+                      reviews={reviews}
+                      riders={riders}
+                      currentUser={currentUser}
+                      deleteReview={deleteReview}
+                      // fetchReview={fetchReview}
+                      fetchReviews={fetchReviews}
+                    />
                     <div className="review-form">
-                      <ReviewContainer ride={ride} />
+                      <ReviewContainer currentUser={currentUser} ride={ride} />
                     </div>
                   </div>
                 </div>

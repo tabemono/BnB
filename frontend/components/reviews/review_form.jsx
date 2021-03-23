@@ -87,19 +87,21 @@ class ReviewForm extends React.Component {
 
   render() {
     const errors = this.renderErrors();
+    const { currentUser } = this.props;
     const { rider_id } = this.state;
     return (
       <div className="review-form-container">
         <div className="review-header">
           <h3>Leave a review</h3>
         </div>
-        <div className="mid-review">
+        <div  className="mid-review">
           <div className="reviews-ratings">
             <div className="rating">{this.ratingStars()}</div>
           </div>
           <textarea
             id="review-text"
             key={rider_id}
+            // key={currentUser.id}
             className="review-body-null-error"
             onChange={this.update("body")}
             placeholder="Tell us about the ride"
