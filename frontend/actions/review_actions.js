@@ -6,10 +6,13 @@ export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
 export const CLEAR_REVIEW_ERRORS = "CLEAR_REVIEW_ERRORS";
 export const REMOVE_REVIEW = "REMOVE_REVIEW";
 
-export const removeReview = (reviewId) => ({
-  type: REMOVE_REVIEW,
-  reviewId,
-});
+export const removeReview = ({ review }) => {
+  // debugger;
+  return {
+    type: REMOVE_REVIEW,
+    reviewId: review.id,
+  };
+};
 
 export const receiveReviewErrors = (errors) => ({
   type: RECEIVE_REVIEW_ERRORS,
@@ -56,7 +59,9 @@ export const fetchReview = (review) => (dispatch) => {
 };
 
 export const deleteReview = (reviewId) => (dispatch) => {
-  return ReviewApiUtil.deleteReview(reviewId).then((review) =>
-    dispatch(removeReview(review.id))
-  );
+
+  return ReviewApiUtil.deleteReview(reviewId).then((review) => {
+   
+    dispatch(removeReview(review));
+  });
 };

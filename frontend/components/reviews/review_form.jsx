@@ -94,7 +94,7 @@ class ReviewForm extends React.Component {
         <div className="review-header">
           <h3>Leave a review</h3>
         </div>
-        <div  className="mid-review">
+        <div className="mid-review">
           <div className="reviews-ratings">
             <div className="rating">{this.ratingStars()}</div>
           </div>

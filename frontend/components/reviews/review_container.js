@@ -1,4 +1,8 @@
-import { createReview, fetchReviews } from "../../actions/review_actions";
+import {
+  createReview,
+  fetchReviews,
+  deleteReview,
+} from "../../actions/review_actions";
 import { fetchRide } from "../../actions/ride_actions";
 import ReviewForm from "./review_form";
 import { connect } from "react-redux";
@@ -21,6 +25,7 @@ const mDTP = (dispatch) => ({
   fetchRide: (rideId) => dispatch(fetchRide(rideId)),
   openModal: () => dispatch(openModal("login")),
   clearErrors: () => dispatch(clearErrors()),
+  deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
 });
 
 export default connect(mSTP, mDTP)(ReviewForm);
