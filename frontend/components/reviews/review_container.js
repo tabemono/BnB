@@ -1,7 +1,7 @@
 import {
   createReview,
-  fetchReviews,
-  deleteReview,
+  // fetchReviews,
+  // deleteReview,
 } from "../../actions/review_actions";
 import { fetchRide } from "../../actions/ride_actions";
 import ReviewForm from "./review_form";
@@ -21,11 +21,11 @@ const mSTP = (state, ownProps) => ({
 
 const mDTP = (dispatch) => ({
   createReview: (review) => dispatch(createReview(review)),
-  fetchReviews: (id) => dispatch(fetchReviews(id)),
+  // fetchReviews: (id) => dispatch(fetchReviews(id)),
   fetchRide: (rideId) => dispatch(fetchRide(rideId)),
   openModal: () => dispatch(openModal("login")),
   clearErrors: () => dispatch(clearErrors()),
-  deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
+  // deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
 });
 
 export default connect(mSTP, mDTP)(ReviewForm);

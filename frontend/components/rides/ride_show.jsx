@@ -6,6 +6,7 @@ import { DayPickerRangeController } from "react-dates";
 import RideShowDetail from "./ride_show_detail";
 import ReviewIndex from "../reviews/review_index";
 import ReviewContainer from "../reviews/review_container";
+import ReviewIndexContainer from "../reviews/review_index_container";
 class RideShow extends React.Component {
   constructor(props) {
     super(props);
@@ -17,23 +18,39 @@ class RideShow extends React.Component {
   }
   componentDidMount() {
     this.props.fetchRide(this.props.match.params.rideId);
-    this.props.fetchReviews(this.props.match.params.rideId);
+    // this.props.fetchReviews(this.props.match.params.rideId);
+    // debugger;
     document.addEventListener("scroll", () => {
-      const belowPictures = window.scrollY < 550;
-      if (belowPictures !== this.state.scrollFixedUp)
-        this.setState({ scrollFixedUp: belowPictures });
+      const belowSegment = window.scrollY < 550;
+      if (belowSegment !== this.state.scrollFixedUp)
+        this.setState({ scrollFixedUp: belowSegment });
     });
     document.addEventListener("scroll", () => {
-      const topPictures =
+      const topSegment =
         window.scrollY > document.body.scrollHeight - window.innerHeight - 345;
-      if (topPictures !== this.state.scrollFixedB)
-        this.setState({ scrollFixedB: topPictures });
+      if (topSegment !== this.state.scrollFixedB)
+        this.setState({ scrollFixedB: topSegment });
     });
   }
 
+  // componentDidUpdate(prevProps) {
+  //   debugger;
+  //   if (prevProps.reviews !== this.state.reviews) {
+  //     debugger;
+  //     this.props.fetchReviews(this.props.match.params.rideId);
+  //     debugger;
+  //   }
+  // }
+
   render() {
     if (this.props.ride) {
-      const { ride, currentUser, deleteReview, fetchReview, fetchReviews } = this.props;
+      const {
+        ride,
+        currentUser,
+        deleteReview,
+        fetchReview,
+        fetchReviews,
+      } = this.props;
 
       // const { photoUrls } = ride;
       const reviews = ride.reviews ? Object.values(ride.reviews) : [];
@@ -103,12 +120,6 @@ class RideShow extends React.Component {
                 </div>
                 <div className="ride-reviews">
                   <div className="review-header">
-                    {/* <div className="ride-rating-review">
-                      <div className="star">
-                        <i className="fas fa-star fa-lg"></i>
-                      </div>
-                      {rating}
-                    </div> */}
                     {reviews.length > 0 ? (
                       <h2 className="review-heading">
                         <i className="fas fa-star fa-lg"></i>
@@ -119,29 +130,32 @@ class RideShow extends React.Component {
                     )}
                   </div>
                   <div className="reviews-container">
-                    {/* {reviews
-                      .map((review) => (
-                        <RideReview
-                          key={review.id}
-                          review={review}
-                          riders={riders}
-                          currentUser={currentUser}
-                          deleteReview={deleteReview}
-                          // fetchReview={fetchReview}
-                        />
-                      ))
-                      } */}
-                    <ReviewIndex
+                    {/* <ReviewIndex
                       // key={reviews.id}
+                      ride={ride}
                       reviews={reviews}
                       riders={riders}
                       currentUser={currentUser}
                       deleteReview={deleteReview}
                       // fetchReview={fetchReview}
                       fetchReviews={fetchReviews}
+                    /> */}
+                    <ReviewIndexContainer
+                      // key={reviews.id}
+                      ride={ride}
+                      // reviews={reviews}
+                      riders={riders}
+                      currentUser={currentUser}
+                      // deleteReview={deleteReview}
+                      // fetchReview={fetchReview}
+                      // fetchReviews={fetchReviews}
                     />
                     <div className="review-form">
-                      <ReviewContainer currentUser={currentUser} ride={ride} />
+                      <ReviewContainer
+                        key={Math.random()}
+                        currentUser={currentUser}
+                        ride={ride}
+                      />
                     </div>
                   </div>
                 </div>

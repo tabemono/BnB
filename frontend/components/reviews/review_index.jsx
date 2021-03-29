@@ -7,58 +7,34 @@ class ReviewIndex extends React.Component {
     this.state = { reviews: this.props.reviews };
   }
 
-  // componentDidMount() {
-  //   $(document).ready(function () {
-  //     $(".review-delete").mouseenter(function () {
-  //       $(".review-body").css(
-  //         "box-shadow",
-  //         "inset 0 0 0 4000px rgba(27,61,88,.8)"
-  //       );
-  //     });
-  //     $(".review-delete").mouseout(function () {
-  //       $(".review-body").css(
-  //         "box-shadow",
-  //         "inset 0 0 0 4000px rgb(255,255,255)"
-  //       );
-  //     });
-  //   });
-  // }
-  // componentWillMount() {
-
-  // }
-
-  // handleDelete(e) {
-  //     e.preventDefault();
-  //     this.props.deleteReview()
-
-  // }
-
-  // componentDidUpdate(prevProps) {
-  //   // debugger;
-  //   if (prevProps.reviews.length !== this.props.reviews.length) {
-  //     this.props.fetchReviews(this.props.match.params.rideId);
-  //   }
-  // }
+  componentDidUpdate(prevState) {
+    if (prevState.reviews.length!== this.state.reviews.length) {
+      debugger;
+      this.setState({ reviews: this.props.reviews });
+    }
+  }
 
   render() {
-    const { riders, reviews, currentUser, deleteReview } = this.props;
-
-    // const rider = riders[review.rider_id];
-    // const formatDate = (date) => {
-    //   const dateString = moment(date).format("LL");
-    //   const arr = dateString.split(" ");
-    //   return arr[0] + " " + arr[2];
-    // };
-    const currentReviews = this.state.reviews;
+    const {
+      riders,
+      reviews,
+      currentUser,
+      deleteReview,
+      // fetchReviews,
+    } = this.props;
+    // const reviews = this.state.reviews;
+    // const currentReviews = this.state.reviews;
 
     return (
       <div>
         {reviews.map((review) => (
           <ReviewIndexItem
+            key={review.id}
             review={review}
             riders={riders}
             currentUser={currentUser}
             deleteReview={deleteReview}
+            // fetchReviews={fetchReviews}
           />
         ))}
       </div>

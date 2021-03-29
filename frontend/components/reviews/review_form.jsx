@@ -43,7 +43,7 @@ class ReviewForm extends React.Component {
     if (this.props.review.rider_id) {
       createReview(this.state).then(clearErrors());
       fetchRide(this.state.ride_id);
-      fetchReviews(this.state.ride_id);
+      // fetchReviews(this.state.ride_id);
       this.clearReview();
     } else openModal("login");
   }
@@ -72,6 +72,7 @@ class ReviewForm extends React.Component {
         <input
           type="radio"
           key={`radio-${i}`}
+          // key={i + 1}
           id={`radio-${i}`}
           value={i}
           onChange={() => this.setRating(i)}
@@ -100,7 +101,8 @@ class ReviewForm extends React.Component {
           </div>
           <textarea
             id="review-text"
-            key={rider_id}
+            key={currentUser}
+            // key={rider_id}
             // key={currentUser.id}
             className="review-body-null-error"
             onChange={this.update("body")}

@@ -5,13 +5,24 @@ class ReviewIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
+    this.state = {
+      review: this.props.review,
+      deleted: false,
+    };
   }
 
   handleDelete(e) {
-    e.preventDefault();
-    debugger;
+    // e.preventDefault();
+    // debugger;
     this.props.deleteReview(this.props.review.id);
+    this.setState({ deleted: true });
+
+    // debugger;
+    //.then(this.state.filter(review => review.id !== reviewId));
   }
+
+  componentDidUpdate() {}
+
   render() {
     const { riders, review, currentUser } = this.props;
     const formatDate = (date) => {
@@ -19,8 +30,7 @@ class ReviewIndexItem extends React.Component {
       const arr = dateString.split(" ");
       return arr[0] + " " + arr[2];
     };
-
-    return (
+    const notDeleted = (
       <div key={review.id} className="review-item-container">
         <div className="review-rating">
           <div className="ride-rating-review">
@@ -38,14 +48,22 @@ class ReviewIndexItem extends React.Component {
 
         {review.rider_id === currentUser ? (
           <div className="review-del-btn">
-            <button className="review-delete" onClick={this.handleDelete}>
+            <button
+              className="review-delete"
+              onClick={() => this.handleDelete()}
+            >
               Remove Your Review
             </button>
           </div>
         ) : null}
       </div>
-      //   <p>test</p>
     );
+
+    if (!this.state.deleted) {
+      return notDeleted;
+    } else {
+      return <></>;
+    }
   }
 }
 
