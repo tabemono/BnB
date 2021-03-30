@@ -2,11 +2,15 @@ import ReviewIndex from "./review_index";
 import { deleteReview, fetchReviews } from "../../actions/review_actions";
 import { connect } from "react-redux";
 
-const mSTP = (state, props) => {
+const mSTP = (state, ownProps) => {
   debugger;
-  return {
-    reviews: Object.values(props.ride.reviews),
-  };
+  if (ownProps.ride.reviews) {
+    return {
+      reviews: Object.values(ownProps.ride.reviews),
+    };
+  } else {
+    return {};
+  }
 };
 
 const mDTP = (dispatch) => ({

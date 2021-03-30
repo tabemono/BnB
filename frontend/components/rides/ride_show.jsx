@@ -51,9 +51,10 @@ class RideShow extends React.Component {
         fetchReview,
         fetchReviews,
       } = this.props;
-
+      debugger;
       // const { photoUrls } = ride;
       const reviews = ride.reviews ? Object.values(ride.reviews) : [];
+      debugger;
       const { riders } = ride;
       let totalRate = 0;
       reviews
@@ -143,7 +144,7 @@ class RideShow extends React.Component {
                     <ReviewIndexContainer
                       // key={reviews.id}
                       ride={ride}
-                      // reviews={reviews}
+                      reviews={reviews}
                       riders={riders}
                       currentUser={currentUser}
                       // deleteReview={deleteReview}

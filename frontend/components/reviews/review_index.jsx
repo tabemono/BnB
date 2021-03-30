@@ -5,14 +5,23 @@ class ReviewIndex extends React.Component {
   constructor(props) {
     super(props);
     this.state = { reviews: this.props.reviews };
+    // this.state = this.props.reviews;
   }
 
-  componentDidUpdate(prevState) {
-    if (prevState.reviews.length!== this.state.reviews.length) {
-      debugger;
-      this.setState({ reviews: this.props.reviews });
-    }
-  }
+  // componentDidUpdate(prevState) {
+  //   if (prevState.reviews.length!== this.state.reviews.length) {
+  //     debugger;
+  //     this.setState({ reviews: this.props.reviews });
+  //   }
+  // }
+
+  // componentDidMount() {
+  //   debugger;
+  //   const url = window.location.hash;
+  //   const lastSegment = url.split("/").pop();
+
+  //   this.props.fetchReviews(lastSegment);
+  // }
 
   render() {
     const {

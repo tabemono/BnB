@@ -16,7 +16,8 @@ class Api::RidesController < ApplicationController
     end
 
     def show
-        @ride = Ride.with_attached_photos.find_by(id: params[:id])
+        @ride = Ride.with_attached_photos.includes(:reviews).find_by(id: params[:id])
+    
         render :show 
     end
 

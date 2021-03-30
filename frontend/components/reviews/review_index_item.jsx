@@ -21,7 +21,7 @@ class ReviewIndexItem extends React.Component {
     //.then(this.state.filter(review => review.id !== reviewId));
   }
 
-  componentDidUpdate() {}
+ 
 
   render() {
     const { riders, review, currentUser } = this.props;
