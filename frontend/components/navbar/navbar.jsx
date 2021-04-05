@@ -47,12 +47,17 @@ class NavBar extends React.Component {
         </div>
         <div className="right-nav">
           <div className="nav-2">
-            <a className="git" href="https://github.com/tabemono">
+            <a
+              className="git"
+              href="https://github.com/tabemono"
+              target="_blank"
+            >
               <img src={window.github}></img>
             </a>
             <a
               className="personal-social"
               href="https://www.linkedin.com/in/tony-chen-830850201/"
+              target="_blank"
             >
               <img src={window.linkedIn}></img>
             </a>
