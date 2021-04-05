@@ -116,7 +116,7 @@ class BookingForm extends React.Component {
               <input
                 className="date-input"
                 type="text"
-                // value={this.handleDate(this.state.startDate)}
+                value={this.handleDate(this.state.startDate)}
                 placeholder="MM/DD/YYYY"
                 required
                 onClick={() => {
@@ -130,7 +130,7 @@ class BookingForm extends React.Component {
               <input
                 className="date-input"
                 type="text"
-                // value={this.handleDate(this.state.endDate)}
+                value={this.handleDate(this.state.endDate)}
                 placeholder="MM/DD/YYYY"
                 required
                 onClick={() => {
