@@ -35,7 +35,7 @@
   margin-top: 60px;
   // margin-left: 5px;
   font-size: 20px;
-  color: #C83D14;
+  color: #c83d14;
 }
 
 .star {
@@ -199,16 +199,16 @@ input[type="radio"]:hover ~ label {
 
 .review-footer {
   padding-bottom: 5%;
-}
 
+  //
+}
 
 .review-delete {
   color: #c83d14;
-
 }
 
 .review-delete:hover {
-   transition: 1s;
+  transition: 1s;
   cursor: pointer;
   border-radius: 50px;
   border-bottom: 1px solid burlywood;
