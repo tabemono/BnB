@@ -71,10 +71,7 @@ class BikeMap extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    // debugger;
-    //checking keyword change
     if (prevProps.location.pathname !== this.props.location.pathname) {
-      // debugger;
       let lat;
       let lng;
       let zoom;
@@ -88,7 +85,6 @@ class BikeMap extends React.Component {
         lng = rides[0].lng;
         zoom = 13;
         // this.markerManager.updateMarkers(this.props.rides);
-        // debugger;
       }
       const mapOptions = {
         center: { lat: lat, lng: lng },

@@ -3,7 +3,6 @@ import { deleteReview, fetchReviews } from "../../actions/review_actions";
 import { connect } from "react-redux";
 
 const mSTP = (state, ownProps) => {
-  debugger;
   if (ownProps.ride.reviews) {
     return {
       reviews: Object.values(ownProps.ride.reviews),

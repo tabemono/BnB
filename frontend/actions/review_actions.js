@@ -8,7 +8,6 @@ export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS";
 export const REMOVE_REVIEW = "REMOVE_REVIEW";
 
 export const removeReview = ({ review }) => {
-  // debugger;
   return {
     type: REMOVE_REVIEW,
     reviewId: review.id,

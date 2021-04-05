@@ -19,7 +19,7 @@ class RideShow extends React.Component {
   componentDidMount() {
     this.props.fetchRide(this.props.match.params.rideId);
     // this.props.fetchReviews(this.props.match.params.rideId);
-    // debugger;
+
     document.addEventListener("scroll", () => {
       const belowSegment = window.scrollY < 550;
       if (belowSegment !== this.state.scrollFixedUp)
@@ -33,15 +33,6 @@ class RideShow extends React.Component {
     });
   }
 
-  // componentDidUpdate(prevProps) {
-  //   debugger;
-  //   if (prevProps.reviews !== this.state.reviews) {
-  //     debugger;
-  //     this.props.fetchReviews(this.props.match.params.rideId);
-  //     debugger;
-  //   }
-  // }
-
   render() {
     if (this.props.ride) {
       const {
@@ -51,10 +42,9 @@ class RideShow extends React.Component {
         fetchReview,
         fetchReviews,
       } = this.props;
-      debugger;
       // const { photoUrls } = ride;
       const reviews = ride.reviews ? Object.values(ride.reviews) : [];
-      debugger;
+
       const { riders } = ride;
       let totalRate = 0;
       reviews

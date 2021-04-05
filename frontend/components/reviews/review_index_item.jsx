@@ -12,16 +12,9 @@ class ReviewIndexItem extends React.Component {
   }
 
   handleDelete(e) {
-    // e.preventDefault();
-    // debugger;
     this.props.deleteReview(this.props.review.id);
     this.setState({ deleted: true });
-
-    // debugger;
-    //.then(this.state.filter(review => review.id !== reviewId));
   }
-
- 
 
   render() {
     const { riders, review, currentUser } = this.props;

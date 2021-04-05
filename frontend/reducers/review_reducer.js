@@ -24,7 +24,6 @@ const reviewsReducer = (state = {}, action) => {
       let newState = { ...state };
 
       delete newState[action.reviewId];
-      debugger;
       return newState;
     default:
       return state;
