@@ -61,6 +61,13 @@ class NavBar extends React.Component {
             >
               <img src={window.linkedIn}></img>
             </a>
+            <a
+              className="personal-social"
+              href="https://tabemono.github.io/"
+              target="_blank"
+            >
+              <img src={window.portfolio}></img>
+            </a>
             {navDisplay}
           </div>
         </div>
