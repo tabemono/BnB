@@ -21,11 +21,10 @@ const mSTP = (state, ownProps) => ({
 
 const mDTP = (dispatch) => ({
   createReview: (review) => dispatch(createReview(review)),
-  // fetchReviews: (id) => dispatch(fetchReviews(id)),
+
   fetchRide: (rideId) => dispatch(fetchRide(rideId)),
   openModal: () => dispatch(openModal("login")),
   clearErrors: () => dispatch(clearErrors()),
-  // deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
 });
 
 export default connect(mSTP, mDTP)(ReviewForm);
