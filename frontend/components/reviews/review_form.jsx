@@ -100,12 +100,9 @@ class ReviewForm extends React.Component {
           <textarea
             id="review-text"
             key={currentUser}
-            // key={rider_id}
-            // key={currentUser.id}
             className="review-body-null-error"
             onChange={this.update("body")}
             placeholder="Tell us about the ride"
-            // value={this.state.body}
           />
         </div>
         {errors}
