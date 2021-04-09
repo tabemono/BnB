@@ -2,8 +2,6 @@ import { isEqual } from "date-fns";
 import React from "react";
 import { withRouter } from "react-router-dom";
 import MarkerManager from "./marker_manager";
-// import { isEqual } from "lodash";
-// import getLocation from "../../util/map_util";
 
 const getCoordsObj = (latLng) => ({
   lat: latLng.lat(),
