@@ -15,6 +15,7 @@ Backend implemented with Rails and Postgres while the front end is managed by Re
 * Users are able to log in and signup through buttons that bring up a modal. User credentials are then validated through rails backend that deliver error messages when invalidations occur. Demo User login is also included to preview the app.
 
 
+# Search Feature
 ![search](https://github.com/tabemono/BnB/blob/media/media/search-gif.gif)
 * Listings are placed on the map when searched and filtered by city 
 * Searchbar is implemented to update map and listings shown on index page.
@@ -41,10 +42,12 @@ Backend implemented with Rails and Postgres while the front end is managed by Re
 
 ```
 
-
+# Adding Reviews 
 ![review](https://github.com/tabemono/BnB/blob/media/media/review-gif.gif)
 * Users can add and remove reviews when logged in.
 
+
+# Reserving Bookings And Cancellations
 ![booking](https://github.com/tabemono/BnB/blob/media/media/booking-gif.gif)
 * Users can reserve rides on selected dates and remove their bookings at their selected page.
 
