@@ -6,12 +6,7 @@ import { IoMdPerson, IoIosMail } from "react-icons/io";
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   email: "",
-    //   password: "",
-    //   firstname: "",
-    //   error: "",
-    // };
+
     this.state = { ...props.user };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
