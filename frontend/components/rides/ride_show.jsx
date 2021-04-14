@@ -118,25 +118,12 @@ class RideShow extends React.Component {
                     )}
                   </div>
                   <div className="reviews-container">
-                    {/* <ReviewIndex
-                      // key={reviews.id}
-                      ride={ride}
-                      reviews={reviews}
-                      riders={riders}
-                      currentUser={currentUser}
-                      deleteReview={deleteReview}
-                      // fetchReview={fetchReview}
-                      fetchReviews={fetchReviews}
-                    /> */}
                     <ReviewIndexContainer
                       // key={reviews.id}
                       ride={ride}
                       reviews={reviews}
                       riders={riders}
                       currentUser={currentUser}
-                      // deleteReview={deleteReview}
-                      // fetchReview={fetchReview}
-                      // fetchReviews={fetchReviews}
                     />
                     <div className="review-form">
                       <ReviewContainer
