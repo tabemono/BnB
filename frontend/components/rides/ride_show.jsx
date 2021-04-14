@@ -81,7 +81,6 @@ class RideShow extends React.Component {
               <div className="ride-body">
                 <div className="ride-details">
                   <div className="ride-header">
-                    {/* <h3>Bike is owned by {ride.owner.firstname}</h3> */}
                     <span className="ride-rating">
                       <div className="rating-container">
                         <div className="star">
