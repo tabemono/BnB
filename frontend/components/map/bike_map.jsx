@@ -82,7 +82,7 @@ class BikeMap extends React.Component {
         lat = rides[0].lat;
         lng = rides[0].lng;
         zoom = 13;
-        // this.markerManager.updateMarkers(this.props.rides);
+        
       }
       const mapOptions = {
         center: { lat: lat, lng: lng },
