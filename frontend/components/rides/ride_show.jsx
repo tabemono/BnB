@@ -135,8 +135,7 @@ class RideShow extends React.Component {
                   </div>
                 </div>
               </div>
-              {/* <div className="booking-div-div"> */}
-              {/* </div> */}
+             
             </div>
             <div className="booking-div">
               <BookingFormContainer
