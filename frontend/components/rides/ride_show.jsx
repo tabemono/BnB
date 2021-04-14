@@ -13,12 +13,10 @@ class RideShow extends React.Component {
     this.state = {
       scrollFixedUp: true,
       scrollFixedB: false,
-      // reviews: this.props.ride.reviews,
     };
   }
   componentDidMount() {
     this.props.fetchRide(this.props.match.params.rideId);
-    // this.props.fetchReviews(this.props.match.params.rideId);
 
     document.addEventListener("scroll", () => {
       const belowSegment = window.scrollY < 550;
