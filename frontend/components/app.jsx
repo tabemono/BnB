@@ -20,7 +20,6 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={Splash} />
       <Route exact path="/rides" component={RideIndex} />
-      {/* <Route exact path="/search/:input" component={Search} /> */}
       <Route exact path="/search=:keyword" component={Search} />
       <Route exact path="/rides/:rideId" component={RideShowContainer} />
       <Route exact path="/search=" component={EmptySearch} />
