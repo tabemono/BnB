@@ -5,9 +5,7 @@ import BikeMap from "../map/bike_map";
 class Search extends React.Component {
   constructor(props) {
     super(props);
-   
   }
-
 
   render() {
     const {
@@ -36,15 +34,6 @@ class Search extends React.Component {
                 deleteKeyword={deleteKeyword}
               />
             </ul>
-            {/* <div id="map-container"> */}
-            {/* <BikeMap
-              rides={rides}
-              // updateBounds={updateBounds}
-              updateFilter={updateFilter}
-              keyword={keyword}
-              deleteKeyword={deleteKeyword}
-            /> */}
-            {/* </div> */}
           </div>
         </div>
       </div>
