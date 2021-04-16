@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import "react-dates/initialize";
 import { withRouter } from "react-router";
@@ -94,7 +92,7 @@ class BookingForm extends React.Component {
     const riders = this.state.num_riders > 1 ? "riders" : "rider";
     const { scroll } = this.props;
     const bookingBox = document.getElementById("box");
-    // if (!this.props.ride) return null;
+
     return (
       <div className={scroll} id="box">
         <div className="booking-header">
