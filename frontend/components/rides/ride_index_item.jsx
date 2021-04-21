@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "nuka-carousel";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import RideIndexIcon from "./ride_index_icons";
 class RideIndexItem extends React.Component {
   constructor(props) {
