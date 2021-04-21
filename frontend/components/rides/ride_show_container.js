@@ -11,7 +11,6 @@ import RideShow from "./ride_show";
 const mstp = (state, ownProps) => {
   const ride = state.entities.rides[ownProps.match.params.rideId];
   const owner = !!ride ? state.entities.users[ride.ownerId] : null;
-  //possibly put owner of bike later
 
   return {
     ride,
