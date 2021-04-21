@@ -1,8 +1,4 @@
-import {
-  createReview,
-  // fetchReviews,
-  // deleteReview,
-} from "../../actions/review_actions";
+import { createReview } from "../../actions/review_actions";
 import { fetchRide } from "../../actions/ride_actions";
 import ReviewForm from "./review_form";
 import { connect } from "react-redux";
