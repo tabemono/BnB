@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
+import Footer from "../footer/footer";
 class Splash extends React.Component {
   constructor(props) {
     {
@@ -126,6 +127,7 @@ class Splash extends React.Component {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

@@ -11,7 +11,7 @@ import RideShowContainer from "./rides/ride_show_container";
 import Search from "./search_bar/search_container";
 import BookingIndexContainer from "./bookings/booking_index_container";
 import EmptySearch from "./search_bar/empty_search";
-import Footer from "./footer/footer";
+// import Footer from "./footer/footer";
 const App = () => (
   <>
     <Modal />
@@ -30,7 +30,7 @@ const App = () => (
         component={BookingIndexContainer}
       />
     </Switch>
-    <Route path="/" component={Footer} />
+    {/* <Route path="/" component={Footer} /> */}
   </>
 );
 
