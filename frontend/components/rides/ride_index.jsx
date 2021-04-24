@@ -32,7 +32,7 @@ class RideIndex extends React.Component {
           </div>
         );
       } else {
-        return <div className="index-count">{count} bikes to ride.</div>;
+        return <div className="index-count">{count} Bikes to ride.</div>;
       }
     };
     const rideIndexItems = this.props.rides.map((ride) => {
