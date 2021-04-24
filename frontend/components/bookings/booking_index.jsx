@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useRouteMatch, useHistory } from "react-router-dom";
 import BookingIndexItem from "./booking_index_item";
-
+import Footer from "../footer/footer";
 const BookingIndex = ({
   bookings,
   fetchBookings,
@@ -51,13 +51,16 @@ const BookingIndex = ({
     </div>
   );
   return (
-    <div className="booking-index-container">
-      <h1>Rides</h1>
-      <hr className="underline" />
-      {upcomingBookings}
-      <button className="booking-index-button" onClick={handleClick}>
-        Explore BnB
-      </button>
+    <div>
+      <div className="booking-index-container">
+        <h1>Rides</h1>
+        <hr className="underline" />
+        {upcomingBookings}
+        <button className="booking-index-button" onClick={handleClick}>
+          Explore BnB
+        </button>
+      </div>
+      <Footer />
     </div>
   );
 };
