@@ -7,6 +7,8 @@ import RideShowDetail from "./ride_show_detail";
 import ReviewIndex from "../reviews/review_index";
 import ReviewContainer from "../reviews/review_container";
 import ReviewIndexContainer from "../reviews/review_index_container";
+import Footer from "../footer/footer";
+
 class RideShow extends React.Component {
   constructor(props) {
     super(props);
@@ -135,7 +137,6 @@ class RideShow extends React.Component {
                   </div>
                 </div>
               </div>
-             
             </div>
             <div className="booking-div">
               <BookingFormContainer
@@ -151,6 +152,7 @@ class RideShow extends React.Component {
             <h2>Pick Up Location</h2>
             <BikeShowMap ride={ride} center={center} zoom={zoom} />
           </div>
+          <Footer />
         </div>
       );
     } else {
