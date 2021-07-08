@@ -28,11 +28,11 @@
 }
 
 .ride-index-item {
-  border-bottom: 1px grey solid;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   justify-content: flex-start;
   cursor: pointer;
-  border-top: 1px grey solid;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   padding-top: 30px;
 
   p {

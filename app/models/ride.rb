@@ -51,7 +51,8 @@ class Ride < ApplicationRecord
         result = Ride.where("city ILIKE ?", match)
             .or(Ride.where("location ILIKE ?", match))
             .or(Ride.where("model ILIKE ?", match))
-     end
+            .or(Ride.where("brand ILIKE ?", match))
+    end
 
 
 end
