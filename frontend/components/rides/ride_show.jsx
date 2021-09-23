@@ -149,7 +149,7 @@ class RideShow extends React.Component {
           </div>
 
           <div className="ride-show-map">
-            <h2>Pick Up Location</h2>
+            {/* <h2>Pick Up Location</h2> */}
             <BikeShowMap ride={ride} center={center} zoom={zoom} />
           </div>
           <Footer />
