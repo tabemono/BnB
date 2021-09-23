@@ -2,9 +2,8 @@ import React from "react";
 import BookingFormContainer from "../bookings/booking_form_container";
 import BikeShowMap from "../map/bike_show_map";
 import { withRouter } from "react-router-dom";
-import { DayPickerRangeController } from "react-dates";
 import RideShowDetail from "./ride_show_detail";
-import ReviewIndex from "../reviews/review_index";
+
 import ReviewContainer from "../reviews/review_container";
 import ReviewIndexContainer from "../reviews/review_index_container";
 import Footer from "../footer/footer";
