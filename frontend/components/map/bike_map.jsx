@@ -3,10 +3,10 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import MarkerManager from "./marker_manager";
 
-const getCoordsObj = (latLng) => ({
-  lat: latLng.lat(),
-  lng: latLng.lng(),
-});
+// const getCoordsObj = (latLng) => ({
+//   lat: latLng.lat(),
+//   lng: latLng.lng(),
+// });
 
 class BikeMap extends React.Component {
   constructor(props) {
