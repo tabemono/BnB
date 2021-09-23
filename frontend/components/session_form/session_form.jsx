@@ -1,8 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
-import { IoMdPerson, IoIosMail } from "react-icons/io";
-
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
