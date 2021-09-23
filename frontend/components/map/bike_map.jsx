@@ -1,4 +1,3 @@
-import { isEqual } from "date-fns";
 import React from "react";
 import { withRouter } from "react-router-dom";
 import MarkerManager from "./marker_manager";
@@ -82,7 +81,6 @@ class BikeMap extends React.Component {
         lat = rides[0].lat;
         lng = rides[0].lng;
         zoom = 13;
-        
       }
       const mapOptions = {
         center: { lat: lat, lng: lng },
