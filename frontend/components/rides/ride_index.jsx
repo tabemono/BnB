@@ -1,9 +1,8 @@
 import React from "react";
-// import Carousel from 'nuka-carousel';
+
 import RideIndexItem from "./ride_index_item";
 import BikeMap from "../map/bike_map";
 import { withRouter } from "react-router";
-import { deleteKeyword } from "../../actions/keyword_actions";
 
 class RideIndex extends React.Component {
   constructor(props) {
