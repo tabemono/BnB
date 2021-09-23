@@ -1,11 +1,7 @@
 import { fetchRide } from "../../actions/ride_actions";
 import { connect } from "react-redux";
 import { createBooking } from "../../actions/booking_actions";
-import {
-  deleteReview,
-  fetchReviews,
-  fetchReview,
-} from "../../actions/review_actions";
+import { deleteReview, fetchReviews } from "../../actions/review_actions";
 import RideShow from "./ride_show";
 
 const mstp = (state, ownProps) => {
