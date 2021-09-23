@@ -1,9 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import "react-dates/initialize";
-import { DateRangePicker } from "react-dates";
-import { BsSearch } from "react-icons/bs";
-import RideIndexItem from "../rides/ride_index_item";
 
 class SearchBar extends React.Component {
   constructor(props) {
