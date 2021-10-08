@@ -18,11 +18,12 @@ class Splash extends React.Component {
           </div>
           <div width="100%" height="50%">
             <img
-              autoPlay
-              muted
-              loop
+              // autoPlay
+              // muted
+              // loop
               className="splash-image"
-              src={window.splashvid}
+              // src={window.splashvid}
+              src={window.splash}
             ></img>
           </div>
         </div>
