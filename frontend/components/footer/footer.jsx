@@ -7,8 +7,23 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <footer>
-        <div className="footer-container">
+      <footer id="main-footer">
+        <div className="footer-listings">
+          <ul>
+            <h3>About me</h3>
+            <li>
+              <a
+                // className="git"
+                href="https://github.com/tabemono"
+                target="_blank"
+              >
+                {/* <img src={window.github}></img> */}
+                Linkedin
+              </a>
+            </li>
+          </ul>
+        </div>
+        {/* <div className="footer-container">
           <div>© 2021 by Tony Chen</div>
           <div>
             Inspired by{" "}
@@ -16,7 +31,7 @@ class Footer extends React.Component {
               AirBnb{" "}
             </a>
           </div>
-        </div>
+        </div> */}
       </footer>
     );
   }
