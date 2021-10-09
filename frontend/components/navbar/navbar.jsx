@@ -37,9 +37,9 @@ class NavBar extends React.Component {
     return (
       <header className="navbar">
         <nav className="nonsplash-nav">
-          <Link id="nav-logo" to="/">
+          <Link id="logo" to="/">
             <img src={window.logo} className="logo"></img>
-            <h1>bikesnbikers</h1>
+            <h1>Bikes & Bikers</h1>
           </Link>
           <div className="search-nav">
             <SearchBarContainer />

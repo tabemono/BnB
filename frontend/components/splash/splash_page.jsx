@@ -12,26 +12,29 @@ class Splash extends React.Component {
   render() {
     return (
       <div className="splashpage">
-        <div className="banner">
-          <div className="header-content">
-            <h1 className="welcome">Find The Perfect Ride</h1>
-          </div>
-          <div width="100%" height="50%">
-            <img
-              // autoPlay
-              // muted
-              // loop
-              className="splash-image"
-              // src={window.splashvid}
-              src={window.splash}
-            ></img>
+        <h1 className="welcome">Find The Perfect Ride</h1>
+        {/* <div className="banner"> */}
+        {/* <div className="header-content"> */}
+        {/* </div> */}
+        <div id="splashimg-cont" width="100%" height="100%">
+          <img
+            // autoPlay
+            // muted
+            // loop
+            className="splash-image"
+            // src={window.splashvid}
+            src={window.splash}
+          ></img>
+          {/* </div> */}
+        </div>
+        <div className="intro-wrapper">
+          <div className="look-btn">
+            <Link className="look-button" to="/rides">
+              Look Around
+            </Link>
           </div>
         </div>
-        <div className="look-btn">
-          <Link className="look-button" to="/rides">
-            Look Around
-          </Link>
-        </div>
+
         <div className="riding-style">
           <div className="style-col">
             <img src={window.sport} className="style-img"></img>

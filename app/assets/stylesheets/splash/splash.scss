@@ -1,21 +1,25 @@
 .splash-image {
-  border-radius: 10px;
+  // border-radius: 10px;
   position: absolute;
   top: 0;
   display: fixed;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
+  margin-bottom: 200px;
   width: 100%;
 
   z-index: -2;
 }
 
+#splashimg-cont {
+  margin-bottom: 100px;
+}
+
 .welcome {
   font-family: "Montserrat", sans-serif;
   font-size: 62px;
-  margin: 200px auto 30px auto;
+  margin: 2% auto 30px auto;
   color: black;
 
   font-weight: bold;

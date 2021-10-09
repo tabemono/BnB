@@ -1,13 +1,17 @@
-.logo {
-  width: 85px;
-  position: relative;
-  margin-top: -8px;
-  margin-left: 3px;
-  outline: none;
+#logo {
+  font-weight: 700;
+  color: rgb(22, 22, 22);
   display: flex;
-  color: brown;
+  align-items: center;
   > h1 {
     font-size: 22px;
+  }
+
+  > img:first-child {
+    height: 50px;
+    width: 75px;
+    margin-right: 18px;
+    margin-left: -20px;
   }
 }
 
@@ -21,6 +25,7 @@
   // width: 100%;
   // border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   display: block;
+  // margin-bottom: 10px;
 }
 
 .nonsplash-nav {
@@ -121,12 +126,12 @@ div > p {
 // }
 
 .look-btn {
-  justify-content: space-between;
+  // justify-content: space-between;
   cursor: pointer;
   text-align: center;
   font-family: "Montserrat";
   font-size: 16px;
-  line-height: 18px;
+  // line-height: 18px;
   font-weight: 600;
   padding-top: 7px;
   padding-bottom: 7px;
@@ -140,6 +145,8 @@ div > p {
   // border: none;
   border-style: ridge;
   background-color: black;
+  position: relative;
+  bottom: 150px;
 }
 
 .search-nav {
