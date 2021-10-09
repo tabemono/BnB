@@ -7,7 +7,7 @@ class Api::SessionsController < ApplicationController
             # render "api/users/show"
             redirect_to api_user_url(@user)
         else
-            render json: ['email or password is invalid'], status: 422
+            render json: ['The email or password you entered is incorrect.Try again'], status: 422
         end
     end
 

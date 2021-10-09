@@ -21,15 +21,11 @@ const App = () => (
 
     <Switch>
       <Route exact path="/" component={Splash} />
-      <Route exact path="/rides" component={RideIndex} />
-      <Route exact path="/search=:keyword" component={Search} />
-      <Route exact path="/rides/:rideId" component={RideShowContainer} />
-      <Route exact path="/search=" component={EmptySearch} />
-      <Route
-        exact
-        path={`/:userId/bookings`}
-        component={BookingIndexContainer}
-      />
+      <Route path="/rides" component={RideIndex} />
+      <Route path="/search=:keyword" component={Search} />
+      <Route path="/rides/:rideId" component={RideShowContainer} />
+      <Route path="/search=" component={EmptySearch} />
+      <Route path={`/:userId/bookings`} component={BookingIndexContainer} />
     </Switch>
     {/* <Route path="/" component={Footer} /> */}
   </>
