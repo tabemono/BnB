@@ -1,7 +1,8 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import NavBar from "./navbar/navbar_container";
+// import NavBar from "./navbar/navbar_container";
+import Navbar from "./navbar/navbar";
 
 import { AuthRoute, Protected } from "../util/route_util";
 import Splash from "./splash/splash_page";
@@ -16,7 +17,7 @@ const App = () => (
   <>
     <Modal />
 
-    <Route path="/" component={NavBar} />
+    <Route path="/" component={Navbar} />
 
     <Switch>
       <Route exact path="/" component={Splash} />

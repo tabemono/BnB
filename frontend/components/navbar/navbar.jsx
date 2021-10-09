@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SearchBarContainer from "../search_bar/search_bar_container";
 import { withRouter } from "react-router-dom";
-
+import DropDown from "./dropdown";
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -10,29 +10,29 @@ class NavBar extends React.Component {
   }
 
   render() {
-    const handleRidesClick = () =>
-      this.props.history.push(`/${this.props.currentUser.id}/bookings`);
+    // const handleRidesClick = () =>
+    //   this.props.history.push(`/${this.props.currentUser.id}/bookings`);
 
-    const navDisplay = this.props.currentUser ? (
-      <div className="right-nav">
-        <div className="nav-btn" onClick={this.props.logout}>
-          Log Out
-        </div>
-        <div className="nav-btn" onClick={handleRidesClick}>
-          Rides
-        </div>
-      </div>
-    ) : (
-      <div className="right-nav">
-        <div className="nav-btn" onClick={() => this.props.openModal("login")}>
-          Login
-        </div>
-        &nbsp;&nbsp;
-        <div className="nav-btn" onClick={() => this.props.openModal("signup")}>
-          Signup
-        </div>
-      </div>
-    );
+    // const navDisplay = this.props.currentUser ? (
+    //   <div className="right-nav">
+    //     <div className="nav-btn" onClick={this.props.logout}>
+    //       Log Out
+    //     </div>
+    //     <div className="nav-btn" onClick={handleRidesClick}>
+    //       Rides
+    //     </div>
+    //   </div>
+    // ) : (
+    //   <div className="right-nav">
+    //     <div className="nav-btn" onClick={() => this.props.openModal("login")}>
+    //       Login
+    //     </div>
+    //     &nbsp;&nbsp;
+    //     <div className="nav-btn" onClick={() => this.props.openModal("signup")}>
+    //       Signup
+    //     </div>
+    //   </div>
+    // );
 
     return (
       <header className="navbar">
@@ -46,7 +46,7 @@ class NavBar extends React.Component {
         </div>
         <div className="right-nav">
           <div className="nav-2">
-            <a
+            {/* <a
               className="git"
               href="https://github.com/tabemono"
               target="_blank"
@@ -66,8 +66,10 @@ class NavBar extends React.Component {
               target="_blank"
             >
               <img src={window.portfolio}></img>
-            </a>
-            {navDisplay}
+            </a> */}
+            {/* {navDisplay}
+             */}
+            <DropDown />
           </div>
         </div>
       </header>
