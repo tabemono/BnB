@@ -64,7 +64,7 @@ class SessionForm extends React.Component {
           onClick={() =>
             this.props
 
-              .processForm({ email: "demo@aa.com", password: "123456" })
+              .processForm(this.props.demoUser)
               .then(this.props.clearErrors())
               .then(this.props.closeModal)
           }
@@ -81,7 +81,11 @@ class SessionForm extends React.Component {
         <button onClick={this.props.closeModal} className="close-x">
           x
         </button>
-        <form onSubmit={this.handleSubmit} className="input-box">
+        <form
+          autoComplete="off"
+          onSubmit={this.handleSubmit}
+          className="input-box"
+        >
           <div className="input-container">
             {isSignedUp ? fname() : null}
             <div className="signup-input">

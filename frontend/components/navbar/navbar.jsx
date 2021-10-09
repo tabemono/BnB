@@ -46,43 +46,6 @@ class NavBar extends React.Component {
           </div>
           <DropDown />
         </nav>
-        {/* <div className="logo-container">
-          <Link to="/">
-            <img src={window.logo} className="logo"></img>
-            <h1>Bikes</h1>
-          </Link>
-        </div>
-        <div className="search-nav">
-          <SearchBarContainer />
-        </div>
-        <div className="right-nav">
-          <div className="nav-2">
-            <a
-              className="git"
-              href="https://github.com/tabemono"
-              target="_blank"
-            >
-              <img src={window.github}></img>
-            </a>
-            <a
-              className="personal-social"
-              href="https://www.linkedin.com/in/tony-chen-830850201/"
-              target="_blank"
-            >
-              <img src={window.linkedIn}></img>
-            </a>
-            <a
-              className="personal-social"
-              href="https://tabemono.github.io/"
-              target="_blank"
-            >
-              <img src={window.portfolio}></img>
-            </a>
-            {navDisplay}
-            
-            <DropDown />
-          </div>
-        </div> */}
       </header>
     );
   }
