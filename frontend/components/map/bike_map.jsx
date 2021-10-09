@@ -88,7 +88,7 @@ class BikeMap extends React.Component {
       };
       this.map.setCenter(mapOptions.center);
       this.map.setZoom(mapOptions.zoom);
-      this.props.deleteKeyword();
+      // this.props.deleteKeyword();
       this.markerManager.removeAllMarkers();
       this.markerManager.updateMarkers(this.props.rides);
     } else {

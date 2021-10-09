@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useRouteMatch, useHistory } from "react-router-dom";
 import BookingIndexItem from "./booking_index_item";
-import Footer from "../footer/footer";
+
 const BookingIndex = ({
   bookings,
   fetchBookings,
@@ -60,7 +60,6 @@ const BookingIndex = ({
           Explore BnB
         </button>
       </div>
-      <Footer />
     </div>
   );
 };
