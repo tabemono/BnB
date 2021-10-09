@@ -103,7 +103,11 @@ class BikeMap extends React.Component {
   }
 
   render() {
-    return <div id="map-index" ref={(map) => (this.mapNode = map)}></div>;
+    return (
+      <div>
+        <div id="map-contaner" ref={(map) => (this.mapNode = map)}></div>;
+      </div>
+    );
   }
 }
 
