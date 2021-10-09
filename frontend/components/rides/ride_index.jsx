@@ -46,26 +46,24 @@ class RideIndex extends React.Component {
     });
 
     return (
-      <div>
-        <div className="ride-index-page">
-          <div className="ride-index">
-            <ul className="ride-index-left">
-              <div>{ifZero()}</div>
-              {rideIndexItems}
-            </ul>
-            <div id="map-container">
-              <BikeMap
-                type={this.props.type}
-                rideSearch={rideSearch}
-                keyword={keyword}
-                rides={rides}
-                updateFilter={updateFilter}
-                deleteKeyword={deleteKeyword}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <>
+        <main className="ride-index-page">
+          <section className="ride-index">
+            <h1>{ifZero()}</h1>
+            <ul>{rideIndexItems}</ul>
+          </section>
+          <section id="map-container">
+            <BikeMap
+              type={this.props.type}
+              rideSearch={rideSearch}
+              keyword={keyword}
+              rides={rides}
+              updateFilter={updateFilter}
+              deleteKeyword={deleteKeyword}
+            />
+          </section>
+        </main>
+      </>
     );
   }
 }

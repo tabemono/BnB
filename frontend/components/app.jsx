@@ -19,14 +19,13 @@ const App = () => (
     <Route path="/" component={Navbar} />
     <Switch>
       <Route exact path="/" component={Splash} />
-      <Route path="/rides" component={RideIndex} />
+      <Route exact path="/rides" component={RideIndex} />
       <Route path="/search=:keyword" component={Search} />
-      <Route path path="/rides/:rideId" component={RideShowContainer} />
+      <Route exact path="/rides/:rideId" component={RideShowContainer} />
       <Route path="/search=" component={EmptySearch} />
       <Route path={`/:userId/bookings`} component={BookingIndexContainer} />
     </Switch>
     <Footer />
-    {/* <Route path="/" component={Footer} /> */}
   </>
 );
 

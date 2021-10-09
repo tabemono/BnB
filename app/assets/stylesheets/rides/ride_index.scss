@@ -67,13 +67,17 @@
 }
 
 .ride-index {
-  display: flex;
-  width: 100vw;
-  padding-top: 80px;
-  height: 100vh;
+  margin: 20px;
+  h1 {
+    font-size: 36px;
+    font-weight: 600;
+    padding: 20px 10px;
+  }
 }
 .ride-index-page {
-  display: flex;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  margin-top: 100px;
 }
 
 .index-count {
