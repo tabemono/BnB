@@ -36,9 +36,20 @@ class NavBar extends React.Component {
 
     return (
       <header className="navbar">
-        <div className="logo-container">
+        <nav className="nonsplash-nav">
+          <Link id="nav-logo" to="/">
+            <img src={window.logo} className="logo"></img>
+            <h1>bikesnbikers</h1>
+          </Link>
+          <div className="search-nav">
+            <SearchBarContainer />
+          </div>
+          <DropDown />
+        </nav>
+        {/* <div className="logo-container">
           <Link to="/">
             <img src={window.logo} className="logo"></img>
+            <h1>Bikes</h1>
           </Link>
         </div>
         <div className="search-nav">
@@ -46,7 +57,7 @@ class NavBar extends React.Component {
         </div>
         <div className="right-nav">
           <div className="nav-2">
-            {/* <a
+            <a
               className="git"
               href="https://github.com/tabemono"
               target="_blank"
@@ -66,12 +77,12 @@ class NavBar extends React.Component {
               target="_blank"
             >
               <img src={window.portfolio}></img>
-            </a> */}
-            {/* {navDisplay}
-             */}
+            </a>
+            {navDisplay}
+            
             <DropDown />
           </div>
-        </div>
+        </div> */}
       </header>
     );
   }

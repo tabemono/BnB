@@ -17,8 +17,8 @@ const App = () => (
   <>
     <Modal />
 
+    {/* <Route path="/" component={Navbar} /> */}
     <Route path="/" component={Navbar} />
-
     <Switch>
       <Route exact path="/" component={Splash} />
       <Route path="/rides" component={RideIndex} />
