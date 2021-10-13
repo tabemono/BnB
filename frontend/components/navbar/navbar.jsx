@@ -27,7 +27,7 @@ class NavBar extends React.Component {
       <div className="right-nav">
         <div
           className="nav-btn"
-          data-testid="loginbtn"
+          data-testid="login-btn"
           onClick={() => this.props.openModal("login")}
         >
           Login

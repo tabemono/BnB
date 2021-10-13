@@ -15,7 +15,7 @@ describe("visits site", () => {
 
   it("Checks Login modal links", () => {
     cy.viewport(1280, 720);
-    cy.get("[data-testid=loginbtn]").click();
+    cy.get("[data-testid=login-btn]").click();
     // cy.get("[data-testid=login-button]").click();
     // cy.contains("Demo Login").should("exist");
     // cy.contains("Log in").should("exist");
@@ -25,9 +25,9 @@ describe("visits site", () => {
     // cy.contains("Sign Up").should("exist");
   });
   //   it("Checks Signup errors", () => {
-  // Cypress.on("uncaught:exception", (err, runnable) => {
-  //   return false;
-  // });
+//   Cypress.on("uncaught:exception", (err, runnable) => {
+//     return false;
+//   });
   //   cy.get("[data-testid=firstname]").type("tony");
   //   cy.get("[data-testid=email-input]").type("demo@aa.com");
   //   cy.get("[data-testid=password-input]").type("123456");
@@ -39,6 +39,6 @@ describe("visits site", () => {
   it("Checks Login", () => {
     cy.get("[data-testid=email-input]").type("demo@aa.com");
     cy.get("[data-testid=password-input]").type("123456");
-    cy.get("[data-testid=submit-button]").click();
+    cy.get("[data-testid=submit-btn]").click();
   });
 });

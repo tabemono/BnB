@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 
 import NavBar from "./navbar/navbar_container";
 
-import { AuthRoute, Protected } from "../util/route_util";
+import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import Splash from "./splash/splash_page";
 import Modal from "./modal/modal";
 import RideIndex from "./rides/ride_index_container";
@@ -23,7 +23,7 @@ const App = () => (
       <Route exact path="/search=:keyword" component={Search} />
       <Route exact path="/rides/:rideId" component={RideShowContainer} />
       {/* <Route exact path="/search=" component={EmptySearch} /> */}
-      <Route
+      <ProtectedRoute
         exact
         path={`/:userId/bookings`}
         component={BookingIndexContainer}

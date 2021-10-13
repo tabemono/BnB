@@ -92,7 +92,7 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="input-box">
           <div className="input-container">
             {isSignedUp ? fname() : null}
-            <div className="signup-input">
+            <div className="signup-input" data-testid="email-input">
               <input
                 type="text"
                 placeholder="Email"
@@ -101,7 +101,7 @@ class SessionForm extends React.Component {
                 className="login-input"
               />
             </div>
-            <div className="signup-input">
+            <div className="signup-input" data-testid="password-input">
               <input
                 type="password"
                 placeholder="Password"
@@ -114,6 +114,7 @@ class SessionForm extends React.Component {
 
             <input
               className="session-submit"
+              data-testid="submit-btn"
               type="submit"
               value={this.props.formType}
             />
