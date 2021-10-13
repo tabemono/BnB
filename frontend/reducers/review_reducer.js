@@ -1,6 +1,11 @@
 import { RECEIVE_RIDE } from "../actions/ride_actions";
 
-import { RECEIVE_REVIEW, RECEIVE_ALL_REVIEWS } from "../actions/review_actions";
+import {
+  RECEIVE_REVIEW,
+  RECEIVE_ALL_REVIEWS,
+  REMOVE_REVIEW,
+  RECEIVE_REVIEWS,
+} from "../actions/review_actions";
 import { merge } from "lodash";
 
 const reviewsReducer = (state = {}, action) => {
@@ -11,8 +16,15 @@ const reviewsReducer = (state = {}, action) => {
     case RECEIVE_REVIEW:
       const { review } = action;
       return merge({}, state, { [review.id]: review });
+    case RECEIVE_REVIEWS:
+      return action.reviews;
     case RECEIVE_ALL_REVIEWS:
       return action.reviews;
+    case REMOVE_REVIEW:
+      let newState = { ...state };
+
+      delete newState[action.reviewId];
+      return newState;
     default:
       return state;
   }
