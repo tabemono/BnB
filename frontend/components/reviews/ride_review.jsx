@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { deleteReview, fetchReview } from "../../actions/review_actions";
-import moment from 'moment'
+import moment from "moment";
 const formatDate = (date) => {
   const dateString = moment(date).format("LL");
   const arr = dateString.split(" ");
@@ -27,13 +27,12 @@ const RideReview = ({ riders, review, currentUser, rideId }) => {
         <div className="review-item-container">
           <div className="review-rating">
             <div className="ride-rating-review">
-              <div className="star">
-                <i className="fas fa-star fa-lg"></i>
-              </div>
-              {review.rating}
+              <i className="fas fa-user-circle fa-3x"></i>
             </div>
             <div key={rider.id} className="review-rider">
-              <h3>{rider.firstname}</h3>
+              <h3>
+                <strong>{rider.firstname}</strong>
+              </h3>
               <h4>
                 <h4>{formatDate(review.updatedAt)}</h4>
               </h4>

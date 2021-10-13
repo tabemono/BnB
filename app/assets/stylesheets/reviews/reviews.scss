@@ -16,12 +16,8 @@
 
 .review-header {
   font-size: 20px;
-  display: flex;
-  // flex-direction: row;
+
   justify-content: left;
-  width: 200px;
-  // padding-top: 20px;
-  padding-left: 25%;
 }
 
 .ride-rating-review {
@@ -35,7 +31,7 @@
   margin-top: 60px;
   // margin-left: 5px;
   font-size: 20px;
-  color: #c83d14;
+  color: black;
 }
 
 .star {
@@ -108,7 +104,7 @@
   top: 0;
   opacity: 0;
   display: block;
-  color: #ff0066;
+  color: black;
   transition: 0.4s;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -129,7 +125,7 @@ input[type="radio"] {
 }
 input[type="radio"]:checked ~ label,
 input[type="radio"]:hover ~ label {
-  color: rgb(236, 79, 17);
+  color: rgb(5, 5, 5);
 }
 
 .reviews-stars-create label:hover::after,

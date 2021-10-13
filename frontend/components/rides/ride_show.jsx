@@ -17,13 +17,13 @@ class RideShow extends React.Component {
     this.props.fetchRide(this.props.match.params.rideId);
 
     document.addEventListener("scroll", () => {
-      const belowPictures = window.scrollY < 550;
+      const belowPictures = window.scrollY < 500;
       if (belowPictures !== this.state.scrollFixedUp)
         this.setState({ scrollFixedUp: belowPictures });
     });
     document.addEventListener("scroll", () => {
       const topPictures =
-        window.scrollY > document.body.scrollHeight - window.innerHeight - 345;
+        window.scrollY > document.body.scrollHeight - window.innerHeight - 10;
       if (topPictures !== this.state.scrollFixedB)
         this.setState({ scrollFixedB: topPictures });
     });
@@ -100,12 +100,6 @@ class RideShow extends React.Component {
                 </div>
                 <div className="ride-reviews">
                   <div className="review-header">
-                    {/* <div className="ride-rating-review">
-                      <div className="star">
-                        <i className="fas fa-star fa-lg"></i>
-                      </div>
-                      {rating}
-                    </div> */}
                     {reviews.length > 0 ? (
                       <h2 className="review-heading">
                         <i className="fas fa-star fa-lg"></i>
@@ -131,8 +125,6 @@ class RideShow extends React.Component {
                   </div>
                 </div>
               </div>
-              {/* <div className="booking-div-div"> */}
-              {/* </div> */}
             </div>
             <div className="booking-div">
               <BookingFormContainer
