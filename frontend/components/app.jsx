@@ -22,7 +22,7 @@ const App = () => (
       <Route exact path="/rides" component={RideIndex} />
       <Route exact path="/search=:keyword" component={Search} />
       <Route exact path="/rides/:rideId" component={RideShowContainer} />
-      <Route exact path="/search=" component={EmptySearch} />
+      {/* <Route exact path="/search=" component={EmptySearch} /> */}
       <Route
         exact
         path={`/:userId/bookings`}

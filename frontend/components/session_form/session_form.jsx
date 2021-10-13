@@ -69,12 +69,9 @@ class SessionForm extends React.Component {
           className="session-submit"
           id="demo-button"
           onClick={
-            () =>
-              this.props
-
-                .processForm({ email: "demo@aa.com", password: "123456" })
-                .then(this.props.clearErrors())
-                .then(this.props.closeModal)
+            () => this.setState(this.props.demoUser)
+            // .then(this.props.processForm({}))
+            // .then(this.props.closeModal)
             // {
             //   this.handleSubmit;
             // }
