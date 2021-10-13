@@ -1,13 +1,10 @@
 import React from "react";
 import RideIndex from "../rides/ride_index";
-import BikeMap from "../map/bike_map";
 
 class Search extends React.Component {
   constructor(props) {
     super(props);
-   
   }
-
 
   render() {
     const {
