@@ -121,6 +121,8 @@ class RideShow extends React.Component {
                         key={review.id}
                         review={review}
                         riders={riders}
+                        currentUser={currentUser}
+                        rideId={ride.id}
                       />
                     ))}
                     <div className="review-form">

@@ -35,7 +35,7 @@
   margin-top: 60px;
   // margin-left: 5px;
   font-size: 20px;
-  color: #C83D14;
+  color: #c83d14;
 }
 
 .star {
@@ -194,4 +194,8 @@ input[type="radio"]:hover ~ label {
 
 .review-footer {
   padding-bottom: 5%;
+}
+
+.review-del-btn {
+  margin-left: 25%;
 }
