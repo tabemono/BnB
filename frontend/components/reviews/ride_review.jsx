@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { deleteReview, fetchReview } from "../../actions/review_actions";
+import moment from 'moment'
+const formatDate = (date) => {
+  const dateString = moment(date).format("LL");
+  const arr = dateString.split(" ");
+  return arr[0] + " " + arr[2];
+};
+
 const RideReview = ({ riders, review, currentUser, rideId }) => {
   const rider = riders[review.rider_id];
-  // const [riderId, setRider] = useState("")
-  // debugger;
   const [deleted, setDeleted] = useState(false);
-  // const [currentUser, setUser] = useState("");
-  // debugger;
   useEffect(() => {
     dispatch(fetchReview(review.id));
   }, [fetchReview]);
@@ -30,7 +33,10 @@ const RideReview = ({ riders, review, currentUser, rideId }) => {
               {review.rating}
             </div>
             <div key={rider.id} className="review-rider">
-              by {rider.firstname}
+              <h3>{rider.firstname}</h3>
+              <h4>
+                <h4>{formatDate(review.updatedAt)}</h4>
+              </h4>
             </div>
           </div>
 
