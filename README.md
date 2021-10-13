@@ -53,6 +53,6 @@ Backend implemented with Rails and Postgres while the front end is managed by Re
 
 
 # Future Features
-
+* Need to update my state and possibly remove redux and switch to hooks
 * Add more search options
 * Revamp Review section
