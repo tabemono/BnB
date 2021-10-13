@@ -19,6 +19,34 @@ class Api::ReviewsController < ApplicationController
         end
     end
 
+
+     def show
+        @review = Review.find_by(id: params[:id])
+        render :show
+    end
+
+    def destroy
+        # @review = Review.find_by(id: params[:id])
+        # if @review.destroy
+        #     render :show
+        # else
+        #     render json @review.errors.full_messages, status: 422
+        # end
+        @review = Review.find_by(id: params[:id])
+        @review.destroy
+        render :show
+    end
+
+    def update
+        @review = Review.find_by(id: params[:review][:id])
+        if @review.update(review_params)
+            render :show
+        else
+            render json: @review.errors.full_messages, status: 422
+        end
+    end
+
+
     private
     
     def review_params
