@@ -51,7 +51,6 @@ class RideIndex extends React.Component {
         <div className="ride-index-page">
           <div className="ride-index">
             <ul className="ride-index-left">
-              {/* <span className="index-count">{count} bikes to ride.</span> */}
               <div>{ifZero()}</div>
               {rideIndexItems}
             </ul>
@@ -67,6 +66,7 @@ class RideIndex extends React.Component {
             </div>
           </div>
         </div>
+        
       </div>
     );
   }

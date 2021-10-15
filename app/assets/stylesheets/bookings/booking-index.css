@@ -1,8 +1,8 @@
 .booking-index-container {
   margin-top: 25px;
   font-family: "Montserrat";
-  padding-left: 65px;
-  padding-right: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .booking-picture {
@@ -29,6 +29,7 @@
 .booking-index-container h1 {
   z-index: 1;
   margin-top: 110px;
+  
   font-size: 32px;
   font-weight: 700;
   font-family: "Montserrat";
@@ -74,5 +75,6 @@
   background: black;
   z-index: 3;
   margin-bottom: 1%;
+  margin-left: 15%;
   margin-top: 2%;
 }

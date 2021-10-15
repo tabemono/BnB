@@ -16,6 +16,7 @@ const App = () => (
     <Modal />
 
     <Route path="/" component={NavBar} />
+
     <Switch>
       <Route exact path="/" component={Splash} />
       <Route exact path="/rides" component={RideIndex} />
@@ -27,6 +28,7 @@ const App = () => (
         component={BookingIndexContainer}
       />
     </Switch>
+  
   </>
 );
 

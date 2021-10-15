@@ -108,7 +108,7 @@
   top: 0;
   opacity: 0;
   display: block;
-  color: black;
+  color: darkred;
   transition: 0.4s;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -129,7 +129,7 @@ input[type="radio"] {
 }
 input[type="radio"]:checked ~ label,
 input[type="radio"]:hover ~ label {
-  color: rgb(5, 5, 5);
+  color: darkred;
 }
 
 .reviews-stars-create label:hover::after,
