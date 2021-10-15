@@ -1,9 +1,9 @@
 import React from "react";
 import BookingFormContainer from "../bookings/booking_form_container";
 import BikeShowMap from "../map/bike_show_map";
-import { withRouter } from "react-router-dom";
+import { DayPickerRangeController } from "react-dates";
 import RideShowDetail from "./ride_show_detail";
-
+import RideReview from "../reviews/ride_review";
 import ReviewContainer from "../reviews/review_container";
 import Footer from "../footer/footer";
 class RideShow extends React.Component {
@@ -32,16 +32,9 @@ class RideShow extends React.Component {
 
   render() {
     if (this.props.ride) {
-      const {
-        ride,
-        currentUser,
-        deleteReview,
-        fetchReview,
-        fetchReviews,
-      } = this.props;
+      const { ride, currentUser } = this.props;
       // const { photoUrls } = ride;
       const reviews = ride.reviews ? Object.values(ride.reviews) : [];
-
       const { riders } = ride;
       let totalRate = 0;
       reviews
@@ -80,6 +73,7 @@ class RideShow extends React.Component {
               <div className="ride-body">
                 <div className="ride-details">
                   <div className="ride-header">
+                    {/* <h3>Bike is owned by {ride.owner.firstname}</h3> */}
                     <span className="ride-rating">
                       <div className="rating-container">
                         <div className="star">
@@ -127,11 +121,7 @@ class RideShow extends React.Component {
                       />
                     ))}
                     <div className="review-form">
-                      <ReviewContainer
-                        key={Math.random()}
-                        currentUser={currentUser}
-                        ride={ride}
-                      />
+                      <ReviewContainer ride={ride} />
                     </div>
                   </div>
                 </div>
@@ -148,10 +138,10 @@ class RideShow extends React.Component {
           </div>
 
           <div className="ride-show-map">
-            {/* <h2>Pick Up Location</h2> */}
+            <h2>Pick Up Location</h2>
             <BikeShowMap ride={ride} center={center} zoom={zoom} />
           </div>
-          <Footer/>
+          <Footer />
         </div>
       );
     } else {
@@ -160,4 +150,4 @@ class RideShow extends React.Component {
   }
 }
 
-export default withRouter(RideShow);
+export default RideShow;

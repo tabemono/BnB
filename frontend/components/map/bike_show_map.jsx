@@ -20,7 +20,7 @@ class BikeShowMap extends React.Component {
       position,
       map: this.map,
       rideId: ride.id,
-      // icon: "&#xe860",
+      icon: null,
     });
 
     let circle2 = new google.maps.Circle({
