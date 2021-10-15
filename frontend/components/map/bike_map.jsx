@@ -1,11 +1,14 @@
+import { isEqual } from "date-fns";
 import React from "react";
 import { withRouter } from "react-router-dom";
 import MarkerManager from "./marker_manager";
+// import { isEqual } from "lodash";
+// import getLocation from "../../util/map_util";
 
-// const getCoordsObj = (latLng) => ({
-//   lat: latLng.lat(),
-//   lng: latLng.lng(),
-// });
+const getCoordsObj = (latLng) => ({
+  lat: latLng.lat(),
+  lng: latLng.lng(),
+});
 
 class BikeMap extends React.Component {
   constructor(props) {
@@ -75,7 +78,10 @@ class BikeMap extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
+    // debugger;
+    //checking keyword change
     if (prevProps.location.pathname !== this.props.location.pathname) {
+      // debugger;
       let lat;
       let lng;
       let zoom;
@@ -88,6 +94,8 @@ class BikeMap extends React.Component {
         lat = rides[0].lat;
         lng = rides[0].lng;
         zoom = 13;
+        // this.markerManager.updateMarkers(this.props.rides);
+        // debugger;
       }
       const mapOptions = {
         center: { lat: lat, lng: lng },
@@ -95,7 +103,7 @@ class BikeMap extends React.Component {
       };
       this.map.setCenter(mapOptions.center);
       this.map.setZoom(mapOptions.zoom);
-      // this.props.deleteKeyword();
+      this.props.deleteKeyword();
       this.markerManager.removeAllMarkers();
       this.markerManager.updateMarkers(this.props.rides);
     } else {
@@ -110,11 +118,7 @@ class BikeMap extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <div id="map-contaner" ref={(map) => (this.mapNode = map)}></div>;
-      </div>
-    );
+    return <div id="map-index" ref={(map) => (this.mapNode = map)}></div>;
   }
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Navbar from "./navbar/navbar";
+import Navbar from "./navbar/navbar_container";
 
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import Splash from "./splash/splash_page";
@@ -14,7 +14,7 @@ const App = () => (
   <>
     <Modal />
 
-    <Route path="/" component={NavBar} />
+    <Route path="/" component={Navbar} />
 
     <Switch>
       <Route exact path="/" component={Splash} />
@@ -27,7 +27,6 @@ const App = () => (
         component={BookingIndexContainer}
       />
     </Switch>
-  
   </>
 );
 
