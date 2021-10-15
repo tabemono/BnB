@@ -4,7 +4,7 @@ export default ({ openModal }) => {
   return (
     <ul className="drop-menu">
       <li>
-        <a id="log-in-button" onClick={() => openModal("login")}>
+        <a id="login-button" onClick={() => openModal("login")}>
           Log in
         </a>
       </li>

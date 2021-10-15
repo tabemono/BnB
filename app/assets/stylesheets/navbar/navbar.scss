@@ -1,20 +1,44 @@
-.logo {
-  width: 85px;
-  position: relative;
-  margin-top: -8px;
-  margin-left: 3px;
-  outline: none;
+#logo {
+  font-weight: 700;
+  color: rgb(22, 22, 22);
+  display: flex;
+  align-items: center;
+  > h1 {
+    font-size: 22px;
+  }
+
+  > img:first-child {
+    height: 50px;
+    width: 75px;
+    margin-right: 18px;
+    margin-left: -20px;
+  }
 }
 
 .navbar {
-  justify-content: space-between;
+  // justify-content: space-between;
+  // display: flex;
+  // flex-direction: row;
+  // background-color: white;
+  // position: fixed;
+  // z-index: 1;
+  // width: 100%;
+  // border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: block;
+  // margin-bottom: 10px;
+}
+
+.nonsplash-nav {
+  padding: 0 20px;
   display: flex;
-  flex-direction: row;
-  background-color: #fff;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  box-shadow: 1px 2px 2px 2px rgb(241, 235, 235);
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  min-width: 90%;
+  position: relative;
+  box-shadow: 1px 3px 12px 7px rgba(190, 190, 190, 0.3);
+  z-index: 12;
+  background: #fff;
 }
 
 .input:focus {
@@ -74,11 +98,13 @@ button {
   // padding: 0px 0px 3px;
 }
 
-.right-nav {
-  display: flex;
-  justify-content: flex-end;
-  margin-left: 100px;
-}
+// .right-nav {
+//   // display: flex;
+//   justify-content: flex-end;
+//   margin-left: 100px;
+//   margin-top: 1%;
+//   margin-right: 1%;
+// }
 
 // .outer-div {
 //   font-family: "Roboto", sans-serif;
@@ -96,16 +122,16 @@ div > p {
 }
 
 // .header-content {
-
+//   margin-top: -5%;
 // }
 
 .look-btn {
-  justify-content: space-between;
+  // justify-content: space-between;
   cursor: pointer;
   text-align: center;
   font-family: "Montserrat";
   font-size: 16px;
-  line-height: 18px;
+  // line-height: 18px;
   font-weight: 600;
   padding-top: 7px;
   padding-bottom: 7px;
@@ -119,6 +145,8 @@ div > p {
   // border: none;
   border-style: ridge;
   background-color: black;
+  position: relative;
+  bottom: 150px;
 }
 
 .search-nav {
@@ -131,11 +159,11 @@ div > p {
   z-index: 100;
 }
 
-.right-nav {
-  width: 50%;
-  display: flex;
-  z-index: 1;
-}
+// .right-nav {
+//   width: 50%;
+//   display: flex;
+//   z-index: 1;
+// }
 
 .nav-2 {
   display: flex;
@@ -359,4 +387,63 @@ div > p {
   animation: aaa 0.7s 1;
   top: -10%;
   left: -10%;
+}
+
+.nav-drop-down {
+  position: relative;
+}
+
+.menu-button {
+  border: 1px solid #ebebeb;
+  border-radius: 20px;
+  background: #fff;
+  width: 80px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.menu-button:hover {
+  box-shadow: 1px 3px 12px 7px rgba(190, 190, 190, 0.3);
+}
+
+.menu-button > img {
+  height: 35px;
+  width: 35px;
+  margin-right: -5px;
+}
+
+.drop-menu {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  padding: 8px 0;
+  background: #ffffff;
+  box-shadow: 1px 3px 12px 7px rgba(190, 190, 190, 0.3);
+  z-index: 2;
+
+  > li {
+    width: 250px;
+    height: 50px;
+
+    > a {
+      display: block;
+      padding-left: 25px;
+      height: 100%;
+      color: #4f4f4f;
+      padding: 10px 0 0 25px;
+      box-sizing: border-box;
+    }
+
+    :hover {
+      background: #ebebeb80;
+    }
+  }
+
+  #log-in-button {
+    font-weight: 700;
+  }
 }
