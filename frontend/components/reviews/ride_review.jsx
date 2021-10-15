@@ -8,7 +8,7 @@ const formatDate = (date) => {
   return arr[0] + " " + arr[2];
 };
 
-const RideReview = ({ riders, review, currentUser, rideId }) => {
+const RideReview = ({ riders, review, currentUser }) => {
   const rider = riders[review.rider_id];
   const [deleted, setDeleted] = useState(false);
   useEffect(() => {
