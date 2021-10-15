@@ -49,11 +49,15 @@ class Ride < ApplicationRecord
     def self.filtered_search(query) 
         match = "%#{query}%"
         result = Ride.where("city ILIKE ?", match)
+<<<<<<< HEAD
             .or(Ride.where("brand ILIKE ?", match))
             .or(Ride.where("style ILIKE ?", match))
             .or(Ride.where("location ILIKE ?", match))
+=======
+>>>>>>> master
             .or(Ride.where("model ILIKE ?", match))
-     end
+            .or(Ride.where("brand ILIKE ?", match))
+    end
 
 
 end

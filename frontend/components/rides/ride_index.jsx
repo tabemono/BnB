@@ -1,9 +1,8 @@
 import React from "react";
-// import Carousel from 'nuka-carousel';
+
 import RideIndexItem from "./ride_index_item";
 import BikeMap from "../map/bike_map";
 import { withRouter } from "react-router";
-import { deleteKeyword } from "../../actions/keyword_actions";
 
 class RideIndex extends React.Component {
   constructor(props) {
@@ -32,7 +31,7 @@ class RideIndex extends React.Component {
           </div>
         );
       } else {
-        return <span className="index-count">{count} bikes to ride.</span>;
+        return <div className="index-count">{count} Bikes to ride.</div>;
       }
     };
     const rideIndexItems = this.props.rides.map((ride) => {
@@ -47,27 +46,24 @@ class RideIndex extends React.Component {
     });
 
     return (
-      <div>
-        <div className="ride-index-page">
-          <div className="ride-index">
-            <ul className="ride-index-left">
-              <div>{ifZero()}</div>
-              {rideIndexItems}
-            </ul>
-            <div id="map-container">
-              <BikeMap
-                type={this.props.type}
-                rideSearch={rideSearch}
-                keyword={keyword}
-                rides={rides}
-                updateFilter={updateFilter}
-                deleteKeyword={deleteKeyword}
-              />
-            </div>
-          </div>
-        </div>
-        
-      </div>
+      <>
+        <main className="ride-index-page">
+          <section className="ride-index">
+            <h1>{ifZero()}</h1>
+            <ul>{rideIndexItems}</ul>
+          </section>
+          <section id="map-container">
+            <BikeMap
+              type={this.props.type}
+              rideSearch={rideSearch}
+              keyword={keyword}
+              rides={rides}
+              updateFilter={updateFilter}
+              deleteKeyword={deleteKeyword}
+            />
+          </section>
+        </main>
+      </>
     );
   }
 }

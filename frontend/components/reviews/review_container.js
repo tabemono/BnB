@@ -1,4 +1,4 @@
-import { createReview, fetchReviews } from "../../actions/review_actions";
+import { createReview } from "../../actions/review_actions";
 import { fetchRide } from "../../actions/ride_actions";
 import ReviewForm from "./review_form";
 import { connect } from "react-redux";
@@ -17,7 +17,7 @@ const mSTP = (state, ownProps) => ({
 
 const mDTP = (dispatch) => ({
   createReview: (review) => dispatch(createReview(review)),
-  fetchReviews: (id) => dispatch(fetchReviews(id)),
+
   fetchRide: (rideId) => dispatch(fetchRide(rideId)),
   openModal: () => dispatch(openModal("login")),
   clearErrors: () => dispatch(clearErrors()),

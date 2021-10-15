@@ -16,19 +16,20 @@ class Api::RidesController < ApplicationController
     end
 
     def show
-        @ride = Ride.with_attached_photos.find_by(id: params[:id])
+        @ride = Ride.with_attached_photos.includes(:reviews).find_by(id: params[:id])
+        # @ride = Ride.find_by(id: params[:id])
         render :show 
     end
 
-    def create
-        @ride = Ride.new(ride_params)
-        @ride.owner_id = current_user.id
-        if @ride.save 
-            render :show
-        else
-            render json: @ride.errors.full_messages, status: 422
-        end
-    end
+    # def create
+    #     @ride = Ride.new(ride_params)
+    #     @ride.owner_id = current_user.id
+    #     if @ride.save 
+    #         render :show
+    #     else
+    #         render json: @ride.errors.full_messages, status: 422
+    #     end
+    # end
 
 
 

@@ -43,7 +43,7 @@ class ReviewForm extends React.Component {
     if (this.props.review.rider_id) {
       createReview(this.state).then(clearErrors());
       fetchRide(this.state.ride_id);
-      fetchReviews(this.state.ride_id);
+
       this.clearReview();
     } else openModal("login");
   }
@@ -86,7 +86,8 @@ class ReviewForm extends React.Component {
 
   render() {
     const errors = this.renderErrors();
-    const {rider_id} = this.state;
+    const { currentUser } = this.props;
+    const { rider_id } = this.state;
     return (
       <div className="review-form-container">
         <div className="review-header">
@@ -98,11 +99,10 @@ class ReviewForm extends React.Component {
           </div>
           <textarea
             id="review-text"
-            // key={rider_id}
+            key={currentUser}
             className="review-body-null-error"
             onChange={this.update("body")}
             placeholder="Tell us about the ride"
-            value={this.state.body}
           />
         </div>
         {errors}

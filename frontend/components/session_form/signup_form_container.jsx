@@ -2,7 +2,6 @@ import { connect } from "react-redux";
 import React from "react";
 import { signup, clearErrors } from "../../actions/session_actions";
 import { openModal, closeModal } from "../../actions/modal_actions";
-import { withRouter } from "react-router-dom";
 import SessionForm from "./session_form";
 
 const mstp = ({ session, errors, entities: { users } }) => {

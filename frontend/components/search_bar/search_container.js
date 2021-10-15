@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import Search from "./search";
 import { fetchRides, fetchRide, rideSearch } from "../../actions/ride_actions";
 import { updateFilter } from "../../actions/filter_actions";
-// import { updateBounds } from "../../actions/filter_actions";
+
 import { deleteKeyword } from "../../actions/keyword_actions";
 
 const mstp = (state) => {

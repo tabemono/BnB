@@ -1,17 +1,10 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
-import { IoMdPerson, IoIosMail } from "react-icons/io";
-
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   email: "",
-    //   password: "",
-    //   firstname: "",
-    //   error: "",
-    // };
+
     this.state = { ...props.user };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
@@ -89,7 +82,11 @@ class SessionForm extends React.Component {
         <button onClick={this.props.closeModal} className="close-x">
           x
         </button>
-        <form onSubmit={this.handleSubmit} className="input-box">
+        <form
+          autoComplete="off"
+          onSubmit={this.handleSubmit}
+          className="input-box"
+        >
           <div className="input-container">
             {isSignedUp ? fname() : null}
             <div className="signup-input" data-testid="email-input">

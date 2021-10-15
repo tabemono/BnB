@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta property="og:title" content="Airbnsqueeze" />
+    <meta property="og:title" content="BnB" />
+    <meta property="og:image" content="https://bnb-seeds.s3.amazonaws.com/meta-home.png"/>
+    <meta property="og:description" content="An AirBnb clone with a motorcycle themed twist to it." />
+    <meta property="og:url" content="https://bnb-heroku.herokuapp.com" />
+     <title>Bikes and Bikers</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
   <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyB0cgyzG8DjgEGQcjWk1pwQw2Wjj8XcwYI"></script>
-  <%# <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyDpMnFahZxeKYBPRRnU2Wspgz7_7RD2GxElibraries=places"></script> %>
+  
   <script src="https://kit.fontawesome.com/a2bdb82061.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all' %> <%= csrf_meta_tags %>
     <%= javascript_include_tag 'application' %>
   </head>
    <%= favicon_link_tag asset_path('helmet.png') %>
+<<<<<<< HEAD
     <script type="text/javascript">
       window.splashpic = "<%= image_url("splash.jpeg")%>"
+=======
+    <script type="text/javascript"> 
+
+      window.portfolio ="<%= image_url("portfolio.png")%>";
+>>>>>>> master
       window.linkedIn ="<%= image_url("linkedin.png")%>";
       window.github ="<%= image_url("github.png")%>";
       window.logo ="<%= image_url("bikelogo.jpg")%>";
       window.track1 ="<%= image_url("track-pic.jpg")%>";
-      window.splashvid ="<%= image_url("video1.gif")%>";
+      // window.splashvid ="<%= image_url("video1.gif")%>";
       window.offroad ="<%= image_url("dirtbike1.jpeg")%>";
       window.sport ="<%= image_url("sportbike.jpeg")%>";
       window.street ="<%= image_url("streetbike.jpg")%>";
@@ -31,6 +41,7 @@
       window.streetb ="<%= image_url("street.png")%>";
       window.sportb ="<%= image_url("sport.png")%>";
       window.marker ="<%= image_url("marker.ico")%>";
+      window.splash = "<%= image_url("splash.jpeg")%>";
    </script>
   <body>
     <%= yield %>

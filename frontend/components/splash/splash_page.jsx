@@ -27,11 +27,14 @@ class Splash extends React.Component {
             ></img>
           </div>
         </div>
-        <div className="look-btn">
-          <Link className="look-button" to="/rides">
-            Look Around
-          </Link>
+        <div className="intro-wrapper">
+          <div className="look-btn">
+            <Link className="look-button" to="/rides">
+              Look Around
+            </Link>
+          </div>
         </div>
+
         <div className="riding-style">
           <div className="style-col">
             <img src={window.sport} className="style-img"></img>

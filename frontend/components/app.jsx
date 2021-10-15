@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import NavBar from "./navbar/navbar_container";
+import Navbar from "./navbar/navbar";
 
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import Splash from "./splash/splash_page";
@@ -10,7 +10,6 @@ import RideIndex from "./rides/ride_index_container";
 import RideShowContainer from "./rides/ride_show_container";
 import Search from "./search_bar/search_container";
 import BookingIndexContainer from "./bookings/booking_index_container";
-
 const App = () => (
   <>
     <Modal />
