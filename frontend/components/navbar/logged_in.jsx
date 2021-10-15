@@ -10,7 +10,7 @@ const LoggedIn = ({ currentUser, logout }) => {
   return (
     <ul className="drop-menu">
       <li>
-        <Link to={`/${userId}/bookings`}>Trips</Link>
+        <Link to={`/${userId}/bookings`}>Bookings</Link>
       </li>
       <li>
         <a onClick={signOutAction}>Log Out</a>

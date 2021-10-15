@@ -33,9 +33,8 @@ const RideReview = ({ riders, review, currentUser, rideId }) => {
               <h3>
                 <strong>{rider.firstname}</strong>
               </h3>
-              <h4>
-                <h4>{formatDate(review.updatedAt)}</h4>
-              </h4>
+
+              <h4>{formatDate(review.updatedAt)}</h4>
             </div>
           </div>
 
