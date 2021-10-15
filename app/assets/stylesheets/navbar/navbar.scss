@@ -193,8 +193,9 @@ div > p {
 
 .search-wrapper {
   position: relative;
-  // width: 900px;
+
   margin: auto;
+  padding-right:400px;
 }
 
 .search-form {
@@ -205,13 +206,12 @@ div > p {
   background-color: white;
   border: 1px solid #ebebeb;
   transition: box-shadow 200ms ease-in;
-  // height: 65px;
+  
   box-shadow: 0 5px 10px -5px grey;
 }
 
 #search-badge {
   background: rgb(163, 155, 155);
-  // width: 30px;
   height: 30px;
   border-radius: 50%;
   color: white;
