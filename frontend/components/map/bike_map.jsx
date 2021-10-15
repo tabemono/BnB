@@ -22,8 +22,15 @@ class BikeMap extends React.Component {
     let lat;
     let lng;
     let zoom;
+    const query = window.location.hash;
     const { rides } = this.props;
-    if (rides.length === 0 || window.location.hash === "#/rides") {
+    if (
+      rides.length === 0 ||
+      window.location.hash === "#/rides" ||
+      query === "search=sport" ||
+      query === "search=street" ||
+      query === "search=adventure"
+    ) {
       lat = 40.228245;
       lng = -96.2309;
       zoom = 3.9;

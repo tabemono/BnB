@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import SearchBarContainer from "../search_bar/search_bar_container";
 import { withRouter } from "react-router-dom";
 // import DateSearch from './date_search';
-
+import Dropdown from './nav_dropdown';
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -60,7 +60,8 @@ class NavBar extends React.Component {
             >
               <img src={window.linkedIn}></img>
             </a>
-            {navDisplay}
+            {/* {navDisplay} */}
+            <Dropdown/>
           </div>
         </div>
       </header>

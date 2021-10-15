@@ -1,14 +1,15 @@
 .splash-image {
-  border-radius: 10px;
+  // border-radius: 10px;
   position: absolute;
   top: 0;
   display: fixed;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
+  // text-align: center;
+  // margin-left: auto;
+  // margin-right: auto;
+  // margin-bottom: 50px;
+  margin-top: -150px;
   width: 100%;
-
+  filter: brightness(0.5);
   z-index: -2;
 }
 
@@ -16,10 +17,10 @@
   font-family: "Montserrat", sans-serif;
   font-size: 62px;
   margin: 200px auto 30px auto;
-  color: darkred;
+  color: white;
   display: flex;
   justify-content: center;
-  padding:100px;
+  padding: 150px;
 }
 
 .riding-style {
@@ -34,7 +35,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
+  background-color: #0d0e0e;
   color: white;
   border-radius: 10px;
   width: 100%;
@@ -49,10 +50,10 @@
 }
 
 .splash-exp-area {
-  background-color: black;
   font-size: 20px;
   display: flex;
   margin: 0 100px;
+  margin-bottom: 5%;
 }
 
 .exp-header {
@@ -92,14 +93,14 @@
 .parent-box2 {
   display: flex;
   flex-direction: column;
-  // background-color: #232323;
+
   width: 60%;
   height: 50%;
 }
 
 .parent-desc-box1 {
   background-color: #232323;
-  // width: 600px;
+
   height: 50px;
   padding: 16px;
   border-radius: 0px 0px 16px 16px;
@@ -122,7 +123,6 @@
 }
 
 .topgrid {
-  display: flex;
   flex-direction: column;
 }
 

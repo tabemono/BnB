@@ -22,6 +22,7 @@ class Splash extends React.Component {
               loop
               className="splash-image"
               src={window.splashvid}
+              // src={window.splashpic}
             ></img>
           </div>
         </div>

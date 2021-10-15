@@ -19,32 +19,14 @@ class Search extends React.Component {
     } = this.props;
 
     return (
-      <div>
-        <div className="ride-index-page">
-          <div className="ride-index">
-            <ul className="ride-index-left">
-              <span className="index-count"></span>
-              <RideIndex
-                rides={rides}
-                fetchRides={fetchRides}
-                keyword={keyword}
-                requestRide={requestRide}
-                updateFilter={updateFilter}
-                deleteKeyword={deleteKeyword}
-              />
-            </ul>
-            {/* <div id="map-container"> */}
-            {/* <BikeMap
-              rides={rides}
-              // updateBounds={updateBounds}
-              updateFilter={updateFilter}
-              keyword={keyword}
-              deleteKeyword={deleteKeyword}
-            /> */}
-            {/* </div> */}
-          </div>
-        </div>
-      </div>
+      <RideIndex
+        rides={rides}
+        fetchRides={fetchRides}
+        keyword={keyword}
+        requestRide={requestRide}
+        updateFilter={updateFilter}
+        deleteKeyword={deleteKeyword}
+      />
     );
   }
 }
